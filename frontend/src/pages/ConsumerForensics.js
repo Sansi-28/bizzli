@@ -10,9 +10,10 @@ import {
   Legend,
   ReferenceDot
 } from 'recharts';
-import { FiSearch, FiUser } from 'react-icons/fi';
+import { FiSearch, FiUser, FiUsers } from 'react-icons/fi';
 import ChartContainer from '../components/ChartContainer';
 import Loading from '../components/Loading';
+import ConsumerComparison from '../components/ConsumerComparison';
 import { useTheme } from '../context/ThemeContext';
 import { searchConsumers, getConsumerDetails } from '../services/api';
 import './ConsumerForensics.css';
@@ -234,6 +235,9 @@ const ConsumerForensics = () => {
           <p>Enter a consumer name or ID to view detailed usage patterns and risk analysis</p>
         </div>
       )}
+
+      <h3 className="section-title"><FiUsers /> Consumer Comparison Tool</h3>
+      <ConsumerComparison />
     </div>
   );
 };

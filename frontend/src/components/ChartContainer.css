@@ -1,20 +1,56 @@
+/* ============================================
+   CHART CONTAINER - Data Visualization Panel
+   ============================================ */
+
 .chart-container {
-  background-color: var(--bg-secondary);
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 20px;
+  background: var(--voltage-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  padding: 24px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.chart-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--energy-cyan), transparent);
+  opacity: 0.3;
 }
 
 .chart-container h3 {
+  font-family: 'Rajdhani', sans-serif;
   font-size: 1rem;
-  margin-bottom: 15px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text-bright);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
 .chart-container h3 .icon {
   font-size: 1.2rem;
+}
+
+.chart-container h3::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--energy-cyan);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  animation: chartPulse 2s ease-in-out infinite;
+}
+
+@keyframes chartPulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.15); }
 }
 
 .chart-content {

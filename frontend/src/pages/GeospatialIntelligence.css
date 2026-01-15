@@ -1,73 +1,98 @@
+/* ============================================
+   GEOSPATIAL - Surveillance Map Interface
+   ============================================ */
+
 .geospatial-page {
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
 .map-chart-container {
   padding: 0;
   overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  position: relative;
 }
 
 .map-container {
-  border-radius: 10px;
+  border-radius: 0;
   overflow: hidden;
+  position: relative;
 }
 
 .map-legend {
   display: flex;
-  gap: 20px;
-  padding: 15px 20px;
-  background-color: var(--bg-secondary);
+  gap: 24px;
+  padding: 16px 20px;
+  background: var(--voltage-tertiary);
+  border-top: 1px solid var(--border-subtle);
 }
 
 .legend-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.85rem;
+  gap: 10px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
 }
 
 .legend-dot {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
 }
 
 .legend-dot.critical {
-  background-color: #FF4B4B;
+  background: #ff2d55;
+  box-shadow: 0 0 6px rgba(255, 45, 85, 0.4);
 }
 
 .legend-dot.normal {
-  background-color: #00ADB5;
+  background: #00f5d4;
 }
 
 .map-popup {
-  min-width: 180px;
+  min-width: 200px;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 .map-popup h4 {
-  margin: 0 0 10px 0;
-  color: #1A1A2E;
+  margin: 0 0 12px 0;
+  color: #0a0f1a;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .map-popup p {
-  margin: 5px 0;
+  margin: 6px 0;
   font-size: 0.85rem;
   color: #4A5568;
+  display: flex;
+  justify-content: space-between;
 }
 
 .map-popup .critical {
-  color: #E53E3E;
-  font-weight: 600;
+  color: #ff2d55;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .map-popup .normal {
-  color: #38A169;
+  color: #00a896;
   font-weight: 600;
 }
 
 .risk-info {
-  padding: 10px;
+  padding: 14px;
   text-align: center;
-  color: var(--text-secondary);
-  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: var(--voltage-tertiary);
+  border-top: 1px solid var(--border-subtle);
 }

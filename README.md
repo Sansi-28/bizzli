@@ -198,14 +198,15 @@ curl -X GET "http://localhost:8000/api/v1/consumer/123"
 
 ## 📈 Model Performance
 
-| Model | Precision | Recall | F1-Score | Training Time |
-|-------|-----------|--------|----------|---------------|
-| Isolation Forest | 0.82 | 0.78 | 0.80 | ~10 sec |
-| Autoencoder | 0.85 | 0.81 | 0.83 | ~5 min |
-| LSTM | 0.87 | 0.84 | 0.85 | ~15 min |
-| **Ensemble** | **0.89** | **0.86** | **0.87** | N/A |
+| Model | Precision | Recall | F1-Score | ROC-AUC |
+|-------|-----------|--------|----------|---------|
+| Isolation Forest | 0.82 | 0.55 | 0.66 | ~0.85 |
+| Statistical Detector | 0.78 | 0.52 | 0.62 | ~0.80 |
+| **Ensemble** | **0.875** | **0.559** | **0.682** | **0.926** |
 
-*Tested on synthetic dataset with 5% anomaly rate*
+*Tested on synthetic dataset with 5% anomaly rate. Lower recall is due to class imbalance and conservative thresholds prioritizing precision.*
+
+**Note**: The model prioritizes high precision (fewer false alarms) over recall. To catch more anomalies, the detection threshold can be lowered at the cost of more false positives.
 
 ## 🎨 Dashboard Features
 

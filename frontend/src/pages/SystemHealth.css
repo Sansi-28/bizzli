@@ -1,44 +1,68 @@
+/* ============================================
+   SYSTEM HEALTH - AI Diagnostics Terminal
+   ============================================ */
+
 .system-health {
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
 .warning-message {
-  background-color: rgba(214, 158, 46, 0.1);
-  border: 1px solid #D69E2E;
-  padding: 20px;
-  border-radius: 10px;
+  background: rgba(249, 168, 37, 0.08);
+  border: 1px solid rgba(249, 168, 37, 0.3);
+  padding: 24px;
+  border-radius: 4px;
   text-align: center;
-  color: #D69E2E;
+  color: #f9a825;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.warning-message::before {
+  content: '⚠ SYSTEM ALERT';
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  opacity: 0.7;
 }
 
 .confusion-matrix {
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 30px 20px;
 }
 
 .matrix-grid {
   display: grid;
   grid-template-columns: auto 1fr 1fr;
-  gap: 8px;
-  max-width: 400px;
+  gap: 10px;
+  max-width: 450px;
 }
 
 .matrix-header {
   text-align: center;
+  font-family: 'Rajdhani', sans-serif;
   font-weight: 600;
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  padding: 10px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .matrix-label {
   display: flex;
   align-items: center;
+  font-family: 'Rajdhani', sans-serif;
   font-weight: 600;
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  padding-right: 15px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding-right: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .matrix-cell {
@@ -46,36 +70,62 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 25px;
-  border-radius: 8px;
-  min-width: 100px;
+  padding: 28px;
+  border-radius: 4px;
+  min-width: 110px;
+  position: relative;
+  border: 1px solid var(--border-subtle);
 }
 
 .matrix-cell .cell-value {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.7rem;
+  font-weight: 400;
 }
 
 .matrix-cell .cell-label {
-  font-size: 0.75rem;
-  color: var(--text-secondary);
-  margin-top: 5px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .matrix-cell.tn {
-  background-color: rgba(56, 161, 105, 0.2);
+  background: rgba(0, 245, 212, 0.08);
+  border-color: rgba(0, 245, 212, 0.2);
+}
+
+.matrix-cell.tn .cell-value {
+  color: #00f5d4;
 }
 
 .matrix-cell.tp {
-  background-color: rgba(49, 130, 206, 0.2);
+  background: rgba(0, 187, 249, 0.08);
+  border-color: rgba(0, 187, 249, 0.2);
+}
+
+.matrix-cell.tp .cell-value {
+  color: #00bbf9;
 }
 
 .matrix-cell.fp {
-  background-color: rgba(229, 62, 62, 0.15);
+  background: rgba(255, 45, 85, 0.08);
+  border-color: rgba(255, 45, 85, 0.2);
+}
+
+.matrix-cell.fp .cell-value {
+  color: #ff2d55;
 }
 
 .matrix-cell.fn {
-  background-color: rgba(214, 158, 46, 0.2);
+  background: rgba(249, 168, 37, 0.08);
+  border-color: rgba(249, 168, 37, 0.2);
+}
+
+.matrix-cell.fn .cell-value {
+  color: #f9a825;
 }
 
 .empty-state-small {
@@ -83,19 +133,56 @@
   justify-content: center;
   align-items: center;
   height: 200px;
-  color: var(--text-secondary);
+  color: var(--text-muted);
+  font-family: 'Rajdhani', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px dashed var(--border-subtle);
+  border-radius: 4px;
 }
 
 .model-info {
-  margin-top: 30px;
-  padding: 20px;
-  background-color: var(--bg-secondary);
-  border-radius: 10px;
-  text-align: center;
+  margin-top: 35px;
+  padding: 24px 30px;
+  background: var(--voltage-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.model-info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gradient-electric);
+}
+
+.model-info::after {
+  content: 'MODEL METADATA';
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.55rem;
+  color: var(--text-dim);
+  letter-spacing: 2px;
 }
 
 .model-info p {
-  margin: 5px 0;
+  margin: 8px 0;
+  font-family: 'Rajdhani', sans-serif;
   font-size: 0.9rem;
-  color: var(--text-secondary);
+  color: var(--text-muted);
+  display: flex;
+  gap: 10px;
+}
+
+.model-info p strong {
+  color: var(--text-bright);
+  font-weight: 600;
+  min-width: 180px;
 }

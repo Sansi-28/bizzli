@@ -1,24 +1,83 @@
+/* ============================================
+   COMMAND CENTER - Control Room Aesthetic
+   ============================================ */
+
 .command-center {
-  padding-bottom: 30px;
+  padding-bottom: 40px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.header-content h1 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin-bottom: 4px;
+}
+
+.header-content p {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
 }
 
 .section-title {
-  margin: 25px 0 15px 0;
-  font-size: 1.1rem;
+  font-family: 'Rajdhani', sans-serif;
+  margin: 30px 0 18px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--border-subtle), transparent);
 }
 
 .empty-state {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 200px;
-  color: var(--text-secondary);
+  color: var(--text-muted);
+  background: rgba(0, 245, 212, 0.02);
+  border: 1px dashed var(--border-subtle);
+  border-radius: 4px;
+}
+
+.empty-state p {
+  font-family: 'Rajdhani', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .success-message {
-  padding: 20px;
+  padding: 24px;
   text-align: center;
-  color: var(--success);
-  background-color: rgba(56, 161, 105, 0.1);
-  border-radius: 8px;
+  color: var(--energy-cyan);
+  background: rgba(0, 245, 212, 0.05);
+  border: 1px solid rgba(0, 245, 212, 0.2);
+  border-radius: 4px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
 }

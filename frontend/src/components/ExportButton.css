@@ -1,0 +1,48 @@
+/* ============================================
+   EXPORT BUTTON - Data Export Functionality
+   ============================================ */
+
+.export-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: var(--voltage-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-bright);
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.export-button:hover:not(:disabled) {
+  border-color: var(--energy-cyan);
+  color: var(--energy-cyan);
+}
+
+.export-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.export-button.exported {
+  border-color: var(--energy-cyan);
+  background: rgba(0, 245, 212, 0.1);
+  color: var(--energy-cyan);
+}
+
+.spinner-small {
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--voltage-highlight);
+  border-top-color: var(--energy-cyan);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

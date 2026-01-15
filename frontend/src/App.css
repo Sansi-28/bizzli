@@ -1,5 +1,86 @@
-/* App-specific styles */
+/* ═══════════════════════════════════════════════════════════════
+   ELECTRIC GRID CONTROL - MAIN APPLICATION SHELL
+   Manipur PowerGuard Theme
+═══════════════════════════════════════════════════════════════ */
+
 .app-container {
   display: flex;
   min-height: 100vh;
+  position: relative;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  margin-left: 260px;
+  min-height: 100vh;
+  position: relative;
+  background: var(--voltage-primary);
+  overflow-x: hidden;
+}
+
+/* Page Content Wrapper */
+.page-content {
+  padding: 24px;
+  padding-top: 32px;
+}
+
+/* Power Status Indicator - Top Bar Accent */
+.main-content::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 260px;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--energy-cyan) 0%,
+    transparent 20%,
+    transparent 80%,
+    var(--energy-cyan) 100%
+  );
+  z-index: 100;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+  
+  .main-content::before {
+    left: 0;
+  }
+}
+
+/* Scroll styling */
+.main-content::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: var(--voltage-secondary);
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: var(--voltage-highlight);
+  border-radius: 2px;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+  background: var(--energy-cyan);
+}
+
+/* Global Page Transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
 }

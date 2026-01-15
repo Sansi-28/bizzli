@@ -1,8 +1,12 @@
+/* ============================================
+   SIDEBAR - Electric Control Panel Style
+   ============================================ */
+
 .sidebar {
-  width: 260px;
-  background-color: var(--bg-sidebar);
-  border-right: 1px solid var(--border);
-  padding: 20px;
+  width: 280px;
+  background: linear-gradient(180deg, #111827 0%, #0a0f1a 100%);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0;
   position: fixed;
   height: 100vh;
   overflow-y: auto;
@@ -10,86 +14,188 @@
   flex-direction: column;
 }
 
+[data-theme="light"] .sidebar {
+  background: linear-gradient(180deg, #f1f5f9 0%, #f8fafc 100%);
+}
+
+.sidebar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, #00f5d4 0%, transparent 30%, transparent 70%, #9d4edd 100%);
+}
+
 .sidebar-header {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--border);
+  gap: 14px;
+  padding: 24px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+}
+
+.sidebar-header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 20px;
+  right: 20px;
+  height: 1px;
+  background: linear-gradient(90deg, #00f5d4, transparent);
 }
 
 .sidebar-header .icon {
-  font-size: 2rem;
+  font-size: 2.2rem;
+  filter: drop-shadow(0 0 10px rgba(0, 245, 212, 0.5));
 }
 
 .sidebar-header h1 {
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
   margin: 0;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #00f5d4 0%, #00bbf9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .sidebar-header .subtitle {
-  font-size: 0.75rem;
-  color: var(--text-secondary);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.7rem;
+  color: #8b949e;
   margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .nav-section {
-  margin-bottom: 25px;
+  padding: 20px;
+  margin-bottom: 0;
 }
 
 .nav-section h3 {
-  font-size: 0.75rem;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.7rem;
   text-transform: uppercase;
-  color: var(--text-secondary);
-  margin-bottom: 12px;
-  letter-spacing: 0.5px;
+  color: #8b949e;
+  margin-bottom: 14px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-section h3::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #00f5d4;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
 .nav-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 15px;
-  border-radius: 8px;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: all 0.2s ease;
-  color: var(--text-primary);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #f0f6fc;
   text-decoration: none;
-  margin-bottom: 5px;
-  font-size: 0.9rem;
+  margin-bottom: 6px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+  border: 1px solid transparent;
+}
+
+[data-theme="light"] .nav-item {
+  color: #0f172a;
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 60%;
+  background: #00f5d4;
+  transition: width 0.2s ease;
 }
 
 .nav-item:hover {
-  background-color: var(--bg-secondary);
+  background: rgba(0, 245, 212, 0.05);
+  border-color: rgba(0, 245, 212, 0.1);
+}
+
+.nav-item:hover::before {
+  width: 3px;
 }
 
 .nav-item.active {
-  background-color: var(--accent);
-  color: white;
+  background: rgba(0, 245, 212, 0.1);
+  border-color: rgba(0, 245, 212, 0.3);
+  color: #00f5d4;
+}
+
+.nav-item.active::before {
+  width: 3px;
+  box-shadow: 0 0 10px rgba(0, 245, 212, 0.5);
 }
 
 .nav-item .icon {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   display: flex;
   align-items: center;
+  opacity: 0.8;
+}
+
+.nav-item.active .icon {
+  opacity: 1;
+  filter: drop-shadow(0 0 6px rgba(0, 245, 212, 0.5));
 }
 
 .sidebar-footer {
   margin-top: auto;
-  padding-top: 20px;
-  border-top: 1px solid var(--border);
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
   text-align: center;
+  position: relative;
+}
+
+.sidebar-footer::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 20px;
+  right: 20px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 245, 212, 0.3), transparent);
 }
 
 .sidebar-footer p {
-  font-size: 0.8rem;
-  color: var(--text-secondary);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.75rem;
+  color: #8b949e;
   margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
 .sidebar-footer .version {
-  font-size: 0.7rem;
-  margin-top: 5px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.65rem;
+  margin-top: 6px;
+  color: #484f58;
 }

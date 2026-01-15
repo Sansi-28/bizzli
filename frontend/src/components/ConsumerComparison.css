@@ -1,0 +1,278 @@
+/* ============================================
+   CONSUMER COMPARISON - Multi-Consumer Analysis
+   ============================================ */
+
+.consumer-comparison {
+  background: var(--voltage-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.comparison-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--voltage-tertiary);
+}
+
+.comparison-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin: 0;
+}
+
+.comparison-header .hint {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+.comparison-body {
+  padding: 20px;
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--voltage-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  padding: 8px 14px;
+  margin-bottom: 16px;
+}
+
+.search-box svg {
+  color: var(--text-dim);
+}
+
+.search-box input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-bright);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.search-box input::placeholder {
+  color: var(--text-dim);
+}
+
+.search-box button {
+  padding: 6px 14px;
+  background: var(--voltage-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.search-box button:hover {
+  border-color: var(--energy-cyan);
+  color: var(--energy-cyan);
+}
+
+/* Search Dropdown */
+.search-dropdown {
+  background: var(--voltage-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  margin-bottom: 16px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.search-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.search-option:last-child {
+  border-bottom: none;
+}
+
+.search-option:hover {
+  background: rgba(0, 245, 212, 0.05);
+}
+
+.search-option .name {
+  flex: 1;
+  font-family: 'Rajdhani', sans-serif;
+  color: var(--text-bright);
+}
+
+.search-option .id {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.search-option .district {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+.search-option .add-icon {
+  color: var(--energy-cyan);
+}
+
+/* Selected Consumers */
+.selected-consumers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.selected-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: var(--voltage-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  border-left-width: 3px;
+}
+
+.selected-tag .color-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.selected-tag .name {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-bright);
+}
+
+.selected-tag button {
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  transition: color 0.2s ease;
+}
+
+.selected-tag button:hover {
+  color: var(--energy-crimson);
+}
+
+/* Compare Button */
+.compare-btn {
+  padding: 10px 24px;
+  background: var(--energy-cyan);
+  border: none;
+  color: var(--voltage-primary);
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.compare-btn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.compare-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Comparison Results */
+.comparison-results {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.stats-comparison {
+  margin-bottom: 24px;
+  overflow-x: auto;
+}
+
+.stats-comparison table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stats-comparison th,
+.stats-comparison td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.stats-comparison th {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stats-comparison td {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.9rem;
+  color: var(--text-bright);
+}
+
+.stats-comparison td:first-child {
+  font-family: 'Rajdhani', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stats-comparison td .color-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.stats-comparison td.has-anomaly {
+  color: var(--energy-crimson);
+}
+
+/* Comparison Chart */
+.comparison-chart {
+  background: var(--voltage-tertiary);
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.comparison-chart h4 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}

@@ -16,13 +16,19 @@ import KPICard from '../components/KPICard';
 import ChartContainer from '../components/ChartContainer';
 import DataTable from '../components/DataTable';
 import Loading from '../components/Loading';
+import StatsSummary from '../components/StatsSummary';
+import AlertPanel from '../components/AlertPanel';
+import RevenueImpact from '../components/RevenueImpact';
+import AnomalyClassification from '../components/AnomalyClassification';
+import ExportButton from '../components/ExportButton';
 import { useTheme } from '../context/ThemeContext';
 import {
   getDistricts,
   getKPIs,
   getDailyConsumption,
   getAnomalyDistribution,
-  getRecentAnomalies
+  getRecentAnomalies,
+  exportAnomalies
 } from '../services/api';
 import './CommandCenter.css';
 
@@ -102,9 +108,16 @@ const CommandCenter = () => {
   return (
     <div className="command-center">
       <div className="page-header">
-        <h1>⚡ Manipur State Power | Intelligent GridWatch</h1>
-        <p>Automated Theft Detection & Loss Prevention System</p>
+        <div className="header-content">
+          <h1>⚡ Manipur State Power | Intelligent GridWatch</h1>
+          <p>Automated Theft Detection & Loss Prevention System</p>
+        </div>
+        <div className="header-actions">
+          <ExportButton district={selectedDistrict} label="Export Report" />
+        </div>
       </div>
+
+      <StatsSummary />
 
       <div className="filter-bar">
         <label>Select District:</label>
@@ -121,7 +134,7 @@ const CommandCenter = () => {
         </select>
       </div>
 
-      <h3 className="section-title">📊 Live Grid Status</h3>
+      <h3 className="section-title">📊 Key Performance Indicators</h3>
 
       <div className="kpi-grid">
         <KPICard
@@ -220,15 +233,14 @@ const CommandCenter = () => {
         </ChartContainer>
       </div>
 
-      <ChartContainer title="🔔 Recent High-Priority Alerts" icon="">
-        {recentAnomalies.length > 0 ? (
-          <DataTable columns={alertColumns} data={recentAnomalies} />
-        ) : (
-          <div className="success-message">
-            <p>✅ No recent alerts.</p>
-          </div>
-        )}
-      </ChartContainer>
+      <h3 className="section-title">💰 Revenue Impact Analysis</h3>
+      <RevenueImpact district={selectedDistrict} />
+
+      <h3 className="section-title">🔔 Alert Management</h3>
+      <AlertPanel district={selectedDistrict} />
+
+      <h3 className="section-title">🏷️ Anomaly Classification</h3>
+      <AnomalyClassification district={selectedDistrict} />
     </div>
   );
 };

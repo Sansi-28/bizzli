@@ -1,36 +1,60 @@
+/* ============================================
+   DATA TABLE - Grid Intelligence Display
+   ============================================ */
+
 .table-wrapper {
   overflow-x: auto;
 }
 
 .data-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
 .data-table th,
 .data-table td {
-  padding: 12px 15px;
+  padding: 14px 18px;
   text-align: left;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .data-table th {
+  font-family: 'Rajdhani', sans-serif;
   font-weight: 600;
-  color: var(--text-secondary);
-  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  background-color: var(--bg-primary);
+  letter-spacing: 2px;
+  background: var(--voltage-tertiary);
   position: sticky;
   top: 0;
 }
 
+.data-table th:first-child {
+  border-radius: 4px 0 0 0;
+}
+
+.data-table th:last-child {
+  border-radius: 0 4px 0 0;
+}
+
+.data-table td {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
 .data-table tbody tr {
-  transition: background-color 0.15s ease;
+  transition: all 0.2s ease;
 }
 
 .data-table tbody tr:hover {
-  background-color: var(--bg-primary);
+  background: rgba(0, 245, 212, 0.03);
+}
+
+.data-table tbody tr:hover td:first-child {
+  box-shadow: inset 3px 0 0 var(--energy-cyan);
 }
 
 .data-table tbody tr.clickable {
@@ -38,7 +62,10 @@
 }
 
 .empty-table {
-  padding: 40px;
+  padding: 50px;
   text-align: center;
-  color: var(--text-secondary);
+  color: var(--text-muted);
+  font-family: 'Rajdhani', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }

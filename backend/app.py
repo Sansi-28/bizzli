@@ -354,6 +354,360 @@ def get_feature_importance():
 
 
 # ==============================================================================
+# NEW FEATURE ENDPOINTS
+# ==============================================================================
+
+@app.route('/api/alerts', methods=['GET'])
+def get_alerts():
+    """Get alerts with severity levels and status"""
+    district = request.args.get('district', None)
+    severity = request.args.get('severity', None)
+    status = request.args.get('status', 'all')  # all, acknowledged, pending
+    limit = request.args.get('limit', 50, type=int)
+    
+    df_cons = load_consumption_data()
+    df_meta = load_metadata()
+    
+    if df_cons is None or df_meta is None:
+        return jsonify({'error': 'Data not found'}), 404
+    
+    # Apply district filter
+    if district and district != 'All Districts':
+        filtered_meta = df_meta[df_meta['district'] == district]
+        consumer_ids = filtered_meta['consumer_id'].unique()
+        filtered_cons = df_cons[df_cons['consumer_id'].isin(consumer_ids)]
+    else:
+        filtered_meta = df_meta
+        filtered_cons = df_cons
+    
+    # Get anomalies
+    anomalies = filtered_cons[filtered_cons['anomaly_label'] != 'normal'].copy()
+    anomalies = anomalies.merge(filtered_meta, on='consumer_id', how='left')
+    
+    # Assign severity based on anomaly type
+    severity_map = {
+        'sudden_spike': 'critical',
+        'unusual_pattern': 'high', 
+        'meter_tampering': 'critical',
+        'theft_suspected': 'critical',
+        'irregular_consumption': 'medium',
+        'bypass_detected': 'critical'
+    }
+    anomalies['severity'] = anomalies['anomaly_label'].map(severity_map).fillna('low')
+    
+    # Calculate loss estimate per anomaly
+    anomalies['estimated_loss'] = anomalies['consumption_kwh'] * 7 * 0.3  # 30% assumed theft
+    
+    # Filter by severity if specified
+    if severity and severity != 'all':
+        anomalies = anomalies[anomalies['severity'] == severity]
+    
+    anomalies = anomalies.sort_values('timestamp', ascending=False).head(limit)
+    anomalies['timestamp'] = anomalies['timestamp'].dt.strftime('%Y-%m-%d %H:%M')
+    anomalies['acknowledged'] = False  # Default status
+    
+    columns = ['timestamp', 'consumer_id', 'name', 'district', 'anomaly_label', 
+               'consumption_kwh', 'severity', 'estimated_loss', 'acknowledged']
+    result = anomalies[columns].to_dict(orient='records')
+    
+    return jsonify({
+        'data': result,
+        'total': len(result),
+        'severity_counts': {
+            'critical': len([r for r in result if r['severity'] == 'critical']),
+            'high': len([r for r in result if r['severity'] == 'high']),
+            'medium': len([r for r in result if r['severity'] == 'medium']),
+            'low': len([r for r in result if r['severity'] == 'low'])
+        }
+    })
+
+
+@app.route('/api/revenue/impact', methods=['GET'])
+def get_revenue_impact():
+    """Get detailed revenue impact analysis"""
+    district = request.args.get('district', None)
+    
+    df_cons = load_consumption_data()
+    df_meta = load_metadata()
+    
+    if df_cons is None or df_meta is None:
+        return jsonify({'error': 'Data not found'}), 404
+    
+    # Apply district filter
+    if district and district != 'All Districts':
+        filtered_meta = df_meta[df_meta['district'] == district]
+        consumer_ids = filtered_meta['consumer_id'].unique()
+        filtered_cons = df_cons[df_cons['consumer_id'].isin(consumer_ids)]
+    else:
+        filtered_cons = df_cons
+    
+    # Calculate revenue metrics
+    anomalous = filtered_cons[filtered_cons['anomaly_label'] != 'normal']
+    normal = filtered_cons[filtered_cons['anomaly_label'] == 'normal']
+    
+    total_consumption = filtered_cons['consumption_kwh'].sum()
+    anomalous_consumption = anomalous['consumption_kwh'].sum()
+    
+    # Revenue calculations (₹7/unit)
+    rate_per_unit = 7
+    total_expected_revenue = total_consumption * rate_per_unit
+    revenue_at_risk = anomalous_consumption * rate_per_unit * 0.3  # 30% assumed loss
+    
+    # Monthly breakdown
+    anomalous_monthly = anomalous.set_index('timestamp').resample('M')['consumption_kwh'].sum()
+    monthly_loss = (anomalous_monthly * rate_per_unit * 0.3).reset_index()
+    monthly_loss['timestamp'] = monthly_loss['timestamp'].dt.strftime('%Y-%m')
+    monthly_loss.columns = ['month', 'estimated_loss']
+    
+    # By anomaly type
+    by_type = anomalous.groupby('anomaly_label')['consumption_kwh'].sum() * rate_per_unit * 0.3
+    by_type_data = [{'type': k, 'loss': round(v, 2)} for k, v in by_type.items()]
+    
+    # By district
+    if district == 'All Districts' or not district:
+        anomalous_with_district = anomalous.merge(df_meta[['consumer_id', 'district']], on='consumer_id')
+        by_district = anomalous_with_district.groupby('district')['consumption_kwh'].sum() * rate_per_unit * 0.3
+        by_district_data = [{'district': k, 'loss': round(v, 2)} for k, v in by_district.items()]
+    else:
+        by_district_data = []
+    
+    return jsonify({
+        'summary': {
+            'total_consumption_kwh': round(total_consumption, 2),
+            'anomalous_consumption_kwh': round(anomalous_consumption, 2),
+            'total_expected_revenue': round(total_expected_revenue, 2),
+            'revenue_at_risk': round(revenue_at_risk, 2),
+            'recovery_potential': round(revenue_at_risk * 0.8, 2),  # 80% recoverable
+            'rate_per_unit': rate_per_unit
+        },
+        'monthly_trend': monthly_loss.to_dict(orient='records'),
+        'by_type': by_type_data,
+        'by_district': by_district_data
+    })
+
+
+@app.route('/api/anomalies/classification', methods=['GET'])
+def get_anomaly_classification():
+    """Get detailed anomaly classification breakdown"""
+    district = request.args.get('district', None)
+    
+    df_cons = load_consumption_data()
+    df_meta = load_metadata()
+    
+    if df_cons is None or df_meta is None:
+        return jsonify({'error': 'Data not found'}), 404
+    
+    # Apply district filter
+    if district and district != 'All Districts':
+        filtered_meta = df_meta[df_meta['district'] == district]
+        consumer_ids = filtered_meta['consumer_id'].unique()
+        filtered_cons = df_cons[df_cons['consumer_id'].isin(consumer_ids)]
+    else:
+        filtered_cons = df_cons
+    
+    anomalies = filtered_cons[filtered_cons['anomaly_label'] != 'normal']
+    
+    # Classification definitions
+    classifications = {
+        'sudden_spike': {
+            'category': 'Usage Anomaly',
+            'description': 'Sudden unusual increase in consumption',
+            'action': 'Schedule meter verification',
+            'priority': 2
+        },
+        'unusual_pattern': {
+            'category': 'Pattern Anomaly', 
+            'description': 'Consumption pattern deviates from normal behavior',
+            'action': 'Monitor for 7 days',
+            'priority': 3
+        },
+        'meter_tampering': {
+            'category': 'Equipment Issue',
+            'description': 'Possible meter manipulation detected',
+            'action': 'Immediate physical inspection required',
+            'priority': 1
+        },
+        'theft_suspected': {
+            'category': 'Theft',
+            'description': 'High probability of electricity theft',
+            'action': 'Dispatch investigation team',
+            'priority': 1
+        },
+        'irregular_consumption': {
+            'category': 'Usage Anomaly',
+            'description': 'Irregular consumption patterns detected',
+            'action': 'Review consumption history',
+            'priority': 3
+        },
+        'bypass_detected': {
+            'category': 'Theft',
+            'description': 'Meter bypass suspected',
+            'action': 'Emergency inspection required',
+            'priority': 1
+        }
+    }
+    
+    # Build classification summary
+    type_counts = anomalies['anomaly_label'].value_counts()
+    classification_data = []
+    
+    for anom_type, count in type_counts.items():
+        info = classifications.get(anom_type, {
+            'category': 'Unknown',
+            'description': 'Unclassified anomaly',
+            'action': 'Manual review required',
+            'priority': 4
+        })
+        affected_consumers = anomalies[anomalies['anomaly_label'] == anom_type]['consumer_id'].nunique()
+        
+        classification_data.append({
+            'type': anom_type,
+            'count': int(count),
+            'affected_consumers': affected_consumers,
+            **info
+        })
+    
+    # Sort by priority
+    classification_data.sort(key=lambda x: x['priority'])
+    
+    return jsonify({
+        'data': classification_data,
+        'total_anomalies': len(anomalies),
+        'total_affected_consumers': anomalies['consumer_id'].nunique()
+    })
+
+
+@app.route('/api/consumers/compare', methods=['GET'])
+def compare_consumers():
+    """Compare multiple consumers' consumption patterns"""
+    consumer_ids = request.args.get('ids', '').split(',')
+    consumer_ids = [c.strip() for c in consumer_ids if c.strip()]
+    
+    if not consumer_ids:
+        return jsonify({'error': 'No consumer IDs provided'}), 400
+    
+    df_cons = load_consumption_data()
+    df_meta = load_metadata()
+    
+    if df_cons is None or df_meta is None:
+        return jsonify({'error': 'Data not found'}), 404
+    
+    results = []
+    for cid in consumer_ids[:5]:  # Max 5 consumers
+        consumer_meta = df_meta[df_meta['consumer_id'] == cid]
+        if consumer_meta.empty:
+            continue
+            
+        cons_data = df_cons[df_cons['consumer_id'] == cid]
+        
+        # Daily aggregation
+        daily = cons_data.set_index('timestamp').resample('D')['consumption_kwh'].sum().reset_index()
+        daily['timestamp'] = daily['timestamp'].dt.strftime('%Y-%m-%d')
+        
+        results.append({
+            'consumer_id': cid,
+            'name': consumer_meta.iloc[0]['name'],
+            'district': consumer_meta.iloc[0]['district'],
+            'avg_consumption': round(cons_data['consumption_kwh'].mean(), 2),
+            'max_consumption': round(cons_data['consumption_kwh'].max(), 2),
+            'anomaly_count': int((cons_data['anomaly_label'] != 'normal').sum()),
+            'timeline': daily.to_dict(orient='records')
+        })
+    
+    return jsonify({'data': results})
+
+
+@app.route('/api/export/anomalies', methods=['GET'])
+def export_anomalies():
+    """Export anomaly data as CSV-ready JSON"""
+    district = request.args.get('district', None)
+    
+    df_cons = load_consumption_data()
+    df_meta = load_metadata()
+    
+    if df_cons is None or df_meta is None:
+        return jsonify({'error': 'Data not found'}), 404
+    
+    # Apply district filter
+    if district and district != 'All Districts':
+        filtered_meta = df_meta[df_meta['district'] == district]
+        consumer_ids = filtered_meta['consumer_id'].unique()
+        filtered_cons = df_cons[df_cons['consumer_id'].isin(consumer_ids)]
+    else:
+        filtered_meta = df_meta
+        filtered_cons = df_cons
+    
+    anomalies = filtered_cons[filtered_cons['anomaly_label'] != 'normal'].copy()
+    anomalies = anomalies.merge(filtered_meta, on='consumer_id', how='left')
+    anomalies['timestamp'] = anomalies['timestamp'].dt.strftime('%Y-%m-%d %H:%M')
+    anomalies['estimated_loss'] = anomalies['consumption_kwh'] * 7 * 0.3
+    
+    columns = ['timestamp', 'consumer_id', 'name', 'district', 'consumer_type',
+               'anomaly_label', 'consumption_kwh', 'estimated_loss', 'lat', 'lon']
+    
+    result = anomalies[columns].to_dict(orient='records')
+    
+    return jsonify({
+        'data': result,
+        'total_records': len(result),
+        'export_timestamp': pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S')
+    })
+
+
+@app.route('/api/stats/summary', methods=['GET'])
+def get_summary_stats():
+    """Get quick summary statistics for dashboard widgets"""
+    df_cons = load_consumption_data()
+    df_meta = load_metadata()
+    
+    if df_cons is None or df_meta is None:
+        return jsonify({'error': 'Data not found'}), 404
+    
+    total_consumers = len(df_meta)
+    total_readings = len(df_cons)
+    
+    anomalies = df_cons[df_cons['anomaly_label'] != 'normal']
+    total_anomalies = len(anomalies)
+    affected_consumers = anomalies['consumer_id'].nunique()
+    
+    # Time range
+    date_range = {
+        'start': df_cons['timestamp'].min().strftime('%Y-%m-%d'),
+        'end': df_cons['timestamp'].max().strftime('%Y-%m-%d')
+    }
+    
+    # Consumption stats
+    total_consumption = df_cons['consumption_kwh'].sum()
+    avg_daily_consumption = df_cons.set_index('timestamp').resample('D')['consumption_kwh'].sum().mean()
+    
+    # District breakdown
+    district_counts = df_meta['district'].value_counts().to_dict()
+    
+    # Consumer type breakdown
+    type_counts = df_meta['consumer_type'].value_counts().to_dict()
+    
+    return jsonify({
+        'consumers': {
+            'total': int(total_consumers),
+            'affected': int(affected_consumers),
+            'healthy': int(total_consumers - affected_consumers)
+        },
+        'readings': {
+            'total': int(total_readings),
+            'anomalies': int(total_anomalies),
+            'normal': int(total_readings - total_anomalies)
+        },
+        'consumption': {
+            'total_kwh': round(total_consumption, 2),
+            'avg_daily_kwh': round(avg_daily_consumption, 2)
+        },
+        'date_range': date_range,
+        'districts': district_counts,
+        'consumer_types': type_counts
+    })
+
+
+# ==============================================================================
 # Main
 # ==============================================================================
 

@@ -1,0 +1,240 @@
+/* ============================================
+   ANOMALY CLASSIFICATION - Category Analysis
+   ============================================ */
+
+.anomaly-classification {
+  background: var(--voltage-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.classification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--voltage-tertiary);
+}
+
+.classification-header h3 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin: 0;
+}
+
+.summary-stats {
+  display: flex;
+  gap: 20px;
+}
+
+.summary-stats .stat {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.summary-stats .stat strong {
+  color: var(--energy-cyan);
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* Classification List */
+.classification-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.classification-item {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.classification-item:last-child {
+  border-bottom: none;
+}
+
+.item-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 20px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.item-header:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.item-icon {
+  flex-shrink: 0;
+}
+
+.cat-icon {
+  font-size: 1.3rem;
+  color: var(--text-muted);
+}
+
+.cat-icon.theft {
+  color: var(--energy-crimson);
+}
+
+.cat-icon.equipment {
+  color: var(--energy-amber);
+}
+
+.cat-icon.usage {
+  color: var(--energy-violet);
+}
+
+.item-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.item-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2px;
+}
+
+.type-name {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  color: var(--text-bright);
+  text-transform: capitalize;
+}
+
+.priority-badge {
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.priority-badge.urgent {
+  background: rgba(255, 45, 85, 0.2);
+  color: var(--energy-crimson);
+}
+
+.priority-badge.high {
+  background: rgba(249, 168, 37, 0.2);
+  color: var(--energy-amber);
+}
+
+.priority-badge.medium {
+  background: rgba(157, 78, 221, 0.2);
+  color: var(--energy-violet);
+}
+
+.priority-badge.low {
+  background: rgba(139, 148, 158, 0.2);
+  color: var(--text-muted);
+}
+
+.item-category {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.item-counts {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.count-value {
+  display: block;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.1rem;
+  color: var(--text-bright);
+}
+
+.count-label {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+.item-expand {
+  flex-shrink: 0;
+  color: var(--text-dim);
+  transition: transform 0.2s ease;
+}
+
+.item-expand .rotated {
+  transform: rotate(90deg);
+}
+
+/* Expanded Details */
+.item-details {
+  padding: 0 20px 16px 54px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.detail-row {
+  display: flex;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.detail-row:last-of-type {
+  border-bottom: none;
+}
+
+.detail-label {
+  width: 140px;
+  flex-shrink: 0;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-value {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.detail-value.action {
+  color: var(--energy-cyan);
+  font-weight: 500;
+}
+
+.view-cases-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid var(--energy-cyan);
+  color: var(--energy-cyan);
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.view-cases-btn:hover {
+  background: rgba(0, 245, 212, 0.1);
+}
+
+/* Loading/Error States */
+.classification-loading,
+.classification-error {
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-family: 'Rajdhani', sans-serif;
+}
