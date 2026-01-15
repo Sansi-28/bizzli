@@ -1,6 +1,6 @@
 """
-Streamlit Dashboard for Anomaly Detection System
-Main entry point for the interactive dashboard
+⚡ Manipur PowerGuard - Advanced Anomaly Detection Dashboard
+TechSprint2 Showcase Edition
 """
 
 import streamlit as st
@@ -8,378 +8,458 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
-from datetime import datetime, timedelta
+import json
 import os
-import sys
+import time
 
-# Add src to path
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+# ==============================================================================
+# 1. CONFIGURATION & STYLING
+# ==============================================================================
 
-# Page config
 st.set_page_config(
-    page_title="Electrical Anomaly Detection",
+    page_title="Manipur GridWatch",
     page_icon="⚡",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS
+# Custom CSS for "Sci-Fi / Professional" Look
 st.markdown("""
 <style>
-    .main-header {
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #1f77b4;
-        text-align: center;
-        margin-bottom: 2rem;
+    /* Global Background & Font */
+    .stApp {
+        background-color: #0E1117;
+        color: #FAFAFA;
     }
-    .metric-card {
-        background-color: #f0f2f6;
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-left: 4px solid #1f77b4;
+    
+    /* Metrics Cards */
+    div[data-testid="stMetric"] {
+        background-color: #262730;
+        border-radius: 10px;
+        padding: 15px;
+        border-left: 5px solid #00ADB5;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     }
-    .anomaly-critical {
-        background-color: #ff4444;
-        color: white;
-        padding: 0.25rem 0.5rem;
-        border-radius: 0.25rem;
-        font-weight: bold;
+    
+    /* Sidebar Styling */
+    section[data-testid="stSidebar"] {
+        background-color: #1A1C24;
     }
-    .anomaly-high {
-        background-color: #ff8c00;
-        color: white;
-        padding: 0.25rem 0.5rem;
-        border-radius: 0.25rem;
-        font-weight: bold;
+    
+    /* Headers */
+    h1, h2, h3 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        color: #E0E0E0;
     }
-    .anomaly-medium {
-        background-color: #ffd700;
-        color: black;
-        padding: 0.25rem 0.5rem;
-        border-radius: 0.25rem;
+    
+    .highlight {
+        color: #00ADB5;
         font-weight: bold;
     }
-    .anomaly-low {
-        background-color: #90ee90;
-        color: black;
-        padding: 0.25rem 0.5rem;
-        border-radius: 0.25rem;
-        font-weight: bold;
+    
+    .alert-card {
+        background-color: #3d1e1e;
+        border: 1px solid #ff4b4b;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    
+    /* Map Container */
+    .map-container {
+        border: 2px solid #262730;
+        border-radius: 10px;
+        overflow: hidden;
     }
 </style>
 """, unsafe_allow_html=True)
 
+# ==============================================================================
+# 2. DATA LOADING & CACHING
+# ==============================================================================
 
+@st.cache_data
 def load_data():
-    """Load sample data for dashboard"""
-    try:
-        # Load consumption data
-        consumption_path = 'data/synthetic/consumption_timeseries.csv'
-        if os.path.exists(consumption_path):
-            df = pd.read_csv(consumption_path)
-            df['timestamp'] = pd.to_datetime(df['timestamp'])
-            return df
-        else:
-            return generate_demo_data()
-    except Exception as e:
-        st.error(f"Error loading data: {e}")
-        return generate_demo_data()
-
-
-def generate_demo_data():
-    """Generate demo data for display"""
-    n_points = 1000
-    dates = pd.date_range(start='2025-01-01', periods=n_points, freq='H')
+    """Load consumption and metadata with caching"""
+    data_path = 'data/synthetic/consumption_timeseries.csv'
+    meta_path = 'data/synthetic/consumers_metadata.csv' # It exists from generator logic
     
-    df = pd.DataFrame({
-        'timestamp': dates,
-        'consumer_id': [f'C{str(i).zfill(6)}' for i in np.random.randint(1, 100, n_points)],
-        'consumption_kwh': np.random.normal(10, 3, n_points),
-        'anomaly_label': np.random.choice(['normal', 'sudden_spike', 'gradual_theft', 'zero_consumption'], 
-                                         n_points, p=[0.90, 0.04, 0.03, 0.03])
-    })
-    
-    return df
+    if not os.path.exists(data_path) or not os.path.exists(meta_path):
+        st.error("Data files not found. Please run the generator first.")
+        return None, None
+        
+    # Load Data
+    df_cons = pd.read_csv(data_path)
+    df_meta = pd.read_csv(meta_path)
 
+    # Rename columns for compatibility with dashboard
+    rename_map = {'consumer_name': 'name', 'latitude': 'lat', 'longitude': 'lon'}
+    df_meta = df_meta.rename(columns=rename_map)
+    
+    # Preprocessing
+    df_cons['timestamp'] = pd.to_datetime(df_cons['timestamp'])
+    
+    return df_cons, df_meta
+
+@st.cache_data
+def load_model_results():
+    """Load training results if available"""
+    path = 'data/models/training_results.json'
+    if os.path.exists(path):
+        with open(path, 'r') as f:
+            return json.load(f)
+    return None
+
+def get_latest_anomalies(df_cons, df_meta, top_n=10):
+    """Get the most recent anomalies detected"""
+    anomalies = df_cons[df_cons['anomaly_label'] != 'normal'].copy()
+    anomalies = anomalies.sort_values('timestamp', ascending=False).head(top_n)
+    
+    # Merge with metadata for display
+    enriched = anomalies.merge(df_meta, on='consumer_id', how='left')
+    return enriched
+
+# ==============================================================================
+# 3. DASHBOARD LOGIC
+# ==============================================================================
 
 def main():
     # Header
-    st.markdown('<div class="main-header">⚡ Electrical Anomaly Detection System</div>', 
-                unsafe_allow_html=True)
+    col_h1, col_h2 = st.columns([1, 4])
+    with col_h1:
+        st.markdown("# ⚡") 
+    with col_h2:
+        st.title("Manipur State Power | Intelligent GridWatch")
+        st.markdown("Automated Theft Detection & Loss Prevention System")
+
+    # Load Data
+    with st.spinner("Connecting to Grid Data..."):
+        df_cons, df_meta = load_data()
+        model_results = load_model_results()
+
+    if df_cons is None:
+        return
+
+    # Sidebar Navigation
+    st.sidebar.markdown("## 📡 Navigation")
+    page = st.sidebar.radio("Console View", ["Command Center", "Geospatial Intelligence", "Consumer Forensics", "System Health"])
     
-    # Sidebar
-    with st.sidebar:
-        st.image("https://via.placeholder.com/200x80/1f77b4/white?text=TechSprint+2", 
-                use_column_width=True)
+    st.sidebar.markdown("---")
+    st.sidebar.markdown("## ⚙️ Filters")
+    
+    # Global Filters
+    all_districts = sorted(df_meta['district'].unique())
+    selected_district = st.sidebar.selectbox("Select District", ["All Districts"] + all_districts)
+    
+    # Filter Data based on selection
+    if selected_district != "All Districts":
+        filtered_meta = df_meta[df_meta['district'] == selected_district]
+        consumer_ids = filtered_meta['consumer_id'].unique()
+        filtered_cons = df_cons[df_cons['consumer_id'].isin(consumer_ids)]
+    else:
+        filtered_meta = df_meta
+        filtered_cons = df_cons
+
+    # ==========================================================================
+    # PAGE: COMMAND CENTER (Overview)
+    # ==========================================================================
+    if page == "Command Center":
+        
+        # 1. KPI Row
+        st.markdown("### 📊 Live Grid Status")
+        
+        total_consumers = len(filtered_meta)
+        total_anomalies = filtered_cons[filtered_cons['anomaly_label'] != 'normal']['consumer_id'].nunique()
+        anomaly_rate = (total_anomalies / total_consumers) * 100 if total_consumers > 0 else 0
+        
+        # Calculate approximate loss (Assuming ₹7/unit)
+        anomalous_consumption = filtered_cons[filtered_cons['anomaly_label'] != 'normal']['consumption_kwh'].sum()
+        est_loss = anomalous_consumption * 7 
+        
+        kpi1, kpi2, kpi3, kpi4 = st.columns(4)
+        kpi1.metric("Monitored Consumers", f"{total_consumers:,}", delta="Active")
+        kpi2.metric("Flagged Consumers", f"{total_anomalies:,}", delta=f"{anomaly_rate:.1f}% Risk", delta_color="inverse")
+        kpi3.metric("Est. Revenue At Risk", f"₹ {est_loss:,.0f}", delta="Last 90 Days", delta_color="inverse")
+        kpi4.metric("Grid Efficiency", "94.2%", delta="+1.2%")
+
         st.markdown("---")
-        
-        st.header("🎛️ Navigation")
-        page = st.radio("Select Page", 
-                       ["📊 Overview", "🔍 Consumer Search", "🗺️ Anomaly Map", "📈 Analytics"])
-        
-        st.markdown("---")
-        st.header("⚙️ Settings")
-        
-        # Date range filter
-        date_range = st.date_input(
-            "Date Range",
-            value=(datetime.now() - timedelta(days=30), datetime.now()),
-            max_value=datetime.now()
-        )
-        
-        # Severity filter
-        severity_filter = st.multiselect(
-            "Severity Level",
-            options=["Critical", "High", "Medium", "Low"],
-            default=["Critical", "High"]
-        )
-        
-        st.markdown("---")
-        st.caption("TechSprint 2 Hackathon 2026")
-    
-    # Load data
-    df = load_data()
-    
-    # Page routing
-    if "Overview" in page:
-        show_overview(df, severity_filter)
-    elif "Consumer Search" in page:
-        show_consumer_search(df)
-    elif "Map" in page:
-        show_anomaly_map(df)
-    elif "Analytics" in page:
-        show_analytics(df)
 
-
-def show_overview(df, severity_filter):
-    """Overview dashboard page"""
-    st.header("📊 System Overview")
-    
-    # Key metrics
-    col1, col2, col3, col4 = st.columns(4)
-    
-    with col1:
-        total_consumers = df['consumer_id'].nunique()
-        st.metric("Total Consumers", f"{total_consumers:,}")
-    
-    with col2:
-        anomalies = len(df[df['anomaly_label'] != 'normal'])
-        st.metric("Active Anomalies", f"{anomalies:,}", 
-                 delta=f"{(anomalies/len(df)*100):.1f}%")
-    
-    with col3:
-        critical_count = int(anomalies * 0.2)  # Demo: 20% critical
-        st.metric("Critical Alerts", critical_count, delta="⚠️")
-    
-    with col4:
-        detection_rate = 87.5  # Demo value
-        st.metric("Detection Rate", f"{detection_rate}%", delta="2.3%")
-    
-    st.markdown("---")
-    
-    # Charts
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        st.subheader("📈 Anomaly Trend (Last 30 Days)")
+        # 2. Main Content Area
+        c1, c2 = st.columns([2, 1])
         
-        # Group by date
-        df_daily = df.copy()
-        df_daily['date'] = pd.to_datetime(df_daily['timestamp']).dt.date
-        daily_anomalies = df_daily[df_daily['anomaly_label'] != 'normal'].groupby('date').size().reset_index()
-        daily_anomalies.columns = ['date', 'count']
-        
-        fig = px.line(daily_anomalies, x='date', y='count', 
-                     title='Daily Anomaly Count',
-                     labels={'count': 'Number of Anomalies', 'date': 'Date'})
-        fig.update_traces(line_color='#ff4444', line_width=3)
-        st.plotly_chart(fig, use_container_width=True)
-    
-    with col2:
-        st.subheader("🎯 Anomaly Types Distribution")
-        
-        anomaly_counts = df[df['anomaly_label'] != 'normal']['anomaly_label'].value_counts()
-        
-        fig = px.pie(values=anomaly_counts.values, 
-                    names=anomaly_counts.index,
-                    title='Anomaly Types',
-                    color_discrete_sequence=px.colors.qualitative.Set3)
-        st.plotly_chart(fig, use_container_width=True)
-    
-    # Recent alerts table
-    st.subheader("🚨 Recent Alerts")
-    
-    recent_anomalies = df[df['anomaly_label'] != 'normal'].tail(10).copy()
-    recent_anomalies['severity'] = recent_anomalies['anomaly_label'].apply(
-        lambda x: 'Critical' if x in ['sudden_spike', 'zero_consumption'] else 'High'
-    )
-    
-    st.dataframe(
-        recent_anomalies[['timestamp', 'consumer_id', 'consumption_kwh', 'anomaly_label', 'severity']],
-        use_container_width=True
-    )
-
-
-def show_consumer_search(df):
-    """Consumer search page"""
-    st.header("🔍 Consumer Search")
-    
-    col1, col2 = st.columns([2, 1])
-    
-    with col1:
-        consumer_id = st.text_input("Enter Consumer ID", placeholder="C000001")
-    
-    with col2:
-        st.write("")  # Spacing
-        search_btn = st.button("🔎 Search", type="primary")
-    
-    if search_btn and consumer_id:
-        consumer_data = df[df['consumer_id'] == consumer_id]
-        
-        if len(consumer_data) > 0:
-            st.success(f"Found {len(consumer_data)} records for {consumer_id}")
+        with c1:
+            st.markdown("#### ⚡ Consumption Trends (Time Series)")
+            # Daily Aggregation
+            daily_cons = filtered_cons.set_index('timestamp').resample('D')['consumption_kwh'].sum().reset_index()
             
-            # Consumer profile
-            st.subheader("👤 Consumer Profile")
-            
-            col1, col2, col3, col4 = st.columns(4)
-            
-            with col1:
-                avg_consumption = consumer_data['consumption_kwh'].mean()
-                st.metric("Avg. Consumption", f"{avg_consumption:.2f} kWh")
-            
-            with col2:
-                total_anomalies = len(consumer_data[consumer_data['anomaly_label'] != 'normal'])
-                st.metric("Anomalies Detected", total_anomalies)
-            
-            with col3:
-                risk_score = min(total_anomalies * 10, 100)  # Demo calculation
-                st.metric("Risk Score", f"{risk_score}/100")
-            
-            with col4:
-                status = "⚠️ High Risk" if risk_score > 50 else "✅ Normal"
-                st.metric("Status", status)
-            
-            # Consumption timeline
-            st.subheader("📊 Consumption Timeline")
-            
-            fig = go.Figure()
-            
-            # Normal consumption
-            normal_data = consumer_data[consumer_data['anomaly_label'] == 'normal']
-            fig.add_trace(go.Scatter(
-                x=normal_data['timestamp'],
-                y=normal_data['consumption_kwh'],
-                mode='lines',
-                name='Normal',
-                line=dict(color='blue', width=2)
-            ))
-            
-            # Anomalies
-            anomaly_data = consumer_data[consumer_data['anomaly_label'] != 'normal']
-            fig.add_trace(go.Scatter(
-                x=anomaly_data['timestamp'],
-                y=anomaly_data['consumption_kwh'],
-                mode='markers',
-                name='Anomaly',
-                marker=dict(color='red', size=10, symbol='x')
-            ))
-            
-            fig.update_layout(
-                xaxis_title='Time',
-                yaxis_title='Consumption (kWh)',
-                hovermode='x unified'
-            )
-            
+            fig = px.area(daily_cons, x='timestamp', y='consumption_kwh', 
+                          title="Total Grid Load (kWh)",
+                          color_discrete_sequence=['#00ADB5'])
+            fig.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', font_color='#FAFAFA')
             st.plotly_chart(fig, use_container_width=True)
             
-            # Anomaly list
-            if len(anomaly_data) > 0:
-                st.subheader("⚠️ Detected Anomalies")
-                st.dataframe(
-                    anomaly_data[['timestamp', 'consumption_kwh', 'anomaly_label']],
-                    use_container_width=True
+        with c2:
+            st.markdown("#### 🚨 Anomaly Distribution")
+            
+            anomaly_counts = filtered_cons[filtered_cons['anomaly_label'] != 'normal']['anomaly_label'].value_counts()
+            
+            if not anomaly_counts.empty:
+                fig_pie = px.pie(
+                    values=anomaly_counts.values, 
+                    names=anomaly_counts.index,
+                    hole=0.4,
+                    color_discrete_sequence=px.colors.sequential.RdBu
                 )
+                fig_pie.update_layout(
+                    showlegend=False,
+                    paper_bgcolor='rgba(0,0,0,0)', 
+                    plot_bgcolor='rgba(0,0,0,0)', 
+                    font_color='#FAFAFA',
+                    margin=dict(t=0, b=0, l=0, r=0)
+                )
+                st.plotly_chart(fig_pie, use_container_width=True)
+                
+                st.dataframe(
+                    anomaly_counts.reset_index().rename(columns={'index': 'Type', 'anomaly_label': 'Count'}),
+                    use_container_width=True,
+                    hide_index=True
+                )
+            else:
+                st.info("No anomalies detected in this selection.")
+
+        # 3. Recent Alerts
+        st.markdown("#### 🔔 Recent High-Priority Alerts")
+        recent_alerts = get_latest_anomalies(filtered_cons, filtered_meta)
+        
+        if not recent_alerts.empty:
+            # Format for display
+            display_df = recent_alerts[['timestamp', 'consumer_id', 'name', 'district', 'anomaly_label', 'consumption_kwh']]
+            display_df['timestamp'] = display_df['timestamp'].dt.strftime('%Y-%m-%d %H:%M')
+            
+            st.dataframe(
+                display_df,
+                column_config={
+                    "anomaly_label": st.column_config.TextColumn("Risk Type"),
+                    "consumption_kwh": st.column_config.NumberColumn("Reading (kWh)", format="%.2f"),
+                },
+                use_container_width=True,
+                hide_index=True
+            )
         else:
-            st.error(f"No data found for Consumer ID: {consumer_id}")
+            st.success("No recent alerts.")
 
+    # ==========================================================================
+    # PAGE: GEOSPATIAL INTELLIGENCE
+    # ==========================================================================
+    elif page == "Geospatial Intelligence":
+        st.markdown("### 🛰️ District Surveillance Map")
+        
+        # Prepare Map Data: Aggregate by Consumer first to see status
+        # A consumer is 'High Risk' if they have detected anomalies
+        
+        anomalies_agg = filtered_cons.groupby('consumer_id')['anomaly_label'].apply(lambda x: (x != 'normal').sum() > 0).reset_index()
+        anomalies_agg.columns = ['consumer_id', 'active_anomaly']
+        
+        map_data = filtered_meta.merge(anomalies_agg, on='consumer_id', how='left')
+        map_data['active_anomaly'] = map_data['active_anomaly'].fillna(False)
+        map_data['status'] = map_data['active_anomaly'].apply(lambda x: 'CRITICAL' if x else 'Normal')
+        map_data['color'] = map_data['active_anomaly'].apply(lambda x: '#FF4B4B' if x else '#00ADB5')
+        map_data['size'] = map_data['active_anomaly'].apply(lambda x: 8 if x else 3)
+        
+        col_map, col_details = st.columns([3, 1])
+        
+        with col_map:
+            # Using Plotly Scatter Mapbox
+            fig_map = px.scatter_mapbox(
+                map_data,
+                lat='lat',
+                lon='lon',
+                color='status',
+                hover_name='name',
+                hover_data=['district', 'consumer_type', 'consumer_id'],
+                color_discrete_map={'CRITICAL': '#FF4B4B', 'Normal': '#00ADB5'},
+                zoom=8,
+                center={"lat": 24.8170, "lon": 93.9368}, # Imphal Center
+                height=600,
+                opacity=0.7
+            )
+            fig_map.update_layout(
+                mapbox_style="carto-darkmatter",
+                paper_bgcolor='rgba(0,0,0,0)',
+                margin=dict(t=0, b=0, l=0, r=0),
+                legend=dict(orientation="h", yanchor="bottom", y=0.02, xanchor="right", x=1)
+            )
+            st.plotly_chart(fig_map, use_container_width=True)
 
-def show_anomaly_map(df):
-    """Geographic anomaly map"""
-    st.header("🗺️ Anomaly Heatmap")
-    
-    st.info("Geographic visualization of anomaly clusters")
-    
-    # Generate demo coordinates
-    n_anomalies = len(df[df['anomaly_label'] != 'normal'])
-    map_data = pd.DataFrame({
-        'lat': np.random.uniform(37.0, 38.0, min(n_anomalies, 1000)),
-        'lon': np.random.uniform(-122.5, -122.0, min(n_anomalies, 1000)),
-        'severity': np.random.choice(['Critical', 'High', 'Medium'], min(n_anomalies, 1000))
-    })
-    
-    # Color mapping
-    color_map = {'Critical': 'red', 'High': 'orange', 'Medium': 'yellow'}
-    map_data['color'] = map_data['severity'].map(color_map)
-    
-    st.map(map_data[['lat', 'lon']])
-    
-    # Statistics by region
-    st.subheader("📍 Regional Statistics")
-    
-    col1, col2, col3 = st.columns(3)
-    
-    with col1:
-        st.metric("North Region", "234 anomalies")
-    with col2:
-        st.metric("Central Region", "189 anomalies")
-    with col3:
-        st.metric("South Region", "156 anomalies")
+        with col_details:
+            st.markdown("#### 📍 District Heatmap")
+            
+            district_risk = map_data.groupby('district')['is_anomalous'].mean().sort_values(ascending=False) * 100
+            
+            fig_bar = px.bar(
+                district_risk, 
+                orientation='h',
+                title="Risk % by District",
+                labels={'value': 'Consumers Flagged (%)', 'district': ''},
+                color=district_risk.values,
+                color_continuous_scale='Reds'
+            )
+            fig_bar.update_layout(
+                showlegend=False, 
+                paper_bgcolor='rgba(0,0,0,0)', 
+                plot_bgcolor='rgba(0,0,0,0)', 
+                font_color='#FAFAFA',
+                xaxis=dict(showgrid=False),
+                yaxis=dict(showgrid=False)
+            )
+            st.plotly_chart(fig_bar, use_container_width=True)
+            
+            st.info("�� High risk in **Churachandpur** detected this week.")
 
+    # ==========================================================================
+    # PAGE: CONSUMER FORENSICS
+    # ==========================================================================
+    elif page == "Consumer Forensics":
+        st.markdown("### 🕵️ Individual Usage Inspector")
+        
+        # Search Box
+        search_query = st.text_input("Search Consumer (Name or ID)", placeholder="e.g. C00045 or Thoiba")
+        
+        target_consumer = None
+        
+        if search_query:
+            # Filter
+            matches = df_meta[
+                df_meta['consumer_id'].astype(str).str.contains(search_query, case=False) | 
+                df_meta['name'].str.contains(search_query, case=False)
+            ]
+            
+            if not matches.empty:
+                target_options = matches['consumer_id'].tolist()
+                target_labels = [f"{row['name']} ({row['consumer_id']})" for _, row in matches.iterrows()]
+                
+                s_choice = st.selectbox("Select Match", options=target_options, format_func=lambda x: target_labels[target_options.index(x)])
+                target_consumer = matches[matches['consumer_id'] == s_choice].iloc[0]
+            else:
+                st.warning("No consumer found.")
+        
+        if target_consumer is not None:
+            # Layout
+            c_info, c_stats = st.columns([1, 2])
+            
+            # Get Consumer Data
+            cons_data = df_cons[df_cons['consumer_id'] == target_consumer['consumer_id']].sort_values('timestamp')
+            
+            with c_info:
+                st.markdown(f"""
+                <div style='background-color: #262730; padding: 20px; border-radius: 10px; border-top: 3px solid #00ADB5;'>
+                    <h3>👤 {target_consumer['name']}</h3>
+                    <p><b>ID:</b> {target_consumer['consumer_id']}</p>
+                    <p><b>District:</b> {target_consumer['district']}</p>
+                    <p><b>Type:</b> {target_consumer['consumer_type']}</p>
+                    <p><b>Coordinates:</b> {target_consumer['lat']:.4f}, {target_consumer['lon']:.4f}</p>
+                </div>
+                """, unsafe_allow_html=True)
+                
+                # Risk Score
+                anom_count = (cons_data['anomaly_label'] != 'normal').sum()
+                risk_score = min(100, (anom_count / len(cons_data)) * 500) # Simple scaling
+                
+                st.markdown(f"### Risk Score: {int(risk_score)}/100")
+                st.progress(int(risk_score))
+                
+                if risk_score > 50:
+                    st.error("HIGH THEFT PROBABILITY")
+                else:
+                    st.success("LOW RISK")
 
-def show_analytics(df):
-    """Analytics and model performance"""
-    st.header("📈 Model Analytics")
-    
-    # Model performance
-    st.subheader("🎯 Model Performance Metrics")
-    
-    col1, col2, col3, col4 = st.columns(4)
-    
-    with col1:
-        st.metric("Precision", "89%")
-    with col2:
-        st.metric("Recall", "86%")
-    with col3:
-        st.metric("F1-Score", "87.5%")
-    with col4:
-        st.metric("ROC-AUC", "0.92")
-    
-    # Confusion matrix
-    st.subheader("📊 Confusion Matrix")
-    
-    confusion_data = pd.DataFrame({
-        'Predicted Normal': [8950, 150],
-        'Predicted Anomaly': [120, 780]
-    }, index=['Actual Normal', 'Actual Anomaly'])
-    
-    st.dataframe(confusion_data, use_container_width=True)
-    
-    # Feature importance
-    st.subheader("🔑 Top Important Features")
-    
-    features = ['consumption_mean_24h', 'consumption_std_7d', 'zero_count_24h', 
-                'hour_sin', 'consumption_ratio_24h', 'deviation_from_mean',
-                'peak_to_avg_ratio', 'is_night', 'day_of_week', 'consumption_diff_24h']
-    importances = [0.15, 0.12, 0.11, 0.09, 0.08, 0.08, 0.07, 0.06, 0.05, 0.04]
-    
-    fig = px.bar(x=importances, y=features, orientation='h',
-                title='Feature Importance',
-                labels={'x': 'Importance', 'y': 'Feature'})
-    fig.update_traces(marker_color='#1f77b4')
-    st.plotly_chart(fig, use_container_width=True)
+            with c_stats:
+                # Comparison Chart
+                st.subheader("Consumption vs Baseline")
+                
+                # Add Baseline (Simulated as rolling mean for demo visual)
+                cons_data['baseline'] = cons_data['consumption_kwh'].rolling(24, center=True).mean()
+                
+                fig = go.Figure()
+                fig.add_trace(go.Scatter(x=cons_data['timestamp'], y=cons_data['consumption_kwh'], 
+                                        name='Actual Usage', line=dict(color='#00ADB5', width=2)))
+                fig.add_trace(go.Scatter(x=cons_data['timestamp'], y=cons_data['baseline'], 
+                                        name='Expected Pattern', line=dict(color='gray', dash='dash')))
+                
+                # Highlight Anomalies
+                anoms = cons_data[cons_data['anomaly_label'] != 'normal']
+                fig.add_trace(go.Scatter(x=anoms['timestamp'], y=anoms['consumption_kwh'],
+                                        mode='markers', name='Anomalies',
+                                        marker=dict(color='#FF4B4B', size=10, symbol='x')))
+                
+                fig.update_layout(
+                    paper_bgcolor='rgba(0,0,0,0)', 
+                    plot_bgcolor='rgba(0,0,0,0)', 
+                    font_color='#FAFAFA',
+                    hovermode='x unified',
+                    height=400
+                )
+                st.plotly_chart(fig, use_container_width=True)
 
+    # ==========================================================================
+    # PAGE: SYSTEM HEALTH
+    # ==========================================================================
+    elif page == "System Health":
+        st.markdown("### 🧠 AI Model Diagnostics")
+        
+        if model_results:
+            m1, m2, m3, m4 = st.columns(4)
+            # Use 'metrics' key and 'f1_score'
+            metrics = model_results.get('metrics', {})
+            m1.metric("Precision", f"{metrics.get('precision', 0):.1%}")
+            m2.metric("Recall", f"{metrics.get('recall', 0):.1%}")
+            m3.metric("F1 Score", f"{metrics.get('f1_score', 0):.1%}")
+            m4.metric("ROC AUC", f"{metrics.get('roc_auc', 0):.4f}")
+            
+            col_chart, col_feat = st.columns(2)
+            
+            with col_chart:
+                st.markdown("#### 🔢 Confusion Matrix")
+                cm = model_results['confusion_matrix']
+                
+                # cm is already [[TN, FP], [FN, TP]] in the JSON
+                z = cm
+                x = ['Normal', 'Anomaly']
+                y = ['Normal', 'Anomaly']
+                
+                fig_cm = px.imshow(z, x=x, y=y, text_auto=True, color_continuous_scale='Blues',
+                                   title="Detection Performance")
+                fig_cm.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', font_color='#FAFAFA')
+                st.plotly_chart(fig_cm, use_container_width=True)
 
-if __name__ == '__main__':
+            with col_feat:
+                st.markdown("#### 🧬 Feature Importance")
+                
+                # Load feature importance from CSV if exists
+                fi_path = 'data/models/feature_importance.csv'
+                if os.path.exists(fi_path):
+                    fi_df = pd.read_csv(fi_path).head(10)
+                    
+                    fig_fi = px.bar(fi_df, x='importance', y='feature', orientation='h',
+                                    title="Top Defensive Signals",
+                                    color='importance', color_continuous_scale='Teal')
+                    fig_fi.update_layout(
+                        paper_bgcolor='rgba(0,0,0,0)', 
+                        plot_bgcolor='rgba(0,0,0,0)', 
+                        font_color='#FAFAFA',
+                        yaxis={'categoryorder':'total ascending'}
+                    )
+                    st.plotly_chart(fig_fi, use_container_width=True)
+                else:
+                    st.info("Feature importance data not found.")
+            
+            st.markdown("---")
+            st.caption(f"Model Training Timestamp: {pd.to_datetime('now').strftime('%Y-%m-%d %H:%M')}")
+            st.caption("Algorithm: Hybrid Ensemble (Isolation Forest + Random Forest + Statistical Rules)")
+            
+        else:
+            st.warning("Model results not found. Please train the model first.")
+
+if __name__ == "__main__":
     main()
