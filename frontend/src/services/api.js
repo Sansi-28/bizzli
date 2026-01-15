@@ -101,4 +101,9 @@ export const exportAnomalies = (district = null) => {
 // Summary Statistics
 export const getSummaryStats = () => api.get('/stats/summary');
 
+// Chatbot
+export const sendChatQuery = (query) => {
+  return api.post('/chat', { query });
+};
+
 export default api;

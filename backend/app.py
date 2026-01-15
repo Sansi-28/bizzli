@@ -707,6 +707,141 @@ def get_summary_stats():
 
 
 # ==============================================================================
+# CHATBOT ENDPOINT
+# ==============================================================================
+
+@app.route('/api/chat', methods=['POST'])
+def chat_query():
+    """Process natural language queries about the data"""
+    data = request.get_json()
+    query = data.get('query', '').lower().strip()
+    
+    if not query:
+        return jsonify({'response': "Please ask me a question about the grid data.", 'type': 'text'})
+    
+    df_cons = load_consumption_data()
+    df_meta = load_metadata()
+    
+    if df_cons is None or df_meta is None:
+        return jsonify({'response': "Sorry, I couldn't access the data.", 'type': 'error'})
+    
+    # Get aggregated data for queries
+    anomalies_agg = df_cons.groupby('consumer_id').agg(
+        has_anomaly=('anomaly_label', lambda x: (x != 'normal').any()),
+        anomaly_count=('anomaly_label', lambda x: (x != 'normal').sum()),
+        total_consumption=('consumption_kwh', 'sum'),
+        avg_consumption=('consumption_kwh', 'mean')
+    ).reset_index()
+    
+    merged = df_meta.merge(anomalies_agg, on='consumer_id', how='left')
+    merged['has_anomaly'] = merged['has_anomaly'].fillna(False)
+    
+    # District risk calculation
+    district_risk = merged.groupby('district').agg(
+        total_consumers=('consumer_id', 'count'),
+        flagged_consumers=('has_anomaly', 'sum'),
+        total_anomalies=('anomaly_count', 'sum'),
+        total_consumption=('total_consumption', 'sum')
+    ).reset_index()
+    district_risk['risk_percentage'] = (district_risk['flagged_consumers'] / district_risk['total_consumers']) * 100
+    district_risk = district_risk.sort_values('risk_percentage', ascending=False)
+    
+    response = None
+    response_type = 'text'
+    data_payload = None
+    
+    # Query matching patterns
+    if any(word in query for word in ['highest risk', 'most risk', 'riskiest', 'most dangerous', 'worst district']):
+        top_district = district_risk.iloc[0]
+        response = f"**{top_district['district']}** has the highest risk at **{top_district['risk_percentage']:.1f}%** with {int(top_district['flagged_consumers'])} flagged consumers out of {int(top_district['total_consumers'])} total."
+        data_payload = {'district': top_district['district'], 'risk': round(top_district['risk_percentage'], 1)}
+        
+    elif any(word in query for word in ['lowest risk', 'safest', 'least risk', 'best district']):
+        safe_district = district_risk.iloc[-1]
+        response = f"**{safe_district['district']}** is the safest with only **{safe_district['risk_percentage']:.1f}%** risk rate."
+        data_payload = {'district': safe_district['district'], 'risk': round(safe_district['risk_percentage'], 1)}
+        
+    elif any(word in query for word in ['total consumers', 'how many consumers', 'number of consumers']):
+        total = len(df_meta)
+        response = f"There are **{total:,}** consumers being monitored across all districts."
+        data_payload = {'total_consumers': total}
+        
+    elif any(word in query for word in ['total anomalies', 'how many anomalies', 'anomaly count']):
+        total_anom = int((df_cons['anomaly_label'] != 'normal').sum())
+        affected = int(merged['has_anomaly'].sum())
+        response = f"There are **{total_anom:,}** anomaly readings detected, affecting **{affected}** consumers."
+        data_payload = {'total_anomalies': total_anom, 'affected_consumers': affected}
+        
+    elif any(word in query for word in ['revenue', 'loss', 'money', 'financial']):
+        anomalous_kwh = df_cons[df_cons['anomaly_label'] != 'normal']['consumption_kwh'].sum()
+        est_loss = anomalous_kwh * 7 * 0.3  # ₹7/unit, 30% theft assumption
+        response = f"Estimated revenue at risk: **₹{est_loss:,.0f}** based on anomalous consumption of {anomalous_kwh:,.0f} kWh."
+        data_payload = {'estimated_loss': round(est_loss, 0), 'anomalous_kwh': round(anomalous_kwh, 0)}
+        
+    elif any(word in query for word in ['all districts', 'list districts', 'district list', 'which districts']):
+        districts = district_risk['district'].tolist()
+        response = f"Monitoring **{len(districts)}** districts: {', '.join(districts)}"
+        data_payload = {'districts': districts}
+        
+    elif any(word in query for word in ['district risk', 'risk by district', 'district ranking']):
+        top_5 = district_risk.head(5)
+        lines = [f"**Top 5 Risk Districts:**"]
+        for i, row in top_5.iterrows():
+            lines.append(f"• {row['district']}: {row['risk_percentage']:.1f}%")
+        response = "\n".join(lines)
+        response_type = 'list'
+        data_payload = top_5[['district', 'risk_percentage']].to_dict(orient='records')
+        
+    elif any(word in query for word in ['anomaly type', 'types of anomaly', 'anomaly distribution', 'what anomalies']):
+        type_counts = df_cons[df_cons['anomaly_label'] != 'normal']['anomaly_label'].value_counts()
+        lines = ["**Anomaly Types Detected:**"]
+        for anom_type, count in type_counts.items():
+            lines.append(f"• {anom_type}: {count:,} incidents")
+        response = "\n".join(lines)
+        response_type = 'list'
+        data_payload = type_counts.to_dict()
+        
+    elif any(word in query for word in ['top consumer', 'highest consumption', 'most consumption']):
+        top_consumer = merged.nlargest(1, 'total_consumption').iloc[0]
+        response = f"**{top_consumer['name']}** ({top_consumer['consumer_id']}) has the highest consumption at **{top_consumer['total_consumption']:,.0f} kWh**."
+        data_payload = {'consumer': top_consumer['name'], 'consumption': round(top_consumer['total_consumption'], 0)}
+        
+    elif any(word in query for word in ['model', 'accuracy', 'performance', 'precision', 'recall']):
+        results = load_model_results()
+        if results and 'metrics' in results:
+            metrics = results['metrics']
+            response = f"**Model Performance:**\n• Precision: {metrics.get('precision', 0):.1%}\n• Recall: {metrics.get('recall', 0):.1%}\n• F1 Score: {metrics.get('f1', 0):.1%}\n• ROC-AUC: {metrics.get('roc_auc', 0):.3f}"
+            response_type = 'list'
+            data_payload = metrics
+        else:
+            response = "Model metrics are not available."
+            
+    elif any(word in query for word in ['help', 'what can you', 'commands', 'how to use']):
+        response = """**I can answer questions like:**
+• "Which district has the highest risk?"
+• "How many consumers are being monitored?"
+• "What's the total revenue at risk?"
+• "Show me district risk ranking"
+• "What types of anomalies are detected?"
+• "What is the model performance?"
+• "Which consumer has highest consumption?"
+• "How many anomalies are there?"
+• "Which is the safest district?"
+"""
+        response_type = 'help'
+        
+    else:
+        response = "I'm not sure how to answer that. Try asking about:\n• District risk levels\n• Consumer counts\n• Anomaly statistics\n• Revenue loss estimates\n\nType **help** for more options."
+        response_type = 'fallback'
+    
+    return jsonify({
+        'response': response,
+        'type': response_type,
+        'data': data_payload
+    })
+
+
+# ==============================================================================
 # Main
 # ==============================================================================
 

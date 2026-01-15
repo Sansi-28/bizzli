@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
+import ChatBot from './components/ChatBot';
 import CommandCenter from './pages/CommandCenter';
 import GeospatialIntelligence from './pages/GeospatialIntelligence';
 import ConsumerForensics from './pages/ConsumerForensics';
@@ -22,6 +23,7 @@ function App() {
               <Route path="/health" element={<SystemHealth />} />
             </Routes>
           </main>
+          <ChatBot />
         </div>
       </Router>
     </ThemeProvider>
