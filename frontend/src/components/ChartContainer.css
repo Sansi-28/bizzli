@@ -1,0 +1,22 @@
+.chart-container {
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.chart-container h3 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chart-container h3 .icon {
+  font-size: 1.2rem;
+}
+
+.chart-content {
+  width: 100%;
+}

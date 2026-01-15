@@ -15,8 +15,9 @@ matplotlib>=3.8.0
 seaborn>=0.13.0
 plotly>=5.18.0
 
-# Dashboard & Web
-streamlit>=1.29.0
+# Backend API (Flask)
+flask>=3.0.0
+flask-cors>=4.0.0
 
 # Data Generation & Utilities
 faker>=22.0.0

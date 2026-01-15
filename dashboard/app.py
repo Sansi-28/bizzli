@@ -23,55 +23,88 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for "Sci-Fi / Professional" Look
-st.markdown("""
+# Theme Toggle (Dark/Light Mode)
+if 'dark_mode' not in st.session_state:
+    st.session_state.dark_mode = False
+
+# Define theme colors
+THEMES = {
+    'light': {
+        'bg': '#FFFFFF',
+        'text': '#1A1A2E',
+        'card_bg': '#F8F9FA',
+        'sidebar_bg': '#F0F2F6',
+        'accent': '#0077B6',
+        'alert_bg': '#FFF5F5',
+        'border': '#E2E8F0',
+        'chart_bg': '#FFFFFF',
+        'map_style': 'carto-positron'
+    },
+    'dark': {
+        'bg': '#0E1117',
+        'text': '#FAFAFA',
+        'card_bg': '#262730',
+        'sidebar_bg': '#1A1C24',
+        'accent': '#00ADB5',
+        'alert_bg': '#3d1e1e',
+        'border': '#262730',
+        'chart_bg': 'rgba(0,0,0,0)',
+        'map_style': 'carto-darkmatter'
+    }
+}
+
+# Get current theme
+theme = THEMES['dark'] if st.session_state.dark_mode else THEMES['light']
+
+# Dynamic CSS based on theme
+st.markdown(f"""
 <style>
     /* Global Background & Font */
-    .stApp {
-        background-color: #0E1117;
-        color: #FAFAFA;
-    }
+    .stApp {{
+        background-color: {theme['bg']};
+        color: {theme['text']};
+    }}
     
     /* Metrics Cards */
-    div[data-testid="stMetric"] {
-        background-color: #262730;
+    div[data-testid="stMetric"] {{
+        background-color: {theme['card_bg']};
         border-radius: 10px;
         padding: 15px;
-        border-left: 5px solid #00ADB5;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    }
+        border-left: 5px solid {theme['accent']};
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }}
     
     /* Sidebar Styling */
-    section[data-testid="stSidebar"] {
-        background-color: #1A1C24;
-    }
+    section[data-testid="stSidebar"] {{
+        background-color: {theme['sidebar_bg']};
+    }}
     
     /* Headers */
-    h1, h2, h3 {
+    h1, h2, h3 {{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 600;
-        color: #E0E0E0;
-    }
+        color: {theme['text']};
+    }}
     
-    .highlight {
-        color: #00ADB5;
+    .highlight {{
+        color: {theme['accent']};
         font-weight: bold;
-    }
+    }}
     
-    .alert-card {
-        background-color: #3d1e1e;
-        border: 1px solid #ff4b4b;
+    .alert-card {{
+        background-color: {theme['alert_bg']};
+        border: 1px solid #E53E3E;
         padding: 10px;
         border-radius: 5px;
         margin-bottom: 10px;
-    }
+    }}
     
     /* Map Container */
-    .map-container {
-        border: 2px solid #262730;
+    .map-container {{
+        border: 2px solid {theme['border']};
         border-radius: 10px;
         overflow: hidden;
-    }
+    }}
 </style>
 """, unsafe_allow_html=True)
 
@@ -146,6 +179,15 @@ def main():
     page = st.sidebar.radio("Console View", ["Command Center", "Geospatial Intelligence", "Consumer Forensics", "System Health"])
     
     st.sidebar.markdown("---")
+    
+    # Theme Toggle
+    st.sidebar.markdown("## 🎨 Appearance")
+    dark_mode = st.sidebar.toggle("Dark Mode", value=st.session_state.dark_mode)
+    if dark_mode != st.session_state.dark_mode:
+        st.session_state.dark_mode = dark_mode
+        st.rerun()
+    
+    st.sidebar.markdown("---")
     st.sidebar.markdown("## ⚙️ Filters")
     
     # Global Filters
@@ -195,8 +237,8 @@ def main():
             
             fig = px.area(daily_cons, x='timestamp', y='consumption_kwh', 
                           title="Total Grid Load (kWh)",
-                          color_discrete_sequence=['#00ADB5'])
-            fig.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', font_color='#FAFAFA')
+                          color_discrete_sequence=[theme['accent']])
+            fig.update_layout(paper_bgcolor=theme['chart_bg'], plot_bgcolor=theme['chart_bg'], font_color=theme['text'])
             st.plotly_chart(fig, use_container_width=True)
             
         with c2:
@@ -213,9 +255,9 @@ def main():
                 )
                 fig_pie.update_layout(
                     showlegend=False,
-                    paper_bgcolor='rgba(0,0,0,0)', 
-                    plot_bgcolor='rgba(0,0,0,0)', 
-                    font_color='#FAFAFA',
+                    paper_bgcolor=theme['chart_bg'], 
+                    plot_bgcolor=theme['chart_bg'], 
+                    font_color=theme['text'],
                     margin=dict(t=0, b=0, l=0, r=0)
                 )
                 st.plotly_chart(fig_pie, use_container_width=True)
@@ -285,8 +327,8 @@ def main():
                 opacity=0.7
             )
             fig_map.update_layout(
-                mapbox_style="carto-darkmatter",
-                paper_bgcolor='rgba(0,0,0,0)',
+                mapbox_style=theme['map_style'],
+                paper_bgcolor=theme['chart_bg'],
                 margin=dict(t=0, b=0, l=0, r=0),
                 legend=dict(orientation="h", yanchor="bottom", y=0.02, xanchor="right", x=1)
             )
@@ -307,10 +349,10 @@ def main():
             )
             fig_bar.update_layout(
                 showlegend=False, 
-                paper_bgcolor='rgba(0,0,0,0)', 
-                plot_bgcolor='rgba(0,0,0,0)', 
-                font_color='#FAFAFA',
-                xaxis=dict(showgrid=False),
+                paper_bgcolor=theme['chart_bg'], 
+                plot_bgcolor=theme['chart_bg'], 
+                font_color=theme['text'],
+                xaxis=dict(showgrid=True, gridcolor=theme['border']),
                 yaxis=dict(showgrid=False)
             )
             st.plotly_chart(fig_bar, use_container_width=True)
@@ -353,8 +395,8 @@ def main():
             
             with c_info:
                 st.markdown(f"""
-                <div style='background-color: #262730; padding: 20px; border-radius: 10px; border-top: 3px solid #00ADB5;'>
-                    <h3>👤 {target_consumer['name']}</h3>
+                <div style='background-color: {theme['card_bg']}; padding: 20px; border-radius: 10px; border-top: 3px solid {theme['accent']}; color: {theme['text']};'>
+                    <h3 style='color: {theme['text']};'>👤 {target_consumer['name']}</h3>
                     <p><b>ID:</b> {target_consumer['consumer_id']}</p>
                     <p><b>District:</b> {target_consumer['district']}</p>
                     <p><b>Type:</b> {target_consumer['consumer_type']}</p>
@@ -383,7 +425,7 @@ def main():
                 
                 fig = go.Figure()
                 fig.add_trace(go.Scatter(x=cons_data['timestamp'], y=cons_data['consumption_kwh'], 
-                                        name='Actual Usage', line=dict(color='#00ADB5', width=2)))
+                                        name='Actual Usage', line=dict(color=theme['accent'], width=2)))
                 fig.add_trace(go.Scatter(x=cons_data['timestamp'], y=cons_data['baseline'], 
                                         name='Expected Pattern', line=dict(color='gray', dash='dash')))
                 
@@ -394,9 +436,9 @@ def main():
                                         marker=dict(color='#FF4B4B', size=10, symbol='x')))
                 
                 fig.update_layout(
-                    paper_bgcolor='rgba(0,0,0,0)', 
-                    plot_bgcolor='rgba(0,0,0,0)', 
-                    font_color='#FAFAFA',
+                    paper_bgcolor=theme['chart_bg'], 
+                    plot_bgcolor=theme['chart_bg'], 
+                    font_color=theme['text'],
                     hovermode='x unified',
                     height=400
                 )
@@ -430,7 +472,7 @@ def main():
                 
                 fig_cm = px.imshow(z, x=x, y=y, text_auto=True, color_continuous_scale='Blues',
                                    title="Detection Performance")
-                fig_cm.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', font_color='#FAFAFA')
+                fig_cm.update_layout(paper_bgcolor=theme['chart_bg'], plot_bgcolor=theme['chart_bg'], font_color=theme['text'])
                 st.plotly_chart(fig_cm, use_container_width=True)
 
             with col_feat:
@@ -445,9 +487,9 @@ def main():
                                     title="Top Defensive Signals",
                                     color='importance', color_continuous_scale='Teal')
                     fig_fi.update_layout(
-                        paper_bgcolor='rgba(0,0,0,0)', 
-                        plot_bgcolor='rgba(0,0,0,0)', 
-                        font_color='#FAFAFA',
+                        paper_bgcolor=theme['chart_bg'], 
+                        plot_bgcolor=theme['chart_bg'], 
+                        font_color=theme['text'],
                         yaxis={'categoryorder':'total ascending'}
                     )
                     st.plotly_chart(fig_fi, use_container_width=True)

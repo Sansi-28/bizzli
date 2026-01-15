@@ -1,0 +1,101 @@
+.system-health {
+  padding-bottom: 30px;
+}
+
+.warning-message {
+  background-color: rgba(214, 158, 46, 0.1);
+  border: 1px solid #D69E2E;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #D69E2E;
+}
+
+.confusion-matrix {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.matrix-grid {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 8px;
+  max-width: 400px;
+}
+
+.matrix-header {
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding: 10px;
+}
+
+.matrix-label {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding-right: 15px;
+}
+
+.matrix-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  border-radius: 8px;
+  min-width: 100px;
+}
+
+.matrix-cell .cell-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.matrix-cell .cell-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: 5px;
+}
+
+.matrix-cell.tn {
+  background-color: rgba(56, 161, 105, 0.2);
+}
+
+.matrix-cell.tp {
+  background-color: rgba(49, 130, 206, 0.2);
+}
+
+.matrix-cell.fp {
+  background-color: rgba(229, 62, 62, 0.15);
+}
+
+.matrix-cell.fn {
+  background-color: rgba(214, 158, 46, 0.2);
+}
+
+.empty-state-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: var(--text-secondary);
+}
+
+.model-info {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.model-info p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}

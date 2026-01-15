@@ -1,0 +1,206 @@
+import React, { useState, useEffect } from 'react';
+import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet';
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  Cell
+} from 'recharts';
+import ChartContainer from '../components/ChartContainer';
+import Loading from '../components/Loading';
+import { useTheme } from '../context/ThemeContext';
+import { getDistricts, getMapConsumers, getDistrictRisk } from '../services/api';
+import 'leaflet/dist/leaflet.css';
+import './GeospatialIntelligence.css';
+
+const GeospatialIntelligence = () => {
+  const { darkMode } = useTheme();
+  const [loading, setLoading] = useState(true);
+  const [districts, setDistricts] = useState([]);
+  const [selectedDistrict, setSelectedDistrict] = useState('All Districts');
+  const [mapData, setMapData] = useState([]);
+  const [districtRisk, setDistrictRisk] = useState([]);
+
+  useEffect(() => {
+    loadDistricts();
+    loadDistrictRisk();
+  }, []);
+
+  useEffect(() => {
+    loadMapData();
+  }, [selectedDistrict]);
+
+  const loadDistricts = async () => {
+    try {
+      const response = await getDistricts();
+      setDistricts(response.data.districts || []);
+    } catch (error) {
+      console.error('Error loading districts:', error);
+    }
+  };
+
+  const loadMapData = async () => {
+    setLoading(true);
+    try {
+      const response = await getMapConsumers(selectedDistrict);
+      setMapData(response.data.data || []);
+    } catch (error) {
+      console.error('Error loading map data:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const loadDistrictRisk = async () => {
+    try {
+      const response = await getDistrictRisk();
+      setDistrictRisk(response.data.data || []);
+    } catch (error) {
+      console.error('Error loading district risk:', error);
+    }
+  };
+
+  const tileUrl = darkMode
+    ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+    : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+
+  // Manipur center coordinates
+  const mapCenter = [24.8170, 93.9368];
+
+  if (loading && mapData.length === 0) {
+    return <Loading message="Loading geospatial data..." />;
+  }
+
+  return (
+    <div className="geospatial-page">
+      <div className="page-header">
+        <h1>🛰️ District Surveillance Map</h1>
+        <p>Real-time consumer monitoring with anomaly detection overlay</p>
+      </div>
+
+      <div className="filter-bar">
+        <label>Select District:</label>
+        <select
+          value={selectedDistrict}
+          onChange={(e) => setSelectedDistrict(e.target.value)}
+        >
+          <option value="All Districts">All Districts</option>
+          {districts.map((district) => (
+            <option key={district} value={district}>
+              {district}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div className="grid-3-1">
+        <ChartContainer title="" className="map-chart-container">
+          <div className="map-container">
+            <MapContainer
+              center={mapCenter}
+              zoom={8}
+              style={{ height: '500px', width: '100%' }}
+            >
+              <TileLayer
+                attribution='&copy; <a href="https://carto.com/">CARTO</a>'
+                url={tileUrl}
+              />
+              {mapData.map((consumer) => (
+                <CircleMarker
+                  key={consumer.consumer_id}
+                  center={[consumer.lat, consumer.lon]}
+                  radius={consumer.has_anomaly ? 8 : 4}
+                  fillColor={consumer.has_anomaly ? '#FF4B4B' : '#00ADB5'}
+                  color={consumer.has_anomaly ? '#FF4B4B' : '#00ADB5'}
+                  weight={1}
+                  opacity={0.8}
+                  fillOpacity={0.6}
+                >
+                  <Popup>
+                    <div className="map-popup">
+                      <h4>{consumer.name}</h4>
+                      <p><strong>ID:</strong> {consumer.consumer_id}</p>
+                      <p><strong>District:</strong> {consumer.district}</p>
+                      <p><strong>Type:</strong> {consumer.consumer_type}</p>
+                      <p>
+                        <strong>Status:</strong>{' '}
+                        <span className={consumer.has_anomaly ? 'critical' : 'normal'}>
+                          {consumer.status}
+                        </span>
+                      </p>
+                    </div>
+                  </Popup>
+                </CircleMarker>
+              ))}
+            </MapContainer>
+          </div>
+          <div className="map-legend">
+            <div className="legend-item">
+              <span className="legend-dot critical"></span>
+              Critical (Anomaly Detected)
+            </div>
+            <div className="legend-item">
+              <span className="legend-dot normal"></span>
+              Normal
+            </div>
+          </div>
+        </ChartContainer>
+
+        <ChartContainer title="📍 District Risk Heatmap">
+          <ResponsiveContainer width="100%" height={400}>
+            <BarChart
+              data={districtRisk}
+              layout="vertical"
+              margin={{ top: 5, right: 30, left: 80, bottom: 5 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" stroke={darkMode ? '#2D3748' : '#E2E8F0'} />
+              <XAxis
+                type="number"
+                stroke={darkMode ? '#A0AEC0' : '#4A5568'}
+                tick={{ fontSize: 12 }}
+              />
+              <YAxis
+                type="category"
+                dataKey="district"
+                stroke={darkMode ? '#A0AEC0' : '#4A5568'}
+                tick={{ fontSize: 11 }}
+                width={75}
+              />
+              <Tooltip
+                contentStyle={{
+                  backgroundColor: darkMode ? '#1A1C24' : '#FFFFFF',
+                  border: `1px solid ${darkMode ? '#2D3748' : '#E2E8F0'}`,
+                  borderRadius: '8px'
+                }}
+                formatter={(value) => [`${value.toFixed(1)}%`, 'Risk']}
+              />
+              <Bar dataKey="risk_percentage" name="Risk %">
+                {districtRisk.map((entry, index) => (
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={
+                      entry.risk_percentage > 10
+                        ? '#E53E3E'
+                        : entry.risk_percentage > 5
+                        ? '#D69E2E'
+                        : '#38A169'
+                    }
+                  />
+                ))}
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
+          <div className="risk-info">
+            <p>🔴 High risk areas require immediate attention</p>
+          </div>
+        </ChartContainer>
+      </div>
+    </div>
+  );
+};
+
+export default GeospatialIntelligence;

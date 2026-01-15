@@ -1,0 +1,95 @@
+.sidebar {
+  width: 260px;
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+  padding: 20px;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar-header .icon {
+  font-size: 2rem;
+}
+
+.sidebar-header h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.sidebar-header .subtitle {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.nav-section {
+  margin-bottom: 25px;
+}
+
+.nav-section h3 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text-primary);
+  text-decoration: none;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.nav-item:hover {
+  background-color: var(--bg-secondary);
+}
+
+.nav-item.active {
+  background-color: var(--accent);
+  color: white;
+}
+
+.nav-item .icon {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.sidebar-footer p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.sidebar-footer .version {
+  font-size: 0.7rem;
+  margin-top: 5px;
+}

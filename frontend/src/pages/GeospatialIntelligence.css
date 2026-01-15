@@ -1,0 +1,73 @@
+.geospatial-page {
+  padding-bottom: 30px;
+}
+
+.map-chart-container {
+  padding: 0;
+  overflow: hidden;
+}
+
+.map-container {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.map-legend {
+  display: flex;
+  gap: 20px;
+  padding: 15px 20px;
+  background-color: var(--bg-secondary);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.legend-dot.critical {
+  background-color: #FF4B4B;
+}
+
+.legend-dot.normal {
+  background-color: #00ADB5;
+}
+
+.map-popup {
+  min-width: 180px;
+}
+
+.map-popup h4 {
+  margin: 0 0 10px 0;
+  color: #1A1A2E;
+}
+
+.map-popup p {
+  margin: 5px 0;
+  font-size: 0.85rem;
+  color: #4A5568;
+}
+
+.map-popup .critical {
+  color: #E53E3E;
+  font-weight: 600;
+}
+
+.map-popup .normal {
+  color: #38A169;
+  font-weight: 600;
+}
+
+.risk-info {
+  padding: 10px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}

@@ -1,0 +1,24 @@
+.command-center {
+  padding-bottom: 30px;
+}
+
+.section-title {
+  margin: 25px 0 15px 0;
+  font-size: 1.1rem;
+}
+
+.empty-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: var(--text-secondary);
+}
+
+.success-message {
+  padding: 20px;
+  text-align: center;
+  color: var(--success);
+  background-color: rgba(56, 161, 105, 0.1);
+  border-radius: 8px;
+}

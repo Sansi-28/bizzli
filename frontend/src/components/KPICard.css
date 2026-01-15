@@ -1,0 +1,47 @@
+.kpi-card {
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  padding: 20px;
+  border-left: 4px solid var(--accent);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.kpi-card .label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.kpi-card .value {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.kpi-card .delta {
+  font-size: 0.8rem;
+  padding: 3px 10px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.kpi-card .delta.positive {
+  background-color: rgba(56, 161, 105, 0.1);
+  color: var(--success);
+}
+
+.kpi-card .delta.negative {
+  background-color: rgba(229, 62, 62, 0.1);
+  color: var(--danger);
+}
+
+.kpi-card .delta.neutral {
+  background-color: rgba(160, 174, 192, 0.1);
+  color: var(--text-secondary);
+}
