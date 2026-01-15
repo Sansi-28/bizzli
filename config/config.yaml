@@ -1,0 +1,121 @@
+# Configuration file for the anomaly detection system
+
+data:
+  raw_data_path: "data/raw"
+  processed_data_path: "data/processed"
+  synthetic_data_path: "data/synthetic"
+  models_path: "data/models"
+  
+  # Data generation parameters
+  n_consumers: 10000
+  n_days: 365
+  anomaly_rate: 0.05
+
+preprocessing:
+  remove_outliers: false
+  outlier_method: "iqr"
+  outlier_threshold: 3.0
+  scaler_type: "standard"  # or "robust"
+  test_size: 0.2
+  time_based_split: true
+
+feature_engineering:
+  include_lags: true
+  lag_values: [1, 2, 3, 24, 168]
+  
+  include_rolling: true
+  rolling_windows: [24, 168, 720]  # hours
+  
+  time_features: true
+  cyclical_encoding: true
+  
+  statistical_features: true
+  derivative_features: true
+  zero_consumption_features: true
+  peak_features: true
+
+models:
+  isolation_forest:
+    contamination: 0.05
+    n_estimators: 100
+    max_samples: "auto"
+    random_state: 42
+    
+  autoencoder:
+    encoding_dim: 32
+    learning_rate: 0.001
+    epochs: 50
+    batch_size: 128
+    validation_split: 0.2
+    early_stopping_patience: 5
+    
+  lstm:
+    sequence_length: 24
+    lstm_units: 64
+    learning_rate: 0.001
+    epochs: 30
+    batch_size: 64
+    validation_split: 0.2
+    early_stopping_patience: 5
+  
+  ensemble:
+    weights:
+      isolation_forest: 0.3
+      autoencoder: 0.35
+      lstm: 0.35
+    threshold: 0.5
+
+alerts:
+  severity_thresholds:
+    critical: 0.9
+    high: 0.7
+    medium: 0.5
+    low: 0.3
+  
+  notification_channels:
+    - email
+    - dashboard
+  
+  priority_anomaly_types:
+    - sudden_spike
+    - zero_consumption
+    - odd_hour_usage
+
+dashboard:
+  title: "Electrical Anomaly Detection System"
+  port: 8501
+  refresh_interval: 60  # seconds
+  
+  display_settings:
+    recent_alerts_count: 10
+    map_zoom_level: 10
+    chart_height: 400
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  debug: true
+  
+  endpoints:
+    - /api/v1/predict
+    - /api/v1/batch
+    - /api/v1/consumer/{id}
+    - /api/v1/dashboard
+
+database:
+  type: "sqlite"  # or "postgresql"
+  sqlite_path: "data/anomaly_detection.db"
+  
+  # For PostgreSQL
+  # host: "localhost"
+  # port: 5432
+  # database: "anomaly_detection"
+  # user: "admin"
+  # password: "password"
+
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/anomaly_detection.log"
+  max_file_size: 10485760  # 10MB
+  backup_count: 5
