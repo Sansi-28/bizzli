@@ -178,16 +178,16 @@ const GeospatialIntelligence = () => {
                 }}
                 formatter={(value) => [`${value.toFixed(1)}%`, 'Risk']}
               />
-              <Bar dataKey="risk_percentage" name="Risk %">
+              <Bar dataKey="risk_percentage" name="Risk %" radius={[0, 4, 4, 0]}>
                 {districtRisk.map((entry, index) => (
                   <Cell
                     key={`cell-${index}`}
                     fill={
                       entry.risk_percentage > 10
-                        ? '#E53E3E'
+                        ? '#ff2d55'
                         : entry.risk_percentage > 5
-                        ? '#D69E2E'
-                        : '#38A169'
+                        ? '#f9a825'
+                        : '#00f5d4'
                     }
                   />
                 ))}

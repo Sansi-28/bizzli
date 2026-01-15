@@ -96,3 +96,17 @@
   background: var(--voltage-tertiary);
   border-top: 1px solid var(--border-subtle);
 }
+
+/* District Risk Chart Container */
+.district-risk-chart {
+  min-width: 320px;
+}
+
+.district-risk-chart .recharts-wrapper {
+  margin: 0 auto;
+}
+
+/* Make sure bars are visible */
+.district-risk-chart .recharts-bar-rectangle {
+  filter: brightness(1.1);
+}

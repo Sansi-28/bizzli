@@ -250,15 +250,14 @@ def get_district_risk():
         return jsonify({'error': 'Data not found'}), 404
     
     # Get anomaly status per consumer
-    anomalies_agg = df_cons.groupby('consumer_id')['anomaly_label'].apply(
-        lambda x: (x != 'normal').sum() > 0
+    anomalies_agg = df_cons.groupby('consumer_id').agg(
+        has_anomaly=('anomaly_label', lambda x: (x != 'normal').any())
     ).reset_index()
-    anomalies_agg.columns = ['consumer_id', 'is_anomalous']
     
     merged = df_meta.merge(anomalies_agg, on='consumer_id', how='left')
-    merged['is_anomalous'] = merged['is_anomalous'].fillna(False)
+    merged['has_anomaly'] = merged['has_anomaly'].fillna(False)
     
-    district_risk = merged.groupby('district')['is_anomalous'].mean().sort_values(ascending=False) * 100
+    district_risk = merged.groupby('district')['has_anomaly'].mean().sort_values(ascending=False) * 100
     
     result = [{'district': k, 'risk_percentage': round(v, 1)} for k, v in district_risk.items()]
     
