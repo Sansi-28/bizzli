@@ -1,5 +1,5 @@
 /* ============================================
-   LOADING - Power Grid Initialization
+   LOADING - Ink Wash Contemplation
    ============================================ */
 
 .loading-container {
@@ -12,21 +12,22 @@
 }
 
 .spinner {
-  width: 40px;
-  height: 40px;
-  border: 3px solid var(--voltage-tertiary);
-  border-top-color: var(--energy-cyan);
+  width: 36px;
+  height: 36px;
+  border: 2px solid var(--ink-medium);
+  border-top-color: var(--indigo);
   border-radius: 50%;
-  animation: electricSpin 0.8s linear infinite;
+  animation: inkSpin 1s ease-in-out infinite;
 }
 
-@keyframes electricSpin {
+@keyframes inkSpin {
   to { transform: rotate(360deg); }
 }
 
 .loading-container p {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Noto Serif', serif;
   color: var(--text-muted);
   font-size: 0.85rem;
-  font-weight: 500;
+  font-style: italic;
+  font-weight: 400;
 }

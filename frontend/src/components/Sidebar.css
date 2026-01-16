@@ -1,11 +1,11 @@
 /* ============================================
-   SIDEBAR - Electric Control Panel Style
+   SIDEBAR - Ink Wash Navigation Panel
    ============================================ */
 
 .sidebar {
   width: 280px;
-  background: linear-gradient(180deg, #111827 0%, #0a0f1a 100%);
-  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(180deg, var(--ink-dark) 0%, var(--ink-deep) 100%);
+  border-right: 1px solid var(--border-ink);
   padding: 0;
   position: fixed;
   height: 100vh;
@@ -15,17 +15,32 @@
 }
 
 [data-theme="light"] .sidebar {
-  background: linear-gradient(180deg, #f1f5f9 0%, #f8fafc 100%);
+  background: linear-gradient(180deg, #f5f3ef 0%, #ebe7df 100%);
 }
 
+[data-theme="light"] .sidebar-header h1 {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .sidebar-header .subtitle {
+  color: #5a5a5a;
+}
+
+/* Subtle brush stroke accent on right edge */
 .sidebar::before {
   content: '';
   position: absolute;
   top: 0;
   right: 0;
-  width: 1px;
+  width: 2px;
   height: 100%;
-  background: linear-gradient(180deg, #00f5d4 0%, transparent 30%, transparent 70%, #9d4edd 100%);
+  background: linear-gradient(180deg, 
+    var(--vermillion) 0%, 
+    transparent 20%, 
+    transparent 80%, 
+    var(--indigo) 100%
+  );
+  opacity: 0.5;
 }
 
 .sidebar-header {
@@ -33,7 +48,7 @@
   align-items: center;
   gap: 14px;
   padding: 24px 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid var(--border-ink);
   position: relative;
 }
 
@@ -44,33 +59,31 @@
   left: 20px;
   right: 20px;
   height: 1px;
-  background: linear-gradient(90deg, #00f5d4, transparent);
+  background: linear-gradient(90deg, var(--vermillion), transparent);
+  opacity: 0.4;
 }
 
 .sidebar-header .icon {
-  font-size: 2.2rem;
-  filter: drop-shadow(0 0 10px rgba(0, 245, 212, 0.5));
+  font-size: 2rem;
+  color: var(--vermillion);
+  opacity: 0.9;
 }
 
 .sidebar-header h1 {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-family: 'Noto Serif', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
   margin: 0;
-  letter-spacing: 0.5px;
-  background: linear-gradient(135deg, #00f5d4 0%, #00bbf9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  letter-spacing: 0;
+  color: var(--text-bright);
 }
 
 .sidebar-header .subtitle {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 0.7rem;
-  color: #8b949e;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--text-muted);
   margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .nav-section {
@@ -78,25 +91,27 @@
   margin-bottom: 0;
 }
 
+[data-theme="light"] .nav-section h3 {
+  color: #6a6a6a;
+}
+
 .nav-section h3 {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Noto Serif', serif;
   font-size: 0.7rem;
-  text-transform: uppercase;
-  color: #8b949e;
+  text-transform: lowercase;
+  font-style: italic;
+  color: var(--text-muted);
   margin-bottom: 14px;
-  letter-spacing: 2px;
-  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-weight: 400;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
 .nav-section h3::before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  background: #00f5d4;
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  content: '—';
+  color: var(--indigo-soft);
 }
 
 .nav-item {
@@ -104,22 +119,33 @@
   align-items: center;
   gap: 14px;
   padding: 14px 16px;
-  border-radius: 4px;
+  border-radius: 2px;
   cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  color: #f0f6fc;
+  transition: all 0.25s ease;
+  color: var(--text-bright);
   text-decoration: none;
   margin-bottom: 6px;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.9rem;
+  font-weight: 400;
   position: relative;
   border: 1px solid transparent;
 }
 
 [data-theme="light"] .nav-item {
-  color: #0f172a;
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .nav-item .icon {
+  color: #3a3a3a;
+}
+
+[data-theme="light"] .nav-item.active {
+  color: #3d5a80;
+}
+
+[data-theme="light"] .nav-item.active .icon {
+  color: #3d5a80;
 }
 
 .nav-item::before {
@@ -130,46 +156,47 @@
   transform: translateY(-50%);
   width: 0;
   height: 60%;
-  background: #00f5d4;
+  background: var(--indigo);
   transition: width 0.2s ease;
+  border-radius: 0 1px 1px 0;
 }
 
 .nav-item:hover {
-  background: rgba(0, 245, 212, 0.05);
-  border-color: rgba(0, 245, 212, 0.1);
+  background: rgba(61, 90, 128, 0.1);
+  border-color: rgba(61, 90, 128, 0.15);
 }
 
 .nav-item:hover::before {
-  width: 3px;
+  width: 2px;
 }
 
 .nav-item.active {
-  background: rgba(0, 245, 212, 0.1);
-  border-color: rgba(0, 245, 212, 0.3);
-  color: #00f5d4;
+  background: rgba(61, 90, 128, 0.15);
+  border-color: rgba(61, 90, 128, 0.3);
+  color: var(--indigo-soft);
 }
 
 .nav-item.active::before {
-  width: 3px;
-  box-shadow: 0 0 10px rgba(0, 245, 212, 0.5);
+  width: 2px;
+  background: var(--vermillion);
 }
 
 .nav-item .icon {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .nav-item.active .icon {
   opacity: 1;
-  filter: drop-shadow(0 0 6px rgba(0, 245, 212, 0.5));
+  color: var(--indigo-soft);
 }
 
 .sidebar-footer {
   margin-top: auto;
   padding: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid var(--border-ink);
   text-align: center;
   position: relative;
 }
@@ -181,21 +208,28 @@
   left: 20px;
   right: 20px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0, 245, 212, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, var(--border-brush), transparent);
 }
 
 .sidebar-footer p {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.75rem;
-  color: #8b949e;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.7rem;
+  font-style: italic;
+  color: var(--text-muted);
   margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
+}
+
+[data-theme="light"] .sidebar-footer p {
+  color: #5a5a5a;
 }
 
 .sidebar-footer .version {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 0.65rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
   margin-top: 6px;
-  color: #484f58;
+  color: rgba(160, 154, 140, 0.5);
+}
+
+[data-theme="light"] .sidebar-footer .version {
+  color: rgba(60, 60, 60, 0.6);
 }

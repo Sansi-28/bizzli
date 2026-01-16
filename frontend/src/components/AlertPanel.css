@@ -1,11 +1,11 @@
 /* ============================================
-   ALERT PANEL - Alert Management System
+   ALERT PANEL - Ink Wash Notifications
    ============================================ */
 
 .alert-panel {
-  background: var(--voltage-secondary);
-  border: 1px solid var(--border-subtle);
-  border-radius: 4px;
+  background: var(--ink-dark);
+  border: 1px solid var(--border-ink);
+  border-radius: 2px;
   overflow: hidden;
 }
 
@@ -14,14 +14,14 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px 20px;
-  border-bottom: 1px solid var(--border-subtle);
-  background: var(--voltage-tertiary);
+  border-bottom: 1px solid var(--border-ink);
+  background: var(--ink-medium);
 }
 
 .alert-header h3 {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.95rem;
+  font-weight: 500;
   color: var(--text-bright);
   margin: 0;
 }
@@ -40,13 +40,13 @@
 }
 
 .filter-dropdown select {
-  background: var(--voltage-primary);
-  border: 1px solid var(--border-subtle);
+  background: var(--ink-deep);
+  border: 1px solid var(--border-ink);
   color: var(--text-bright);
   padding: 6px 12px;
-  border-radius: 4px;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.85rem;
+  border-radius: 2px;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.8rem;
   cursor: pointer;
 }
 
@@ -56,18 +56,18 @@
   gap: 6px;
   padding: 6px 14px;
   background: transparent;
-  border: 1px solid var(--energy-cyan);
-  color: var(--energy-cyan);
-  border-radius: 4px;
+  border: 1px solid var(--indigo);
+  color: var(--indigo-soft);
+  border-radius: 2px;
   cursor: pointer;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.85rem;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.8rem;
   font-weight: 500;
   transition: all 0.2s ease;
 }
 
 .export-btn:hover {
-  background: rgba(0, 245, 212, 0.1);
+  background: rgba(61, 90, 128, 0.1);
 }
 
 /* Severity Summary */
@@ -75,7 +75,7 @@
   display: flex;
   padding: 12px 20px;
   gap: 16px;
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-ink);
 }
 
 .severity-badge {
@@ -83,44 +83,43 @@
   align-items: center;
   gap: 8px;
   padding: 6px 12px;
-  border-radius: 4px;
-  font-family: 'Rajdhani', sans-serif;
+  border-radius: 2px;
+  font-family: 'Noto Serif', serif;
 }
 
 .severity-badge .count {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .severity-badge .label {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-size: 0.7rem;
+  font-style: italic;
 }
 
 .severity-badge.critical {
-  background: rgba(255, 45, 85, 0.15);
-  color: var(--energy-crimson);
-  border: 1px solid rgba(255, 45, 85, 0.3);
+  background: rgba(199, 62, 58, 0.12);
+  color: var(--vermillion-soft);
+  border: 1px solid rgba(199, 62, 58, 0.25);
 }
 
 .severity-badge.high {
-  background: rgba(249, 168, 37, 0.15);
-  color: var(--energy-amber);
-  border: 1px solid rgba(249, 168, 37, 0.3);
+  background: rgba(201, 162, 39, 0.12);
+  color: var(--gold);
+  border: 1px solid rgba(201, 162, 39, 0.25);
 }
 
 .severity-badge.medium {
-  background: rgba(157, 78, 221, 0.15);
-  color: var(--energy-violet);
-  border: 1px solid rgba(157, 78, 221, 0.3);
+  background: rgba(61, 90, 128, 0.12);
+  color: var(--indigo-soft);
+  border: 1px solid rgba(61, 90, 128, 0.25);
 }
 
 .severity-badge.low {
-  background: rgba(0, 245, 212, 0.1);
-  color: var(--energy-cyan);
-  border: 1px solid rgba(0, 245, 212, 0.2);
+  background: rgba(107, 143, 113, 0.1);
+  color: var(--bamboo-light);
+  border: 1px solid rgba(107, 143, 113, 0.2);
 }
 
 /* Alert List */
@@ -134,33 +133,33 @@
   align-items: flex-start;
   gap: 14px;
   padding: 14px 20px;
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-ink);
   transition: background 0.2s ease;
 }
 
 .alert-item:hover {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(61, 90, 128, 0.05);
 }
 
 .alert-item.acknowledged {
   opacity: 0.5;
-  background: rgba(0, 245, 212, 0.03);
+  background: rgba(107, 143, 113, 0.05);
 }
 
 .alert-icon .icon {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .alert-icon .icon.critical {
-  color: var(--energy-crimson);
+  color: var(--vermillion);
 }
 
 .alert-icon .icon.high {
-  color: var(--energy-amber);
+  color: var(--gold);
 }
 
 .alert-icon .icon.medium {
-  color: var(--energy-violet);
+  color: var(--indigo-soft);
 }
 
 .alert-icon .icon.low {
@@ -180,14 +179,14 @@
 }
 
 .consumer-name {
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 600;
+  font-family: 'Noto Serif', serif;
+  font-weight: 500;
   color: var(--text-bright);
 }
 
 .consumer-id {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 0.8rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
   color: var(--text-muted);
 }
 
@@ -199,24 +198,24 @@
 }
 
 .alert-details span {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
 }
 
 .alert-details .anomaly-type {
-  color: var(--energy-amber);
+  color: var(--gold);
   font-weight: 500;
 }
 
 .alert-details .loss {
-  color: var(--energy-crimson);
-  font-family: 'Share Tech Mono', monospace;
+  color: var(--vermillion-soft);
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .alert-time {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--text-dim);
-  font-family: 'Share Tech Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .alert-action {
@@ -226,26 +225,26 @@
 .ack-btn {
   padding: 6px 14px;
   background: transparent;
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--border-ink);
   color: var(--text-muted);
-  border-radius: 4px;
+  border-radius: 2px;
   cursor: pointer;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.8rem;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.75rem;
   transition: all 0.2s ease;
 }
 
 .ack-btn:hover {
-  border-color: var(--energy-cyan);
-  color: var(--energy-cyan);
+  border-color: var(--indigo);
+  color: var(--indigo-soft);
 }
 
 .ack-badge {
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: 0.75rem;
-  color: var(--energy-cyan);
+  font-size: 0.7rem;
+  color: var(--bamboo-light);
 }
 
 .loading-state,
@@ -253,5 +252,6 @@
   padding: 40px;
   text-align: center;
   color: var(--text-muted);
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Noto Serif', serif;
+  font-style: italic;
 }

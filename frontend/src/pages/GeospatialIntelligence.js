@@ -109,13 +109,22 @@ const GeospatialIntelligence = () => {
                 attribution='&copy; <a href="https://carto.com/">CARTO</a>'
                 url={tileUrl}
               />
-              {mapData.map((consumer) => (
+              {mapData.map((consumer) => {
+                const getColor = (riskClass) => {
+                  switch(riskClass) {
+                    case 'high_risk': return '#FF4B4B';
+                    case 'low_risk': return '#f9a825';
+                    default: return '#00ADB5';
+                  }
+                };
+                const color = getColor(consumer.risk_class);
+                return (
                 <CircleMarker
                   key={consumer.consumer_id}
                   center={[consumer.lat, consumer.lon]}
-                  radius={consumer.has_anomaly ? 8 : 4}
-                  fillColor={consumer.has_anomaly ? '#FF4B4B' : '#00ADB5'}
-                  color={consumer.has_anomaly ? '#FF4B4B' : '#00ADB5'}
+                  radius={consumer.risk_class === 'high_risk' ? 8 : (consumer.risk_class === 'low_risk' ? 6 : 4)}
+                  fillColor={color}
+                  color={color}
                   weight={1}
                   opacity={0.8}
                   fillOpacity={0.6}
@@ -128,20 +137,24 @@ const GeospatialIntelligence = () => {
                       <p><strong>Type:</strong> {consumer.consumer_type}</p>
                       <p>
                         <strong>Status:</strong>{' '}
-                        <span className={consumer.has_anomaly ? 'critical' : 'normal'}>
+                        <span className={consumer.risk_class}>
                           {consumer.status}
                         </span>
                       </p>
                     </div>
                   </Popup>
                 </CircleMarker>
-              ))}
+              )})}
             </MapContainer>
           </div>
           <div className="map-legend">
             <div className="legend-item">
-              <span className="legend-dot critical"></span>
-              Critical (Anomaly Detected)
+              <span className="legend-dot high-risk"></span>
+              High Risk
+            </div>
+            <div className="legend-item">
+              <span className="legend-dot low-risk"></span>
+              Low Risk
             </div>
             <div className="legend-item">
               <span className="legend-dot normal"></span>

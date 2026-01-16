@@ -224,20 +224,41 @@ def get_map_consumers():
         filtered_meta = df_meta
         filtered_cons = df_cons
     
-    # Check if consumer has anomalies
-    anomalies_agg = filtered_cons.groupby('consumer_id')['anomaly_label'].apply(
-        lambda x: (x != 'normal').sum() > 0
-    ).reset_index()
-    anomalies_agg.columns = ['consumer_id', 'has_anomaly']
+    # Define high-risk anomaly types
+    high_risk_types = {'meter_tampering', 'theft_suspected', 'bypass_detected', 'sudden_spike'}
+    low_risk_types = {'unusual_pattern', 'irregular_consumption', 'odd_hour_usage', 'gradual_theft', 'erratic_pattern'}
     
-    map_data = filtered_meta.merge(anomalies_agg, on='consumer_id', how='left')
-    map_data['has_anomaly'] = map_data['has_anomaly'].fillna(False)
-    map_data['status'] = map_data['has_anomaly'].apply(lambda x: 'CRITICAL' if x else 'Normal')
+    # Classify each consumer based on their most severe anomaly
+    def classify_risk(labels):
+        anomaly_labels = [l for l in labels if l != 'normal']
+        if not anomaly_labels:
+            return 'normal'
+        if any(l in high_risk_types for l in anomaly_labels):
+            return 'high_risk'
+        return 'low_risk'
     
-    columns = ['consumer_id', 'name', 'district', 'consumer_type', 'lat', 'lon', 'status', 'has_anomaly']
+    risk_agg = filtered_cons.groupby('consumer_id')['anomaly_label'].apply(classify_risk).reset_index()
+    risk_agg.columns = ['consumer_id', 'risk_class']
+    
+    map_data = filtered_meta.merge(risk_agg, on='consumer_id', how='left')
+    map_data['risk_class'] = map_data['risk_class'].fillna('normal')
+    map_data['has_anomaly'] = map_data['risk_class'] != 'normal'
+    map_data['status'] = map_data['risk_class'].apply(lambda x: 'High Risk' if x == 'high_risk' else ('Low Risk' if x == 'low_risk' else 'Normal'))
+    
+    columns = ['consumer_id', 'name', 'district', 'consumer_type', 'lat', 'lon', 'status', 'risk_class', 'has_anomaly']
     result = map_data[columns].to_dict(orient='records')
     
-    return jsonify({'data': result})
+    # Add risk distribution summary
+    risk_counts = map_data['risk_class'].value_counts().to_dict()
+    
+    return jsonify({
+        'data': result,
+        'risk_distribution': {
+            'normal': risk_counts.get('normal', 0),
+            'low_risk': risk_counts.get('low_risk', 0),
+            'high_risk': risk_counts.get('high_risk', 0)
+        }
+    })
 
 
 @app.route('/api/districts/risk', methods=['GET'])
@@ -308,20 +329,115 @@ def get_consumer_details(consumer_id):
     # Get consumption data
     cons_data = df_cons[df_cons['consumer_id'] == consumer_id].sort_values('timestamp')
     
-    # Calculate risk score
-    anom_count = (cons_data['anomaly_label'] != 'normal').sum()
-    total_readings = len(cons_data)
-    risk_score = min(100, int((anom_count / total_readings) * 500)) if total_readings > 0 else 0
+    # Define risk weights for different anomaly types
+    high_risk_types = {'meter_tampering', 'theft_suspected', 'bypass_detected', 'sudden_spike'}
+    medium_risk_types = {'zero_consumption', 'odd_hour_usage'}
+    low_risk_types = {'unusual_pattern', 'irregular_consumption', 'gradual_theft', 'erratic_pattern'}
     
-    # Prepare consumption timeline
-    cons_data['baseline'] = cons_data['consumption_kwh'].rolling(24, center=True, min_periods=1).mean()
-    cons_data['timestamp'] = cons_data['timestamp'].dt.strftime('%Y-%m-%d %H:%M')
+    # Calculate risk score based on anomaly type severity
+    total_readings = len(cons_data)
+    anomaly_labels = cons_data['anomaly_label'].unique().tolist()
+    
+    # Remove 'normal' from list if present
+    anomaly_types = [label for label in anomaly_labels if label != 'normal']
+    
+    # Count anomalies by severity
+    high_risk_count = sum(1 for label in anomaly_types if label in high_risk_types)
+    medium_risk_count = sum(1 for label in anomaly_types if label in medium_risk_types)
+    low_risk_count = sum(1 for label in anomaly_types if label in low_risk_types)
+    
+    # Calculate risk score based on severity levels
+    # High risk types: 70-100 score
+    # Medium risk types: 40-69 score  
+    # Low risk types: 15-39 score
+    # Normal: 0-14 score
+    if high_risk_count > 0:
+        # High risk: base 70, add up to 30 more based on anomaly percentage
+        anom_percentage = (cons_data['anomaly_label'] != 'normal').sum() / total_readings if total_readings > 0 else 0
+        risk_score = 70 + int(anom_percentage * 30)
+        risk_class = 'high_risk'
+    elif medium_risk_count > 0:
+        # Medium risk: 40-69
+        anom_percentage = (cons_data['anomaly_label'] != 'normal').sum() / total_readings if total_readings > 0 else 0
+        risk_score = 40 + int(anom_percentage * 29)
+        risk_class = 'high_risk'  # Still high risk for UI
+    elif low_risk_count > 0:
+        # Low risk: 15-39
+        anom_percentage = (cons_data['anomaly_label'] != 'normal').sum() / total_readings if total_readings > 0 else 0
+        risk_score = 15 + int(anom_percentage * 24)
+        risk_class = 'low_risk'
+    else:
+        # Normal consumer
+        risk_score = 0
+        risk_class = 'normal'
+    
+    # Total anomaly count for display
+    anom_count = (cons_data['anomaly_label'] != 'normal').sum()
+    high_risk_anom_count = sum((cons_data['anomaly_label'] == t).sum() for t in high_risk_types) + \
+                           sum((cons_data['anomaly_label'] == t).sum() for t in medium_risk_types)
+    low_risk_anom_count = sum((cons_data['anomaly_label'] == t).sum() for t in low_risk_types)
+    
+    # Prepare consumption timeline with proper baseline calculation
+    # Baseline should represent expected consumption for this consumer type
+    consumer_type = consumer_info.get('consumer_type', 'residential')
+    
+    # Get average consumption pattern for this consumer type from all similar consumers
+    similar_consumers = df_meta[df_meta['consumer_type'] == consumer_type]['consumer_id'].tolist()
+    similar_data = df_cons[df_cons['consumer_id'].isin(similar_consumers)]
+    
+    # Calculate hourly average pattern by day of week for similar consumers (excluding anomalies)
+    similar_normal = similar_data[similar_data['anomaly_label'] == 'normal'].copy()
+    
+    cons_data = cons_data.copy()
+    cons_data['datetime'] = pd.to_datetime(cons_data['timestamp'])
+    cons_data['hour'] = cons_data['datetime'].dt.hour
+    cons_data['dayofweek'] = cons_data['datetime'].dt.dayofweek
+    cons_data['date'] = cons_data['datetime'].dt.date
+    
+    if len(similar_normal) > 0:
+        similar_normal['datetime'] = pd.to_datetime(similar_normal['timestamp'])
+        similar_normal['hour'] = similar_normal['datetime'].dt.hour
+        similar_normal['dayofweek'] = similar_normal['datetime'].dt.dayofweek
+        
+        # Calculate baseline by hour and day of week for more variation
+        hourly_dow_baseline = similar_normal.groupby(['dayofweek', 'hour'])['consumption_kwh'].mean()
+        
+        # Map baseline to consumer data
+        cons_data['baseline'] = cons_data.apply(
+            lambda row: hourly_dow_baseline.get((row['dayofweek'], row['hour']), 2.0), 
+            axis=1
+        )
+    else:
+        cons_data['baseline'] = 2.0  # Default baseline
+    
+    # Scale baseline to match consumer's average (some consumers use more/less than average)
+    normal_data = cons_data[cons_data['anomaly_label'] == 'normal']
+    if len(normal_data) > 0:
+        consumer_avg = normal_data['consumption_kwh'].mean()
+        baseline_avg = cons_data['baseline'].mean()
+        if baseline_avg > 0 and not pd.isna(consumer_avg):
+            scale_factor = consumer_avg / baseline_avg
+            cons_data['baseline'] = cons_data['baseline'] * scale_factor
+    
+    # Add slight daily variation to baseline (weather, seasonal effects simulation)
+    daily_variation = cons_data.groupby('date')['consumption_kwh'].transform('mean')
+    daily_baseline_mean = cons_data.groupby('date')['baseline'].transform('mean')
+    
+    # Adjust baseline slightly towards actual daily pattern (but not too much)
+    adjustment_factor = 0.3  # 30% adjustment towards actual pattern
+    cons_data['baseline'] = cons_data['baseline'] * (1 - adjustment_factor) + \
+                            (cons_data['baseline'] * (daily_variation / daily_baseline_mean.replace(0, 1))) * adjustment_factor
+    
+    cons_data['timestamp'] = cons_data['datetime'].dt.strftime('%Y-%m-%d %H:%M')
     
     timeline = cons_data[['timestamp', 'consumption_kwh', 'baseline', 'anomaly_label']].to_dict(orient='records')
     
     return jsonify({
         'consumer': consumer_info,
         'risk_score': risk_score,
+        'risk_class': risk_class,
+        'high_risk_count': int(high_risk_anom_count),
+        'low_risk_count': int(low_risk_anom_count),
         'timeline': timeline,
         'anomaly_count': int(anom_count),
         'total_readings': int(total_readings)

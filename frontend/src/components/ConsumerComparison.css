@@ -1,11 +1,11 @@
 /* ============================================
-   CONSUMER COMPARISON - Multi-Consumer Analysis
+   CONSUMER COMPARISON - Ink Wash Analysis
    ============================================ */
 
 .consumer-comparison {
-  background: var(--voltage-secondary);
-  border: 1px solid var(--border-subtle);
-  border-radius: 4px;
+  background: var(--ink-dark);
+  border: 1px solid var(--border-ink);
+  border-radius: 2px;
   overflow: hidden;
 }
 
@@ -14,24 +14,25 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px 20px;
-  border-bottom: 1px solid var(--border-subtle);
-  background: var(--voltage-tertiary);
+  border-bottom: 1px solid var(--border-ink);
+  background: var(--ink-medium);
 }
 
 .comparison-header h3 {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.95rem;
+  font-weight: 500;
   color: var(--text-bright);
   margin: 0;
 }
 
 .comparison-header .hint {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.8rem;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.75rem;
+  font-style: italic;
   color: var(--text-dim);
 }
 
@@ -44,9 +45,9 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background: var(--voltage-primary);
-  border: 1px solid var(--border-subtle);
-  border-radius: 4px;
+  background: var(--ink-deep);
+  border: 1px solid var(--border-ink);
+  border-radius: 2px;
   padding: 8px 14px;
   margin-bottom: 16px;
 }
@@ -60,37 +61,38 @@
   background: transparent;
   border: none;
   color: var(--text-bright);
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.9rem;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.85rem;
   outline: none;
 }
 
 .search-box input::placeholder {
   color: var(--text-dim);
+  font-style: italic;
 }
 
 .search-box button {
   padding: 6px 14px;
-  background: var(--voltage-tertiary);
-  border: 1px solid var(--border-subtle);
+  background: var(--ink-medium);
+  border: 1px solid var(--border-ink);
   color: var(--text-muted);
-  border-radius: 3px;
+  border-radius: 2px;
   cursor: pointer;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.8rem;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.75rem;
   transition: all 0.2s ease;
 }
 
 .search-box button:hover {
-  border-color: var(--energy-cyan);
-  color: var(--energy-cyan);
+  border-color: var(--indigo);
+  color: var(--indigo-soft);
 }
 
 /* Search Dropdown */
 .search-dropdown {
-  background: var(--voltage-primary);
-  border: 1px solid var(--border-subtle);
-  border-radius: 4px;
+  background: var(--ink-deep);
+  border: 1px solid var(--border-ink);
+  border-radius: 2px;
   margin-bottom: 16px;
   max-height: 200px;
   overflow-y: auto;
@@ -103,7 +105,7 @@
   padding: 10px 14px;
   cursor: pointer;
   transition: background 0.2s ease;
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-ink);
 }
 
 .search-option:last-child {
@@ -111,28 +113,29 @@
 }
 
 .search-option:hover {
-  background: rgba(0, 245, 212, 0.05);
+  background: rgba(61, 90, 128, 0.08);
 }
 
 .search-option .name {
   flex: 1;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Noto Serif', serif;
   color: var(--text-bright);
 }
 
 .search-option .id {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 0.8rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
   color: var(--text-muted);
 }
 
 .search-option .district {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  font-style: italic;
   color: var(--text-dim);
 }
 
 .search-option .add-icon {
-  color: var(--energy-cyan);
+  color: var(--indigo-soft);
 }
 
 /* Selected Consumers */
@@ -148,21 +151,21 @@
   align-items: center;
   gap: 8px;
   padding: 6px 12px;
-  background: var(--voltage-tertiary);
-  border: 1px solid var(--border-subtle);
-  border-radius: 4px;
-  border-left-width: 3px;
+  background: var(--ink-medium);
+  border: 1px solid var(--border-ink);
+  border-radius: 2px;
+  border-left-width: 2px;
 }
 
 .selected-tag .color-dot {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
 }
 
 .selected-tag .name {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.85rem;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.8rem;
   color: var(--text-bright);
 }
 
@@ -177,29 +180,29 @@
 }
 
 .selected-tag button:hover {
-  color: var(--energy-crimson);
+  color: var(--vermillion);
 }
 
 /* Compare Button */
 .compare-btn {
   padding: 10px 24px;
-  background: var(--energy-cyan);
+  background: var(--indigo);
   border: none;
-  color: var(--voltage-primary);
-  border-radius: 4px;
+  color: var(--text-bright);
+  border-radius: 2px;
   cursor: pointer;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.85rem;
+  font-weight: 500;
   transition: all 0.2s ease;
 }
 
 .compare-btn:hover:not(:disabled) {
-  opacity: 0.9;
+  background: var(--indigo-soft);
 }
 
 .compare-btn:disabled {
-  opacity: 0.6;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
@@ -207,7 +210,7 @@
 .comparison-results {
   margin-top: 24px;
   padding-top: 24px;
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid var(--border-ink);
 }
 
 .stats-comparison {
@@ -224,55 +227,53 @@
 .stats-comparison td {
   padding: 12px 14px;
   text-align: left;
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-ink);
 }
 
 .stats-comparison th {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  font-style: italic;
   color: var(--text-dim);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 .stats-comparison td {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 0.9rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.85rem;
   color: var(--text-bright);
 }
 
 .stats-comparison td:first-child {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Noto Serif', serif;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
 .stats-comparison td .color-dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   flex-shrink: 0;
 }
 
 .stats-comparison td.has-anomaly {
-  color: var(--energy-crimson);
+  color: var(--vermillion-soft);
 }
 
 /* Comparison Chart */
 .comparison-chart {
-  background: var(--voltage-tertiary);
-  border-radius: 4px;
+  background: var(--ink-medium);
+  border-radius: 2px;
   padding: 16px;
 }
 
 .comparison-chart h4 {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-style: italic;
   color: var(--text-muted);
   margin-bottom: 16px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }

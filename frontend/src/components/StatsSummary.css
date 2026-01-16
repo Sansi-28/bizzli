@@ -1,11 +1,11 @@
 /* ============================================
-   STATS SUMMARY - Quick Overview Widget
+   STATS SUMMARY - Ink Wash Overview
    ============================================ */
 
 .stats-summary {
-  background: var(--voltage-secondary);
-  border: 1px solid var(--border-subtle);
-  border-radius: 4px;
+  background: var(--ink-dark);
+  border: 1px solid var(--border-ink);
+  border-radius: 2px;
   padding: 16px 24px;
   margin-bottom: 24px;
 }
@@ -25,16 +25,16 @@
 }
 
 .stat-icon {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--text-muted);
 }
 
 .stat-icon.warning {
-  color: var(--energy-amber);
+  color: var(--gold);
 }
 
 .stat-icon.success {
-  color: var(--energy-cyan);
+  color: var(--bamboo-light);
 }
 
 .stat-content {
@@ -43,27 +43,26 @@
 }
 
 .stat-value {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.95rem;
   color: var(--text-bright);
 }
 
 .stat-value.date {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 
 .stat-label {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.7rem;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.65rem;
   color: var(--text-dim);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-style: italic;
 }
 
 .stat-divider {
   width: 1px;
   height: 32px;
-  background: var(--border-subtle);
+  background: var(--border-ink);
 }
 
 /* Responsive */

@@ -1,5 +1,5 @@
 /* ============================================
-   COMMAND CENTER - Control Room Aesthetic
+   COMMAND CENTER - Ink Wash Overview
    ============================================ */
 
 .command-center {
@@ -14,16 +14,17 @@
 }
 
 .header-content h1 {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-family: 'Noto Serif', serif;
+  font-size: 1.4rem;
+  font-weight: 500;
   color: var(--text-bright);
   margin-bottom: 4px;
 }
 
 .header-content p {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.9rem;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.85rem;
+  font-style: italic;
   color: var(--text-muted);
 }
 
@@ -33,13 +34,12 @@
 }
 
 .section-title {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Noto Serif', serif;
   margin: 30px 0 18px 0;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: italic;
   color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 2px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -49,7 +49,7 @@
   content: '';
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, var(--border-subtle), transparent);
+  background: linear-gradient(90deg, var(--border-ink), transparent);
 }
 
 .empty-state {
@@ -59,25 +59,23 @@
   align-items: center;
   height: 200px;
   color: var(--text-muted);
-  background: rgba(0, 245, 212, 0.02);
-  border: 1px dashed var(--border-subtle);
-  border-radius: 4px;
+  background: rgba(61, 90, 128, 0.05);
+  border: 1px dashed var(--border-ink);
+  border-radius: 2px;
 }
 
 .empty-state p {
-  font-family: 'Rajdhani', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-family: 'Noto Serif', serif;
+  font-style: italic;
 }
 
 .success-message {
   padding: 24px;
   text-align: center;
-  color: var(--energy-cyan);
-  background: rgba(0, 245, 212, 0.05);
-  border: 1px solid rgba(0, 245, 212, 0.2);
-  border-radius: 4px;
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 600;
-  letter-spacing: 1px;
+  color: var(--bamboo-light);
+  background: rgba(107, 143, 113, 0.1);
+  border: 1px solid rgba(107, 143, 113, 0.25);
+  border-radius: 2px;
+  font-family: 'Noto Serif', serif;
+  font-weight: 500;
 }

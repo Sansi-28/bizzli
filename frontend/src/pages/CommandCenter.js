@@ -215,7 +215,6 @@ const CommandCenter = () => {
                   paddingAngle={5}
                   dataKey="count"
                   nameKey="type"
-                  label={({ type, count }) => `${type}: ${count}`}
                 >
                   {anomalyDistribution.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />

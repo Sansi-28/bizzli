@@ -161,11 +161,17 @@ const RevenueImpact = ({ district }) => {
           {data.by_district && data.by_district.length > 0 && (
             <div className="breakdown-section">
               <h4>Loss by District</h4>
-              <ResponsiveContainer width="100%" height={200}>
-                <BarChart data={data.by_district} layout="vertical">
+              <ResponsiveContainer width="100%" height={Math.max(250, data.by_district.length * 35)}>
+                <BarChart data={data.by_district} layout="vertical" margin={{ left: 10 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke={darkMode ? '#2D3748' : '#E2E8F0'} />
                   <XAxis type="number" tickFormatter={(v) => formatCurrency(v)} />
-                  <YAxis dataKey="district" type="category" width={100} tick={{ fontSize: 11 }} />
+                  <YAxis 
+                    dataKey="district" 
+                    type="category" 
+                    width={120} 
+                    tick={{ fontSize: 11 }} 
+                    interval={0}
+                  />
                   <Tooltip formatter={(value) => formatCurrency(value)} />
                   <Bar dataKey="loss" fill="#ff2d55" radius={[0, 4, 4, 0]} />
                 </BarChart>

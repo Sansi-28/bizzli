@@ -1,11 +1,11 @@
 /* ============================================
-   REVENUE IMPACT - Financial Analysis
+   REVENUE IMPACT - Ink Wash Financial View
    ============================================ */
 
 .revenue-impact {
-  background: var(--voltage-secondary);
-  border: 1px solid var(--border-subtle);
-  border-radius: 4px;
+  background: var(--ink-dark);
+  border: 1px solid var(--border-ink);
+  border-radius: 2px;
   overflow: hidden;
 }
 
@@ -14,17 +14,17 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px 20px;
-  border-bottom: 1px solid var(--border-subtle);
-  background: var(--voltage-tertiary);
+  border-bottom: 1px solid var(--border-ink);
+  background: var(--ink-medium);
 }
 
 .revenue-header h3 {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.95rem;
+  font-weight: 500;
   color: var(--text-bright);
   margin: 0;
 }
@@ -32,9 +32,9 @@
 .view-toggle {
   display: flex;
   gap: 4px;
-  background: var(--voltage-primary);
+  background: var(--ink-deep);
   padding: 4px;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 .view-toggle button {
@@ -42,17 +42,17 @@
   background: transparent;
   border: none;
   color: var(--text-muted);
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.75rem;
+  font-weight: 400;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 2px;
   transition: all 0.2s ease;
 }
 
 .view-toggle button.active {
-  background: var(--voltage-tertiary);
-  color: var(--energy-cyan);
+  background: var(--ink-medium);
+  color: var(--indigo-soft);
 }
 
 .view-toggle button:hover:not(.active) {
@@ -76,9 +76,9 @@
   align-items: center;
   gap: 14px;
   padding: 16px;
-  background: var(--voltage-tertiary);
-  border-radius: 4px;
-  border: 1px solid var(--border-subtle);
+  background: var(--ink-medium);
+  border-radius: 2px;
+  border: 1px solid var(--border-ink);
 }
 
 .metric-icon {
@@ -87,23 +87,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
-  font-size: 1.2rem;
+  border-radius: 2px;
+  font-size: 1.1rem;
 }
 
 .metric-icon.loss {
-  background: rgba(255, 45, 85, 0.15);
-  color: var(--energy-crimson);
+  background: rgba(199, 62, 58, 0.12);
+  color: var(--vermillion-soft);
 }
 
 .metric-icon.recovery {
-  background: rgba(0, 245, 212, 0.1);
-  color: var(--energy-cyan);
+  background: rgba(107, 143, 113, 0.12);
+  color: var(--bamboo-light);
 }
 
 .metric-icon.consumption {
-  background: rgba(249, 168, 37, 0.15);
-  color: var(--energy-amber);
+  background: rgba(201, 162, 39, 0.12);
+  color: var(--gold);
 }
 
 .metric-content {
@@ -112,28 +112,27 @@
 }
 
 .metric-value {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.3rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.2rem;
   color: var(--text-bright);
 }
 
 .metric-label {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.75rem;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.7rem;
   color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-style: italic;
 }
 
 .rate-info {
   display: flex;
   justify-content: space-between;
   padding: 12px 16px;
-  background: rgba(0, 245, 212, 0.05);
-  border: 1px solid rgba(0, 245, 212, 0.1);
-  border-radius: 4px;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.85rem;
+  background: rgba(61, 90, 128, 0.08);
+  border: 1px solid rgba(61, 90, 128, 0.15);
+  border-radius: 2px;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.8rem;
   color: var(--text-muted);
 }
 
@@ -146,12 +145,11 @@
 }
 
 .breakdown-section h4 {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.8rem;
+  font-weight: 500;
   color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-style: italic;
   margin-bottom: 16px;
 }
 
@@ -169,23 +167,23 @@
 }
 
 .legend-color {
-  width: 10px;
-  height: 10px;
-  border-radius: 2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 1px;
   flex-shrink: 0;
 }
 
 .legend-label {
   flex: 1;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.8rem;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.75rem;
   color: var(--text-muted);
 }
 
 .legend-value {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 0.8rem;
-  color: var(--energy-crimson);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--vermillion-soft);
 }
 
 /* Trend View */
@@ -194,12 +192,11 @@
 }
 
 .trend-view h4 {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.8rem;
+  font-weight: 500;
   color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-style: italic;
   margin-bottom: 16px;
 }
 
@@ -209,7 +206,8 @@
   padding: 60px 20px;
   text-align: center;
   color: var(--text-muted);
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Noto Serif', serif;
+  font-style: italic;
 }
 
 /* Responsive */

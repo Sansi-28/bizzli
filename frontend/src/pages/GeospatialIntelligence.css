@@ -1,5 +1,5 @@
 /* ============================================
-   GEOSPATIAL - Surveillance Map Interface
+   GEOSPATIAL - Ink Wash Terrain View
    ============================================ */
 
 .geospatial-page {
@@ -9,7 +9,7 @@
 .map-chart-container {
   padding: 0;
   overflow: hidden;
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--border-ink);
   position: relative;
 }
 
@@ -23,78 +23,84 @@
   display: flex;
   gap: 24px;
   padding: 16px 20px;
-  background: var(--voltage-tertiary);
-  border-top: 1px solid var(--border-subtle);
+  background: var(--ink-medium);
+  border-top: 1px solid var(--border-ink);
 }
 
 .legend-item {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-family: 'Noto Serif', serif;
+  font-size: 0.75rem;
+  font-style: italic;
   color: var(--text-muted);
 }
 
 .legend-dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
 }
 
-.legend-dot.critical {
-  background: #ff2d55;
-  box-shadow: 0 0 6px rgba(255, 45, 85, 0.4);
+.legend-dot.high-risk {
+  background: var(--vermillion);
+  box-shadow: 0 0 4px rgba(199, 62, 58, 0.4);
+}
+
+.legend-dot.low-risk {
+  background: var(--gold);
+  box-shadow: 0 0 4px rgba(201, 162, 39, 0.4);
 }
 
 .legend-dot.normal {
-  background: #00f5d4;
+  background: var(--bamboo);
 }
 
 .map-popup {
   min-width: 200px;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Noto Serif', serif;
 }
 
 .map-popup h4 {
   margin: 0 0 12px 0;
-  color: #0a0f1a;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  color: var(--ink-deep);
+  font-size: 0.95rem;
+  font-weight: 500;
 }
 
 .map-popup p {
   margin: 6px 0;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #4A5568;
   display: flex;
   justify-content: space-between;
 }
 
-.map-popup .critical {
-  color: #ff2d55;
-  font-weight: 700;
-  text-transform: uppercase;
+.map-popup .high_risk {
+  color: var(--vermillion);
+  font-weight: 600;
+}
+
+.map-popup .low_risk {
+  color: var(--gold);
+  font-weight: 600;
 }
 
 .map-popup .normal {
-  color: #00a896;
-  font-weight: 600;
+  color: var(--bamboo);
+  font-weight: 500;
 }
 
 .risk-info {
   padding: 14px;
   text-align: center;
   color: var(--text-muted);
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  background: var(--voltage-tertiary);
-  border-top: 1px solid var(--border-subtle);
+  font-family: 'Noto Serif', serif;
+  font-size: 0.75rem;
+  font-style: italic;
+  background: var(--ink-medium);
+  border-top: 1px solid var(--border-ink);
 }
 
 /* District Risk Chart Container */

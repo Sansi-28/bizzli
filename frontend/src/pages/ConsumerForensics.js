@@ -8,7 +8,8 @@ import {
   Tooltip,
   ResponsiveContainer,
   Legend,
-  ReferenceDot
+  ReferenceDot,
+  Brush
 } from 'recharts';
 import { FiSearch, FiUser, FiUsers } from 'react-icons/fi';
 import ChartContainer from '../components/ChartContainer';
@@ -25,6 +26,7 @@ const ConsumerForensics = () => {
   const [selectedConsumer, setSelectedConsumer] = useState(null);
   const [consumerDetails, setConsumerDetails] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [timePeriod, setTimePeriod] = useState('daily');
 
   useEffect(() => {
     if (searchQuery.length >= 2) {
@@ -61,19 +63,76 @@ const ConsumerForensics = () => {
     }
   };
 
-  const getRiskLevel = (score) => {
-    if (score > 50) return { label: 'HIGH THEFT PROBABILITY', color: 'danger' };
-    if (score > 25) return { label: 'MEDIUM RISK', color: 'warning' };
-    return { label: 'LOW RISK', color: 'success' };
+  const getRiskLevel = (riskClass, score) => {
+    if (riskClass === 'high_risk') return { label: 'HIGH RISK', color: 'danger' };
+    if (riskClass === 'low_risk') return { label: 'LOW RISK', color: 'warning' };
+    return { label: 'NORMAL', color: 'success' };
   };
 
-  // Prepare chart data with anomaly markers
+  const getRiskBarClass = (riskClass) => {
+    if (riskClass === 'high_risk') return 'high';
+    if (riskClass === 'low_risk') return 'medium';
+    return 'low';
+  };
+
+  // Prepare chart data with aggregation based on time period
   const getChartData = () => {
     if (!consumerDetails?.timeline) return [];
-    return consumerDetails.timeline.map((item) => ({
+    
+    const timeline = consumerDetails.timeline.map((item) => ({
       ...item,
       isAnomaly: item.anomaly_label !== 'normal'
     }));
+    
+    if (timePeriod === 'hourly') {
+      // Sample hourly data for cleaner visualization
+      if (timeline.length > 200) {
+        const samplingRate = Math.ceil(timeline.length / 150);
+        return timeline.filter((item, index) => 
+          item.isAnomaly || index % samplingRate === 0
+        );
+      }
+      return timeline;
+    }
+    
+    // Aggregate data by day or month
+    const aggregated = {};
+    
+    timeline.forEach((item) => {
+      if (!item.timestamp) return;
+      
+      let key;
+      if (timePeriod === 'daily') {
+        key = item.timestamp.split(' ')[0]; // YYYY-MM-DD
+      } else {
+        // Monthly: YYYY-MM
+        key = item.timestamp.slice(0, 7);
+      }
+      
+      if (!aggregated[key]) {
+        aggregated[key] = {
+          timestamp: key,
+          consumption_kwh: 0,
+          baseline: 0,
+          count: 0,
+          hasAnomaly: false
+        };
+      }
+      
+      aggregated[key].consumption_kwh += item.consumption_kwh || 0;
+      aggregated[key].baseline += item.baseline || 0;
+      aggregated[key].count += 1;
+      if (item.isAnomaly) aggregated[key].hasAnomaly = true;
+    });
+    
+    return Object.values(aggregated)
+      .map((item) => ({
+        timestamp: item.timestamp,
+        consumption_kwh: Math.round(item.consumption_kwh * 100) / 100,
+        baseline: Math.round(item.baseline * 100) / 100,
+        isAnomaly: item.hasAnomaly
+      }))
+      .sort((a, b) => a.timestamp.localeCompare(b.timestamp));
   };
 
   const chartData = getChartData();
@@ -147,12 +206,12 @@ const ConsumerForensics = () => {
                 <h3>Risk Score: {consumerDetails.risk_score}/100</h3>
                 <div className="risk-bar">
                   <div
-                    className={`fill ${consumerDetails.risk_score > 50 ? 'high' : 'low'}`}
-                    style={{ width: `${consumerDetails.risk_score}%` }}
+                    className={`fill ${getRiskBarClass(consumerDetails.risk_class)}`}
+                    style={{ width: `${Math.max(consumerDetails.risk_score, 5)}%` }}
                   ></div>
                 </div>
-                <div className={`risk-label ${getRiskLevel(consumerDetails.risk_score).color}`}>
-                  {getRiskLevel(consumerDetails.risk_score).label}
+                <div className={`risk-label ${getRiskLevel(consumerDetails.risk_class, consumerDetails.risk_score).color}`}>
+                  {getRiskLevel(consumerDetails.risk_class, consumerDetails.risk_score).label}
                 </div>
               </div>
 
@@ -162,48 +221,95 @@ const ConsumerForensics = () => {
                   <span className="stat-label">Total Readings</span>
                 </div>
                 <div className="stat">
-                  <span className="stat-value">{consumerDetails.anomaly_count}</span>
-                  <span className="stat-label">Anomalies</span>
+                  <span className="stat-value high-risk">{consumerDetails.high_risk_count || 0}</span>
+                  <span className="stat-label">High Risk</span>
+                </div>
+                <div className="stat">
+                  <span className="stat-value low-risk">{consumerDetails.low_risk_count || 0}</span>
+                  <span className="stat-label">Low Risk</span>
                 </div>
               </div>
             </div>
 
             <ChartContainer title="Consumption vs Baseline">
-              <ResponsiveContainer width="100%" height={350}>
-                <LineChart data={chartData}>
-                  <CartesianGrid strokeDasharray="3 3" stroke={darkMode ? '#2D3748' : '#E2E8F0'} />
+              <div className="chart-controls">
+                <label>View by:</label>
+                <select 
+                  value={timePeriod} 
+                  onChange={(e) => setTimePeriod(e.target.value)}
+                  className="time-period-select"
+                >
+                  <option value="hourly">Hourly</option>
+                  <option value="daily">Daily</option>
+                  <option value="monthly">Monthly</option>
+                </select>
+              </div>
+              <ResponsiveContainer width="100%" height={400}>
+                <LineChart data={chartData} margin={{ top: 20, right: 30, left: 20, bottom: 60 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke={darkMode ? '#2D3748' : '#E2E8F0'} opacity={0.5} />
                   <XAxis
                     dataKey="timestamp"
                     stroke={darkMode ? '#A0AEC0' : '#4A5568'}
                     tick={{ fontSize: 10 }}
-                    tickFormatter={(value) => value?.split(' ')[0] || ''}
+                    tickFormatter={(value) => {
+                      if (!value) return '';
+                      if (timePeriod === 'monthly') {
+                        // Show YYYY-MM as "Jan 25", "Feb 25" etc.
+                        const [year, month] = value.split('-');
+                        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                        return `${months[parseInt(month) - 1]} '${year?.slice(2)}`;
+                      }
+                      if (timePeriod === 'daily') {
+                        // Show MM-DD format
+                        return value.slice(5); // MM-DD
+                      }
+                      // Hourly: show date only
+                      const parts = value.split(' ');
+                      return parts[0]?.slice(5) || '';
+                    }}
+                    interval={timePeriod === 'monthly' ? 0 : 'preserveStartEnd'}
+                    angle={-45}
+                    textAnchor="end"
+                    height={60}
                   />
                   <YAxis
                     stroke={darkMode ? '#A0AEC0' : '#4A5568'}
-                    tick={{ fontSize: 12 }}
+                    tick={{ fontSize: 11 }}
+                    tickFormatter={(value) => `${value.toFixed(1)}`}
+                    width={50}
+                    label={{ 
+                      value: 'kWh', 
+                      angle: -90, 
+                      position: 'insideLeft',
+                      style: { fontSize: 11, fill: darkMode ? '#A0AEC0' : '#4A5568' }
+                    }}
                   />
                   <Tooltip
                     contentStyle={{
                       backgroundColor: darkMode ? '#1A1C24' : '#FFFFFF',
                       border: `1px solid ${darkMode ? '#2D3748' : '#E2E8F0'}`,
-                      borderRadius: '8px'
+                      borderRadius: '8px',
+                      padding: '12px'
                     }}
+                    labelFormatter={(label) => `Time: ${label}`}
+                    formatter={(value, name) => [`${value?.toFixed(2)} kWh`, name]}
                   />
-                  <Legend />
+                  <Legend wrapperStyle={{ paddingTop: '20px' }} />
                   <Line
                     type="monotone"
                     dataKey="consumption_kwh"
-                    stroke={darkMode ? '#00ADB5' : '#0077B6'}
+                    stroke={darkMode ? '#00f5d4' : '#0077B6'}
                     strokeWidth={2}
                     dot={false}
                     name="Actual Usage"
+                    activeDot={{ r: 4, fill: darkMode ? '#00f5d4' : '#0077B6' }}
                   />
                   <Line
                     type="monotone"
                     dataKey="baseline"
-                    stroke="#A0AEC0"
-                    strokeWidth={2}
-                    strokeDasharray="5 5"
+                    stroke={darkMode ? '#A0AEC0' : '#718096'}
+                    strokeWidth={1.5}
+                    strokeDasharray="8 4"
                     dot={false}
                     name="Expected Pattern"
                   />
@@ -212,11 +318,23 @@ const ConsumerForensics = () => {
                       key={index}
                       x={point.timestamp}
                       y={point.consumption_kwh}
-                      r={6}
+                      r={5}
                       fill="#FF4B4B"
-                      stroke="#FF4B4B"
+                      stroke="#fff"
+                      strokeWidth={2}
                     />
                   ))}
+                  <Brush
+                    dataKey="timestamp"
+                    height={40}
+                    stroke={darkMode ? '#3d5a80' : '#0077B6'}
+                    fill={darkMode ? '#1a1c24' : '#f5f5f5'}
+                    tickFormatter={(value) => {
+                      if (!value) return '';
+                      if (timePeriod === 'monthly') return value.slice(5);
+                      return value.slice(5, 10);
+                    }}
+                  />
                 </LineChart>
               </ResponsiveContainer>
               <div className="chart-legend-custom">
