@@ -24,6 +24,7 @@ const GeospatialIntelligence = () => {
   const [selectedDistrict, setSelectedDistrict] = useState('All Districts');
   const [mapData, setMapData] = useState([]);
   const [districtRisk, setDistrictRisk] = useState([]);
+  const [mapView, setMapView] = useState('street');
 
   useEffect(() => {
     loadDistricts();
@@ -64,9 +65,30 @@ const GeospatialIntelligence = () => {
     }
   };
 
-  const tileUrl = darkMode
-    ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
-    : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+  const getTileUrl = () => {
+    if (mapView === 'satellite') {
+      return 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
+    }
+    if (mapView === 'terrain') {
+      return 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png';
+    }
+    // Street view
+    return darkMode
+      ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+      : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+  };
+
+  const getAttribution = () => {
+    if (mapView === 'satellite') {
+      return '&copy; <a href="https://www.esri.com/">Esri</a>';
+    }
+    if (mapView === 'terrain') {
+      return '&copy; <a href="https://opentopomap.org">OpenTopoMap</a>';
+    }
+    return '&copy; <a href="https://carto.com/">CARTO</a>';
+  };
+
+  const tileUrl = getTileUrl();
 
   // Manipur center coordinates
   const mapCenter = [24.8170, 93.9368];
@@ -95,6 +117,17 @@ const GeospatialIntelligence = () => {
             </option>
           ))}
         </select>
+
+        <label>Map View:</label>
+        <select
+          value={mapView}
+          onChange={(e) => setMapView(e.target.value)}
+          className="map-view-select"
+        >
+          <option value="street">Street Map</option>
+          <option value="satellite">Satellite</option>
+          <option value="terrain">Terrain</option>
+        </select>
       </div>
 
       <div className="grid-3-1">
@@ -106,7 +139,7 @@ const GeospatialIntelligence = () => {
               style={{ height: '500px', width: '100%' }}
             >
               <TileLayer
-                attribution='&copy; <a href="https://carto.com/">CARTO</a>'
+                attribution={getAttribution()}
                 url={tileUrl}
               />
               {mapData.map((consumer) => {
