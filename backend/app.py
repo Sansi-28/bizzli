@@ -61,6 +61,24 @@ def load_feature_importance():
 # API Routes
 # ==============================================================================
 
+@app.route('/', methods=['GET'])
+def root():
+    """Root endpoint - API info"""
+    return jsonify({
+        'service': 'Manipur PowerGuard API',
+        'version': '1.0.0',
+        'status': 'running',
+        'endpoints': {
+            'health': '/api/health',
+            'districts': '/api/districts',
+            'kpis': '/api/kpis',
+            'consumption': '/api/consumption/daily',
+            'anomalies': '/api/anomalies/distribution',
+            'map': '/api/map/consumers'
+        }
+    })
+
+
 @app.route('/api/health', methods=['GET'])
 def health_check():
     """Health check endpoint"""
