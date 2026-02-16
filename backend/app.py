@@ -808,14 +808,15 @@ def export_anomalies():
 @app.route('/api/stats/summary', methods=['GET'])
 def get_summary_stats():
     """Get quick summary statistics for dashboard widgets"""
-    df_cons = load_consumption_data()
-    df_meta = load_metadata()
-    
-    if df_cons is None or df_meta is None:
-        return jsonify({'error': 'Data not found'}), 404
-    
-    total_consumers = len(df_meta)
-    total_readings = len(df_cons)
+    try:
+        df_cons = load_consumption_data()
+        df_meta = load_metadata()
+        
+        if df_cons is None or df_meta is None:
+            return jsonify({'error': 'Data not found', 'details': 'Could not load data files'}), 404
+        
+        total_consumers = len(df_meta)
+        total_readings = len(df_cons)
     
     anomalies = df_cons[df_cons['anomaly_label'] != 'normal']
     total_anomalies = len(anomalies)
@@ -856,6 +857,8 @@ def get_summary_stats():
         'districts': district_counts,
         'consumer_types': type_counts
     })
+    except Exception as e:
+        return jsonify({'error': 'Server error', 'details': str(e)}), 500
 
 
 # ==============================================================================
