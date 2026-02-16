@@ -817,46 +817,46 @@ def get_summary_stats():
         
         total_consumers = len(df_meta)
         total_readings = len(df_cons)
-    
-    anomalies = df_cons[df_cons['anomaly_label'] != 'normal']
-    total_anomalies = len(anomalies)
-    affected_consumers = anomalies['consumer_id'].nunique()
-    
-    # Time range
-    date_range = {
-        'start': df_cons['timestamp'].min().strftime('%Y-%m-%d'),
-        'end': df_cons['timestamp'].max().strftime('%Y-%m-%d')
-    }
-    
-    # Consumption stats
-    total_consumption = df_cons['consumption_kwh'].sum()
-    avg_daily_consumption = df_cons.set_index('timestamp').resample('D')['consumption_kwh'].sum().mean()
-    
-    # District breakdown
-    district_counts = df_meta['district'].value_counts().to_dict()
-    
-    # Consumer type breakdown
-    type_counts = df_meta['consumer_type'].value_counts().to_dict()
-    
-    return jsonify({
-        'consumers': {
-            'total': int(total_consumers),
-            'affected': int(affected_consumers),
-            'healthy': int(total_consumers - affected_consumers)
-        },
-        'readings': {
-            'total': int(total_readings),
-            'anomalies': int(total_anomalies),
-            'normal': int(total_readings - total_anomalies)
-        },
-        'consumption': {
-            'total_kwh': round(total_consumption, 2),
-            'avg_daily_kwh': round(avg_daily_consumption, 2)
-        },
-        'date_range': date_range,
-        'districts': district_counts,
-        'consumer_types': type_counts
-    })
+        
+        anomalies = df_cons[df_cons['anomaly_label'] != 'normal']
+        total_anomalies = len(anomalies)
+        affected_consumers = anomalies['consumer_id'].nunique()
+        
+        # Time range
+        date_range = {
+            'start': df_cons['timestamp'].min().strftime('%Y-%m-%d'),
+            'end': df_cons['timestamp'].max().strftime('%Y-%m-%d')
+        }
+        
+        # Consumption stats
+        total_consumption = df_cons['consumption_kwh'].sum()
+        avg_daily_consumption = df_cons.set_index('timestamp').resample('D')['consumption_kwh'].sum().mean()
+        
+        # District breakdown
+        district_counts = df_meta['district'].value_counts().to_dict()
+        
+        # Consumer type breakdown
+        type_counts = df_meta['consumer_type'].value_counts().to_dict()
+        
+        return jsonify({
+            'consumers': {
+                'total': int(total_consumers),
+                'affected': int(affected_consumers),
+                'healthy': int(total_consumers - affected_consumers)
+            },
+            'readings': {
+                'total': int(total_readings),
+                'anomalies': int(total_anomalies),
+                'normal': int(total_readings - total_anomalies)
+            },
+            'consumption': {
+                'total_kwh': round(total_consumption, 2),
+                'avg_daily_kwh': round(avg_daily_consumption, 2)
+            },
+            'date_range': date_range,
+            'districts': district_counts,
+            'consumer_types': type_counts
+        })
     except Exception as e:
         return jsonify({'error': 'Server error', 'details': str(e)}), 500
 
