@@ -1,0 +1,1001 @@
+consumer_id,consumer_name,consumer_type,connection_type,tariff_category,district,area,address,latitude,longitude,sanctioned_load_kw,meter_number,installation_date,base_consumption,is_anomalous
+MN-IMP-000001,Khumanthem Zou,residential,single_phase,BPL Category,Imphal East,Sagolband,"Sagolband, Imphal East, Manipur",24.806218,93.99655,4.79,MNP876646,2020-12-12,9.59,True
+MN-SEN-000002,Rajkumar Kom,residential,single_phase,BPL Category,Senapati,Senapati Town,"Senapati Town, Senapati, Manipur",25.319732,93.981204,2.2,MNP127824,2020-11-09,4.4,True
+MN-SEN-000003,Naoba Lamkang,residential,single_phase,Domestic LT-I,Senapati,Maram,"Maram, Senapati, Manipur",25.211617,94.123235,4.21,MNP895667,2023-02-10,8.41,True
+MN-UKH-000004,Konsam Angami,residential,single_phase,Domestic LT-II,Ukhrul,Lunghar,"Lunghar, Ukhrul, Manipur",25.141615,94.304117,5.86,MNP201414,2021-12-28,11.73,True
+MN-CHU-000005,Nirmalabas High School,commercial,three_phase,Commercial HT,Churachandpur,Churachandpur Town,"Churachandpur Town, Churachandpur, Manipur",24.424866,93.681851,13.41,MNP182627,2020-11-28,26.82,True
+MN-UKH-000006,Khogen Meetei,residential,single_phase,Domestic LT-I,Ukhrul,Jessami,"Jessami, Ukhrul, Manipur",25.036681,94.360848,3.86,MNP910620,2022-05-20,7.72,True
+MN-BIS-000007,Manipur Food Industries,industrial,three_phase,Industrial HT,Bishnupur,Nambol,"Nambol, Bishnupur, Manipur",24.593195,93.793684,137.9,MNP575435,2020-06-10,275.79,True
+MN-THO-000008,Medplus Manipur,commercial,single_phase,Commercial HT,Thoubal,Lilong,"Lilong, Thoubal, Manipur",24.613949,93.993822,19.41,MNP835911,2020-03-04,38.81,True
+MN-THO-000009,Ningombam Thangal,residential,single_phase,BPL Category,Thoubal,Mayang Imphal,"Mayang Imphal, Thoubal, Manipur",24.645607,94.067776,2.4,MNP821590,2020-11-18,4.8,True
+MN-UKH-000010,Tomba Anal,residential,single_phase,Domestic LT-I,Ukhrul,Ukhrul Town,"Ukhrul Town, Ukhrul, Manipur",25.102847,94.418483,1.71,MNP321231,2020-10-28,3.42,True
+MN-UKH-000011,Big Bazaar Imphal,commercial,single_phase,Shops & Establishments,Ukhrul,Kasom,"Kasom, Ukhrul, Manipur",25.121509,94.334105,9.61,MNP581141,2023-03-16,19.23,True
+MN-BIS-000012,Naoba Zeliang,residential,three_phase,Domestic LT-II,Bishnupur,Thanga,"Thanga, Bishnupur, Manipur",24.644889,93.894845,5.14,MNP479580,2022-10-10,10.28,True
+MN-THO-000013,Cement Corporation Manipur,industrial,three_phase,Industrial LT,Thoubal,Mayang Imphal,"Mayang Imphal, Thoubal, Manipur",24.630461,93.964651,149.48,MNP892495,2023-09-28,298.95,True
+MN-THO-000014,Sunrise School,commercial,three_phase,Commercial HT,Thoubal,Wangjing,"Wangjing, Thoubal, Manipur",24.644015,93.968306,23.59,MNP500156,2020-08-30,47.19,True
+MN-CHU-000015,MSPDCL Substation,industrial,three_phase,Small Scale Industry,Churachandpur,Sangaikot,"Sangaikot, Churachandpur, Manipur",24.305158,93.786398,81.4,MNP855731,2023-05-13,162.81,True
+MN-CHU-000016,Oinam Zeliang,residential,single_phase,Domestic LT-I,Churachandpur,Singngat,"Singngat, Churachandpur, Manipur",24.399378,93.696757,3.84,MNP857168,2019-12-21,7.68,True
+MN-THO-000017,Ebomcha Monsang,residential,single_phase,BPL Category,Thoubal,Mayang Imphal,"Mayang Imphal, Thoubal, Manipur",24.654671,93.977728,5.86,MNP738551,2022-11-21,11.73,True
+MN-THO-000018,Chinglen Anal,residential,single_phase,Domestic LT-I,Thoubal,Mayang Imphal,"Mayang Imphal, Thoubal, Manipur",24.677513,94.090925,5.53,MNP480612,2022-04-13,11.05,True
+MN-BIS-000019,Rajkumar Inpui,residential,single_phase,BPL Category,Bishnupur,Karang,"Karang, Bishnupur, Manipur",24.60979,93.888281,1.9,MNP903035,2023-04-20,3.8,True
+MN-CHA-000020,Maibam Chiru,residential,three_phase,Domestic LT-II,Chandel,Molnoi,"Molnoi, Chandel, Manipur",24.339197,94.013568,2.96,MNP322086,2020-12-24,5.93,True
+MN-BIS-000021,NIT Manipur,commercial,three_phase,Shops & Establishments,Bishnupur,Ningthoukhong,"Ningthoukhong, Bishnupur, Manipur",24.588868,93.790702,34.43,MNP491559,2021-07-19,68.87,True
+MN-CHA-000022,Gomti Restaurant,commercial,single_phase,Commercial HT,Chandel,Tengnoupal,"Tengnoupal, Chandel, Manipur",24.371351,94.08428,25.14,MNP122056,2020-09-15,50.28,True
+MN-BIS-000023,Khogen Meitei,residential,single_phase,Domestic LT-I,Bishnupur,Bishnupur Bazar,"Bishnupur Bazar, Bishnupur, Manipur",24.564092,93.87033,1.84,MNP446479,2023-08-10,3.67,True
+MN-CHU-000024,Wahengbam Zou,residential,single_phase,BPL Category,Churachandpur,Thanlon,"Thanlon, Churachandpur, Manipur",24.448033,93.765837,2.39,MNP704201,2021-05-09,4.79,True
+MN-CHA-000025,Thangjam Vaiphei,residential,single_phase,Domestic LT-II,Chandel,Liwa Sarei,"Liwa Sarei, Chandel, Manipur",24.301104,94.244638,4.68,MNP544154,2021-09-13,9.36,True
+MN-IMP-000026,Jilangamba Angami,residential,single_phase,Domestic LT-I,Imphal East,Khongman,"Khongman, Imphal East, Manipur",24.831031,93.983989,1.83,MNP360735,2022-12-06,3.67,True
+MN-CHA-000027,Thangjam Lamkang,residential,single_phase,Domestic LT-I,Chandel,Machi,"Machi, Chandel, Manipur",24.371693,94.034761,5.38,MNP564656,2020-12-01,10.77,True
+MN-IMP-000028,Ningombam Tangkhul,residential,single_phase,Domestic LT-I,Imphal East,Khongman,"Khongman, Imphal East, Manipur",24.823631,93.953163,1.79,MNP520521,2023-09-04,3.57,True
+MN-IMP-000029,Elangbam Moyon,residential,single_phase,BPL Category,Imphal East,Mantripukhri,"Mantripukhri, Imphal East, Manipur",24.801769,93.952763,4.78,MNP921414,2020-11-20,9.57,True
+MN-CHA-000030,Oinam Kom,residential,three_phase,BPL Category,Chandel,Machi,"Machi, Chandel, Manipur",24.427511,94.266164,3.62,MNP871476,2020-12-18,7.25,True
+MN-UKH-000031,Bijoy Kabui,residential,single_phase,BPL Category,Ukhrul,Ukhrul Town,"Ukhrul Town, Ukhrul, Manipur",25.023919,94.442649,4.92,MNP265080,2023-09-08,9.85,True
+MN-IMP-000032,Loktak Power Station,industrial,three_phase,Small Scale Industry,Imphal West,Keishampat,"Keishampat, Imphal West, Manipur",24.789289,93.933968,119.01,MNP171262,2020-03-21,238.01,True
+MN-SEN-000033,Kauna Craft,commercial,single_phase,Shops & Establishments,Senapati,Kangpokpi,"Kangpokpi, Senapati, Manipur",25.304547,94.035508,8.33,MNP141672,2020-07-13,16.65,True
+MN-UKH-000034,Hemanta Anal,residential,single_phase,Domestic LT-II,Ukhrul,Lunghar,"Lunghar, Ukhrul, Manipur",25.021578,94.306286,4.36,MNP237235,2020-03-28,8.73,True
+MN-CHA-000035,Thoiba Thangal,residential,single_phase,BPL Category,Chandel,Khudengthabi,"Khudengthabi, Chandel, Manipur",24.362871,94.152571,5.58,MNP204837,2023-08-05,11.17,True
+MN-CHU-000036,Chanu Chothe,residential,single_phase,Domestic LT-I,Churachandpur,Rengkai,"Rengkai, Churachandpur, Manipur",24.337394,93.711557,4.9,MNP559469,2020-12-16,9.8,True
+MN-IMP-000037,Tombi Zou,residential,single_phase,Domestic LT-I,Imphal East,Nagamapal,"Nagamapal, Imphal East, Manipur",24.796016,93.935389,2.8,MNP878480,2020-11-25,5.61,True
+MN-CHU-000038,Khogen Angami,residential,single_phase,BPL Category,Churachandpur,Mualkoi,"Mualkoi, Churachandpur, Manipur",24.324183,93.789455,5.14,MNP994343,2022-07-11,10.27,True
+MN-CHU-000039,Ebomcha Zeliang,residential,single_phase,Domestic LT-I,Churachandpur,Churachandpur Town,"Churachandpur Town, Churachandpur, Manipur",24.395011,93.780719,5.12,MNP103717,2022-02-18,10.23,True
+MN-CHU-000040,St. Joseph School,commercial,three_phase,Commercial HT,Churachandpur,Rengkai,"Rengkai, Churachandpur, Manipur",24.327986,93.783884,25.03,MNP688153,2023-12-14,50.06,True
+MN-THO-000041,Heisnam Khoibu,residential,single_phase,Domestic LT-I,Thoubal,Mayang Imphal,"Mayang Imphal, Thoubal, Manipur",24.680744,94.084414,2.93,MNP143860,2022-04-11,5.86,True
+MN-IMP-000042,Ibotombi Chothe,residential,single_phase,Domestic LT-II,Imphal East,Langol,"Langol, Imphal East, Manipur",24.787704,93.945955,3.42,MNP918011,2020-11-12,6.84,True
+MN-SEN-000043,Hotel Classic Grande,commercial,three_phase,Commercial LT,Senapati,Karong,"Karong, Senapati, Manipur",25.363603,94.122146,7.73,MNP270395,2023-01-05,15.45,True
+MN-IMP-000044,Apollo Pharmacy Imphal,commercial,three_phase,Commercial HT,Imphal East,Heingang,"Heingang, Imphal East, Manipur",24.815752,93.959219,14.72,MNP941204,2020-04-01,29.44,True
+MN-BIS-000045,Imphal Hotel,commercial,three_phase,Commercial LT,Bishnupur,Ningthoukhong,"Ningthoukhong, Bishnupur, Manipur",24.561987,93.800642,38.14,MNP501124,2023-10-15,76.29,True
+MN-BIS-000046,Nirmalabas High School,commercial,single_phase,Commercial LT,Bishnupur,Kumbi,"Kumbi, Bishnupur, Manipur",24.58232,93.827819,30.35,MNP333752,2023-11-15,60.7,True
+MN-SEN-000047,Chanu Lamkang,residential,single_phase,BPL Category,Senapati,Mao,"Mao, Senapati, Manipur",25.272726,94.144356,5.83,MNP519093,2020-03-12,11.66,True
+MN-UKH-000048,Loktak Power Station,industrial,three_phase,Industrial HT,Ukhrul,Ukhrul Town,"Ukhrul Town, Ukhrul, Manipur",25.050356,94.39945,88.14,MNP287241,2020-09-30,176.28,True
+MN-CHU-000049,Loktak Power Station,industrial,three_phase,Small Scale Industry,Churachandpur,Churachandpur Town,"Churachandpur Town, Churachandpur, Manipur",24.342726,93.655533,137.53,MNP555673,2022-01-25,275.06,True
+MN-UKH-000050,Irengbam Hmar,residential,single_phase,BPL Category,Ukhrul,Litan,"Litan, Ukhrul, Manipur",25.100536,94.310296,2.75,MNP557239,2023-12-30,5.51,True
+MN-BIS-000051,Chanu Angami,residential,single_phase,BPL Category,Bishnupur,Kwasiphai,"Kwasiphai, Bishnupur, Manipur",24.640827,93.785934,2.15,MNP989208,2023-04-22,4.3,False
+MN-CHU-000052,Bidyarani Anal,residential,single_phase,Domestic LT-II,Churachandpur,Sangaikot,"Sangaikot, Churachandpur, Manipur",24.373418,93.797848,2.59,MNP681343,2023-04-17,5.18,False
+MN-SEN-000053,Ahongsangbam Khoibu,residential,single_phase,Domestic LT-II,Senapati,Saikul,"Saikul, Senapati, Manipur",25.334427,94.102324,2.57,MNP400850,2022-10-29,5.14,False
+MN-UKH-000054,Dinamani Kom,residential,single_phase,BPL Category,Ukhrul,Shangshak,"Shangshak, Ukhrul, Manipur",25.145643,94.373557,4.35,MNP277934,2020-04-23,8.69,False
+MN-UKH-000055,Ibotombi Monsang,residential,single_phase,Domestic LT-I,Ukhrul,Phungyar,"Phungyar, Ukhrul, Manipur",25.126706,94.407155,1.91,MNP254511,2023-11-13,3.81,False
+MN-CHA-000056,Ngangom Tangkhul,residential,three_phase,BPL Category,Chandel,Khengjoy,"Khengjoy, Chandel, Manipur",24.46706,94.096234,2.34,MNP303880,2019-12-23,4.68,False
+MN-CHA-000057,Laishram Singh,residential,three_phase,Domestic LT-I,Chandel,Liwa Sarei,"Liwa Sarei, Chandel, Manipur",24.308155,94.177268,4.55,MNP916232,2021-08-15,9.1,False
+MN-CHA-000058,Yumnam Thangal,residential,single_phase,Domestic LT-II,Chandel,Chandel Town,"Chandel Town, Chandel, Manipur",24.303318,94.153628,2.52,MNP800005,2021-01-10,5.04,False
+MN-UKH-000059,Handloom Cluster Moirang,industrial,three_phase,Small Scale Industry,Ukhrul,Shangshak,"Shangshak, Ukhrul, Manipur",25.129035,94.334873,150.55,MNP629298,2021-08-12,301.1,False
+MN-CHA-000060,SBI Imphal Branch,commercial,single_phase,Commercial LT,Chandel,Machi,"Machi, Chandel, Manipur",24.377347,94.281019,11.97,MNP980660,2020-06-06,23.94,False
+MN-CHA-000061,Dinamani Meetei,residential,single_phase,Domestic LT-I,Chandel,Moreh,"Moreh, Chandel, Manipur",24.368213,94.034042,5.66,MNP384913,2022-02-14,11.32,False
+MN-IMP-000062,Khumanthem Poumai,residential,single_phase,BPL Category,Imphal West,Keishampat,"Keishampat, Imphal West, Manipur",24.811414,93.898056,4.47,MNP324345,2023-08-24,8.94,False
+MN-UKH-000063,Bidyarani Meitei,residential,single_phase,Domestic LT-II,Ukhrul,Pushing,"Pushing, Ukhrul, Manipur",25.163444,94.41104,3.88,MNP508396,2019-09-09,7.77,False
+MN-IMP-000064,Geetarani Singh,residential,three_phase,Domestic LT-II,Imphal East,Thangmeiband,"Thangmeiband, Imphal East, Manipur",24.79693,93.936517,5.54,MNP890075,2021-10-26,11.07,False
+MN-SEN-000065,Moirang Pheijom,commercial,three_phase,Commercial LT,Senapati,Willong,"Willong, Senapati, Manipur",25.380084,94.07662,18.52,MNP611945,2022-10-10,37.04,False
+MN-CHA-000066,Umakanta Rongmei,residential,single_phase,Domestic LT-II,Chandel,Chandel Town,"Chandel Town, Chandel, Manipur",24.369842,94.217787,5.54,MNP233827,2020-07-07,11.07,False
+MN-SEN-000067,Rajkumar Zeliang,residential,single_phase,Domestic LT-II,Senapati,Karong,"Karong, Senapati, Manipur",25.377417,94.105975,4.39,MNP290556,2023-09-22,8.78,False
+MN-UKH-000068,Takhellambam Angami,residential,single_phase,Domestic LT-II,Ukhrul,Kasom,"Kasom, Ukhrul, Manipur",25.016828,94.332326,5.54,MNP391773,2019-10-15,11.09,False
+MN-SEN-000069,Loktak Power Station,industrial,three_phase,Industrial HT,Senapati,Purul,"Purul, Senapati, Manipur",25.321286,93.951839,56.24,MNP120324,2019-10-21,112.47,False
+MN-UKH-000070,Oken Chanu,residential,single_phase,Domestic LT-I,Ukhrul,Kasom,"Kasom, Ukhrul, Manipur",25.1327,94.301012,2.22,MNP309044,2023-11-22,4.45,False
+MN-BIS-000071,Ibemhal Kom,residential,single_phase,Domestic LT-II,Bishnupur,Moirang,"Moirang, Bishnupur, Manipur",24.604873,93.853784,4.43,MNP904150,2021-12-08,8.87,False
+MN-IMP-000072,Tombi Devi,residential,three_phase,BPL Category,Imphal West,Keishampat,"Keishampat, Imphal West, Manipur",24.765699,93.929853,2.57,MNP810250,2021-11-25,5.14,False
+MN-BIS-000073,Thangjam Monsang,residential,three_phase,BPL Category,Bishnupur,Nambol,"Nambol, Bishnupur, Manipur",24.58254,93.861974,4.42,MNP944657,2023-04-30,8.85,False
+MN-IMP-000074,Moirang Pheijom,commercial,single_phase,Commercial HT,Imphal East,Langol,"Langol, Imphal East, Manipur",24.839446,93.976033,25.97,MNP172306,2021-03-02,51.94,False
+MN-IMP-000075,Tombi Zeliang,residential,three_phase,BPL Category,Imphal East,Mantripukhri,"Mantripukhri, Imphal East, Manipur",24.786557,93.95574,2.69,MNP968962,2021-06-05,5.39,False
+MN-SEN-000076,Premila Tarao,residential,single_phase,Domestic LT-II,Senapati,Saikul,"Saikul, Senapati, Manipur",25.248798,94.144602,3.27,MNP556732,2019-11-27,6.54,False
+MN-UKH-000077,Naorem Liangmai,residential,single_phase,Domestic LT-II,Ukhrul,Kasom,"Kasom, Ukhrul, Manipur",25.178409,94.426228,5.08,MNP697530,2020-08-01,10.15,False
+MN-UKH-000078,Takhellambam Thadou,residential,single_phase,Domestic LT-II,Ukhrul,Ukhrul Town,"Ukhrul Town, Ukhrul, Manipur",25.100527,94.415381,3.72,MNP936587,2022-07-22,7.43,False
+MN-CHU-000079,Usham Hmar,residential,single_phase,BPL Category,Churachandpur,Sangaikot,"Sangaikot, Churachandpur, Manipur",24.329286,93.758368,2.76,MNP526170,2021-04-07,5.53,False
+MN-BIS-000080,Dinamani Devi,residential,single_phase,Domestic LT-I,Bishnupur,Toubul,"Toubul, Bishnupur, Manipur",24.552432,93.846821,2.3,MNP524045,2020-02-16,4.59,False
+MN-UKH-000081,Chandrakala Khoibu,residential,single_phase,BPL Category,Ukhrul,Shangshak,"Shangshak, Ukhrul, Manipur",25.188092,94.490786,5.62,MNP575786,2022-06-27,11.23,False
+MN-BIS-000082,Salam Gangte,residential,single_phase,BPL Category,Bishnupur,Nambol,"Nambol, Bishnupur, Manipur",24.587016,93.752318,5.68,MNP294143,2022-12-06,11.35,False
+MN-CHA-000083,Tombi Hmar,residential,single_phase,Domestic LT-II,Chandel,Chakpikarong,"Chakpikarong, Chandel, Manipur",24.385637,94.289996,5.84,MNP288158,2022-04-23,11.67,False
+MN-THO-000084,Biren Khoibu,residential,single_phase,Domestic LT-I,Thoubal,Yairipok,"Yairipok, Thoubal, Manipur",24.685301,93.994167,3.23,MNP768854,2019-10-14,6.47,False
+MN-IMP-000085,Geetarani Kabui,residential,single_phase,Domestic LT-I,Imphal East,Thangmeiband,"Thangmeiband, Imphal East, Manipur",24.83958,93.952185,2.26,MNP153872,2022-08-03,4.53,False
+MN-CHA-000086,Loktak Power Station,industrial,three_phase,Industrial HT,Chandel,Tengnoupal,"Tengnoupal, Chandel, Manipur",24.41136,94.280846,151.36,MNP615633,2023-08-04,302.73,False
+MN-IMP-000087,Ahongshangbam Monsang,residential,single_phase,Domestic LT-I,Imphal East,Heingang,"Heingang, Imphal East, Manipur",24.819904,93.936802,4.27,MNP224205,2020-11-16,8.54,False
+MN-BIS-000088,Manipur University,commercial,single_phase,Commercial HT,Bishnupur,Thanga,"Thanga, Bishnupur, Manipur",24.649005,93.771013,24.35,MNP411797,2020-09-14,48.69,False
+MN-CHU-000089,Handloom Cluster Moirang,industrial,three_phase,Industrial LT,Churachandpur,Mualkoi,"Mualkoi, Churachandpur, Manipur",24.431606,93.761115,151.52,MNP739244,2019-11-09,303.05,False
+MN-BIS-000090,Devi Paite,residential,single_phase,BPL Category,Bishnupur,Kumbi,"Kumbi, Bishnupur, Manipur",24.620248,93.803924,2.82,MNP178711,2023-02-16,5.64,False
+MN-CHA-000091,Radhamani Chanu,residential,single_phase,BPL Category,Chandel,Khengjoy,"Khengjoy, Chandel, Manipur",24.461872,94.243034,5.4,MNP396451,2020-01-24,10.8,False
+MN-IMP-000092,RIMS Hospital,commercial,three_phase,Shops & Establishments,Imphal West,Uripok,"Uripok, Imphal West, Manipur",24.813927,93.915794,23.8,MNP718439,2020-04-18,47.6,False
+MN-BIS-000093,Singjamei Market,commercial,three_phase,Shops & Establishments,Bishnupur,Laphupat Tera,"Laphupat Tera, Bishnupur, Manipur",24.62983,93.847495,30.31,MNP256226,2022-07-07,60.63,False
+MN-IMP-000094,Imphal Hotel,commercial,three_phase,Shops & Establishments,Imphal West,Lamphel,"Lamphel, Imphal West, Manipur",24.805705,93.9423,18.48,MNP885339,2020-10-24,36.97,False
+MN-CHA-000095,Nirmalabas High School,commercial,three_phase,Shops & Establishments,Chandel,Tengnoupal,"Tengnoupal, Chandel, Manipur",24.375117,94.028195,26.29,MNP522060,2022-06-24,52.59,False
+MN-CHA-000096,Chinglen Chanu,residential,three_phase,BPL Category,Chandel,New Samtal,"New Samtal, Chandel, Manipur",24.307188,94.139679,3.94,MNP437978,2020-08-14,7.88,False
+MN-IMP-000097,Nabachandra Lamkang,residential,single_phase,Domestic LT-I,Imphal West,Uripok,"Uripok, Imphal West, Manipur",24.770058,93.921358,1.64,MNP593355,2021-02-04,3.27,False
+MN-CHU-000098,Hemabati Haokip,residential,single_phase,Domestic LT-II,Churachandpur,Rengkai,"Rengkai, Churachandpur, Manipur",24.305602,93.77339,3.12,MNP449499,2022-03-16,6.24,False
+MN-THO-000099,Hemabati Moyon,residential,single_phase,Domestic LT-II,Thoubal,Lilong,"Lilong, Thoubal, Manipur",24.612706,94.028336,4.96,MNP953085,2019-09-28,9.93,False
+MN-CHA-000100,Oinam Anal,residential,single_phase,Domestic LT-II,Chandel,Tengnoupal,"Tengnoupal, Chandel, Manipur",24.343164,94.186867,1.88,MNP639593,2023-12-31,3.77,False
+MN-CHA-000101,Thokchom Chiru,residential,single_phase,Domestic LT-II,Chandel,Liwa Sarei,"Liwa Sarei, Chandel, Manipur",24.310336,94.159406,3.93,MNP755788,2021-07-11,7.87,False
+MN-BIS-000102,Longpi Pottery,commercial,single_phase,Commercial HT,Bishnupur,Ningthoukhong,"Ningthoukhong, Bishnupur, Manipur",24.613743,93.858914,39.22,MNP559398,2020-02-02,78.43,False
+MN-IMP-000103,Khogen Paite,residential,single_phase,Domestic LT-I,Imphal East,Thangmeiband,"Thangmeiband, Imphal East, Manipur",24.816141,93.952607,5.08,MNP679077,2021-09-19,10.16,False
+MN-IMP-000104,Gokul Simte,residential,single_phase,BPL Category,Imphal West,Kongba,"Kongba, Imphal West, Manipur",24.768958,93.910728,1.85,MNP406039,2021-02-24,3.71,False
+MN-SEN-000105,Naoroibam Thangal,residential,single_phase,Domestic LT-II,Senapati,Liyai,"Liyai, Senapati, Manipur",25.20507,94.14253,5.26,MNP299869,2020-08-23,10.52,False
+MN-THO-000106,Bidyarani Angami,residential,three_phase,BPL Category,Thoubal,Kakching,"Kakching, Thoubal, Manipur",24.669597,94.011343,2.28,MNP380150,2023-12-28,4.56,False
+MN-CHU-000107,Ongbi Liangmai,residential,single_phase,Domestic LT-II,Churachandpur,Mualkoi,"Mualkoi, Churachandpur, Manipur",24.323466,93.687536,3.97,MNP448588,2020-11-28,7.94,False
+MN-SEN-000108,City Pharmacy,commercial,three_phase,Shops & Establishments,Senapati,Liyai,"Liyai, Senapati, Manipur",25.342919,94.082039,16.6,MNP350405,2020-10-18,33.2,False
+MN-SEN-000109,Geetarani Poumai,residential,single_phase,BPL Category,Senapati,Senapati Town,"Senapati Town, Senapati, Manipur",25.390973,94.097579,3.99,MNP930884,2020-05-07,7.99,False
+MN-CHA-000110,NEEPCO Office,industrial,three_phase,Small Scale Industry,Chandel,Chandel Town,"Chandel Town, Chandel, Manipur",24.422344,94.12588,79.64,MNP718849,2022-02-22,159.27,False
+MN-CHA-000111,Manipur Handloom,commercial,three_phase,Commercial LT,Chandel,Tengnoupal,"Tengnoupal, Chandel, Manipur",24.371195,94.227354,7.97,MNP857537,2023-03-13,15.94,False
+MN-THO-000112,Oinam Angami,residential,single_phase,Domestic LT-II,Thoubal,Kakching,"Kakching, Thoubal, Manipur",24.611607,93.9569,1.68,MNP781403,2023-07-22,3.37,False
+MN-SEN-000113,Reliance Fresh Imphal,commercial,three_phase,Commercial HT,Senapati,Mao,"Mao, Senapati, Manipur",25.371092,94.090732,22.91,MNP667296,2023-10-21,45.82,False
+MN-BIS-000114,Manihar Haokip,residential,single_phase,Domestic LT-I,Bishnupur,Ningthoukhong,"Ningthoukhong, Bishnupur, Manipur",24.559783,93.823742,3.63,MNP897305,2020-06-14,7.26,False
+MN-IMP-000115,Joykumar Monsang,residential,three_phase,Domestic LT-I,Imphal West,Kongba,"Kongba, Imphal West, Manipur",24.762124,93.91037,3.29,MNP440131,2019-07-17,6.59,False
+MN-UKH-000116,Ongbi Chothe,residential,single_phase,BPL Category,Ukhrul,Chingai,"Chingai, Ukhrul, Manipur",25.12317,94.427019,1.7,MNP814919,2019-07-24,3.41,False
+MN-THO-000117,Premila Chothe,residential,single_phase,BPL Category,Thoubal,Kakching,"Kakching, Thoubal, Manipur",24.637461,94.043879,3.76,MNP250069,2022-09-14,7.53,False
+MN-CHU-000118,Thoibi Thangal,residential,three_phase,BPL Category,Churachandpur,Thanlon,"Thanlon, Churachandpur, Manipur",24.428473,93.748804,2.23,MNP673149,2023-02-13,4.47,False
+MN-UKH-000119,Chandrakala Koireng,residential,single_phase,Domestic LT-II,Ukhrul,Jessami,"Jessami, Ukhrul, Manipur",25.014114,94.428484,1.62,MNP308894,2021-11-06,3.24,False
+MN-IMP-000120,Manipur University,commercial,three_phase,Shops & Establishments,Imphal West,Uripok,"Uripok, Imphal West, Manipur",24.791004,93.945816,26.2,MNP410244,2020-01-31,52.41,False
+MN-SEN-000121,Ahongshangbam Meitei,residential,three_phase,BPL Category,Senapati,Purul,"Purul, Senapati, Manipur",25.277634,94.078658,3.56,MNP620856,2022-05-26,7.12,False
+MN-BIS-000122,Medplus Manipur,commercial,single_phase,Commercial LT,Bishnupur,Karang,"Karang, Bishnupur, Manipur",24.604562,93.89122,20.05,MNP751051,2022-08-07,40.1,False
+MN-THO-000123,Pukhrambam Liangmai,residential,single_phase,Domestic LT-II,Thoubal,Kakching,"Kakching, Thoubal, Manipur",24.696119,94.085803,2.38,MNP867934,2023-04-08,4.76,False
+MN-CHU-000124,Thangjam Hmar,residential,single_phase,BPL Category,Churachandpur,Singngat,"Singngat, Churachandpur, Manipur",24.310404,93.665117,1.58,MNP483629,2021-01-10,3.16,False
+MN-CHU-000125,Geetarani Moyon,residential,single_phase,Domestic LT-II,Churachandpur,Rengkai,"Rengkai, Churachandpur, Manipur",24.314166,93.752451,1.82,MNP943298,2023-05-12,3.64,False
+MN-IMP-000126,Ibotombi Rongmei,residential,three_phase,BPL Category,Imphal West,Keishampat,"Keishampat, Imphal West, Manipur",24.772328,93.939141,1.6,MNP483542,2023-07-02,3.21,False
+MN-IMP-000127,Moirang Pheijom,commercial,single_phase,Commercial HT,Imphal East,Sagolband,"Sagolband, Imphal East, Manipur",24.837013,93.94973,11.34,MNP805511,2019-10-22,22.68,False
+MN-SEN-000128,Ibotombi Aimol,residential,single_phase,BPL Category,Senapati,Mao,"Mao, Senapati, Manipur",25.339347,94.075789,5.45,MNP688678,2022-03-02,10.9,False
+MN-BIS-000129,Reliance Fresh Imphal,commercial,three_phase,Shops & Establishments,Bishnupur,Nambol,"Nambol, Bishnupur, Manipur",24.623507,93.870522,16.67,MNP416869,2020-05-13,33.33,False
+MN-THO-000130,Pukhrambam Inpui,residential,single_phase,Domestic LT-I,Thoubal,Thoubal Bazar,"Thoubal Bazar, Thoubal, Manipur",24.617744,94.062592,5.13,MNP663658,2023-03-31,10.26,False
+MN-UKH-000131,Naoba Simte,residential,three_phase,BPL Category,Ukhrul,Pushing,"Pushing, Ukhrul, Manipur",25.198101,94.382524,3.17,MNP203831,2021-04-05,6.35,False
+MN-CHU-000132,Lanchenbi Liangmai,residential,single_phase,Domestic LT-I,Churachandpur,Churachandpur Town,"Churachandpur Town, Churachandpur, Manipur",24.416462,93.701121,5.69,MNP997004,2021-12-21,11.38,False
+MN-UKH-000133,Memcha Rongmei,residential,single_phase,Domestic LT-I,Ukhrul,Pushing,"Pushing, Ukhrul, Manipur",25.171683,94.385799,4.88,MNP989227,2021-06-15,9.76,False
+MN-BIS-000134,Biren Angami,residential,single_phase,Domestic LT-I,Bishnupur,Karang,"Karang, Bishnupur, Manipur",24.625454,93.765469,5.56,MNP925206,2020-11-02,11.12,False
+MN-BIS-000135,Khumanthem Angami,residential,single_phase,BPL Category,Bishnupur,Karang,"Karang, Bishnupur, Manipur",24.600525,93.873969,2.94,MNP102973,2022-06-14,5.88,False
+MN-THO-000136,Moirang Pheijom,commercial,single_phase,Commercial LT,Thoubal,Wangjing,"Wangjing, Thoubal, Manipur",24.689552,94.00838,7.85,MNP215266,2020-04-19,15.7,False
+MN-THO-000137,Medplus Manipur,commercial,three_phase,Commercial LT,Thoubal,Thoubal Bazar,"Thoubal Bazar, Thoubal, Manipur",24.690538,93.963693,17.88,MNP717457,2022-03-10,35.76,False
+MN-CHU-000138,Manihar Tangkhul,residential,single_phase,BPL Category,Churachandpur,Churachandpur Town,"Churachandpur Town, Churachandpur, Manipur",24.442509,93.792591,4.08,MNP166645,2021-05-02,8.16,False
+MN-UKH-000139,Mangang Kharam,residential,single_phase,BPL Category,Ukhrul,Pushing,"Pushing, Ukhrul, Manipur",25.126367,94.389689,2.82,MNP145471,2019-12-05,5.64,False
+MN-CHU-000140,Big Bazaar Imphal,commercial,three_phase,Commercial LT,Churachandpur,Thanlon,"Thanlon, Churachandpur, Manipur",24.3493,93.750878,31.95,MNP602248,2021-10-02,63.9,False
+MN-IMP-000141,Chanu Haokip,residential,single_phase,Domestic LT-I,Imphal West,Kongba,"Kongba, Imphal West, Manipur",24.805411,93.935273,1.91,MNP168872,2023-04-19,3.82,False
+MN-UKH-000142,Elangbam Kharam,residential,single_phase,Domestic LT-I,Ukhrul,Litan,"Litan, Ukhrul, Manipur",25.098884,94.311512,3.97,MNP931621,2020-01-26,7.95,False
+MN-BIS-000143,Mangolnganbi Tangkhul,residential,single_phase,Domestic LT-II,Bishnupur,Laphupat Tera,"Laphupat Tera, Bishnupur, Manipur",24.594153,93.883156,3.08,MNP518098,2021-09-03,6.16,False
+MN-UKH-000144,Oinam Maram,residential,three_phase,BPL Category,Ukhrul,Litan,"Litan, Ukhrul, Manipur",25.023413,94.328598,4.93,MNP597305,2023-08-18,9.85,False
+MN-IMP-000145,Tombi Maram,residential,single_phase,BPL Category,Imphal West,Singjamei,"Singjamei, Imphal West, Manipur",24.793275,93.887079,1.88,MNP162894,2020-09-18,3.76,False
+MN-UKH-000146,Manipur Food Industries,industrial,three_phase,Industrial HT,Ukhrul,Phungyar,"Phungyar, Ukhrul, Manipur",25.140194,94.314553,171.5,MNP797660,2019-10-19,343.0,False
+MN-IMP-000147,Victoria Vaiphei,residential,single_phase,Domestic LT-I,Imphal East,Sagolband,"Sagolband, Imphal East, Manipur",24.829437,93.935694,1.88,MNP262246,2020-04-28,3.76,False
+MN-IMP-000148,Ibemhal Lamkang,residential,single_phase,Domestic LT-II,Imphal West,Chingmeirong,"Chingmeirong, Imphal West, Manipur",24.819065,93.906199,3.17,MNP986209,2020-11-10,6.34,False
+MN-IMP-000149,Bamboo Processing Unit,industrial,three_phase,Small Scale Industry,Imphal East,Thangmeiband,"Thangmeiband, Imphal East, Manipur",24.836896,93.996307,197.76,MNP380439,2023-11-04,395.52,False
+MN-CHU-000150,Thoibi Thadou,residential,three_phase,BPL Category,Churachandpur,Singngat,"Singngat, Churachandpur, Manipur",24.413007,93.706439,1.88,MNP789275,2021-10-04,3.75,False
+MN-IMP-000151,Irengbam Tangkhul,residential,single_phase,Domestic LT-I,Imphal East,Khongman,"Khongman, Imphal East, Manipur",24.8344,93.969088,3.41,MNP488028,2022-04-04,6.82,False
+MN-IMP-000152,Ningombam Meitei,residential,single_phase,Domestic LT-II,Imphal West,Lamphel,"Lamphel, Imphal West, Manipur",24.813445,93.887784,3.72,MNP564637,2020-04-17,7.43,False
+MN-CHA-000153,Lanchenbi Kharam,residential,single_phase,Domestic LT-II,Chandel,Liwa Sarei,"Liwa Sarei, Chandel, Manipur",24.302271,94.140598,1.75,MNP216276,2022-06-01,3.51,False
+MN-CHA-000154,Sanahanbi Aimol,residential,single_phase,BPL Category,Chandel,Molnoi,"Molnoi, Chandel, Manipur",24.323764,94.035258,4.42,MNP157443,2023-12-18,8.84,False
+MN-BIS-000155,Radhamani Anal,residential,single_phase,Domestic LT-II,Bishnupur,Moirang,"Moirang, Bishnupur, Manipur",24.624604,93.837505,5.83,MNP883301,2021-08-04,11.66,False
+MN-SEN-000156,Thiyam Khoibu,residential,single_phase,Domestic LT-II,Senapati,Willong,"Willong, Senapati, Manipur",25.274974,94.007142,5.41,MNP175576,2021-10-11,10.82,False
+MN-IMP-000157,Khwairamband Bazaar,commercial,single_phase,Commercial LT,Imphal East,Mantripukhri,"Mantripukhri, Imphal East, Manipur",24.795652,93.997426,7.9,MNP428267,2020-10-10,15.79,False
+MN-SEN-000158,Ibemhal Rongmei,residential,single_phase,Domestic LT-II,Senapati,Tadubi,"Tadubi, Senapati, Manipur",25.393976,93.958632,5.51,MNP280222,2020-07-16,11.02,False
+MN-UKH-000159,Tombi Chothe,residential,single_phase,Domestic LT-II,Ukhrul,Phungyar,"Phungyar, Ukhrul, Manipur",25.10554,94.498593,1.83,MNP649414,2023-07-25,3.66,False
+MN-CHU-000160,Wangkhem Paite,residential,single_phase,BPL Category,Churachandpur,Singngat,"Singngat, Churachandpur, Manipur",24.383078,93.795395,3.85,MNP219565,2021-01-11,7.71,False
+MN-UKH-000161,Lourembam Vaiphei,residential,single_phase,Domestic LT-I,Ukhrul,Chingai,"Chingai, Ukhrul, Manipur",25.12588,94.43915,3.55,MNP281926,2020-08-17,7.09,False
+MN-IMP-000162,Elangbam Liangmai,residential,single_phase,BPL Category,Imphal West,Keishampat,"Keishampat, Imphal West, Manipur",24.793929,93.920902,5.56,MNP774225,2020-06-10,11.11,False
+MN-UKH-000163,NEEPCO Office,industrial,three_phase,Industrial HT,Ukhrul,Chingai,"Chingai, Ukhrul, Manipur",25.009089,94.356193,192.07,MNP171603,2021-05-17,384.13,False
+MN-CHU-000164,Yumlembam Kharam,residential,single_phase,Domestic LT-II,Churachandpur,Henglep,"Henglep, Churachandpur, Manipur",24.43354,93.718349,4.29,MNP573866,2023-10-17,8.58,False
+MN-CHU-000165,Deben Kharam,residential,single_phase,BPL Category,Churachandpur,Tuibong,"Tuibong, Churachandpur, Manipur",24.341607,93.678218,3.59,MNP681242,2019-07-26,7.17,False
+MN-IMP-000166,Salam Kabui,residential,single_phase,Domestic LT-I,Imphal East,Koirengei,"Koirengei, Imphal East, Manipur",24.804735,93.970856,1.85,MNP572407,2023-06-05,3.7,False
+MN-UKH-000167,Manipur Rural Bank,commercial,three_phase,Commercial LT,Ukhrul,Phungyar,"Phungyar, Ukhrul, Manipur",25.194879,94.497242,30.19,MNP359778,2020-01-14,60.38,False
+MN-CHA-000168,Heisnam Maram,residential,three_phase,Domestic LT-II,Chandel,Molnoi,"Molnoi, Chandel, Manipur",24.407219,94.092858,5.16,MNP528625,2019-08-30,10.32,False
+MN-IMP-000169,Wangkhem Vaiphei,residential,single_phase,Domestic LT-II,Imphal East,Langol,"Langol, Imphal East, Manipur",24.827931,93.941383,5.6,MNP397949,2022-08-04,11.2,False
+MN-THO-000170,Bijoy Simte,residential,three_phase,Domestic LT-II,Thoubal,Lilong,"Lilong, Thoubal, Manipur",24.682254,94.09247,4.77,MNP787923,2020-02-02,9.53,False
+MN-THO-000171,Pukhrambam Khoibu,residential,single_phase,Domestic LT-II,Thoubal,Leisho,"Leisho, Thoubal, Manipur",24.661342,94.012736,5.7,MNP952686,2023-04-16,11.39,False
+MN-IMP-000172,Sanatombi Maram,residential,single_phase,Domestic LT-I,Imphal West,Kakching,"Kakching, Imphal West, Manipur",24.810624,93.883165,1.62,MNP458332,2019-09-16,3.24,False
+MN-BIS-000173,Okram Moyon,residential,single_phase,Domestic LT-I,Bishnupur,Moirang,"Moirang, Bishnupur, Manipur",24.587646,93.871583,5.94,MNP632351,2019-09-07,11.89,False
+MN-IMP-000174,Chinglen Poumai,residential,single_phase,Domestic LT-I,Imphal East,Langol,"Langol, Imphal East, Manipur",24.790529,93.971589,3.21,MNP971728,2020-02-14,6.43,False
+MN-THO-000175,Ema Market,commercial,single_phase,Shops & Establishments,Thoubal,Heirok,"Heirok, Thoubal, Manipur",24.696991,94.076318,34.75,MNP854540,2022-09-03,69.49,False
+MN-CHU-000176,Manipur Spinning Mills,industrial,three_phase,Small Scale Industry,Churachandpur,Thanlon,"Thanlon, Churachandpur, Manipur",24.370304,93.712223,83.75,MNP350786,2022-04-09,167.49,False
+MN-CHA-000177,MANIREDA Office,industrial,three_phase,Small Scale Industry,Chandel,Moreh,"Moreh, Chandel, Manipur",24.311275,94.259417,170.06,MNP698128,2021-07-14,340.13,False
+MN-CHU-000178,Saikhom Hmar,residential,single_phase,Domestic LT-I,Churachandpur,Tipaimukh,"Tipaimukh, Churachandpur, Manipur",24.449958,93.799496,4.0,MNP362147,2023-09-18,8.0,False
+MN-UKH-000179,Khogen Chiru,residential,three_phase,Domestic LT-II,Ukhrul,Pushing,"Pushing, Ukhrul, Manipur",25.153797,94.488953,5.32,MNP187949,2019-09-23,10.65,False
+MN-CHA-000180,Leishangthem Haokip,residential,three_phase,Domestic LT-I,Chandel,Molnoi,"Molnoi, Chandel, Manipur",24.34947,94.135163,2.08,MNP956375,2021-06-23,4.16,False
+MN-IMP-000181,Paona Bazaar,commercial,single_phase,Commercial HT,Imphal East,Mantripukhri,"Mantripukhri, Imphal East, Manipur",24.846784,93.972432,14.93,MNP347231,2021-11-03,29.86,False
+MN-UKH-000182,MSPDCL Substation,industrial,three_phase,Industrial HT,Ukhrul,Kasom,"Kasom, Ukhrul, Manipur",25.13434,94.423626,97.31,MNP203896,2019-12-31,194.61,False
+MN-THO-000183,Oinam Kabui,residential,single_phase,Domestic LT-I,Thoubal,Wangjing,"Wangjing, Thoubal, Manipur",24.611356,94.050736,3.84,MNP895702,2020-01-19,7.68,False
+MN-IMP-000184,Maibam Kom,residential,single_phase,BPL Category,Imphal East,Khongman,"Khongman, Imphal East, Manipur",24.834062,93.966411,5.33,MNP862560,2020-08-04,10.67,False
+MN-IMP-000185,Pukhrambam Gangte,residential,single_phase,Domestic LT-II,Imphal West,Kwakeithel,"Kwakeithel, Imphal West, Manipur",24.788633,93.919266,5.44,MNP769989,2019-07-22,10.89,False
+MN-IMP-000186,Ojita Tarao,residential,single_phase,BPL Category,Imphal West,Singjamei,"Singjamei, Imphal West, Manipur",24.778244,93.889381,1.63,MNP702980,2022-08-25,3.26,False
+MN-CHU-000187,Deben Mao,residential,single_phase,Domestic LT-II,Churachandpur,Tipaimukh,"Tipaimukh, Churachandpur, Manipur",24.413271,93.743046,4.67,MNP296412,2020-04-12,9.34,False
+MN-UKH-000188,Irengbam Kabui,residential,single_phase,Domestic LT-II,Ukhrul,Phungyar,"Phungyar, Ukhrul, Manipur",25.042593,94.327274,1.57,MNP491435,2022-08-01,3.13,False
+MN-UKH-000189,Naoroibam Vaiphei,residential,single_phase,BPL Category,Ukhrul,Phungyar,"Phungyar, Ukhrul, Manipur",25.070118,94.417984,3.27,MNP893435,2022-02-21,6.53,False
+MN-UKH-000190,Thangjam Thangal,residential,three_phase,Domestic LT-II,Ukhrul,Pushing,"Pushing, Ukhrul, Manipur",25.087495,94.480832,3.07,MNP762423,2022-12-25,6.13,False
+MN-IMP-000191,Ema Market,commercial,single_phase,Commercial LT,Imphal West,Kongba,"Kongba, Imphal West, Manipur",24.785979,93.934856,20.39,MNP929538,2022-11-20,40.78,False
+MN-UKH-000192,Manipur Rural Bank,commercial,single_phase,Shops & Establishments,Ukhrul,Lunghar,"Lunghar, Ukhrul, Manipur",25.124417,94.472473,38.36,MNP596395,2022-08-02,76.72,False
+MN-BIS-000193,Memcha Angami,residential,single_phase,Domestic LT-II,Bishnupur,Ningthoukhong,"Ningthoukhong, Bishnupur, Manipur",24.564707,93.888988,3.71,MNP558176,2021-10-05,7.43,False
+MN-SEN-000194,Sorokhaibam Inpui,residential,single_phase,BPL Category,Senapati,Mao,"Mao, Senapati, Manipur",25.251649,94.041827,5.91,MNP379676,2023-07-17,11.82,False
+MN-IMP-000195,Wahengbam Moyon,residential,single_phase,Domestic LT-I,Imphal West,Kakching,"Kakching, Imphal West, Manipur",24.784483,93.903013,4.35,MNP443848,2020-04-19,8.7,False
+MN-CHA-000196,Saikhom Liangmai,residential,single_phase,Domestic LT-I,Chandel,Khengjoy,"Khengjoy, Chandel, Manipur",24.348029,94.022759,2.08,MNP862120,2022-01-10,4.16,False
+MN-SEN-000197,Okram Rongmei,residential,single_phase,BPL Category,Senapati,Purul,"Purul, Senapati, Manipur",25.225609,93.980381,2.12,MNP812413,2023-02-09,4.25,False
+MN-THO-000198,Bamboo Processing Unit,industrial,three_phase,Industrial HT,Thoubal,Leisho,"Leisho, Thoubal, Manipur",24.664087,93.977282,95.31,MNP136489,2023-04-19,190.61,False
+MN-UKH-000199,Maipaksana Chanu,residential,single_phase,BPL Category,Ukhrul,Chingai,"Chingai, Ukhrul, Manipur",25.179358,94.394792,4.5,MNP571778,2021-12-04,9.01,False
+MN-IMP-000200,Usham Maram,residential,single_phase,BPL Category,Imphal West,Irilbung,"Irilbung, Imphal West, Manipur",24.762062,93.89346,1.68,MNP392227,2022-08-09,3.37,False
+MN-IMP-000201,Cement Corporation Manipur,industrial,three_phase,Small Scale Industry,Imphal East,Heingang,"Heingang, Imphal East, Manipur",24.791825,93.949501,68.32,MNP505785,2020-11-08,136.64,False
+MN-CHU-000202,Deben Moyon,residential,single_phase,Domestic LT-II,Churachandpur,Thanlon,"Thanlon, Churachandpur, Manipur",24.313305,93.668095,3.57,MNP309902,2023-04-26,7.15,False
+MN-IMP-000203,Khogen Liangmai,residential,three_phase,BPL Category,Imphal West,Kongba,"Kongba, Imphal West, Manipur",24.764443,93.905499,3.77,MNP986593,2022-03-19,7.53,False
+MN-IMP-000204,Sanasam Paite,residential,single_phase,BPL Category,Imphal West,Naoremthong,"Naoremthong, Imphal West, Manipur",24.798328,93.882752,5.1,MNP768676,2023-01-11,10.19,False
+MN-BIS-000205,Luxmi Kitchen,commercial,three_phase,Commercial LT,Bishnupur,Nambol,"Nambol, Bishnupur, Manipur",24.61279,93.762264,35.89,MNP928766,2021-03-27,71.78,False
+MN-UKH-000206,Deben Haokip,residential,single_phase,Domestic LT-II,Ukhrul,Shangshak,"Shangshak, Ukhrul, Manipur",25.184174,94.312216,2.75,MNP851759,2019-12-22,5.49,False
+MN-SEN-000207,Moirangthem Anal,residential,single_phase,Domestic LT-II,Senapati,Tadubi,"Tadubi, Senapati, Manipur",25.36124,94.099652,2.33,MNP588461,2020-03-11,4.66,False
+MN-THO-000208,Oken Zou,residential,single_phase,Domestic LT-I,Thoubal,Mayang Imphal,"Mayang Imphal, Thoubal, Manipur",24.620935,94.005571,3.68,MNP971776,2023-04-23,7.36,False
+MN-CHU-000209,Salam Aimol,residential,single_phase,BPL Category,Churachandpur,Rengkai,"Rengkai, Churachandpur, Manipur",24.392738,93.705337,3.58,MNP397846,2023-07-25,7.16,False
+MN-CHU-000210,Premila Tarao,residential,single_phase,BPL Category,Churachandpur,Rengkai,"Rengkai, Churachandpur, Manipur",24.412121,93.655502,2.64,MNP276827,2020-09-07,5.27,False
+MN-THO-000211,Bamboo Processing Unit,industrial,three_phase,Small Scale Industry,Thoubal,Wangjing,"Wangjing, Thoubal, Manipur",24.671335,94.084281,121.87,MNP855638,2020-08-11,243.74,False
+MN-IMP-000212,Tomba Koireng,residential,single_phase,BPL Category,Imphal East,Porompat,"Porompat, Imphal East, Manipur",24.817248,93.937502,3.51,MNP536822,2020-07-16,7.03,False
+MN-CHA-000213,Sanasam Kabui,residential,single_phase,BPL Category,Chandel,Molnoi,"Molnoi, Chandel, Manipur",24.406523,94.072741,2.71,MNP525818,2022-05-03,5.42,False
+MN-IMP-000214,Bidyarani Kabui,residential,single_phase,Domestic LT-II,Imphal East,Heingang,"Heingang, Imphal East, Manipur",24.80641,93.931405,2.95,MNP736129,2023-03-14,5.9,False
+MN-UKH-000215,Nongthombam Maram,residential,single_phase,Domestic LT-I,Ukhrul,Chingai,"Chingai, Ukhrul, Manipur",25.04229,94.365499,2.04,MNP434617,2022-08-25,4.08,False
+MN-CHU-000216,Laishram Vaiphei,residential,single_phase,Domestic LT-II,Churachandpur,Thanlon,"Thanlon, Churachandpur, Manipur",24.433579,93.739039,4.56,MNP745270,2021-08-29,9.11,False
+MN-THO-000217,Yumnam Paite,residential,single_phase,BPL Category,Thoubal,Lilong,"Lilong, Thoubal, Manipur",24.678917,94.024766,1.89,MNP589491,2021-03-17,3.78,False
+MN-CHA-000218,BT Road Market,commercial,three_phase,Shops & Establishments,Chandel,Chandel Town,"Chandel Town, Chandel, Manipur",24.407421,94.176052,31.73,MNP579441,2022-08-27,63.45,False
+MN-UKH-000219,Oinam Inpui,residential,single_phase,BPL Category,Ukhrul,Ukhrul Town,"Ukhrul Town, Ukhrul, Manipur",25.086332,94.325516,2.78,MNP805188,2021-05-14,5.55,False
+MN-IMP-000220,Nongthombam Koireng,residential,single_phase,Domestic LT-II,Imphal East,Khongman,"Khongman, Imphal East, Manipur",24.805416,93.975214,4.07,MNP483713,2023-10-02,8.14,False
+MN-BIS-000221,Chanu Poumai,residential,single_phase,BPL Category,Bishnupur,Kwasiphai,"Kwasiphai, Bishnupur, Manipur",24.58561,93.897977,4.23,MNP393308,2020-07-05,8.45,False
+MN-IMP-000222,Jilangamba Maram,residential,single_phase,Domestic LT-II,Imphal West,Keishampat,"Keishampat, Imphal West, Manipur",24.766606,93.887125,2.19,MNP684929,2021-12-15,4.38,False
+MN-BIS-000223,Manipur Rural Bank,commercial,single_phase,Commercial LT,Bishnupur,Karang,"Karang, Bishnupur, Manipur",24.574596,93.774102,13.56,MNP147504,2023-10-15,27.13,False
+MN-UKH-000224,Ongbi Kharam,residential,single_phase,BPL Category,Ukhrul,Shangshak,"Shangshak, Ukhrul, Manipur",25.057019,94.334675,5.54,MNP434002,2023-02-04,11.07,False
+MN-CHU-000225,Ibeyaima Kharam,residential,single_phase,BPL Category,Churachandpur,Mualkoi,"Mualkoi, Churachandpur, Manipur",24.312035,93.728677,3.35,MNP690268,2022-04-29,6.69,False
+MN-IMP-000226,Ibemhal Tangkhul,residential,single_phase,BPL Category,Imphal East,Langol,"Langol, Imphal East, Manipur",24.848767,93.937843,3.29,MNP821466,2020-06-23,6.58,False
+MN-CHA-000227,Leikai Meitei,residential,single_phase,Domestic LT-I,Chandel,Chakpikarong,"Chakpikarong, Chandel, Manipur",24.493894,94.259652,5.18,MNP649697,2020-06-23,10.35,False
+MN-SEN-000228,Tomba Gangte,residential,single_phase,Domestic LT-II,Senapati,Saikul,"Saikul, Senapati, Manipur",25.251581,93.984178,4.51,MNP428930,2021-08-28,9.02,False
+MN-BIS-000229,Memcha Zou,residential,single_phase,BPL Category,Bishnupur,Laphupat Tera,"Laphupat Tera, Bishnupur, Manipur",24.642938,93.833514,4.07,MNP440839,2020-04-16,8.14,False
+MN-SEN-000230,Ngangom Tarao,residential,single_phase,Domestic LT-II,Senapati,Mao,"Mao, Senapati, Manipur",25.255996,94.103899,2.34,MNP808699,2019-09-04,4.68,False
+MN-CHU-000231,SBI Imphal Branch,commercial,single_phase,Commercial LT,Churachandpur,Mualkoi,"Mualkoi, Churachandpur, Manipur",24.348552,93.713815,24.0,MNP392559,2020-11-16,47.99,False
+MN-CHU-000232,Joykumar Inpui,residential,single_phase,Domestic LT-II,Churachandpur,Henglep,"Henglep, Churachandpur, Manipur",24.336361,93.667226,4.25,MNP687713,2019-07-19,8.5,False
+MN-CHU-000233,Ahongsangbam Mao,residential,three_phase,Domestic LT-I,Churachandpur,Tuibong,"Tuibong, Churachandpur, Manipur",24.343295,93.737186,2.19,MNP404561,2023-10-08,4.39,False
+MN-IMP-000234,Oinam Kabui,residential,single_phase,BPL Category,Imphal West,Chingmeirong,"Chingmeirong, Imphal West, Manipur",24.78368,93.917281,1.73,MNP384303,2020-11-07,3.47,False
+MN-THO-000235,Lourembam Meitei,residential,single_phase,BPL Category,Thoubal,Kakching,"Kakching, Thoubal, Manipur",24.63366,93.970162,1.79,MNP336633,2020-06-05,3.57,False
+MN-IMP-000236,Geetarani Vaiphei,residential,single_phase,Domestic LT-I,Imphal West,Kakching,"Kakching, Imphal West, Manipur",24.819297,93.902565,5.14,MNP105433,2020-12-01,10.29,False
+MN-THO-000237,Bamboo Processing Unit,industrial,three_phase,Industrial HT,Thoubal,Khongjom,"Khongjom, Thoubal, Manipur",24.625464,94.052225,161.64,MNP600641,2020-05-10,323.27,False
+MN-CHU-000238,Memcha Haokip,residential,single_phase,Domestic LT-I,Churachandpur,Singngat,"Singngat, Churachandpur, Manipur",24.389346,93.720736,3.35,MNP661147,2019-11-12,6.71,False
+MN-IMP-000239,Thangjam Chanu,residential,three_phase,Domestic LT-II,Imphal East,Heingang,"Heingang, Imphal East, Manipur",24.804421,93.995067,5.24,MNP926236,2021-03-24,10.48,False
+MN-CHU-000240,Pukhrambam Vaiphei,residential,three_phase,Domestic LT-II,Churachandpur,Churachandpur Town,"Churachandpur Town, Churachandpur, Manipur",24.444754,93.668645,4.79,MNP398384,2021-06-16,9.58,False
+MN-CHA-000241,Steel Plant Imphal,industrial,three_phase,Industrial HT,Chandel,Machi,"Machi, Chandel, Manipur",24.487668,94.05437,50.64,MNP386090,2022-12-04,101.28,False
+MN-UKH-000242,Nirmalabas High School,commercial,three_phase,Shops & Establishments,Ukhrul,Kamjong,"Kamjong, Ukhrul, Manipur",25.148224,94.414895,34.86,MNP295243,2023-12-05,69.72,False
+MN-CHU-000243,Sagolsem Rongmei,residential,single_phase,BPL Category,Churachandpur,Mualkoi,"Mualkoi, Churachandpur, Manipur",24.320966,93.76929,2.41,MNP443856,2023-07-09,4.81,False
+MN-IMP-000244,Kshetrimayum Anal,residential,three_phase,Domestic LT-I,Imphal West,Keishampat,"Keishampat, Imphal West, Manipur",24.761456,93.891499,5.17,MNP373453,2021-11-08,10.33,False
+MN-CHU-000245,Naoba Singh,residential,single_phase,Domestic LT-II,Churachandpur,Singngat,"Singngat, Churachandpur, Manipur",24.39978,93.72846,3.11,MNP826420,2022-09-06,6.23,False
+MN-IMP-000246,Saikhom Rongmei,residential,single_phase,BPL Category,Imphal West,Kongba,"Kongba, Imphal West, Manipur",24.811404,93.907471,5.17,MNP907236,2022-04-06,10.35,False
+MN-CHU-000247,Khumanthem Zou,residential,single_phase,Domestic LT-II,Churachandpur,Singngat,"Singngat, Churachandpur, Manipur",24.36587,93.706542,3.58,MNP884056,2020-08-10,7.16,False
+MN-CHA-000248,Nabachandra Chothe,residential,single_phase,BPL Category,Chandel,Molnoi,"Molnoi, Chandel, Manipur",24.360276,94.224283,3.76,MNP925618,2023-07-19,7.52,False
+MN-UKH-000249,Biren Khoibu,residential,three_phase,Domestic LT-I,Ukhrul,Phungyar,"Phungyar, Ukhrul, Manipur",25.046443,94.479915,3.23,MNP700521,2020-12-29,6.46,False
+MN-UKH-000250,Ibemhal Kom,residential,single_phase,Domestic LT-II,Ukhrul,Pushing,"Pushing, Ukhrul, Manipur",25.108711,94.481294,4.31,MNP195359,2021-02-21,8.62,False
+MN-IMP-000251,Thiyam Tangkhul,residential,single_phase,Domestic LT-I,Imphal East,Koirengei,"Koirengei, Imphal East, Manipur",24.788183,93.995788,4.32,MNP685941,2021-05-31,8.65,False
+MN-CHU-000252,Oinam Singh,residential,single_phase,BPL Category,Churachandpur,Churachandpur Town,"Churachandpur Town, Churachandpur, Manipur",24.350236,93.670891,5.07,MNP176577,2023-10-02,10.15,False
+MN-IMP-000253,Okram Kabui,residential,single_phase,Domestic LT-II,Imphal West,Naoremthong,"Naoremthong, Imphal West, Manipur",24.793405,93.917342,5.52,MNP288724,2019-09-11,11.05,False
+MN-SEN-000254,Dinamani Poumai,residential,single_phase,BPL Category,Senapati,Mao,"Mao, Senapati, Manipur",25.357719,93.980335,2.9,MNP793939,2020-12-24,5.81,False
+MN-UKH-000255,Wahengbam Rongmei,residential,single_phase,BPL Category,Ukhrul,Phungyar,"Phungyar, Ukhrul, Manipur",25.049698,94.448789,1.65,MNP333507,2023-12-26,3.3,False
+MN-CHU-000256,Moirang Pheijom,commercial,single_phase,Commercial HT,Churachandpur,Thanlon,"Thanlon, Churachandpur, Manipur",24.385483,93.764369,35.99,MNP963355,2022-09-19,71.99,False
+MN-UKH-000257,Yumnam Gangte,residential,single_phase,BPL Category,Ukhrul,Kamjong,"Kamjong, Ukhrul, Manipur",25.068416,94.464251,2.0,MNP539605,2020-07-22,4.0,False
+MN-IMP-000258,Sangai Continental,commercial,single_phase,Shops & Establishments,Imphal East,Wangkhei,"Wangkhei, Imphal East, Manipur",24.839252,93.938924,20.41,MNP135207,2021-07-02,40.82,False
+MN-IMP-000259,Jilangamba Liangmai,residential,single_phase,Domestic LT-I,Imphal East,Wangkhei,"Wangkhei, Imphal East, Manipur",24.835811,93.940494,2.53,MNP891030,2019-08-27,5.06,False
+MN-CHU-000260,Maipaksana Anal,residential,single_phase,Domestic LT-I,Churachandpur,Saikot,"Saikot, Churachandpur, Manipur",24.408338,93.758005,4.39,MNP792282,2021-01-30,8.77,False
+MN-CHU-000261,Yendrembam Thadou,residential,single_phase,Domestic LT-II,Churachandpur,Henglep,"Henglep, Churachandpur, Manipur",24.404092,93.731409,2.63,MNP682851,2021-03-23,5.27,False
+MN-UKH-000262,Bidyarani Tangkhul,residential,single_phase,Domestic LT-II,Ukhrul,Litan,"Litan, Ukhrul, Manipur",25.069139,94.33632,5.59,MNP292811,2019-10-10,11.18,False
+MN-BIS-000263,Ongbi Thangal,residential,three_phase,BPL Category,Bishnupur,Kumbi,"Kumbi, Bishnupur, Manipur",24.608339,93.810128,3.58,MNP532723,2021-09-01,7.16,False
+MN-THO-000264,Maibam Kom,residential,single_phase,Domestic LT-I,Thoubal,Khongjom,"Khongjom, Thoubal, Manipur",24.694728,93.973003,4.14,MNP571635,2021-12-04,8.28,False
+MN-BIS-000265,Yaiphabi Chanu,residential,three_phase,Domestic LT-I,Bishnupur,Bishnupur Bazar,"Bishnupur Bazar, Bishnupur, Manipur",24.600589,93.841718,1.58,MNP943737,2019-09-26,3.16,False
+MN-BIS-000266,Wangkhem Monsang,residential,three_phase,Domestic LT-I,Bishnupur,Toubul,"Toubul, Bishnupur, Manipur",24.637212,93.889818,4.04,MNP322096,2022-12-09,8.09,False
+MN-IMP-000267,Manipur Spinning Mills,industrial,three_phase,Small Scale Industry,Imphal West,Kongba,"Kongba, Imphal West, Manipur",24.798766,93.944575,153.16,MNP733760,2020-01-22,306.32,False
+MN-BIS-000268,Radhamani Poumai,residential,single_phase,BPL Category,Bishnupur,Thanga,"Thanga, Bishnupur, Manipur",24.565254,93.836443,4.23,MNP476710,2022-04-11,8.46,False
+MN-CHA-000269,Leikai Kabui,residential,single_phase,Domestic LT-II,Chandel,New Samtal,"New Samtal, Chandel, Manipur",24.384826,94.220933,5.7,MNP312994,2021-12-04,11.41,False
+MN-IMP-000270,Manihar Simte,residential,single_phase,BPL Category,Imphal East,Thangmeiband,"Thangmeiband, Imphal East, Manipur",24.84479,93.961559,2.01,MNP712401,2020-10-03,4.02,False
+MN-CHU-000271,Wangkhem Aimol,residential,single_phase,Domestic LT-I,Churachandpur,Rengkai,"Rengkai, Churachandpur, Manipur",24.447726,93.775835,2.06,MNP623555,2020-12-01,4.12,False
+MN-UKH-000272,Hemabati Thangal,residential,single_phase,Domestic LT-II,Ukhrul,Lunghar,"Lunghar, Ukhrul, Manipur",25.184168,94.473979,3.83,MNP277487,2023-03-22,7.67,False
+MN-CHA-000273,Usham Chanu,residential,single_phase,Domestic LT-I,Chandel,Machi,"Machi, Chandel, Manipur",24.418255,94.119701,1.75,MNP957730,2020-04-04,3.49,False
+MN-IMP-000274,Ebomcha Aimol,residential,single_phase,Domestic LT-I,Imphal East,Mantripukhri,"Mantripukhri, Imphal East, Manipur",24.803464,93.9862,1.52,MNP109585,2022-10-12,3.04,False
+MN-UKH-000275,Hemabati Devi,residential,single_phase,BPL Category,Ukhrul,Ukhrul Town,"Ukhrul Town, Ukhrul, Manipur",25.0667,94.379634,3.92,MNP531319,2023-12-09,7.84,False
+MN-CHU-000276,Sanatombi Kharam,residential,single_phase,BPL Category,Churachandpur,Sangaikot,"Sangaikot, Churachandpur, Manipur",24.437978,93.701952,3.06,MNP551488,2022-12-31,6.12,False
+MN-IMP-000277,Lourembam Hmar,residential,single_phase,Domestic LT-II,Imphal West,Naoremthong,"Naoremthong, Imphal West, Manipur",24.801625,93.911655,2.51,MNP954814,2022-01-07,5.02,False
+MN-SEN-000278,Ahongsangbam Thangal,residential,single_phase,BPL Category,Senapati,Kangpokpi,"Kangpokpi, Senapati, Manipur",25.290488,93.978171,2.29,MNP336828,2022-04-28,4.59,False
+MN-IMP-000279,Jilangamba Poumai,residential,single_phase,Domestic LT-II,Imphal West,Lamphel,"Lamphel, Imphal West, Manipur",24.784886,93.909325,5.62,MNP158840,2020-06-07,11.23,False
+MN-THO-000280,Chandrakala Angami,residential,single_phase,Domestic LT-I,Thoubal,Kakching,"Kakching, Thoubal, Manipur",24.636239,94.037088,4.35,MNP653815,2023-10-07,8.69,False
+MN-CHA-000281,Okram Lamkang,residential,three_phase,BPL Category,Chandel,Chakpikarong,"Chakpikarong, Chandel, Manipur",24.302619,94.199061,2.3,MNP790077,2023-10-27,4.6,False
+MN-UKH-000282,Bijoy Simte,residential,single_phase,BPL Category,Ukhrul,Ukhrul Town,"Ukhrul Town, Ukhrul, Manipur",25.192214,94.329733,3.37,MNP960778,2021-10-09,6.73,False
+MN-CHU-000283,Kauna Craft,commercial,single_phase,Commercial HT,Churachandpur,Rengkai,"Rengkai, Churachandpur, Manipur",24.312802,93.799531,23.82,MNP809922,2020-12-21,47.64,False
+MN-THO-000284,Memcha Vaiphei,residential,single_phase,Domestic LT-I,Thoubal,Kakching,"Kakching, Thoubal, Manipur",24.659539,93.960061,4.87,MNP457137,2020-08-11,9.75,False
+MN-SEN-000285,Khwairamband Bazaar,commercial,three_phase,Commercial HT,Senapati,Mao,"Mao, Senapati, Manipur",25.241981,94.129611,14.17,MNP614435,2022-09-22,28.33,False
+MN-SEN-000286,Ibotombi Poumai,residential,single_phase,BPL Category,Senapati,Tadubi,"Tadubi, Senapati, Manipur",25.238138,93.95731,3.62,MNP409727,2019-07-13,7.25,False
+MN-IMP-000287,Ongbi Poumai,residential,single_phase,BPL Category,Imphal West,Singjamei,"Singjamei, Imphal West, Manipur",24.789539,93.8846,4.99,MNP261771,2019-11-10,9.98,False
+MN-UKH-000288,Thoiba Monsang,residential,single_phase,Domestic LT-II,Ukhrul,Phungyar,"Phungyar, Ukhrul, Manipur",25.090658,94.404878,3.48,MNP207197,2023-04-06,6.97,False
+MN-SEN-000289,Tombi Devi,residential,single_phase,BPL Category,Senapati,Liyai,"Liyai, Senapati, Manipur",25.280153,94.061928,2.2,MNP197584,2020-08-28,4.4,False
+MN-UKH-000290,Oinam Tangkhul,residential,single_phase,Domestic LT-I,Ukhrul,Litan,"Litan, Ukhrul, Manipur",25.036386,94.472357,5.76,MNP860053,2020-11-13,11.52,False
+MN-BIS-000291,Manipur Handloom,commercial,single_phase,Commercial HT,Bishnupur,Karang,"Karang, Bishnupur, Manipur",24.587331,93.790612,28.43,MNP277735,2023-03-24,56.86,False
+MN-CHU-000292,Okram Paite,residential,single_phase,Domestic LT-II,Churachandpur,Thanlon,"Thanlon, Churachandpur, Manipur",24.36131,93.653808,2.2,MNP414313,2021-04-16,4.41,False
+MN-UKH-000293,Gomti Restaurant,commercial,three_phase,Commercial HT,Ukhrul,Lunghar,"Lunghar, Ukhrul, Manipur",25.143194,94.431785,8.38,MNP722651,2020-07-19,16.76,False
+MN-IMP-000294,Thoibi Rongmei,residential,single_phase,BPL Category,Imphal West,Keishampat,"Keishampat, Imphal West, Manipur",24.765538,93.896175,4.52,MNP498343,2022-02-27,9.05,False
+MN-SEN-000295,Pukhrambam Anal,residential,single_phase,BPL Category,Senapati,Karong,"Karong, Senapati, Manipur",25.203942,93.970822,5.1,MNP310608,2021-04-26,10.2,False
+MN-SEN-000296,Hemabati Chothe,residential,single_phase,Domestic LT-II,Senapati,Mao,"Mao, Senapati, Manipur",25.235709,94.080549,2.57,MNP956156,2019-08-07,5.14,False
+MN-IMP-000297,Bijoy Tarao,residential,single_phase,BPL Category,Imphal West,Irilbung,"Irilbung, Imphal West, Manipur",24.756961,93.897022,4.75,MNP128223,2019-12-05,9.5,False
+MN-BIS-000298,Chanu Tangkhul,residential,single_phase,Domestic LT-I,Bishnupur,Toubul,"Toubul, Bishnupur, Manipur",24.63557,93.874533,3.29,MNP764100,2022-04-22,6.57,False
+MN-THO-000299,Chanu Liangmai,residential,three_phase,Domestic LT-II,Thoubal,Khongjom,"Khongjom, Thoubal, Manipur",24.666809,93.980748,2.82,MNP710527,2021-10-04,5.64,False
+MN-SEN-000300,Heisnam Tarao,residential,single_phase,Domestic LT-I,Senapati,Willong,"Willong, Senapati, Manipur",25.379267,93.9526,1.88,MNP214682,2019-09-11,3.77,False
+MN-UKH-000301,Ahongshangbam Rongmei,residential,three_phase,Domestic LT-II,Ukhrul,Kamjong,"Kamjong, Ukhrul, Manipur",25.041577,94.305306,2.32,MNP934908,2021-08-04,4.63,False
+MN-IMP-000302,Thiyam Chiru,residential,single_phase,BPL Category,Imphal West,Kwakeithel,"Kwakeithel, Imphal West, Manipur",24.790813,93.9095,5.52,MNP703178,2022-10-07,11.03,False
+MN-SEN-000303,Yumlembam Devi,residential,single_phase,Domestic LT-II,Senapati,Liyai,"Liyai, Senapati, Manipur",25.363489,94.018363,2.67,MNP536181,2023-07-11,5.33,False
+MN-THO-000304,Umakanta Thangal,residential,single_phase,BPL Category,Thoubal,Lilong,"Lilong, Thoubal, Manipur",24.637969,94.038544,2.71,MNP606384,2022-01-19,5.41,False
+MN-CHA-000305,Chanu Monsang,residential,single_phase,BPL Category,Chandel,New Samtal,"New Samtal, Chandel, Manipur",24.42483,94.122823,3.98,MNP220675,2023-11-17,7.97,False
+MN-IMP-000306,Gomti Restaurant,commercial,three_phase,Shops & Establishments,Imphal West,Keishampat,"Keishampat, Imphal West, Manipur",24.780529,93.900613,38.32,MNP267914,2022-02-24,76.65,False
+MN-CHA-000307,Thangjam Thadou,residential,single_phase,Domestic LT-II,Chandel,Moreh,"Moreh, Chandel, Manipur",24.452721,94.042034,5.41,MNP514798,2023-11-04,10.82,False
+MN-BIS-000308,Yaiphabi Singh,residential,single_phase,Domestic LT-I,Bishnupur,Toubul,"Toubul, Bishnupur, Manipur",24.598743,93.884183,5.1,MNP391865,2019-10-15,10.2,False
+MN-IMP-000309,Wahengbam Thadou,residential,single_phase,Domestic LT-I,Imphal West,Irilbung,"Irilbung, Imphal West, Manipur",24.779765,93.881573,2.71,MNP579776,2023-05-14,5.42,False
+MN-CHA-000310,Ojita Poumai,residential,single_phase,BPL Category,Chandel,Molnoi,"Molnoi, Chandel, Manipur",24.408327,94.190043,2.66,MNP219781,2022-01-20,5.32,False
+MN-CHA-000311,Ibotombi Monsang,residential,three_phase,BPL Category,Chandel,Khengjoy,"Khengjoy, Chandel, Manipur",24.327871,94.250479,5.93,MNP188868,2020-03-27,11.86,False
+MN-IMP-000312,Ibemhal Thadou,residential,single_phase,Domestic LT-I,Imphal West,Uripok,"Uripok, Imphal West, Manipur",24.786798,93.892018,2.73,MNP635638,2021-10-29,5.45,False
+MN-THO-000313,Chandrakala Thadou,residential,single_phase,BPL Category,Thoubal,Leisho,"Leisho, Thoubal, Manipur",24.601839,94.087145,2.03,MNP827117,2020-05-21,4.06,False
+MN-THO-000314,NEEPCO Office,industrial,three_phase,Industrial HT,Thoubal,Mayang Imphal,"Mayang Imphal, Thoubal, Manipur",24.657652,93.991108,128.67,MNP402865,2023-03-21,257.34,False
+MN-CHA-000315,Yumlembam Singh,residential,single_phase,Domestic LT-I,Chandel,Khengjoy,"Khengjoy, Chandel, Manipur",24.430284,94.248923,2.43,MNP954815,2021-11-07,4.86,False
+MN-CHA-000316,Bamboo Processing Unit,industrial,three_phase,Industrial HT,Chandel,Liwa Sarei,"Liwa Sarei, Chandel, Manipur",24.302199,94.041066,184.0,MNP535820,2020-01-09,368.01,False
+MN-CHA-000317,BT Road Market,commercial,three_phase,Commercial LT,Chandel,Machi,"Machi, Chandel, Manipur",24.474778,94.179224,27.02,MNP406278,2023-10-28,54.03,False
+MN-CHU-000318,Maipaksana Inpui,residential,single_phase,Domestic LT-I,Churachandpur,Rengkai,"Rengkai, Churachandpur, Manipur",24.399756,93.676306,5.61,MNP700534,2023-05-14,11.23,False
+MN-UKH-000319,Nabachandra Liangmai,residential,single_phase,Domestic LT-II,Ukhrul,Pushing,"Pushing, Ukhrul, Manipur",25.083754,94.376628,3.84,MNP207391,2019-11-17,7.67,False
+MN-BIS-000320,Ema Market,commercial,single_phase,Commercial HT,Bishnupur,Ningthoukhong,"Ningthoukhong, Bishnupur, Manipur",24.554697,93.774943,31.49,MNP956401,2023-07-08,62.97,False
+MN-IMP-000321,Manihar Mao,residential,three_phase,BPL Category,Imphal West,Uripok,"Uripok, Imphal West, Manipur",24.755796,93.922221,2.6,MNP763508,2021-08-09,5.21,False
+MN-THO-000322,Biren Mao,residential,single_phase,BPL Category,Thoubal,Wabagai,"Wabagai, Thoubal, Manipur",24.63893,93.993304,3.1,MNP664939,2023-01-23,6.2,False
+MN-CHU-000323,Ibeyaima Vaiphei,residential,single_phase,Domestic LT-II,Churachandpur,Henglep,"Henglep, Churachandpur, Manipur",24.407857,93.694568,4.05,MNP162165,2022-06-14,8.1,False
+MN-THO-000324,Gomti Restaurant,commercial,single_phase,Commercial HT,Thoubal,Wangjing,"Wangjing, Thoubal, Manipur",24.647605,94.049551,37.95,MNP968726,2022-08-14,75.89,False
+MN-SEN-000325,Hotel Classic Grande,commercial,three_phase,Commercial HT,Senapati,Liyai,"Liyai, Senapati, Manipur",25.346514,93.992988,8.51,MNP758309,2021-09-06,17.03,False
+MN-IMP-000326,Ibeyaima Lamkang,residential,single_phase,Domestic LT-II,Imphal West,Singjamei,"Singjamei, Imphal West, Manipur",24.768358,93.921655,1.73,MNP576782,2021-04-08,3.46,False
+MN-IMP-000327,Victoria Meetei,residential,single_phase,Domestic LT-II,Imphal East,Khongman,"Khongman, Imphal East, Manipur",24.814746,93.971779,3.0,MNP328411,2021-08-06,6.01,False
+MN-CHA-000328,City Pharmacy,commercial,three_phase,Commercial HT,Chandel,Chakpikarong,"Chakpikarong, Chandel, Manipur",24.454182,94.031979,9.94,MNP673896,2020-10-06,19.88,False
+MN-CHA-000329,Tomba Vaiphei,residential,single_phase,Domestic LT-II,Chandel,Khudengthabi,"Khudengthabi, Chandel, Manipur",24.445638,94.148647,4.6,MNP117072,2023-04-23,9.2,False
+MN-THO-000330,Nirmalabas High School,commercial,single_phase,Commercial HT,Thoubal,Heirok,"Heirok, Thoubal, Manipur",24.643483,93.98696,34.12,MNP312146,2020-02-22,68.24,False
+MN-CHU-000331,Shija Hospital,commercial,single_phase,Commercial HT,Churachandpur,Rengkai,"Rengkai, Churachandpur, Manipur",24.419912,93.754204,16.34,MNP362552,2023-07-18,32.69,False
+MN-THO-000332,Sanasam Aimol,residential,single_phase,Domestic LT-I,Thoubal,Thoubal Bazar,"Thoubal Bazar, Thoubal, Manipur",24.659023,94.004146,1.91,MNP837880,2023-06-22,3.82,False
+MN-CHA-000333,Bijoy Aimol,residential,single_phase,Domestic LT-II,Chandel,Tengnoupal,"Tengnoupal, Chandel, Manipur",24.483463,94.041046,5.78,MNP109738,2023-12-17,11.55,False
+MN-IMP-000334,Kshetrimayum Meetei,residential,single_phase,Domestic LT-I,Imphal West,Kakching,"Kakching, Imphal West, Manipur",24.78122,93.892959,3.94,MNP866260,2023-06-07,7.88,False
+MN-UKH-000335,Irengbam Zou,residential,single_phase,BPL Category,Ukhrul,Lunghar,"Lunghar, Ukhrul, Manipur",25.174589,94.446445,5.13,MNP249792,2023-08-15,10.26,False
+MN-IMP-000336,Mangang Mao,residential,single_phase,BPL Category,Imphal East,Thangmeiband,"Thangmeiband, Imphal East, Manipur",24.826115,93.978459,5.32,MNP884616,2023-02-26,10.64,False
+MN-CHA-000337,BT Road Market,commercial,three_phase,Commercial LT,Chandel,Moreh,"Moreh, Chandel, Manipur",24.349934,94.146827,14.69,MNP888996,2023-04-25,29.38,False
+MN-SEN-000338,Takhellambam Zou,residential,single_phase,BPL Category,Senapati,Mao,"Mao, Senapati, Manipur",25.397534,94.138812,1.68,MNP188341,2022-08-12,3.35,False
+MN-CHU-000339,Lanchenbi Chiru,residential,single_phase,Domestic LT-I,Churachandpur,Churachandpur Town,"Churachandpur Town, Churachandpur, Manipur",24.405836,93.788787,2.31,MNP884170,2021-10-22,4.63,False
+MN-IMP-000340,Yaiphabi Gangte,residential,single_phase,BPL Category,Imphal East,Wangkhei,"Wangkhei, Imphal East, Manipur",24.819756,93.994084,1.65,MNP722780,2023-08-10,3.31,False
+MN-IMP-000341,Nongthombam Poumai,residential,three_phase,BPL Category,Imphal East,Langol,"Langol, Imphal East, Manipur",24.828819,93.950814,5.66,MNP541307,2021-12-15,11.32,False
+MN-THO-000342,Ibomcha Meetei,residential,single_phase,Domestic LT-I,Thoubal,Heirok,"Heirok, Thoubal, Manipur",24.697106,94.09164,3.63,MNP141761,2023-09-01,7.27,False
+MN-SEN-000343,Imphal Rice Mill,industrial,three_phase,Small Scale Industry,Senapati,Willong,"Willong, Senapati, Manipur",25.372409,94.11891,91.06,MNP847245,2021-03-12,182.11,False
+MN-SEN-000344,BT Road Market,commercial,three_phase,Shops & Establishments,Senapati,Tadubi,"Tadubi, Senapati, Manipur",25.365783,93.957402,26.88,MNP745972,2023-02-24,53.76,False
+MN-CHU-000345,Laishram Tarao,residential,single_phase,BPL Category,Churachandpur,Tuibong,"Tuibong, Churachandpur, Manipur",24.334501,93.668085,1.85,MNP765105,2019-09-22,3.69,False
+MN-IMP-000346,Sunrise School,commercial,three_phase,Commercial LT,Imphal West,Kwakeithel,"Kwakeithel, Imphal West, Manipur",24.79874,93.903791,31.05,MNP160718,2022-08-20,62.11,False
+MN-SEN-000347,Premila Meitei,residential,single_phase,BPL Category,Senapati,Kangpokpi,"Kangpokpi, Senapati, Manipur",25.213071,94.013058,3.93,MNP790017,2019-11-08,7.86,False
+MN-IMP-000348,Ningombam Inpui,residential,three_phase,BPL Category,Imphal East,Heingang,"Heingang, Imphal East, Manipur",24.835351,93.952313,4.32,MNP642347,2019-08-13,8.63,False
+MN-CHU-000349,DM College,commercial,single_phase,Commercial HT,Churachandpur,Rengkai,"Rengkai, Churachandpur, Manipur",24.432897,93.742379,15.07,MNP868538,2023-05-06,30.14,False
+MN-IMP-000350,Sunrise School,commercial,single_phase,Commercial LT,Imphal East,Langol,"Langol, Imphal East, Manipur",24.781708,93.990907,8.19,MNP375722,2020-01-05,16.38,False
+MN-IMP-000351,Cement Corporation Manipur,industrial,three_phase,Small Scale Industry,Imphal West,Kongba,"Kongba, Imphal West, Manipur",24.811229,93.917026,190.25,MNP477617,2023-09-11,380.5,False
+MN-THO-000352,Maibam Vaiphei,residential,three_phase,BPL Category,Thoubal,Lilong,"Lilong, Thoubal, Manipur",24.679878,94.09969,3.08,MNP857888,2023-05-11,6.16,False
+MN-IMP-000353,Lourembam Chanu,residential,single_phase,Domestic LT-II,Imphal East,Porompat,"Porompat, Imphal East, Manipur",24.833703,93.958135,3.66,MNP257375,2023-01-01,7.32,False
+MN-IMP-000354,Ginger Processing Plant,industrial,three_phase,Small Scale Industry,Imphal East,Nagamapal,"Nagamapal, Imphal East, Manipur",24.823925,93.991157,197.45,MNP787554,2021-08-27,394.91,False
+MN-BIS-000355,Phurailatpam Meetei,residential,single_phase,Domestic LT-I,Bishnupur,Laphupat Tera,"Laphupat Tera, Bishnupur, Manipur",24.626827,93.812665,3.4,MNP626428,2020-03-25,6.79,False
+MN-THO-000356,Manipur Handloom,commercial,three_phase,Commercial HT,Thoubal,Wabagai,"Wabagai, Thoubal, Manipur",24.673758,93.985817,11.09,MNP172274,2021-05-25,22.18,False
+MN-CHU-000357,BT Road Market,commercial,three_phase,Commercial LT,Churachandpur,Singngat,"Singngat, Churachandpur, Manipur",24.353193,93.693086,17.13,MNP486839,2022-11-18,34.26,False
+MN-CHU-000358,Ngangom Maram,residential,single_phase,Domestic LT-II,Churachandpur,Mualkoi,"Mualkoi, Churachandpur, Manipur",24.335041,93.656314,1.58,MNP910143,2019-08-27,3.16,False
+MN-BIS-000359,Khundrakpam Devi,residential,single_phase,Domestic LT-II,Bishnupur,Moirang,"Moirang, Bishnupur, Manipur",24.648772,93.814166,3.23,MNP766833,2020-02-12,6.46,False
+MN-UKH-000360,Vishal Mega Mart,commercial,single_phase,Shops & Establishments,Ukhrul,Ukhrul Town,"Ukhrul Town, Ukhrul, Manipur",25.135929,94.343651,38.37,MNP862540,2022-04-13,76.75,False
+MN-BIS-000361,Memcha Simte,residential,single_phase,Domestic LT-I,Bishnupur,Laphupat Tera,"Laphupat Tera, Bishnupur, Manipur",24.628635,93.763412,3.38,MNP146032,2022-09-15,6.76,False
+MN-SEN-000362,Nirmalabas High School,commercial,three_phase,Commercial LT,Senapati,Mao,"Mao, Senapati, Manipur",25.375824,94.138946,22.69,MNP708982,2023-06-21,45.38,False
+MN-SEN-000363,Leishangthem Zou,residential,single_phase,Domestic LT-II,Senapati,Kangpokpi,"Kangpokpi, Senapati, Manipur",25.322682,93.983407,5.96,MNP992247,2022-03-28,11.92,False
+MN-SEN-000364,City Pharmacy,commercial,single_phase,Commercial LT,Senapati,Mao,"Mao, Senapati, Manipur",25.246334,94.138546,28.61,MNP178315,2022-11-13,57.23,False
+MN-IMP-000365,Ningombam Liangmai,residential,single_phase,Domestic LT-II,Imphal West,Keishampat,"Keishampat, Imphal West, Manipur",24.792542,93.915888,2.54,MNP226601,2020-12-31,5.08,False
+MN-BIS-000366,Elangbam Koireng,residential,three_phase,Domestic LT-I,Bishnupur,Toubul,"Toubul, Bishnupur, Manipur",24.567653,93.783073,2.34,MNP265271,2020-02-27,4.68,False
+MN-IMP-000367,Ongbi Haokip,residential,single_phase,Domestic LT-II,Imphal East,Wangkhei,"Wangkhei, Imphal East, Manipur",24.834571,93.954509,1.76,MNP515492,2021-02-15,3.52,False
+MN-CHU-000368,Ibomcha Rongmei,residential,three_phase,BPL Category,Churachandpur,Henglep,"Henglep, Churachandpur, Manipur",24.445365,93.782568,5.67,MNP884417,2020-12-02,11.35,False
+MN-CHA-000369,Yumnam Singh,residential,single_phase,Domestic LT-I,Chandel,Tengnoupal,"Tengnoupal, Chandel, Manipur",24.498982,94.052169,3.28,MNP237064,2022-11-23,6.57,False
+MN-UKH-000370,Shamu Automobile,commercial,three_phase,Commercial LT,Ukhrul,Phungyar,"Phungyar, Ukhrul, Manipur",25.151648,94.439204,12.5,MNP122859,2023-08-23,25.0,False
+MN-CHA-000371,Wangkhem Gangte,residential,single_phase,Domestic LT-II,Chandel,Machi,"Machi, Chandel, Manipur",24.463167,94.067332,2.51,MNP153097,2023-01-23,5.01,False
+MN-SEN-000372,HDFC Bank Imphal,commercial,single_phase,Shops & Establishments,Senapati,Tadubi,"Tadubi, Senapati, Manipur",25.307395,94.068588,26.35,MNP547389,2023-01-14,52.71,False
+MN-THO-000373,Dinamani Simte,residential,single_phase,BPL Category,Thoubal,Yairipok,"Yairipok, Thoubal, Manipur",24.609149,94.081619,2.7,MNP746947,2022-08-17,5.39,False
+MN-CHA-000374,Memcha Haokip,residential,single_phase,Domestic LT-I,Chandel,Liwa Sarei,"Liwa Sarei, Chandel, Manipur",24.325903,94.266624,5.8,MNP539599,2022-11-20,11.6,False
+MN-BIS-000375,Irengbam Mao,residential,single_phase,Domestic LT-II,Bishnupur,Thanga,"Thanga, Bishnupur, Manipur",24.636213,93.871427,4.45,MNP460745,2020-10-31,8.9,False
+MN-SEN-000376,Ibomcha Anal,residential,single_phase,Domestic LT-I,Senapati,Purul,"Purul, Senapati, Manipur",25.310171,93.967397,3.34,MNP950069,2019-08-22,6.68,False
+MN-CHA-000377,Naoba Aimol,residential,three_phase,Domestic LT-I,Chandel,Molnoi,"Molnoi, Chandel, Manipur",24.374538,94.077926,4.76,MNP359896,2020-04-27,9.51,False
+MN-IMP-000378,Victoria Thadou,residential,single_phase,BPL Category,Imphal East,Wangkhei,"Wangkhei, Imphal East, Manipur",24.814711,93.935673,2.49,MNP433451,2019-11-13,4.98,False
+MN-IMP-000379,Ahongshangbam Hmar,residential,single_phase,Domestic LT-II,Imphal East,Langol,"Langol, Imphal East, Manipur",24.827828,93.935329,5.33,MNP668458,2022-04-10,10.66,False
+MN-IMP-000380,Khumanthem Aimol,residential,single_phase,Domestic LT-II,Imphal East,Khongman,"Khongman, Imphal East, Manipur",24.81466,93.963641,4.17,MNP100716,2022-02-22,8.33,False
+MN-BIS-000381,Apollo Pharmacy Imphal,commercial,three_phase,Commercial HT,Bishnupur,Moirang,"Moirang, Bishnupur, Manipur",24.632468,93.802171,29.54,MNP162448,2023-11-19,59.07,False
+MN-THO-000382,Chanu Maram,residential,single_phase,BPL Category,Thoubal,Kakching,"Kakching, Thoubal, Manipur",24.656573,93.990054,5.45,MNP514812,2020-09-19,10.91,False
+MN-CHU-000383,Ningombam Zeliang,residential,single_phase,Domestic LT-II,Churachandpur,Singngat,"Singngat, Churachandpur, Manipur",24.419614,93.748768,5.33,MNP780714,2022-03-24,10.66,False
+MN-UKH-000384,Irengbam Monsang,residential,single_phase,Domestic LT-II,Ukhrul,Kasom,"Kasom, Ukhrul, Manipur",25.173459,94.441673,5.27,MNP233534,2023-01-04,10.53,False
+MN-SEN-000385,Sagolsem Anal,residential,three_phase,BPL Category,Senapati,Karong,"Karong, Senapati, Manipur",25.339494,94.086028,4.28,MNP331625,2020-06-02,8.57,False
+MN-CHA-000386,Chanu Chothe,residential,single_phase,Domestic LT-II,Chandel,Machi,"Machi, Chandel, Manipur",24.450543,94.047582,5.46,MNP276042,2020-06-09,10.93,False
+MN-IMP-000387,St. Joseph School,commercial,single_phase,Commercial LT,Imphal West,Chingmeirong,"Chingmeirong, Imphal West, Manipur",24.811029,93.882047,34.34,MNP361662,2020-02-13,68.68,False
+MN-CHU-000388,Biren Poumai,residential,single_phase,Domestic LT-II,Churachandpur,Tuibong,"Tuibong, Churachandpur, Manipur",24.31933,93.700268,4.85,MNP274418,2021-09-07,9.69,False
+MN-SEN-000389,Tombi Kabui,residential,single_phase,BPL Category,Senapati,Mao,"Mao, Senapati, Manipur",25.232152,94.113593,5.24,MNP782591,2019-10-03,10.49,False
+MN-THO-000390,Tomba Moyon,residential,single_phase,Domestic LT-II,Thoubal,Heirok,"Heirok, Thoubal, Manipur",24.650747,93.950958,2.79,MNP209812,2023-08-04,5.58,False
+MN-SEN-000391,Yendrembam Haokip,residential,single_phase,BPL Category,Senapati,Saikul,"Saikul, Senapati, Manipur",25.323385,94.146237,4.34,MNP606186,2020-01-21,8.69,False
+MN-THO-000392,Saikhom Meitei,residential,single_phase,Domestic LT-I,Thoubal,Leisho,"Leisho, Thoubal, Manipur",24.62598,94.045101,3.93,MNP299212,2021-09-16,7.86,False
+MN-CHU-000393,Naoroibam Vaiphei,residential,single_phase,BPL Category,Churachandpur,Henglep,"Henglep, Churachandpur, Manipur",24.416977,93.666047,4.92,MNP676363,2021-04-02,9.85,False
+MN-UKH-000394,Devi Moyon,residential,single_phase,BPL Category,Ukhrul,Ukhrul Town,"Ukhrul Town, Ukhrul, Manipur",25.108253,94.492598,3.04,MNP729371,2021-04-24,6.08,False
+MN-IMP-000395,Ebomcha Moyon,residential,three_phase,Domestic LT-II,Imphal East,Wangkhei,"Wangkhei, Imphal East, Manipur",24.824284,93.995242,1.96,MNP984756,2023-05-11,3.92,False
+MN-SEN-000396,Oinam Haokip,residential,single_phase,Domestic LT-II,Senapati,Liyai,"Liyai, Senapati, Manipur",25.387446,94.087577,1.81,MNP293862,2021-12-04,3.61,False
+MN-UKH-000397,St. Joseph School,commercial,single_phase,Commercial HT,Ukhrul,Kamjong,"Kamjong, Ukhrul, Manipur",25.060193,94.441634,9.69,MNP587648,2022-07-12,19.38,False
+MN-CHU-000398,Laishram Vaiphei,residential,single_phase,Domestic LT-II,Churachandpur,Mualkoi,"Mualkoi, Churachandpur, Manipur",24.387326,93.701882,4.29,MNP947438,2020-12-20,8.59,False
+MN-BIS-000399,Irengbam Chiru,residential,single_phase,BPL Category,Bishnupur,Thanga,"Thanga, Bishnupur, Manipur",24.554574,93.880731,5.88,MNP820442,2021-05-05,11.76,False
+MN-BIS-000400,Devi Rongmei,residential,three_phase,BPL Category,Bishnupur,Toubul,"Toubul, Bishnupur, Manipur",24.646888,93.862448,2.09,MNP136415,2021-03-10,4.17,False
+MN-THO-000401,Thangjam Paite,residential,three_phase,Domestic LT-I,Thoubal,Kakching,"Kakching, Thoubal, Manipur",24.675826,93.953688,1.6,MNP232315,2023-10-07,3.2,False
+MN-SEN-000402,Chinglen Koireng,residential,single_phase,BPL Category,Senapati,Maram,"Maram, Senapati, Manipur",25.264722,94.047729,4.97,MNP946561,2023-08-18,9.93,False
+MN-SEN-000403,Phurailatpam Chiru,residential,single_phase,Domestic LT-I,Senapati,Willong,"Willong, Senapati, Manipur",25.336659,94.039181,2.73,MNP924758,2020-01-29,5.46,False
+MN-SEN-000404,Ongbi Simte,residential,single_phase,BPL Category,Senapati,Kangpokpi,"Kangpokpi, Senapati, Manipur",25.399425,94.035236,3.53,MNP895216,2023-06-11,7.06,False
+MN-IMP-000405,Moirang Pheijom,commercial,three_phase,Commercial HT,Imphal West,Kwakeithel,"Kwakeithel, Imphal West, Manipur",24.761454,93.935637,30.04,MNP376967,2021-11-09,60.09,False
+MN-CHA-000406,Naorem Rongmei,residential,single_phase,BPL Category,Chandel,Chandel Town,"Chandel Town, Chandel, Manipur",24.344154,94.024714,4.56,MNP813884,2020-02-12,9.12,False
+MN-SEN-000407,Biren Kabui,residential,three_phase,Domestic LT-II,Senapati,Mao,"Mao, Senapati, Manipur",25.330902,94.004652,5.78,MNP121215,2022-02-10,11.56,False
+MN-CHU-000408,Shija Hospital,commercial,three_phase,Shops & Establishments,Churachandpur,Henglep,"Henglep, Churachandpur, Manipur",24.322659,93.71485,38.17,MNP818119,2023-06-15,76.34,False
+MN-BIS-000409,Imphal Rice Mill,industrial,three_phase,Small Scale Industry,Bishnupur,Moirang,"Moirang, Bishnupur, Manipur",24.591973,93.845779,103.62,MNP564635,2019-08-31,207.23,False
+MN-CHU-000410,Tata Motors Imphal,commercial,three_phase,Commercial LT,Churachandpur,Tipaimukh,"Tipaimukh, Churachandpur, Manipur",24.341132,93.797597,20.8,MNP563173,2022-10-27,41.61,False
+MN-SEN-000411,Manipur Handloom,commercial,three_phase,Commercial LT,Senapati,Liyai,"Liyai, Senapati, Manipur",25.37882,93.995991,14.43,MNP640299,2019-07-27,28.85,False
+MN-CHU-000412,Nongthombam Chiru,residential,three_phase,Domestic LT-I,Churachandpur,Sangaikot,"Sangaikot, Churachandpur, Manipur",24.30467,93.74775,3.16,MNP282176,2022-12-04,6.32,False
+MN-BIS-000413,Gomti Restaurant,commercial,single_phase,Commercial LT,Bishnupur,Bishnupur Bazar,"Bishnupur Bazar, Bishnupur, Manipur",24.636436,93.820981,38.97,MNP477880,2020-01-20,77.93,False
+MN-UKH-000414,Ibemhal Devi,residential,single_phase,Domestic LT-II,Ukhrul,Shangshak,"Shangshak, Ukhrul, Manipur",25.037105,94.473725,4.99,MNP722899,2021-07-03,9.99,False
+MN-CHA-000415,Victoria Paite,residential,single_phase,Domestic LT-II,Chandel,Khengjoy,"Khengjoy, Chandel, Manipur",24.454184,94.253435,4.92,MNP885342,2020-02-22,9.85,False
+MN-IMP-000416,Ningombam Kom,residential,three_phase,BPL Category,Imphal East,Mantripukhri,"Mantripukhri, Imphal East, Manipur",24.823835,93.939187,1.65,MNP336047,2020-03-16,3.29,False
+MN-SEN-000417,Oken Singh,residential,single_phase,Domestic LT-I,Senapati,Willong,"Willong, Senapati, Manipur",25.38417,94.07333,5.08,MNP778818,2023-01-13,10.17,False
+MN-IMP-000418,Ojita Monsang,residential,single_phase,BPL Category,Imphal East,Wangkhei,"Wangkhei, Imphal East, Manipur",24.813707,93.938212,2.06,MNP773962,2022-06-18,4.13,False
+MN-SEN-000419,Oinam Kom,residential,single_phase,BPL Category,Senapati,Mao,"Mao, Senapati, Manipur",25.337113,94.036061,2.4,MNP645928,2020-07-04,4.8,False
+MN-IMP-000420,Laishram Moyon,residential,single_phase,Domestic LT-I,Imphal West,Lamphel,"Lamphel, Imphal West, Manipur",24.784412,93.884495,4.12,MNP605139,2023-08-25,8.24,False
+MN-CHU-000421,Oinam Monsang,residential,single_phase,BPL Category,Churachandpur,Singngat,"Singngat, Churachandpur, Manipur",24.340349,93.769634,2.9,MNP902658,2022-08-28,5.79,False
+MN-SEN-000422,Hotel Nirmala,commercial,three_phase,Shops & Establishments,Senapati,Mao,"Mao, Senapati, Manipur",25.291044,93.952324,9.85,MNP621533,2022-05-07,19.71,False
+MN-SEN-000423,Sanahanbi Hmar,residential,single_phase,BPL Category,Senapati,Tadubi,"Tadubi, Senapati, Manipur",25.278499,94.045988,4.2,MNP333164,2020-02-27,8.4,False
+MN-CHA-000424,Saikhom Khoibu,residential,single_phase,Domestic LT-I,Chandel,Khudengthabi,"Khudengthabi, Chandel, Manipur",24.358333,94.208495,5.37,MNP593649,2023-04-15,10.74,False
+MN-THO-000425,Khumanthem Mao,residential,single_phase,Domestic LT-II,Thoubal,Lilong,"Lilong, Thoubal, Manipur",24.677985,93.955943,3.66,MNP540897,2019-08-02,7.32,False
+MN-UKH-000426,Shamu Automobile,commercial,single_phase,Commercial LT,Ukhrul,Lunghar,"Lunghar, Ukhrul, Manipur",25.020986,94.348409,39.57,MNP593393,2023-09-15,79.13,False
+MN-IMP-000427,Luxmi Kitchen,commercial,three_phase,Shops & Establishments,Imphal West,Kongba,"Kongba, Imphal West, Manipur",24.759975,93.914922,27.59,MNP500209,2021-01-12,55.18,False
+MN-IMP-000428,Thokchom Angami,residential,single_phase,BPL Category,Imphal East,Heingang,"Heingang, Imphal East, Manipur",24.829173,93.969175,1.54,MNP579798,2023-03-15,3.09,False
+MN-THO-000429,Umakanta Thadou,residential,single_phase,Domestic LT-I,Thoubal,Kakching,"Kakching, Thoubal, Manipur",24.632646,94.027657,1.9,MNP104942,2021-06-21,3.79,False
+MN-THO-000430,Sorokhaibam Haokip,residential,single_phase,Domestic LT-II,Thoubal,Leisho,"Leisho, Thoubal, Manipur",24.635063,93.95498,1.85,MNP764259,2021-08-06,3.71,False
+MN-CHA-000431,Tomba Tarao,residential,single_phase,Domestic LT-II,Chandel,Liwa Sarei,"Liwa Sarei, Chandel, Manipur",24.379385,94.039815,4.05,MNP114760,2022-03-14,8.11,False
+MN-BIS-000432,Ima Keithel,commercial,three_phase,Commercial LT,Bishnupur,Bishnupur Bazar,"Bishnupur Bazar, Bishnupur, Manipur",24.618946,93.870088,14.0,MNP337256,2020-02-12,28.01,False
+MN-CHU-000433,Lamlong Market,commercial,single_phase,Shops & Establishments,Churachandpur,Rengkai,"Rengkai, Churachandpur, Manipur",24.325122,93.665685,28.18,MNP420984,2023-01-25,56.37,False
+MN-IMP-000434,Elangbam Chiru,residential,single_phase,Domestic LT-II,Imphal East,Sagolband,"Sagolband, Imphal East, Manipur",24.829453,93.932211,5.71,MNP554730,2020-02-26,11.43,False
+MN-UKH-000435,MANIREDA Office,industrial,three_phase,Industrial LT,Ukhrul,Shangshak,"Shangshak, Ukhrul, Manipur",25.010394,94.408259,153.45,MNP272892,2021-09-28,306.9,False
+MN-BIS-000436,Leikai Devi,residential,single_phase,Domestic LT-I,Bishnupur,Moirang,"Moirang, Bishnupur, Manipur",24.637097,93.857113,5.11,MNP229144,2021-12-13,10.22,False
+MN-IMP-000437,Kalpana Meitei,residential,single_phase,Domestic LT-I,Imphal East,Mantripukhri,"Mantripukhri, Imphal East, Manipur",24.803762,93.987038,1.86,MNP794125,2023-05-26,3.72,False
+MN-IMP-000438,Khundrakpam Liangmai,residential,single_phase,BPL Category,Imphal East,Porompat,"Porompat, Imphal East, Manipur",24.842637,93.968331,5.18,MNP365015,2021-05-06,10.36,False
+MN-BIS-000439,Bidyarani Vaiphei,residential,single_phase,Domestic LT-II,Bishnupur,Bishnupur Bazar,"Bishnupur Bazar, Bishnupur, Manipur",24.595232,93.846537,3.87,MNP753050,2020-08-10,7.74,False
+MN-SEN-000440,Oinam Gangte,residential,single_phase,Domestic LT-II,Senapati,Kangpokpi,"Kangpokpi, Senapati, Manipur",25.346318,93.966326,1.77,MNP308296,2020-08-03,3.54,False
+MN-CHU-000441,Yumlembam Tangkhul,residential,single_phase,Domestic LT-I,Churachandpur,Sangaikot,"Sangaikot, Churachandpur, Manipur",24.337065,93.673932,5.42,MNP674765,2021-03-22,10.85,False
+MN-CHA-000442,Gomti Restaurant,commercial,single_phase,Shops & Establishments,Chandel,Khudengthabi,"Khudengthabi, Chandel, Manipur",24.343843,94.29276,18.45,MNP193326,2023-05-21,36.9,False
+MN-CHA-000443,BT Road Market,commercial,three_phase,Commercial LT,Chandel,Machi,"Machi, Chandel, Manipur",24.336424,94.23691,28.91,MNP858711,2019-12-13,57.82,False
+MN-CHU-000444,Radhamani Koireng,residential,single_phase,Domestic LT-I,Churachandpur,Saikot,"Saikot, Churachandpur, Manipur",24.374729,93.733305,4.74,MNP952679,2023-01-10,9.47,False
+MN-CHU-000445,City Pharmacy,commercial,single_phase,Commercial LT,Churachandpur,Singngat,"Singngat, Churachandpur, Manipur",24.334268,93.79945,39.18,MNP199613,2019-10-03,78.36,False
+MN-IMP-000446,Vishal Mega Mart,commercial,three_phase,Commercial HT,Imphal East,Heingang,"Heingang, Imphal East, Manipur",24.825523,93.943968,29.61,MNP474894,2021-07-20,59.21,False
+MN-CHU-000447,MANIREDA Office,industrial,three_phase,Industrial HT,Churachandpur,Tuibong,"Tuibong, Churachandpur, Manipur",24.31083,93.654598,81.23,MNP291752,2023-05-14,162.46,False
+MN-CHA-000448,Geetarani Tangkhul,residential,single_phase,Domestic LT-I,Chandel,Chakpikarong,"Chakpikarong, Chandel, Manipur",24.392525,94.260482,4.77,MNP218548,2023-04-06,9.54,False
+MN-IMP-000449,Khundrakpam Kabui,residential,single_phase,BPL Category,Imphal East,Heingang,"Heingang, Imphal East, Manipur",24.831989,93.959785,3.06,MNP559447,2022-12-27,6.11,False
+MN-UKH-000450,Ibotombi Zou,residential,single_phase,Domestic LT-II,Ukhrul,Jessami,"Jessami, Ukhrul, Manipur",25.074208,94.49753,1.68,MNP218423,2021-09-12,3.36,False
+MN-IMP-000451,Thoibi Chiru,residential,single_phase,BPL Category,Imphal West,Kwakeithel,"Kwakeithel, Imphal West, Manipur",24.810692,93.920507,3.47,MNP858931,2020-11-01,6.95,False
+MN-UKH-000452,Leishangthem Chothe,residential,single_phase,BPL Category,Ukhrul,Pushing,"Pushing, Ukhrul, Manipur",25.145052,94.397334,5.43,MNP809147,2020-05-29,10.86,False
+MN-IMP-000453,Thiyam Kabui,residential,three_phase,Domestic LT-I,Imphal East,Porompat,"Porompat, Imphal East, Manipur",24.843049,93.95952,2.75,MNP178501,2019-10-17,5.49,False
+MN-BIS-000454,Memcha Kharam,residential,single_phase,BPL Category,Bishnupur,Kwasiphai,"Kwasiphai, Bishnupur, Manipur",24.609235,93.886855,2.45,MNP497030,2021-09-29,4.9,False
+MN-IMP-000455,St. Joseph School,commercial,three_phase,Commercial HT,Imphal West,Kongba,"Kongba, Imphal West, Manipur",24.793608,93.924209,31.33,MNP192295,2021-03-18,62.65,False
+MN-IMP-000456,Thangjam Rongmei,residential,single_phase,BPL Category,Imphal West,Kongba,"Kongba, Imphal West, Manipur",24.75921,93.930108,5.59,MNP675771,2024-01-02,11.18,False
+MN-CHU-000457,Longpi Pottery,commercial,single_phase,Shops & Establishments,Churachandpur,Sangaikot,"Sangaikot, Churachandpur, Manipur",24.326952,93.685631,39.07,MNP578368,2022-02-03,78.14,False
+MN-IMP-000458,Umakanta Khoibu,residential,single_phase,BPL Category,Imphal East,Wangkhei,"Wangkhei, Imphal East, Manipur",24.792668,93.989807,3.72,MNP596116,2019-12-27,7.43,False
+MN-CHA-000459,Nabachandra Aimol,residential,single_phase,Domestic LT-II,Chandel,Tengnoupal,"Tengnoupal, Chandel, Manipur",24.349446,94.261225,3.5,MNP970196,2020-06-14,7.01,False
+MN-CHU-000460,Steel Plant Imphal,industrial,three_phase,Industrial HT,Churachandpur,Sangaikot,"Sangaikot, Churachandpur, Manipur",24.377223,93.703885,134.87,MNP836201,2023-05-30,269.74,False
+MN-THO-000461,Khogen Tangkhul,residential,single_phase,BPL Category,Thoubal,Heirok,"Heirok, Thoubal, Manipur",24.616352,94.008662,5.86,MNP305438,2022-12-14,11.72,False
+MN-SEN-000462,Yumnam Angami,residential,single_phase,Domestic LT-II,Senapati,Maram,"Maram, Senapati, Manipur",25.251627,94.081347,2.96,MNP148759,2020-06-15,5.93,False
+MN-IMP-000463,Nirmalabas High School,commercial,three_phase,Shops & Establishments,Imphal West,Kongba,"Kongba, Imphal West, Manipur",24.804143,93.889161,39.02,MNP241176,2021-03-17,78.04,False
+MN-IMP-000464,Naoba Kabui,residential,three_phase,Domestic LT-I,Imphal East,Nagamapal,"Nagamapal, Imphal East, Manipur",24.811765,93.946524,1.83,MNP825423,2020-10-05,3.66,False
+MN-THO-000465,Ojita Anal,residential,single_phase,Domestic LT-II,Thoubal,Kakching,"Kakching, Thoubal, Manipur",24.616976,94.027966,3.02,MNP539001,2020-08-03,6.03,False
+MN-BIS-000466,NIT Manipur,commercial,three_phase,Commercial HT,Bishnupur,Ningthoukhong,"Ningthoukhong, Bishnupur, Manipur",24.632888,93.814633,15.58,MNP574843,2023-04-04,31.17,False
+MN-CHU-000467,Laishram Kom,residential,single_phase,BPL Category,Churachandpur,Sangaikot,"Sangaikot, Churachandpur, Manipur",24.392572,93.756017,2.25,MNP849086,2022-05-17,4.5,False
+MN-THO-000468,Ibemhal Mao,residential,single_phase,BPL Category,Thoubal,Wangjing,"Wangjing, Thoubal, Manipur",24.616762,93.955501,4.81,MNP698357,2020-04-06,9.63,False
+MN-CHU-000469,Usham Vaiphei,residential,single_phase,Domestic LT-I,Churachandpur,Tipaimukh,"Tipaimukh, Churachandpur, Manipur",24.399571,93.721195,5.3,MNP155642,2020-03-31,10.6,False
+MN-CHU-000470,Oinam Simte,residential,single_phase,BPL Category,Churachandpur,Rengkai,"Rengkai, Churachandpur, Manipur",24.420851,93.737803,5.41,MNP922458,2022-05-08,10.81,False
+MN-IMP-000471,Tombi Khoibu,residential,three_phase,BPL Category,Imphal East,Langol,"Langol, Imphal East, Manipur",24.794409,93.937834,2.71,MNP778553,2020-11-09,5.43,False
+MN-CHU-000472,Yaiphabi Tangkhul,residential,three_phase,BPL Category,Churachandpur,Churachandpur Town,"Churachandpur Town, Churachandpur, Manipur",24.308563,93.729675,5.71,MNP427841,2020-11-28,11.43,False
+MN-CHU-000473,Mangolnganbi Maram,residential,single_phase,BPL Category,Churachandpur,Saikot,"Saikot, Churachandpur, Manipur",24.305902,93.668316,3.53,MNP874320,2020-08-15,7.07,False
+MN-BIS-000474,Thangjam Meetei,residential,single_phase,Domestic LT-I,Bishnupur,Ningthoukhong,"Ningthoukhong, Bishnupur, Manipur",24.643388,93.797423,3.78,MNP870786,2021-02-14,7.57,False
+MN-IMP-000475,Laishram Koireng,residential,single_phase,BPL Category,Imphal East,Mantripukhri,"Mantripukhri, Imphal East, Manipur",24.78291,93.940384,5.94,MNP987110,2022-07-29,11.88,False
+MN-CHA-000476,Laishram Anal,residential,single_phase,BPL Category,Chandel,Machi,"Machi, Chandel, Manipur",24.493024,94.001482,5.78,MNP745512,2020-04-17,11.57,False
+MN-UKH-000477,Jamuna Aimol,residential,three_phase,BPL Category,Ukhrul,Phungyar,"Phungyar, Ukhrul, Manipur",25.127824,94.473584,3.55,MNP171488,2019-08-06,7.09,False
+MN-SEN-000478,Devi Mao,residential,single_phase,Domestic LT-I,Senapati,Willong,"Willong, Senapati, Manipur",25.303119,94.047769,4.5,MNP795556,2022-02-22,9.0,False
+MN-CHU-000479,Laishram Singh,residential,single_phase,Domestic LT-II,Churachandpur,Saikot,"Saikot, Churachandpur, Manipur",24.320948,93.654496,2.89,MNP567315,2022-08-28,5.77,False
+MN-BIS-000480,City Pharmacy,commercial,single_phase,Commercial LT,Bishnupur,Bishnupur Bazar,"Bishnupur Bazar, Bishnupur, Manipur",24.620468,93.780278,29.39,MNP504620,2022-07-26,58.77,False
+MN-CHU-000481,Ibeyaima Kharam,residential,single_phase,Domestic LT-I,Churachandpur,Churachandpur Town,"Churachandpur Town, Churachandpur, Manipur",24.445487,93.664085,4.53,MNP410833,2020-05-08,9.05,False
+MN-IMP-000482,Oken Tarao,residential,single_phase,BPL Category,Imphal West,Singjamei,"Singjamei, Imphal West, Manipur",24.781063,93.94077,2.3,MNP168652,2022-10-28,4.59,False
+MN-BIS-000483,Konsam Tarao,residential,single_phase,BPL Category,Bishnupur,Laphupat Tera,"Laphupat Tera, Bishnupur, Manipur",24.619263,93.875717,5.75,MNP912863,2021-07-25,11.5,False
+MN-IMP-000484,Ngangom Angami,residential,single_phase,Domestic LT-I,Imphal West,Keishampat,"Keishampat, Imphal West, Manipur",24.797827,93.914802,4.28,MNP156904,2023-01-03,8.56,False
+MN-IMP-000485,Rice Bowl Restaurant,commercial,three_phase,Commercial HT,Imphal West,Irilbung,"Irilbung, Imphal West, Manipur",24.810823,93.919943,8.49,MNP506881,2021-06-23,16.98,False
+MN-SEN-000486,Irengbam Gangte,residential,single_phase,BPL Category,Senapati,Mao,"Mao, Senapati, Manipur",25.38619,94.087905,4.54,MNP855274,2020-07-15,9.09,False
+MN-IMP-000487,Ibeyaima Vaiphei,residential,single_phase,BPL Category,Imphal East,Khongman,"Khongman, Imphal East, Manipur",24.795097,93.976122,3.27,MNP415989,2020-08-08,6.54,False
+MN-CHA-000488,Sanatombi Kabui,residential,single_phase,Domestic LT-I,Chandel,Liwa Sarei,"Liwa Sarei, Chandel, Manipur",24.430247,94.031978,4.46,MNP243006,2019-10-26,8.92,False
+MN-CHU-000489,Waikhom Singh,residential,single_phase,BPL Category,Churachandpur,Rengkai,"Rengkai, Churachandpur, Manipur",24.449912,93.657232,5.9,MNP248241,2023-04-25,11.79,False
+MN-SEN-000490,Pukhrambam Kom,residential,single_phase,BPL Category,Senapati,Willong,"Willong, Senapati, Manipur",25.281382,94.124151,5.02,MNP460554,2022-10-26,10.04,False
+MN-THO-000491,Khumanthem Koireng,residential,single_phase,Domestic LT-I,Thoubal,Wangjing,"Wangjing, Thoubal, Manipur",24.656702,94.060767,5.45,MNP803571,2020-10-28,10.91,False
+MN-CHA-000492,Thangal Bazaar,commercial,single_phase,Commercial LT,Chandel,Molnoi,"Molnoi, Chandel, Manipur",24.380828,94.09811,29.2,MNP362865,2023-06-15,58.39,False
+MN-CHA-000493,Nongthombam Chothe,residential,single_phase,BPL Category,Chandel,Khudengthabi,"Khudengthabi, Chandel, Manipur",24.461569,94.228686,5.09,MNP173199,2022-12-02,10.18,False
+MN-CHA-000494,Naoba Simte,residential,single_phase,Domestic LT-II,Chandel,Khudengthabi,"Khudengthabi, Chandel, Manipur",24.387117,94.24535,2.04,MNP946934,2022-03-26,4.08,False
+MN-THO-000495,MANIREDA Office,industrial,three_phase,Industrial LT,Thoubal,Thoubal Bazar,"Thoubal Bazar, Thoubal, Manipur",24.654449,93.950864,91.93,MNP923824,2022-10-06,183.87,False
+MN-SEN-000496,Nongthombam Angami,residential,three_phase,Domestic LT-II,Senapati,Purul,"Purul, Senapati, Manipur",25.273292,94.029235,4.63,MNP566991,2021-12-29,9.26,False
+MN-CHA-000497,Lamlong Market,commercial,single_phase,Shops & Establishments,Chandel,Molnoi,"Molnoi, Chandel, Manipur",24.377712,94.134608,15.22,MNP185955,2022-06-07,30.44,False
+MN-THO-000498,Luxmi Kitchen,commercial,single_phase,Shops & Establishments,Thoubal,Mayang Imphal,"Mayang Imphal, Thoubal, Manipur",24.637325,93.98409,9.88,MNP180176,2019-12-05,19.76,False
+MN-IMP-000499,Bijoy Rongmei,residential,single_phase,Domestic LT-I,Imphal East,Nagamapal,"Nagamapal, Imphal East, Manipur",24.822241,93.976775,4.29,MNP138436,2020-11-29,8.58,False
+MN-CHA-000500,Ahongsangbam Aimol,residential,three_phase,BPL Category,Chandel,Machi,"Machi, Chandel, Manipur",24.392699,94.113936,5.39,MNP868844,2022-05-17,10.77,False
+MN-IMP-000501,Ibeyaima Singh,residential,single_phase,BPL Category,Imphal West,Kakching,"Kakching, Imphal West, Manipur",24.786336,93.913543,1.62,MNP817395,2023-01-28,3.23,False
+MN-THO-000502,Imphal Hotel,commercial,single_phase,Shops & Establishments,Thoubal,Heirok,"Heirok, Thoubal, Manipur",24.634125,94.007029,20.46,MNP791444,2023-03-09,40.92,False
+MN-CHA-000503,Khumanthem Inpui,residential,single_phase,Domestic LT-II,Chandel,Khudengthabi,"Khudengthabi, Chandel, Manipur",24.416034,94.160081,4.24,MNP487380,2022-09-10,8.47,False
+MN-BIS-000504,Yaiphabi Kabui,residential,three_phase,Domestic LT-I,Bishnupur,Thanga,"Thanga, Bishnupur, Manipur",24.626488,93.871948,4.73,MNP141843,2020-05-14,9.46,False
+MN-CHU-000505,Irengbam Poumai,residential,single_phase,BPL Category,Churachandpur,Henglep,"Henglep, Churachandpur, Manipur",24.443329,93.652735,2.38,MNP976052,2023-07-27,4.76,False
+MN-SEN-000506,Victoria Mao,residential,single_phase,Domestic LT-II,Senapati,Maram,"Maram, Senapati, Manipur",25.201513,94.079495,5.54,MNP733561,2023-12-20,11.08,False
+MN-THO-000507,Khumanthem Meetei,residential,single_phase,Domestic LT-II,Thoubal,Heirok,"Heirok, Thoubal, Manipur",24.624348,94.089055,1.77,MNP321791,2023-03-01,3.54,False
+MN-UKH-000508,Hemanta Aimol,residential,single_phase,Domestic LT-II,Ukhrul,Jessami,"Jessami, Ukhrul, Manipur",25.186887,94.370325,1.96,MNP855242,2023-05-15,3.91,False
+MN-CHA-000509,Bijoy Paite,residential,single_phase,Domestic LT-II,Chandel,New Samtal,"New Samtal, Chandel, Manipur",24.397174,94.077033,2.78,MNP123536,2022-08-21,5.56,False
+MN-THO-000510,Ahongshangbam Simte,residential,single_phase,Domestic LT-II,Thoubal,Wangjing,"Wangjing, Thoubal, Manipur",24.630729,94.070454,3.93,MNP288783,2021-02-08,7.85,False
+MN-IMP-000511,Loktak Power Station,industrial,three_phase,Industrial LT,Imphal East,Sagolband,"Sagolband, Imphal East, Manipur",24.801792,93.972723,154.58,MNP571023,2020-08-08,309.17,False
+MN-CHA-000512,Manipur Spinning Mills,industrial,three_phase,Industrial HT,Chandel,Machi,"Machi, Chandel, Manipur",24.354525,94.124065,59.5,MNP730025,2023-03-16,119.0,False
+MN-THO-000513,Vishal Mega Mart,commercial,three_phase,Commercial LT,Thoubal,Leisho,"Leisho, Thoubal, Manipur",24.618115,94.052168,13.4,MNP859364,2020-02-28,26.79,False
+MN-CHA-000514,Khumanthem Poumai,residential,single_phase,Domestic LT-I,Chandel,Khengjoy,"Khengjoy, Chandel, Manipur",24.405033,94.212714,1.98,MNP117367,2022-11-14,3.96,False
+MN-SEN-000515,Sagolsem Kabui,residential,three_phase,BPL Category,Senapati,Saikul,"Saikul, Senapati, Manipur",25.313462,94.001313,5.83,MNP140932,2019-08-11,11.67,False
+MN-IMP-000516,Nongthombam Tarao,residential,single_phase,BPL Category,Imphal West,Singjamei,"Singjamei, Imphal West, Manipur",24.783848,93.936419,3.98,MNP780768,2021-08-02,7.95,False
+MN-UKH-000517,Mangolnganbi Kabui,residential,single_phase,Domestic LT-II,Ukhrul,Ukhrul Town,"Ukhrul Town, Ukhrul, Manipur",25.008683,94.42663,5.78,MNP467544,2020-09-13,11.56,False
+MN-IMP-000518,Hotel Nirmala,commercial,single_phase,Commercial LT,Imphal West,Kakching,"Kakching, Imphal West, Manipur",24.792113,93.937343,36.24,MNP187889,2022-06-01,72.47,False
+MN-SEN-000519,Thoiba Singh,residential,single_phase,Domestic LT-I,Senapati,Purul,"Purul, Senapati, Manipur",25.245616,93.992409,4.25,MNP645009,2023-12-19,8.5,False
+MN-BIS-000520,Waikhom Vaiphei,residential,single_phase,BPL Category,Bishnupur,Kwasiphai,"Kwasiphai, Bishnupur, Manipur",24.591103,93.875979,5.55,MNP713805,2022-08-01,11.1,False
+MN-SEN-000521,Premila Lamkang,residential,three_phase,Domestic LT-II,Senapati,Karong,"Karong, Senapati, Manipur",25.270684,93.997374,5.01,MNP891645,2022-11-11,10.02,False
+MN-CHA-000522,Laishram Khoibu,residential,single_phase,Domestic LT-II,Chandel,Machi,"Machi, Chandel, Manipur",24.354961,94.246784,3.41,MNP705711,2022-01-27,6.81,False
+MN-SEN-000523,Vishal Mega Mart,commercial,single_phase,Commercial LT,Senapati,Saikul,"Saikul, Senapati, Manipur",25.33351,93.969107,27.78,MNP568288,2019-08-13,55.55,False
+MN-THO-000524,Thiyam Rongmei,residential,single_phase,BPL Category,Thoubal,Kakching,"Kakching, Thoubal, Manipur",24.645177,94.037991,2.26,MNP743852,2020-02-05,4.51,False
+MN-IMP-000525,Thoibi Haokip,residential,single_phase,Domestic LT-II,Imphal East,Heingang,"Heingang, Imphal East, Manipur",24.831581,93.990396,2.48,MNP729402,2021-07-25,4.95,False
+MN-CHU-000526,Devi Chanu,residential,single_phase,Domestic LT-II,Churachandpur,Saikot,"Saikot, Churachandpur, Manipur",24.314357,93.653546,4.39,MNP743789,2020-04-29,8.78,False
+MN-IMP-000527,Dinamani Singh,residential,single_phase,BPL Category,Imphal East,Heingang,"Heingang, Imphal East, Manipur",24.822497,93.968269,2.54,MNP942960,2021-02-05,5.09,False
+MN-IMP-000528,Deben Paite,residential,single_phase,Domestic LT-II,Imphal East,Thangmeiband,"Thangmeiband, Imphal East, Manipur",24.807363,93.971613,3.74,MNP350878,2020-05-01,7.47,False
+MN-THO-000529,Ahongsangbam Mao,residential,single_phase,Domestic LT-II,Thoubal,Kakching,"Kakching, Thoubal, Manipur",24.698779,93.970466,4.63,MNP714549,2022-11-18,9.26,False
+MN-IMP-000530,Laishram Mao,residential,single_phase,Domestic LT-II,Imphal West,Singjamei,"Singjamei, Imphal West, Manipur",24.778302,93.909974,4.73,MNP337288,2020-08-09,9.46,False
+MN-CHA-000531,Handloom Cluster Moirang,industrial,three_phase,Industrial LT,Chandel,Liwa Sarei,"Liwa Sarei, Chandel, Manipur",24.438487,94.297377,60.54,MNP373791,2023-01-09,121.09,False
+MN-IMP-000532,Thiyam Moyon,residential,single_phase,Domestic LT-I,Imphal West,Naoremthong,"Naoremthong, Imphal West, Manipur",24.757288,93.930704,4.1,MNP941945,2021-02-15,8.21,False
+MN-CHU-000533,Manipur Food Industries,industrial,three_phase,Small Scale Industry,Churachandpur,Thanlon,"Thanlon, Churachandpur, Manipur",24.341124,93.661913,53.71,MNP607122,2019-09-09,107.41,False
+MN-UKH-000534,Naoba Devi,residential,single_phase,Domestic LT-II,Ukhrul,Shangshak,"Shangshak, Ukhrul, Manipur",25.178838,94.338373,2.96,MNP170835,2021-11-10,5.91,False
+MN-BIS-000535,Bidyarani Mao,residential,single_phase,Domestic LT-I,Bishnupur,Kumbi,"Kumbi, Bishnupur, Manipur",24.572666,93.803249,1.81,MNP834861,2022-07-12,3.62,False
+MN-IMP-000536,Chanu Khoibu,residential,three_phase,Domestic LT-II,Imphal West,Kakching,"Kakching, Imphal West, Manipur",24.786334,93.884733,5.1,MNP429119,2022-01-08,10.2,False
+MN-CHU-000537,Sorokhaibam Hmar,residential,single_phase,Domestic LT-I,Churachandpur,Rengkai,"Rengkai, Churachandpur, Manipur",24.335057,93.731002,5.46,MNP378297,2022-11-05,10.92,False
+MN-BIS-000538,Ongbi Vaiphei,residential,single_phase,Domestic LT-I,Bishnupur,Karang,"Karang, Bishnupur, Manipur",24.615088,93.829944,2.96,MNP808640,2020-04-14,5.92,False
+MN-IMP-000539,Kshetrimayum Maram,residential,single_phase,Domestic LT-II,Imphal East,Nagamapal,"Nagamapal, Imphal East, Manipur",24.80331,93.976864,5.97,MNP702427,2022-06-19,11.95,False
+MN-CHU-000540,Nabachandra Zou,residential,single_phase,Domestic LT-II,Churachandpur,Tipaimukh,"Tipaimukh, Churachandpur, Manipur",24.399276,93.733668,4.79,MNP601554,2020-12-21,9.58,False
+MN-UKH-000541,Ngangom Gangte,residential,single_phase,Domestic LT-II,Ukhrul,Litan,"Litan, Ukhrul, Manipur",25.093041,94.312028,4.03,MNP430984,2020-02-21,8.06,False
+MN-BIS-000542,Salam Maram,residential,single_phase,Domestic LT-II,Bishnupur,Laphupat Tera,"Laphupat Tera, Bishnupur, Manipur",24.645763,93.776295,4.61,MNP296243,2020-12-05,9.21,False
+MN-CHU-000543,Waikhom Thadou,residential,single_phase,Domestic LT-I,Churachandpur,Thanlon,"Thanlon, Churachandpur, Manipur",24.33014,93.730374,1.94,MNP539450,2020-01-28,3.87,False
+MN-UKH-000544,Shija Hospital,commercial,single_phase,Shops & Establishments,Ukhrul,Litan,"Litan, Ukhrul, Manipur",25.090074,94.451233,18.8,MNP237509,2020-10-10,37.59,False
+MN-IMP-000545,Yendrembam Zeliang,residential,three_phase,Domestic LT-I,Imphal West,Kwakeithel,"Kwakeithel, Imphal West, Manipur",24.796544,93.935681,5.67,MNP252928,2019-11-12,11.34,False
+MN-IMP-000546,Hemabati Zou,residential,three_phase,BPL Category,Imphal East,Heingang,"Heingang, Imphal East, Manipur",24.796425,93.957952,2.19,MNP642121,2021-01-04,4.37,False
+MN-CHA-000547,Laishram Meitei,residential,single_phase,BPL Category,Chandel,Chakpikarong,"Chakpikarong, Chandel, Manipur",24.498497,94.2781,3.93,MNP271276,2023-09-02,7.86,False
+MN-CHU-000548,Mangang Angami,residential,single_phase,Domestic LT-II,Churachandpur,Thanlon,"Thanlon, Churachandpur, Manipur",24.426305,93.728144,4.31,MNP687569,2020-11-17,8.61,False
+MN-CHU-000549,MSPDCL Substation,industrial,three_phase,Industrial HT,Churachandpur,Singngat,"Singngat, Churachandpur, Manipur",24.313369,93.763291,60.43,MNP227126,2022-01-13,120.87,False
+MN-BIS-000550,Kauna Craft,commercial,three_phase,Shops & Establishments,Bishnupur,Karang,"Karang, Bishnupur, Manipur",24.632607,93.867304,30.53,MNP283017,2019-08-18,61.07,False
+MN-UKH-000551,Dinamani Haokip,residential,single_phase,Domestic LT-II,Ukhrul,Pushing,"Pushing, Ukhrul, Manipur",25.007232,94.360626,2.68,MNP586279,2020-06-18,5.37,False
+MN-THO-000552,Manipur Food Industries,industrial,three_phase,Small Scale Industry,Thoubal,Lilong,"Lilong, Thoubal, Manipur",24.636014,93.963146,189.91,MNP742053,2020-10-19,379.83,False
+MN-IMP-000553,Wangkhem Aimol,residential,single_phase,BPL Category,Imphal West,Singjamei,"Singjamei, Imphal West, Manipur",24.788766,93.901387,3.29,MNP405509,2020-01-09,6.57,False
+MN-SEN-000554,Waikhom Chiru,residential,three_phase,Domestic LT-II,Senapati,Purul,"Purul, Senapati, Manipur",25.289441,94.070119,3.82,MNP275445,2022-12-22,7.64,False
+MN-THO-000555,Vishal Mega Mart,commercial,single_phase,Shops & Establishments,Thoubal,Wabagai,"Wabagai, Thoubal, Manipur",24.691939,94.024545,39.75,MNP834733,2019-10-20,79.49,False
+MN-THO-000556,Thangjam Meetei,residential,three_phase,Domestic LT-II,Thoubal,Khongjom,"Khongjom, Thoubal, Manipur",24.685142,93.981277,5.69,MNP675074,2023-09-14,11.38,False
+MN-SEN-000557,Thangjam Koireng,residential,single_phase,Domestic LT-I,Senapati,Willong,"Willong, Senapati, Manipur",25.223273,94.11349,3.21,MNP786641,2021-10-26,6.43,False
+MN-BIS-000558,Nongthombam Zou,residential,single_phase,Domestic LT-I,Bishnupur,Ningthoukhong,"Ningthoukhong, Bishnupur, Manipur",24.637797,93.880209,5.13,MNP129959,2023-10-23,10.25,False
+MN-UKH-000559,Kalpana Lamkang,residential,single_phase,Domestic LT-I,Ukhrul,Shangshak,"Shangshak, Ukhrul, Manipur",25.158006,94.360936,1.86,MNP831510,2020-12-24,3.73,False
+MN-CHA-000560,Jamuna Tarao,residential,single_phase,Domestic LT-II,Chandel,Khengjoy,"Khengjoy, Chandel, Manipur",24.380596,94.052057,4.63,MNP605048,2020-12-23,9.25,False
+MN-IMP-000561,Waikhom Tangkhul,residential,single_phase,Domestic LT-II,Imphal West,Kongba,"Kongba, Imphal West, Manipur",24.774227,93.948293,4.38,MNP111068,2024-01-02,8.77,False
+MN-THO-000562,Geetarani Tarao,residential,single_phase,Domestic LT-II,Thoubal,Lilong,"Lilong, Thoubal, Manipur",24.682248,93.969879,5.38,MNP892170,2021-04-30,10.76,False
+MN-SEN-000563,Thoiba Khoibu,residential,single_phase,Domestic LT-II,Senapati,Purul,"Purul, Senapati, Manipur",25.384551,94.047412,4.23,MNP687783,2021-07-21,8.46,False
+MN-THO-000564,Mangolnganbi Koireng,residential,single_phase,BPL Category,Thoubal,Khongjom,"Khongjom, Thoubal, Manipur",24.676481,93.976226,3.76,MNP351198,2021-02-08,7.52,False
+MN-CHU-000565,Big Bazaar Imphal,commercial,three_phase,Commercial HT,Churachandpur,Henglep,"Henglep, Churachandpur, Manipur",24.359799,93.671956,19.44,MNP532961,2022-12-13,38.89,False
+MN-THO-000566,Raj Medicity,commercial,single_phase,Commercial HT,Thoubal,Wangjing,"Wangjing, Thoubal, Manipur",24.606817,93.953872,11.89,MNP747736,2021-06-19,23.79,False
+MN-CHA-000567,Sanatombi Simte,residential,single_phase,BPL Category,Chandel,Moreh,"Moreh, Chandel, Manipur",24.492623,94.164859,5.85,MNP123205,2022-12-18,11.69,False
+MN-CHU-000568,NEEPCO Office,industrial,three_phase,Small Scale Industry,Churachandpur,Henglep,"Henglep, Churachandpur, Manipur",24.364875,93.696772,120.98,MNP559713,2019-12-05,241.97,False
+MN-IMP-000569,Sorokhaibam Kom,residential,single_phase,Domestic LT-II,Imphal West,Keishampat,"Keishampat, Imphal West, Manipur",24.780766,93.887397,4.38,MNP923892,2021-03-18,8.77,False
+MN-CHA-000570,MANIREDA Office,industrial,three_phase,Industrial LT,Chandel,Chandel Town,"Chandel Town, Chandel, Manipur",24.343208,94.185876,144.03,MNP984522,2019-10-18,288.06,False
+MN-IMP-000571,Manipur Food Industries,industrial,three_phase,Industrial LT,Imphal East,Sagolband,"Sagolband, Imphal East, Manipur",24.790642,93.934294,164.92,MNP669578,2021-05-15,329.84,False
+MN-CHU-000572,Yumnam Chothe,residential,single_phase,Domestic LT-II,Churachandpur,Tipaimukh,"Tipaimukh, Churachandpur, Manipur",24.36897,93.658725,5.98,MNP359168,2019-11-14,11.95,False
+MN-BIS-000573,Ginger Processing Plant,industrial,three_phase,Industrial LT,Bishnupur,Toubul,"Toubul, Bishnupur, Manipur",24.555778,93.854255,197.39,MNP646453,2020-04-09,394.78,False
+MN-CHA-000574,Bamboo Processing Unit,industrial,three_phase,Industrial HT,Chandel,Liwa Sarei,"Liwa Sarei, Chandel, Manipur",24.347836,94.042675,59.42,MNP438756,2023-02-12,118.84,False
+MN-IMP-000575,Maibam Kabui,residential,single_phase,Domestic LT-I,Imphal East,Nagamapal,"Nagamapal, Imphal East, Manipur",24.801229,93.937073,4.61,MNP477934,2023-09-18,9.23,False
+MN-BIS-000576,Gomti Restaurant,commercial,three_phase,Commercial HT,Bishnupur,Nambol,"Nambol, Bishnupur, Manipur",24.556229,93.826413,39.89,MNP115799,2023-01-25,79.79,False
+MN-IMP-000577,Gomti Restaurant,commercial,single_phase,Commercial LT,Imphal West,Kakching,"Kakching, Imphal West, Manipur",24.806978,93.923065,17.45,MNP709303,2019-08-12,34.91,False
+MN-THO-000578,Lourembam Paite,residential,single_phase,BPL Category,Thoubal,Lilong,"Lilong, Thoubal, Manipur",24.66239,94.029056,3.42,MNP748696,2022-02-08,6.83,False
+MN-IMP-000579,MANIREDA Office,industrial,three_phase,Small Scale Industry,Imphal East,Porompat,"Porompat, Imphal East, Manipur",24.78915,93.992062,111.97,MNP261395,2020-01-27,223.93,False
+MN-IMP-000580,Mangolnganbi Anal,residential,three_phase,BPL Category,Imphal West,Keishampat,"Keishampat, Imphal West, Manipur",24.763624,93.905743,3.36,MNP893454,2022-01-21,6.73,False
+MN-CHA-000581,Khwairamband Bazaar,commercial,three_phase,Commercial HT,Chandel,Moreh,"Moreh, Chandel, Manipur",24.465508,94.220084,32.5,MNP859587,2023-04-02,65.0,False
+MN-IMP-000582,Laishram Moyon,residential,single_phase,Domestic LT-II,Imphal East,Koirengei,"Koirengei, Imphal East, Manipur",24.780772,93.959131,3.67,MNP298994,2020-10-29,7.33,False
+MN-UKH-000583,Phurailatpam Khoibu,residential,single_phase,BPL Category,Ukhrul,Chingai,"Chingai, Ukhrul, Manipur",25.003838,94.351963,4.92,MNP262555,2021-06-26,9.84,False
+MN-CHU-000584,Elangbam Singh,residential,single_phase,BPL Category,Churachandpur,Sangaikot,"Sangaikot, Churachandpur, Manipur",24.320566,93.730297,2.47,MNP497455,2019-11-22,4.94,False
+MN-IMP-000585,Premila Chothe,residential,single_phase,Domestic LT-I,Imphal East,Thangmeiband,"Thangmeiband, Imphal East, Manipur",24.780848,93.946884,5.89,MNP790266,2020-12-25,11.78,False
+MN-BIS-000586,HDFC Bank Imphal,commercial,three_phase,Commercial LT,Bishnupur,Thanga,"Thanga, Bishnupur, Manipur",24.630154,93.893936,23.36,MNP742818,2022-06-02,46.71,False
+MN-UKH-000587,Usham Meetei,residential,single_phase,Domestic LT-I,Ukhrul,Phungyar,"Phungyar, Ukhrul, Manipur",25.021947,94.409592,3.54,MNP287316,2023-10-30,7.09,False
+MN-CHA-000588,Tomba Poumai,residential,single_phase,BPL Category,Chandel,Moreh,"Moreh, Chandel, Manipur",24.468871,94.029425,3.7,MNP754280,2020-01-27,7.39,False
+MN-IMP-000589,Chinglen Meetei,residential,single_phase,Domestic LT-I,Imphal East,Langol,"Langol, Imphal East, Manipur",24.790503,93.952727,4.82,MNP787603,2021-04-01,9.64,False
+MN-IMP-000590,Reliance Fresh Imphal,commercial,single_phase,Shops & Establishments,Imphal West,Kongba,"Kongba, Imphal West, Manipur",24.783321,93.906312,20.32,MNP879592,2021-09-03,40.64,False
+MN-IMP-000591,Shija Hospital,commercial,three_phase,Shops & Establishments,Imphal East,Thangmeiband,"Thangmeiband, Imphal East, Manipur",24.812161,93.984951,36.49,MNP173807,2022-04-20,72.99,False
+MN-BIS-000592,Thangjam Aimol,residential,single_phase,Domestic LT-I,Bishnupur,Thanga,"Thanga, Bishnupur, Manipur",24.645533,93.868036,2.92,MNP302500,2021-01-20,5.84,False
+MN-THO-000593,Tombi Mao,residential,single_phase,BPL Category,Thoubal,Mayang Imphal,"Mayang Imphal, Thoubal, Manipur",24.668813,94.01564,2.65,MNP797557,2021-08-11,5.29,False
+MN-THO-000594,Longpi Pottery,commercial,single_phase,Commercial HT,Thoubal,Wangjing,"Wangjing, Thoubal, Manipur",24.684087,93.955764,36.81,MNP789472,2023-02-13,73.61,False
+MN-CHA-000595,Laishram Anal,residential,single_phase,Domestic LT-II,Chandel,Khudengthabi,"Khudengthabi, Chandel, Manipur",24.392295,94.19116,4.47,MNP901305,2020-06-15,8.93,False
+MN-UKH-000596,Ahongshangbam Tarao,residential,single_phase,BPL Category,Ukhrul,Jessami,"Jessami, Ukhrul, Manipur",25.179024,94.427334,4.26,MNP880746,2022-07-31,8.53,False
+MN-CHA-000597,Thoibi Chanu,residential,three_phase,BPL Category,Chandel,New Samtal,"New Samtal, Chandel, Manipur",24.31333,94.155522,2.18,MNP117094,2021-02-06,4.35,False
+MN-CHU-000598,Mangolnganbi Kom,residential,three_phase,Domestic LT-I,Churachandpur,Churachandpur Town,"Churachandpur Town, Churachandpur, Manipur",24.410615,93.726833,4.56,MNP909000,2020-02-20,9.12,False
+MN-THO-000599,Ema Market,commercial,single_phase,Commercial LT,Thoubal,Kakching,"Kakching, Thoubal, Manipur",24.604167,93.962719,30.78,MNP245131,2022-07-09,61.56,False
+MN-BIS-000600,Sanasam Haokip,residential,single_phase,BPL Category,Bishnupur,Kumbi,"Kumbi, Bishnupur, Manipur",24.557208,93.760689,1.55,MNP327999,2019-11-21,3.11,False
+MN-UKH-000601,Sorokhaibam Vaiphei,residential,single_phase,Domestic LT-II,Ukhrul,Shangshak,"Shangshak, Ukhrul, Manipur",25.1913,94.447502,3.09,MNP139186,2019-11-28,6.18,False
+MN-SEN-000602,Paona Bazaar,commercial,three_phase,Commercial HT,Senapati,Kangpokpi,"Kangpokpi, Senapati, Manipur",25.259307,94.019941,32.68,MNP464831,2021-07-27,65.35,False
+MN-IMP-000603,Ebomcha Poumai,residential,single_phase,BPL Category,Imphal West,Uripok,"Uripok, Imphal West, Manipur",24.796296,93.892964,2.28,MNP143182,2022-03-20,4.57,False
+MN-THO-000604,Laishram Meitei,residential,single_phase,Domestic LT-II,Thoubal,Lilong,"Lilong, Thoubal, Manipur",24.60984,94.049045,4.94,MNP567262,2019-10-14,9.88,False
+MN-IMP-000605,Radhamani Rongmei,residential,single_phase,Domestic LT-II,Imphal West,Uripok,"Uripok, Imphal West, Manipur",24.768553,93.881466,1.87,MNP186554,2021-05-03,3.74,False
+MN-IMP-000606,Oinam Haokip,residential,single_phase,Domestic LT-II,Imphal East,Nagamapal,"Nagamapal, Imphal East, Manipur",24.84775,93.950681,4.96,MNP911414,2020-02-03,9.92,False
+MN-THO-000607,Sorokhaibam Rongmei,residential,single_phase,Domestic LT-I,Thoubal,Heirok,"Heirok, Thoubal, Manipur",24.662466,94.007291,2.43,MNP688426,2020-07-20,4.85,False
+MN-BIS-000608,Loktak Power Station,industrial,three_phase,Industrial HT,Bishnupur,Kumbi,"Kumbi, Bishnupur, Manipur",24.562139,93.842252,163.94,MNP914504,2021-08-05,327.88,False
+MN-IMP-000609,Chandrakala Maram,residential,single_phase,Domestic LT-II,Imphal West,Singjamei,"Singjamei, Imphal West, Manipur",24.795073,93.917121,1.69,MNP461260,2020-09-03,3.38,False
+MN-CHU-000610,Premila Liangmai,residential,single_phase,Domestic LT-II,Churachandpur,Rengkai,"Rengkai, Churachandpur, Manipur",24.445273,93.769807,2.82,MNP147057,2022-09-11,5.64,False
+MN-UKH-000611,Yumnam Meitei,residential,single_phase,BPL Category,Ukhrul,Kamjong,"Kamjong, Ukhrul, Manipur",25.195994,94.420376,4.12,MNP254850,2022-05-23,8.24,False
+MN-IMP-000612,Geetarani Devi,residential,single_phase,BPL Category,Imphal West,Kwakeithel,"Kwakeithel, Imphal West, Manipur",24.802365,93.936824,4.45,MNP664139,2022-10-26,8.91,False
+MN-CHU-000613,Premila Simte,residential,single_phase,BPL Category,Churachandpur,Sangaikot,"Sangaikot, Churachandpur, Manipur",24.319214,93.70074,5.68,MNP119281,2021-11-22,11.35,False
+MN-IMP-000614,Biren Moyon,residential,single_phase,BPL Category,Imphal East,Sagolband,"Sagolband, Imphal East, Manipur",24.795723,93.956052,3.44,MNP747983,2022-06-26,6.89,False
+MN-IMP-000615,Phurailatpam Maram,residential,three_phase,Domestic LT-I,Imphal East,Khongman,"Khongman, Imphal East, Manipur",24.810758,93.972906,5.74,MNP406703,2020-05-13,11.49,False
+MN-SEN-000616,Salam Inpui,residential,three_phase,BPL Category,Senapati,Willong,"Willong, Senapati, Manipur",25.248139,93.9743,2.39,MNP192296,2022-12-17,4.78,False
+MN-CHA-000617,Tomba Chothe,residential,three_phase,Domestic LT-II,Chandel,Molnoi,"Molnoi, Chandel, Manipur",24.477385,94.193743,2.79,MNP449773,2021-04-04,5.57,False
+MN-THO-000618,Victoria Mao,residential,single_phase,Domestic LT-I,Thoubal,Thoubal Bazar,"Thoubal Bazar, Thoubal, Manipur",24.681595,94.079205,5.31,MNP625600,2022-06-17,10.62,False
+MN-CHU-000619,Khwairamband Bazaar,commercial,three_phase,Commercial HT,Churachandpur,Tipaimukh,"Tipaimukh, Churachandpur, Manipur",24.437839,93.687836,32.04,MNP336540,2023-02-26,64.08,False
+MN-SEN-000620,Leikai Poumai,residential,single_phase,BPL Category,Senapati,Saikul,"Saikul, Senapati, Manipur",25.292108,94.1184,4.78,MNP742198,2020-06-30,9.56,False
+MN-SEN-000621,Leishangthem Monsang,residential,three_phase,Domestic LT-II,Senapati,Maram,"Maram, Senapati, Manipur",25.355289,94.081232,2.3,MNP570988,2020-12-18,4.6,False
+MN-THO-000622,Moirangthem Monsang,residential,single_phase,BPL Category,Thoubal,Leisho,"Leisho, Thoubal, Manipur",24.654503,94.0977,5.72,MNP241822,2021-08-05,11.44,False
+MN-THO-000623,NEEPCO Office,industrial,three_phase,Industrial HT,Thoubal,Leisho,"Leisho, Thoubal, Manipur",24.604317,93.974722,61.08,MNP171108,2020-11-17,122.15,False
+MN-IMP-000624,Ongbi Devi,residential,single_phase,Domestic LT-II,Imphal West,Keishampat,"Keishampat, Imphal West, Manipur",24.800819,93.937245,2.46,MNP531228,2022-04-21,4.92,False
+MN-CHU-000625,Thangjam Zou,residential,single_phase,BPL Category,Churachandpur,Rengkai,"Rengkai, Churachandpur, Manipur",24.375878,93.776105,4.8,MNP746915,2022-07-05,9.6,False
+MN-BIS-000626,Khumanthem Devi,residential,single_phase,BPL Category,Bishnupur,Karang,"Karang, Bishnupur, Manipur",24.604224,93.838552,3.79,MNP917707,2021-05-01,7.58,False
+MN-CHA-000627,Irengbam Inpui,residential,single_phase,Domestic LT-I,Chandel,Khudengthabi,"Khudengthabi, Chandel, Manipur",24.35951,94.169507,4.6,MNP302647,2022-09-26,9.2,False
+MN-IMP-000628,Mangolnganbi Hmar,residential,single_phase,Domestic LT-I,Imphal East,Sagolband,"Sagolband, Imphal East, Manipur",24.841133,93.97454,4.93,MNP285679,2021-07-17,9.85,False
+MN-CHA-000629,Nirmalabas High School,commercial,three_phase,Commercial HT,Chandel,Khudengthabi,"Khudengthabi, Chandel, Manipur",24.332014,94.138467,7.8,MNP524533,2019-08-27,15.61,False
+MN-SEN-000630,Premila Tarao,residential,single_phase,BPL Category,Senapati,Mao,"Mao, Senapati, Manipur",25.249336,94.095292,5.96,MNP925145,2023-10-16,11.93,False
+MN-CHA-000631,Lourembam Chiru,residential,single_phase,BPL Category,Chandel,New Samtal,"New Samtal, Chandel, Manipur",24.319836,94.120448,5.1,MNP141158,2020-11-16,10.2,False
+MN-IMP-000632,Dinamani Rongmei,residential,three_phase,Domestic LT-II,Imphal East,Wangkhei,"Wangkhei, Imphal East, Manipur",24.794282,93.968856,4.8,MNP583757,2023-01-27,9.6,False
+MN-IMP-000633,Ngangom Liangmai,residential,single_phase,BPL Category,Imphal East,Nagamapal,"Nagamapal, Imphal East, Manipur",24.823119,93.943162,3.1,MNP218669,2022-12-30,6.2,False
+MN-THO-000634,CMC Imphal,commercial,single_phase,Commercial LT,Thoubal,Khongjom,"Khongjom, Thoubal, Manipur",24.678379,94.033134,7.67,MNP287567,2021-06-17,15.34,False
+MN-BIS-000635,Maibam Anal,residential,single_phase,BPL Category,Bishnupur,Toubul,"Toubul, Bishnupur, Manipur",24.626099,93.755297,4.86,MNP935176,2023-02-01,9.71,False
+MN-IMP-000636,Khogen Liangmai,residential,single_phase,Domestic LT-I,Imphal West,Singjamei,"Singjamei, Imphal West, Manipur",24.764174,93.947065,3.16,MNP649262,2020-01-15,6.31,False
+MN-THO-000637,Sanahanbi Paite,residential,three_phase,BPL Category,Thoubal,Khongjom,"Khongjom, Thoubal, Manipur",24.632693,93.972333,2.88,MNP791567,2023-03-01,5.75,False
+MN-THO-000638,Khundrakpam Monsang,residential,single_phase,Domestic LT-II,Thoubal,Wangjing,"Wangjing, Thoubal, Manipur",24.687665,94.09945,3.16,MNP402808,2020-06-29,6.31,False
+MN-THO-000639,Deben Koireng,residential,single_phase,Domestic LT-II,Thoubal,Wabagai,"Wabagai, Thoubal, Manipur",24.644861,94.058311,5.49,MNP996963,2021-03-17,10.98,False
+MN-IMP-000640,Naoroibam Kom,residential,single_phase,Domestic LT-II,Imphal East,Thangmeiband,"Thangmeiband, Imphal East, Manipur",24.821513,93.957407,3.36,MNP575779,2021-09-15,6.71,False
+MN-IMP-000641,Premila Khoibu,residential,single_phase,Domestic LT-I,Imphal East,Wangkhei,"Wangkhei, Imphal East, Manipur",24.828693,93.930225,4.29,MNP151295,2022-12-20,8.58,False
+MN-UKH-000642,Tomba Monsang,residential,single_phase,Domestic LT-I,Ukhrul,Ukhrul Town,"Ukhrul Town, Ukhrul, Manipur",25.071099,94.458839,1.92,MNP151413,2023-05-24,3.84,False
+MN-THO-000643,Premila Khoibu,residential,single_phase,Domestic LT-II,Thoubal,Wangjing,"Wangjing, Thoubal, Manipur",24.65882,94.022146,4.39,MNP885734,2020-10-04,8.78,False
+MN-IMP-000644,Takhellambam Maram,residential,three_phase,Domestic LT-I,Imphal East,Khongman,"Khongman, Imphal East, Manipur",24.78454,93.970599,4.03,MNP895284,2021-08-10,8.05,False
+MN-IMP-000645,SBI Imphal Branch,commercial,single_phase,Shops & Establishments,Imphal West,Kwakeithel,"Kwakeithel, Imphal West, Manipur",24.789246,93.922244,29.49,MNP387748,2022-02-27,58.97,False
+MN-BIS-000646,Thangjam Chiru,residential,three_phase,Domestic LT-II,Bishnupur,Kumbi,"Kumbi, Bishnupur, Manipur",24.630499,93.790473,5.21,MNP859246,2020-02-22,10.43,False
+MN-CHU-000647,Oinam Chiru,residential,single_phase,BPL Category,Churachandpur,Tipaimukh,"Tipaimukh, Churachandpur, Manipur",24.374738,93.661559,1.76,MNP471042,2023-04-12,3.53,False
+MN-CHA-000648,Hemabati Thadou,residential,three_phase,Domestic LT-I,Chandel,Molnoi,"Molnoi, Chandel, Manipur",24.366848,94.235469,4.68,MNP843007,2022-05-18,9.37,False
+MN-IMP-000649,MSPDCL Substation,industrial,three_phase,Industrial HT,Imphal East,Khongman,"Khongman, Imphal East, Manipur",24.835203,93.966209,110.43,MNP755843,2019-07-16,220.86,False
+MN-BIS-000650,Bidyarani Chanu,residential,single_phase,BPL Category,Bishnupur,Karang,"Karang, Bishnupur, Manipur",24.564745,93.799229,3.45,MNP945197,2020-06-06,6.91,False
+MN-BIS-000651,Chanu Monsang,residential,single_phase,BPL Category,Bishnupur,Ningthoukhong,"Ningthoukhong, Bishnupur, Manipur",24.55886,93.783092,4.19,MNP439658,2019-09-15,8.38,False
+MN-UKH-000652,Maipaksana Devi,residential,single_phase,Domestic LT-I,Ukhrul,Chingai,"Chingai, Ukhrul, Manipur",25.147133,94.49967,5.7,MNP446569,2022-02-09,11.4,False
+MN-CHA-000653,Ema Market,commercial,three_phase,Commercial HT,Chandel,New Samtal,"New Samtal, Chandel, Manipur",24.428513,94.126374,28.18,MNP262934,2020-06-27,56.35,False
+MN-UKH-000654,Memcha Chiru,residential,single_phase,BPL Category,Ukhrul,Shangshak,"Shangshak, Ukhrul, Manipur",25.15713,94.323667,3.34,MNP811141,2022-03-27,6.69,False
+MN-IMP-000655,Victoria Meetei,residential,three_phase,Domestic LT-II,Imphal East,Wangkhei,"Wangkhei, Imphal East, Manipur",24.838786,93.956868,4.07,MNP981578,2023-10-31,8.15,False
+MN-SEN-000656,Ahongshangbam Poumai,residential,single_phase,Domestic LT-I,Senapati,Willong,"Willong, Senapati, Manipur",25.317554,93.986895,3.13,MNP920347,2019-10-16,6.26,False
+MN-UKH-000657,Bidyarani Haokip,residential,single_phase,Domestic LT-I,Ukhrul,Ukhrul Town,"Ukhrul Town, Ukhrul, Manipur",25.066902,94.305239,1.61,MNP489633,2021-06-21,3.22,False
+MN-CHU-000658,Manipur Handloom,commercial,single_phase,Commercial LT,Churachandpur,Saikot,"Saikot, Churachandpur, Manipur",24.424755,93.690961,24.34,MNP492393,2019-08-09,48.68,False
+MN-BIS-000659,Ibeyaima Devi,residential,single_phase,BPL Category,Bishnupur,Nambol,"Nambol, Bishnupur, Manipur",24.579873,93.891102,2.67,MNP261562,2022-12-09,5.33,False
+MN-CHA-000660,Takhellambam Simte,residential,single_phase,Domestic LT-I,Chandel,Molnoi,"Molnoi, Chandel, Manipur",24.385931,94.261819,5.29,MNP962074,2021-02-09,10.58,False
+MN-THO-000661,Ngangom Poumai,residential,single_phase,BPL Category,Thoubal,Wabagai,"Wabagai, Thoubal, Manipur",24.61861,94.070396,3.56,MNP221462,2023-12-25,7.12,False
+MN-IMP-000662,Wangkhem Thangal,residential,three_phase,Domestic LT-I,Imphal East,Thangmeiband,"Thangmeiband, Imphal East, Manipur",24.813808,93.939344,1.86,MNP645865,2019-09-16,3.73,False
+MN-CHU-000663,Lanchenbi Anal,residential,single_phase,Domestic LT-II,Churachandpur,Churachandpur Town,"Churachandpur Town, Churachandpur, Manipur",24.409191,93.724469,3.47,MNP390088,2021-01-07,6.93,False
+MN-CHA-000664,Ongbi Paite,residential,single_phase,Domestic LT-I,Chandel,Tengnoupal,"Tengnoupal, Chandel, Manipur",24.445902,94.229654,2.22,MNP753205,2020-11-12,4.43,False
+MN-BIS-000665,Laishram Anal,residential,single_phase,BPL Category,Bishnupur,Thanga,"Thanga, Bishnupur, Manipur",24.611023,93.770303,4.88,MNP943058,2022-06-01,9.76,False
+MN-THO-000666,Premila Angami,residential,single_phase,Domestic LT-I,Thoubal,Kakching,"Kakching, Thoubal, Manipur",24.665696,94.093492,1.81,MNP236392,2023-11-04,3.62,False
+MN-IMP-000667,Memcha Haokip,residential,single_phase,Domestic LT-I,Imphal East,Khongman,"Khongman, Imphal East, Manipur",24.783994,93.949753,2.68,MNP838908,2020-08-30,5.36,False
+MN-CHA-000668,Medplus Manipur,commercial,single_phase,Commercial LT,Chandel,Khengjoy,"Khengjoy, Chandel, Manipur",24.349396,94.271876,15.61,MNP847528,2019-10-02,31.22,False
+MN-IMP-000669,Rajkumar Thangal,residential,single_phase,Domestic LT-II,Imphal West,Kongba,"Kongba, Imphal West, Manipur",24.769036,93.933158,3.52,MNP817727,2020-05-23,7.05,False
+MN-CHA-000670,Khumanthem Simte,residential,three_phase,BPL Category,Chandel,New Samtal,"New Samtal, Chandel, Manipur",24.455342,94.01961,3.69,MNP370587,2021-12-19,7.39,False
+MN-UKH-000671,Hemabati Devi,residential,single_phase,Domestic LT-I,Ukhrul,Chingai,"Chingai, Ukhrul, Manipur",25.006723,94.312531,5.58,MNP468512,2021-04-27,11.16,False
+MN-THO-000672,Ojita Zou,residential,single_phase,Domestic LT-II,Thoubal,Yairipok,"Yairipok, Thoubal, Manipur",24.613925,94.029863,3.35,MNP957266,2020-01-01,6.7,False
+MN-UKH-000673,Big Bazaar Imphal,commercial,single_phase,Commercial HT,Ukhrul,Pushing,"Pushing, Ukhrul, Manipur",25.069469,94.479967,8.21,MNP658624,2021-06-02,16.42,False
+MN-SEN-000674,Yendrembam Paite,residential,three_phase,Domestic LT-II,Senapati,Maram,"Maram, Senapati, Manipur",25.332758,94.142679,4.02,MNP169268,2022-02-04,8.04,False
+MN-SEN-000675,Kalpana Chothe,residential,single_phase,BPL Category,Senapati,Tadubi,"Tadubi, Senapati, Manipur",25.387364,93.960452,3.38,MNP181678,2019-11-10,6.77,False
+MN-CHA-000676,Handloom Cluster Moirang,industrial,three_phase,Small Scale Industry,Chandel,Tengnoupal,"Tengnoupal, Chandel, Manipur",24.352032,94.219246,197.01,MNP585394,2022-03-07,394.02,False
+MN-CHA-000677,Ahongsangbam Meetei,residential,single_phase,BPL Category,Chandel,Machi,"Machi, Chandel, Manipur",24.351306,94.196252,2.39,MNP953610,2020-08-29,4.78,False
+MN-SEN-000678,HDFC Bank Imphal,commercial,three_phase,Commercial LT,Senapati,Mao,"Mao, Senapati, Manipur",25.313066,94.042786,39.09,MNP194930,2022-10-14,78.18,False
+MN-IMP-000679,Vishal Mega Mart,commercial,single_phase,Shops & Establishments,Imphal East,Heingang,"Heingang, Imphal East, Manipur",24.822597,93.954465,11.21,MNP405663,2021-10-26,22.42,False
+MN-CHA-000680,Ibotombi Anal,residential,single_phase,BPL Category,Chandel,Moreh,"Moreh, Chandel, Manipur",24.330249,94.067595,2.63,MNP419343,2021-07-26,5.26,False
+MN-UKH-000681,Deben Kharam,residential,single_phase,Domestic LT-I,Ukhrul,Phungyar,"Phungyar, Ukhrul, Manipur",25.170123,94.412245,3.86,MNP993916,2022-05-10,7.71,False
+MN-IMP-000682,Ibemhal Moyon,residential,three_phase,Domestic LT-I,Imphal East,Porompat,"Porompat, Imphal East, Manipur",24.788034,93.99021,4.75,MNP552686,2020-01-25,9.51,False
+MN-UKH-000683,Yaiphabi Zeliang,residential,single_phase,BPL Category,Ukhrul,Litan,"Litan, Ukhrul, Manipur",25.013534,94.441567,3.95,MNP281833,2021-05-05,7.89,False
+MN-SEN-000684,Ongbi Moyon,residential,three_phase,BPL Category,Senapati,Mao,"Mao, Senapati, Manipur",25.216345,94.04166,3.68,MNP231647,2023-04-02,7.36,False
+MN-IMP-000685,Chandrakala Zou,residential,single_phase,BPL Category,Imphal East,Heingang,"Heingang, Imphal East, Manipur",24.791604,93.996199,5.32,MNP945091,2021-09-03,10.65,False
+MN-SEN-000686,The Classic Hotel,commercial,single_phase,Commercial HT,Senapati,Karong,"Karong, Senapati, Manipur",25.333804,94.042459,20.88,MNP678866,2021-06-25,41.76,False
+MN-BIS-000687,Ojita Singh,residential,single_phase,BPL Category,Bishnupur,Moirang,"Moirang, Bishnupur, Manipur",24.615097,93.831815,1.78,MNP348250,2020-01-05,3.56,False
+MN-SEN-000688,Sanahanbi Chanu,residential,single_phase,BPL Category,Senapati,Willong,"Willong, Senapati, Manipur",25.302501,94.111281,3.57,MNP486482,2023-05-16,7.13,False
+MN-IMP-000689,Elangbam Chiru,residential,single_phase,BPL Category,Imphal West,Keishampat,"Keishampat, Imphal West, Manipur",24.753637,93.935039,2.41,MNP192742,2022-08-18,4.81,False
+MN-IMP-000690,Premila Meitei,residential,three_phase,BPL Category,Imphal West,Naoremthong,"Naoremthong, Imphal West, Manipur",24.768103,93.891529,2.99,MNP916344,2023-12-11,5.97,False
+MN-CHA-000691,Bidyarani Mao,residential,three_phase,Domestic LT-II,Chandel,Khengjoy,"Khengjoy, Chandel, Manipur",24.45135,94.155816,2.42,MNP403257,2023-01-24,4.84,False
+MN-CHU-000692,Memcha Kabui,residential,single_phase,BPL Category,Churachandpur,Mualkoi,"Mualkoi, Churachandpur, Manipur",24.431675,93.781937,5.42,MNP154127,2020-04-28,10.84,False
+MN-IMP-000693,Cement Corporation Manipur,industrial,three_phase,Industrial LT,Imphal East,Sagolband,"Sagolband, Imphal East, Manipur",24.796716,93.961587,197.6,MNP232981,2021-03-03,395.2,False
+MN-CHU-000694,Deben Lamkang,residential,single_phase,Domestic LT-II,Churachandpur,Henglep,"Henglep, Churachandpur, Manipur",24.415802,93.654075,1.79,MNP114892,2019-11-06,3.59,False
+MN-THO-000695,Hemanta Liangmai,residential,single_phase,Domestic LT-I,Thoubal,Leisho,"Leisho, Thoubal, Manipur",24.646393,94.086383,3.92,MNP373943,2019-08-14,7.85,False
+MN-CHA-000696,Wangkhem Haokip,residential,three_phase,BPL Category,Chandel,Machi,"Machi, Chandel, Manipur",24.399563,94.031642,4.46,MNP961639,2023-02-21,8.91,False
+MN-SEN-000697,Gomti Restaurant,commercial,three_phase,Shops & Establishments,Senapati,Tadubi,"Tadubi, Senapati, Manipur",25.364421,94.026084,32.71,MNP768545,2023-01-25,65.41,False
+MN-UKH-000698,Ibemhal Meitei,residential,single_phase,Domestic LT-II,Ukhrul,Ukhrul Town,"Ukhrul Town, Ukhrul, Manipur",25.192895,94.340753,3.85,MNP599365,2022-04-25,7.71,False
+MN-BIS-000699,Geetarani Koireng,residential,single_phase,Domestic LT-II,Bishnupur,Laphupat Tera,"Laphupat Tera, Bishnupur, Manipur",24.578714,93.868928,4.1,MNP112439,2022-05-21,8.2,False
+MN-CHA-000700,City Pharmacy,commercial,three_phase,Shops & Establishments,Chandel,Liwa Sarei,"Liwa Sarei, Chandel, Manipur",24.426916,94.239374,20.37,MNP143010,2023-06-17,40.74,False
+MN-UKH-000701,Hero MotoCorp Manipur,commercial,three_phase,Commercial HT,Ukhrul,Litan,"Litan, Ukhrul, Manipur",25.183018,94.406606,12.63,MNP451238,2022-06-28,25.27,False
+MN-IMP-000702,Elangbam Chothe,residential,single_phase,BPL Category,Imphal West,Kwakeithel,"Kwakeithel, Imphal West, Manipur",24.798713,93.935528,2.93,MNP907924,2022-11-29,5.85,False
+MN-THO-000703,Ibotombi Singh,residential,single_phase,Domestic LT-I,Thoubal,Lilong,"Lilong, Thoubal, Manipur",24.685718,94.085921,2.75,MNP531225,2023-06-16,5.49,False
+MN-CHA-000704,Leikai Moyon,residential,single_phase,Domestic LT-I,Chandel,Khudengthabi,"Khudengthabi, Chandel, Manipur",24.496704,94.042213,2.41,MNP124851,2020-07-13,4.82,False
+MN-BIS-000705,Khogen Gangte,residential,single_phase,BPL Category,Bishnupur,Karang,"Karang, Bishnupur, Manipur",24.568422,93.884098,4.44,MNP236217,2021-11-24,8.89,False
+MN-THO-000706,Maibam Moyon,residential,single_phase,Domestic LT-I,Thoubal,Kakching,"Kakching, Thoubal, Manipur",24.61521,94.016049,4.27,MNP769809,2021-06-18,8.54,False
+MN-CHU-000707,Vishal Mega Mart,commercial,three_phase,Commercial HT,Churachandpur,Tipaimukh,"Tipaimukh, Churachandpur, Manipur",24.31252,93.782362,33.62,MNP369836,2023-02-05,67.23,False
+MN-CHU-000708,Manipur University,commercial,single_phase,Commercial LT,Churachandpur,Churachandpur Town,"Churachandpur Town, Churachandpur, Manipur",24.375781,93.795069,21.08,MNP370782,2022-07-09,42.15,False
+MN-IMP-000709,Deben Rongmei,residential,single_phase,Domestic LT-II,Imphal West,Kongba,"Kongba, Imphal West, Manipur",24.818888,93.926754,4.36,MNP213697,2023-03-14,8.71,False
+MN-SEN-000710,Mangang Koireng,residential,single_phase,Domestic LT-I,Senapati,Maram,"Maram, Senapati, Manipur",25.233191,94.126386,3.42,MNP173832,2020-10-19,6.85,False
+MN-CHA-000711,Ongbi Singh,residential,three_phase,BPL Category,Chandel,Chandel Town,"Chandel Town, Chandel, Manipur",24.332447,94.003782,4.02,MNP509451,2022-07-06,8.04,False
+MN-UKH-000712,Thiyam Inpui,residential,single_phase,Domestic LT-II,Ukhrul,Litan,"Litan, Ukhrul, Manipur",25.10548,94.443871,5.51,MNP985049,2019-12-04,11.01,False
+MN-IMP-000713,Rice Bowl Restaurant,commercial,single_phase,Shops & Establishments,Imphal West,Naoremthong,"Naoremthong, Imphal West, Manipur",24.755558,93.931205,13.59,MNP957710,2019-08-19,27.18,False
+MN-UKH-000714,Ahongsangbam Meitei,residential,single_phase,BPL Category,Ukhrul,Chingai,"Chingai, Ukhrul, Manipur",25.171635,94.463813,3.93,MNP195071,2021-12-15,7.87,False
+MN-UKH-000715,Radhamani Hmar,residential,single_phase,Domestic LT-I,Ukhrul,Phungyar,"Phungyar, Ukhrul, Manipur",25.142049,94.36287,3.62,MNP502824,2020-04-19,7.24,False
+MN-SEN-000716,Hemabati Haokip,residential,three_phase,Domestic LT-II,Senapati,Kangpokpi,"Kangpokpi, Senapati, Manipur",25.364327,94.041853,3.11,MNP871043,2022-12-10,6.22,False
+MN-BIS-000717,Sorokhaibam Poumai,residential,single_phase,BPL Category,Bishnupur,Bishnupur Bazar,"Bishnupur Bazar, Bishnupur, Manipur",24.599421,93.874237,3.01,MNP774661,2022-04-12,6.02,False
+MN-CHA-000718,Wangkhem Meitei,residential,single_phase,BPL Category,Chandel,Chandel Town,"Chandel Town, Chandel, Manipur",24.334752,94.213604,5.22,MNP144894,2021-09-24,10.43,False
+MN-CHA-000719,Manihar Aimol,residential,three_phase,Domestic LT-I,Chandel,Molnoi,"Molnoi, Chandel, Manipur",24.320127,94.071962,2.14,MNP871185,2023-03-19,4.28,False
+MN-IMP-000720,Lourembam Zou,residential,single_phase,BPL Category,Imphal East,Koirengei,"Koirengei, Imphal East, Manipur",24.804356,93.961525,4.87,MNP152384,2022-04-13,9.74,False
+MN-IMP-000721,Hero MotoCorp Manipur,commercial,single_phase,Shops & Establishments,Imphal West,Kongba,"Kongba, Imphal West, Manipur",24.79558,93.923465,18.95,MNP167064,2023-05-30,37.9,False
+MN-BIS-000722,Leishangthem Angami,residential,single_phase,BPL Category,Bishnupur,Nambol,"Nambol, Bishnupur, Manipur",24.634145,93.820693,5.91,MNP811351,2021-10-01,11.81,False
+MN-THO-000723,Nabachandra Chanu,residential,single_phase,Domestic LT-II,Thoubal,Lilong,"Lilong, Thoubal, Manipur",24.663414,93.96894,4.54,MNP166292,2023-04-30,9.09,False
+MN-SEN-000724,Laishram Paite,residential,single_phase,BPL Category,Senapati,Saikul,"Saikul, Senapati, Manipur",25.265021,94.087265,1.81,MNP142675,2023-04-04,3.63,False
+MN-SEN-000725,Sorokhaibam Haokip,residential,single_phase,Domestic LT-I,Senapati,Saikul,"Saikul, Senapati, Manipur",25.234976,94.121147,2.52,MNP193471,2020-01-16,5.04,False
+MN-CHU-000726,Nongthombam Kom,residential,single_phase,Domestic LT-II,Churachandpur,Tipaimukh,"Tipaimukh, Churachandpur, Manipur",24.425556,93.691891,4.39,MNP648496,2021-06-24,8.79,False
+MN-THO-000727,Chinglen Thadou,residential,single_phase,BPL Category,Thoubal,Leisho,"Leisho, Thoubal, Manipur",24.669415,94.026898,2.87,MNP192296,2020-06-27,5.75,False
+MN-CHU-000728,CMC Imphal,commercial,single_phase,Commercial LT,Churachandpur,Singngat,"Singngat, Churachandpur, Manipur",24.331897,93.654978,17.38,MNP301224,2023-05-07,34.76,False
+MN-IMP-000729,MANIREDA Office,industrial,three_phase,Small Scale Industry,Imphal West,Irilbung,"Irilbung, Imphal West, Manipur",24.795721,93.945681,179.39,MNP632195,2022-10-10,358.79,False
+MN-BIS-000730,Thokchom Gangte,residential,single_phase,BPL Category,Bishnupur,Ningthoukhong,"Ningthoukhong, Bishnupur, Manipur",24.626606,93.868267,4.49,MNP984769,2021-05-06,8.98,False
+MN-THO-000731,Gokul Maram,residential,single_phase,Domestic LT-II,Thoubal,Thoubal Bazar,"Thoubal Bazar, Thoubal, Manipur",24.626029,94.086079,4.52,MNP363592,2022-02-17,9.04,False
+MN-CHA-000732,Manihar Meitei,residential,three_phase,Domestic LT-I,Chandel,Chandel Town,"Chandel Town, Chandel, Manipur",24.412088,94.033297,3.51,MNP265722,2019-08-08,7.02,False
+MN-IMP-000733,Leikai Liangmai,residential,single_phase,Domestic LT-II,Imphal West,Singjamei,"Singjamei, Imphal West, Manipur",24.782225,93.940519,3.96,MNP539422,2022-11-21,7.92,False
+MN-UKH-000734,Salam Aimol,residential,single_phase,BPL Category,Ukhrul,Kasom,"Kasom, Ukhrul, Manipur",25.07608,94.49536,2.0,MNP532637,2022-11-19,4.0,False
+MN-BIS-000735,Naoba Inpui,residential,single_phase,Domestic LT-II,Bishnupur,Nambol,"Nambol, Bishnupur, Manipur",24.592255,93.756304,4.83,MNP251981,2022-10-17,9.66,False
+MN-CHA-000736,Manipur University,commercial,single_phase,Commercial HT,Chandel,Machi,"Machi, Chandel, Manipur",24.483615,94.084011,35.4,MNP854787,2022-12-01,70.79,False
+MN-CHU-000737,Nongthombam Chanu,residential,single_phase,Domestic LT-I,Churachandpur,Saikot,"Saikot, Churachandpur, Manipur",24.343833,93.786616,4.89,MNP394234,2023-03-29,9.79,False
+MN-CHA-000738,Saikhom Angami,residential,single_phase,Domestic LT-II,Chandel,New Samtal,"New Samtal, Chandel, Manipur",24.460981,94.005402,5.83,MNP732958,2023-02-15,11.67,False
+MN-THO-000739,Longpi Pottery,commercial,three_phase,Commercial LT,Thoubal,Leisho,"Leisho, Thoubal, Manipur",24.672667,93.995713,34.46,MNP531694,2021-01-29,68.91,False
+MN-BIS-000740,Elangbam Lamkang,residential,single_phase,Domestic LT-II,Bishnupur,Karang,"Karang, Bishnupur, Manipur",24.578152,93.880913,2.01,MNP871939,2022-08-15,4.01,False
+MN-SEN-000741,Bijoy Simte,residential,three_phase,Domestic LT-I,Senapati,Karong,"Karong, Senapati, Manipur",25.340737,94.05814,1.93,MNP538065,2023-10-04,3.87,False
+MN-CHA-000742,Leishangthem Chiru,residential,single_phase,BPL Category,Chandel,Molnoi,"Molnoi, Chandel, Manipur",24.348379,94.003721,3.61,MNP961186,2023-06-16,7.22,False
+MN-BIS-000743,Joykumar Tangkhul,residential,three_phase,Domestic LT-I,Bishnupur,Nambol,"Nambol, Bishnupur, Manipur",24.580127,93.839754,2.84,MNP475815,2022-05-07,5.68,False
+MN-IMP-000744,Sanasam Paite,residential,single_phase,BPL Category,Imphal West,Lamphel,"Lamphel, Imphal West, Manipur",24.770994,93.932024,1.72,MNP883586,2020-09-24,3.43,False
+MN-CHA-000745,Khogen Rongmei,residential,single_phase,Domestic LT-II,Chandel,New Samtal,"New Samtal, Chandel, Manipur",24.480579,94.255679,4.51,MNP757258,2021-05-27,9.01,False
+MN-IMP-000746,Umakanta Chiru,residential,single_phase,Domestic LT-II,Imphal East,Khongman,"Khongman, Imphal East, Manipur",24.821526,93.992461,2.33,MNP889460,2022-06-29,4.67,False
+MN-BIS-000747,Memcha Kharam,residential,three_phase,BPL Category,Bishnupur,Nambol,"Nambol, Bishnupur, Manipur",24.557897,93.785927,5.08,MNP481671,2023-09-19,10.15,False
+MN-UKH-000748,Heisnam Maram,residential,single_phase,BPL Category,Ukhrul,Shangshak,"Shangshak, Ukhrul, Manipur",25.006934,94.416561,5.98,MNP839113,2023-08-18,11.96,False
+MN-BIS-000749,Naoroibam Tarao,residential,single_phase,Domestic LT-II,Bishnupur,Moirang,"Moirang, Bishnupur, Manipur",24.63557,93.828217,1.79,MNP873199,2019-10-15,3.57,False
+MN-BIS-000750,Victoria Lamkang,residential,single_phase,Domestic LT-II,Bishnupur,Kumbi,"Kumbi, Bishnupur, Manipur",24.633137,93.839847,2.02,MNP390607,2023-09-13,4.03,False
+MN-UKH-000751,Ibeyaima Chiru,residential,single_phase,Domestic LT-II,Ukhrul,Shangshak,"Shangshak, Ukhrul, Manipur",25.018771,94.481925,4.51,MNP844305,2021-01-08,9.02,False
+MN-CHU-000752,Chanu Hmar,residential,three_phase,Domestic LT-II,Churachandpur,Thanlon,"Thanlon, Churachandpur, Manipur",24.424393,93.781847,4.07,MNP191549,2023-07-22,8.15,False
+MN-THO-000753,Thangjam Paite,residential,single_phase,BPL Category,Thoubal,Yairipok,"Yairipok, Thoubal, Manipur",24.651745,94.014564,2.93,MNP255141,2021-03-22,5.85,False
+MN-BIS-000754,Oinam Tangkhul,residential,three_phase,BPL Category,Bishnupur,Thanga,"Thanga, Bishnupur, Manipur",24.59346,93.866082,4.21,MNP238440,2021-05-07,8.42,False
+MN-CHA-000755,Yumnam Meetei,residential,single_phase,Domestic LT-I,Chandel,Chandel Town,"Chandel Town, Chandel, Manipur",24.478505,94.133014,4.23,MNP975505,2021-02-02,8.46,False
+MN-SEN-000756,Takhellambam Inpui,residential,single_phase,BPL Category,Senapati,Karong,"Karong, Senapati, Manipur",25.326262,94.068339,4.66,MNP655919,2020-12-05,9.32,False
+MN-CHU-000757,Pukhrambam Paite,residential,single_phase,Domestic LT-I,Churachandpur,Mualkoi,"Mualkoi, Churachandpur, Manipur",24.335615,93.726855,1.97,MNP607765,2021-12-02,3.94,False
+MN-IMP-000758,MANIREDA Office,industrial,three_phase,Industrial HT,Imphal East,Heingang,"Heingang, Imphal East, Manipur",24.806916,93.964137,144.36,MNP578073,2023-01-27,288.71,False
+MN-THO-000759,Thangjam Thadou,residential,single_phase,BPL Category,Thoubal,Mayang Imphal,"Mayang Imphal, Thoubal, Manipur",24.695053,94.040098,4.85,MNP798724,2019-07-20,9.69,False
+MN-BIS-000760,Salam Zou,residential,single_phase,Domestic LT-II,Bishnupur,Nambol,"Nambol, Bishnupur, Manipur",24.600627,93.845116,1.82,MNP293458,2022-11-08,3.64,False
+MN-IMP-000761,Ongbi Maram,residential,single_phase,Domestic LT-I,Imphal East,Langol,"Langol, Imphal East, Manipur",24.797807,93.95533,3.63,MNP659565,2022-04-25,7.25,False
+MN-IMP-000762,Ongbi Thangal,residential,three_phase,Domestic LT-I,Imphal East,Mantripukhri,"Mantripukhri, Imphal East, Manipur",24.783195,93.939802,2.75,MNP104502,2019-11-12,5.49,False
+MN-UKH-000763,Radhamani Simte,residential,single_phase,BPL Category,Ukhrul,Lunghar,"Lunghar, Ukhrul, Manipur",25.194307,94.366269,3.67,MNP563581,2022-02-08,7.34,False
+MN-CHA-000764,Ibotombi Khoibu,residential,single_phase,Domestic LT-I,Chandel,Chandel Town,"Chandel Town, Chandel, Manipur",24.33922,94.183234,2.76,MNP521139,2020-07-17,5.53,False
+MN-CHA-000765,BT Road Market,commercial,single_phase,Shops & Establishments,Chandel,Khudengthabi,"Khudengthabi, Chandel, Manipur",24.341399,94.154972,7.68,MNP772465,2022-11-29,15.36,False
+MN-BIS-000766,Ibomcha Haokip,residential,single_phase,Domestic LT-II,Bishnupur,Ningthoukhong,"Ningthoukhong, Bishnupur, Manipur",24.550766,93.78286,1.67,MNP809952,2020-03-28,3.33,False
+MN-SEN-000767,Cement Corporation Manipur,industrial,three_phase,Industrial HT,Senapati,Maram,"Maram, Senapati, Manipur",25.221605,94.017772,168.41,MNP732471,2020-08-11,336.83,False
+MN-IMP-000768,Ongbi Zeliang,residential,single_phase,Domestic LT-II,Imphal East,Langol,"Langol, Imphal East, Manipur",24.820043,93.965887,2.82,MNP112782,2022-05-30,5.64,False
+MN-CHU-000769,Konsam Liangmai,residential,single_phase,Domestic LT-II,Churachandpur,Thanlon,"Thanlon, Churachandpur, Manipur",24.439763,93.709552,1.89,MNP942725,2021-07-10,3.78,False
+MN-SEN-000770,Bijoy Haokip,residential,single_phase,Domestic LT-II,Senapati,Tadubi,"Tadubi, Senapati, Manipur",25.323413,93.972768,3.05,MNP597667,2021-01-22,6.11,False
+MN-IMP-000771,Manipur Food Industries,industrial,three_phase,Industrial LT,Imphal West,Irilbung,"Irilbung, Imphal West, Manipur",24.785519,93.941196,118.97,MNP106940,2021-09-16,237.93,False
+MN-CHU-000772,Yendrembam Thangal,residential,single_phase,Domestic LT-I,Churachandpur,Tipaimukh,"Tipaimukh, Churachandpur, Manipur",24.405339,93.798923,2.09,MNP308936,2022-12-18,4.18,False
+MN-CHU-000773,HDFC Bank Imphal,commercial,single_phase,Commercial HT,Churachandpur,Sangaikot,"Sangaikot, Churachandpur, Manipur",24.34121,93.709186,21.21,MNP975126,2020-09-21,42.42,False
+MN-CHA-000774,Thoiba Simte,residential,single_phase,BPL Category,Chandel,Moreh,"Moreh, Chandel, Manipur",24.382204,94.272283,4.71,MNP974767,2020-06-08,9.43,False
+MN-CHU-000775,Sorokhaibam Chothe,residential,single_phase,Domestic LT-II,Churachandpur,Tipaimukh,"Tipaimukh, Churachandpur, Manipur",24.391186,93.696406,5.21,MNP617000,2023-08-19,10.41,False
+MN-UKH-000776,Maipaksana Zeliang,residential,three_phase,BPL Category,Ukhrul,Jessami,"Jessami, Ukhrul, Manipur",25.191012,94.46424,1.51,MNP819231,2021-05-03,3.01,False
+MN-IMP-000777,Steel Plant Imphal,industrial,three_phase,Small Scale Industry,Imphal West,Chingmeirong,"Chingmeirong, Imphal West, Manipur",24.794548,93.883579,81.22,MNP703207,2023-11-28,162.43,False
+MN-THO-000778,Paona Bazaar,commercial,single_phase,Commercial HT,Thoubal,Leisho,"Leisho, Thoubal, Manipur",24.605952,94.040569,29.81,MNP826959,2023-03-31,59.63,False
+MN-IMP-000779,Bidyarani Mao,residential,single_phase,Domestic LT-II,Imphal East,Sagolband,"Sagolband, Imphal East, Manipur",24.788014,93.956869,3.55,MNP655338,2020-06-03,7.11,False
+MN-BIS-000780,Loktak Power Station,industrial,three_phase,Small Scale Industry,Bishnupur,Moirang,"Moirang, Bishnupur, Manipur",24.586905,93.768154,107.03,MNP889188,2023-01-25,214.06,False
+MN-UKH-000781,Waikhom Vaiphei,residential,single_phase,Domestic LT-II,Ukhrul,Lunghar,"Lunghar, Ukhrul, Manipur",25.150236,94.314202,1.86,MNP963308,2023-03-14,3.72,False
+MN-CHU-000782,Bidyarani Angami,residential,three_phase,Domestic LT-I,Churachandpur,Singngat,"Singngat, Churachandpur, Manipur",24.353216,93.791259,4.51,MNP207392,2022-10-13,9.02,False
+MN-BIS-000783,Khundrakpam Thangal,residential,three_phase,Domestic LT-I,Bishnupur,Kumbi,"Kumbi, Bishnupur, Manipur",24.617867,93.804288,4.17,MNP958620,2023-04-09,8.34,False
+MN-CHA-000784,Babina Diagnostics,commercial,three_phase,Commercial LT,Chandel,Khudengthabi,"Khudengthabi, Chandel, Manipur",24.302026,94.190829,37.18,MNP956727,2021-07-11,74.36,False
+MN-UKH-000785,Babina Diagnostics,commercial,single_phase,Commercial LT,Ukhrul,Kamjong,"Kamjong, Ukhrul, Manipur",25.122515,94.47474,31.03,MNP333159,2023-04-14,62.06,False
+MN-THO-000786,Babina Diagnostics,commercial,single_phase,Commercial LT,Thoubal,Wabagai,"Wabagai, Thoubal, Manipur",24.612056,94.085368,9.66,MNP182423,2021-08-15,19.32,False
+MN-IMP-000787,Oken Kabui,residential,single_phase,Domestic LT-I,Imphal West,Singjamei,"Singjamei, Imphal West, Manipur",24.787378,93.88995,1.55,MNP305888,2023-05-27,3.11,False
+MN-IMP-000788,Maibam Chanu,residential,single_phase,BPL Category,Imphal East,Koirengei,"Koirengei, Imphal East, Manipur",24.809542,93.950653,3.69,MNP110771,2019-10-10,7.37,False
+MN-IMP-000789,Bijoy Hmar,residential,single_phase,Domestic LT-II,Imphal West,Irilbung,"Irilbung, Imphal West, Manipur",24.790404,93.883062,2.05,MNP130680,2023-07-01,4.11,False
+MN-CHU-000790,Victoria Paite,residential,three_phase,BPL Category,Churachandpur,Mualkoi,"Mualkoi, Churachandpur, Manipur",24.383796,93.701475,4.78,MNP742731,2022-08-25,9.56,False
+MN-IMP-000791,Usham Kom,residential,single_phase,Domestic LT-II,Imphal West,Singjamei,"Singjamei, Imphal West, Manipur",24.79566,93.939192,4.62,MNP280117,2019-10-11,9.23,False
+MN-IMP-000792,Waikhom Thadou,residential,single_phase,Domestic LT-I,Imphal West,Uripok,"Uripok, Imphal West, Manipur",24.780095,93.927108,2.74,MNP289633,2022-01-06,5.48,False
+MN-SEN-000793,Steel Plant Imphal,industrial,three_phase,Industrial LT,Senapati,Maram,"Maram, Senapati, Manipur",25.261263,94.107797,111.43,MNP527376,2023-05-16,222.85,False
+MN-UKH-000794,Nirmalabas High School,commercial,single_phase,Commercial LT,Ukhrul,Phungyar,"Phungyar, Ukhrul, Manipur",25.159676,94.464484,35.37,MNP619900,2019-09-24,70.74,False
+MN-CHU-000795,Rajkumar Anal,residential,single_phase,Domestic LT-II,Churachandpur,Sangaikot,"Sangaikot, Churachandpur, Manipur",24.437495,93.714648,2.93,MNP397388,2021-06-11,5.87,False
+MN-CHU-000796,Yendrembam Tangkhul,residential,single_phase,Domestic LT-II,Churachandpur,Thanlon,"Thanlon, Churachandpur, Manipur",24.38733,93.705676,4.2,MNP297955,2023-08-13,8.41,False
+MN-CHA-000797,The Classic Hotel,commercial,single_phase,Shops & Establishments,Chandel,Khudengthabi,"Khudengthabi, Chandel, Manipur",24.441117,94.206522,19.67,MNP615530,2020-03-27,39.35,False
+MN-CHA-000798,Yumnam Simte,residential,single_phase,BPL Category,Chandel,Molnoi,"Molnoi, Chandel, Manipur",24.333372,94.129159,2.14,MNP719244,2023-06-08,4.28,False
+MN-THO-000799,Yumnam Angami,residential,single_phase,Domestic LT-II,Thoubal,Kakching,"Kakching, Thoubal, Manipur",24.68901,94.001882,2.2,MNP228725,2022-09-13,4.39,False
+MN-CHA-000800,Shamu Automobile,commercial,three_phase,Shops & Establishments,Chandel,Chakpikarong,"Chakpikarong, Chandel, Manipur",24.30509,94.193747,28.2,MNP519677,2022-01-03,56.4,False
+MN-SEN-000801,Ongbi Thangal,residential,single_phase,Domestic LT-II,Senapati,Liyai,"Liyai, Senapati, Manipur",25.268121,93.964342,3.34,MNP613111,2021-03-20,6.69,False
+MN-THO-000802,Manihar Meitei,residential,single_phase,Domestic LT-II,Thoubal,Thoubal Bazar,"Thoubal Bazar, Thoubal, Manipur",24.631122,94.051568,4.23,MNP811047,2023-11-09,8.45,False
+MN-SEN-000803,Bamboo Processing Unit,industrial,three_phase,Industrial HT,Senapati,Karong,"Karong, Senapati, Manipur",25.272919,93.993579,198.09,MNP260155,2022-04-22,396.17,False
+MN-IMP-000804,Elangbam Hmar,residential,single_phase,Domestic LT-II,Imphal West,Singjamei,"Singjamei, Imphal West, Manipur",24.78178,93.928179,2.13,MNP614064,2021-03-05,4.26,False
+MN-UKH-000805,Nabachandra Chanu,residential,three_phase,Domestic LT-I,Ukhrul,Pushing,"Pushing, Ukhrul, Manipur",25.097118,94.305507,3.77,MNP502265,2021-06-25,7.55,False
+MN-SEN-000806,Sanahanbi Chanu,residential,single_phase,BPL Category,Senapati,Liyai,"Liyai, Senapati, Manipur",25.392803,94.026841,1.68,MNP917241,2022-04-22,3.35,False
+MN-THO-000807,Sunrise School,commercial,single_phase,Shops & Establishments,Thoubal,Heirok,"Heirok, Thoubal, Manipur",24.603096,94.008198,12.7,MNP507980,2021-04-09,25.4,False
+MN-CHA-000808,Moirang Pheijom,commercial,three_phase,Commercial HT,Chandel,Molnoi,"Molnoi, Chandel, Manipur",24.30467,94.226864,22.4,MNP689567,2023-02-16,44.8,False
+MN-SEN-000809,Naoba Poumai,residential,single_phase,Domestic LT-II,Senapati,Purul,"Purul, Senapati, Manipur",25.257849,94.130017,2.02,MNP903702,2022-05-30,4.05,False
+MN-IMP-000810,Moirangthem Maram,residential,single_phase,BPL Category,Imphal East,Thangmeiband,"Thangmeiband, Imphal East, Manipur",24.846914,93.951978,5.5,MNP712333,2023-11-08,11.0,False
+MN-UKH-000811,Lamlong Market,commercial,single_phase,Commercial HT,Ukhrul,Litan,"Litan, Ukhrul, Manipur",25.120589,94.465341,39.48,MNP531939,2022-01-13,78.96,False
+MN-BIS-000812,Gokul Monsang,residential,single_phase,BPL Category,Bishnupur,Kumbi,"Kumbi, Bishnupur, Manipur",24.578841,93.89417,3.25,MNP168681,2022-04-18,6.51,False
+MN-THO-000813,Sanahanbi Thangal,residential,single_phase,Domestic LT-II,Thoubal,Thoubal Bazar,"Thoubal Bazar, Thoubal, Manipur",24.638551,94.001058,3.94,MNP695642,2021-02-12,7.87,False
+MN-CHU-000814,SBI Imphal Branch,commercial,three_phase,Commercial HT,Churachandpur,Churachandpur Town,"Churachandpur Town, Churachandpur, Manipur",24.323122,93.733057,25.11,MNP496086,2020-10-21,50.21,False
+MN-IMP-000815,Joykumar Kom,residential,single_phase,BPL Category,Imphal West,Kongba,"Kongba, Imphal West, Manipur",24.803333,93.938355,3.48,MNP950874,2019-09-19,6.96,False
+MN-THO-000816,Waikhom Zeliang,residential,single_phase,BPL Category,Thoubal,Leisho,"Leisho, Thoubal, Manipur",24.630233,93.9889,2.38,MNP988494,2019-08-04,4.75,False
+MN-BIS-000817,Memcha Monsang,residential,three_phase,Domestic LT-II,Bishnupur,Ningthoukhong,"Ningthoukhong, Bishnupur, Manipur",24.555765,93.801367,2.72,MNP943687,2022-09-27,5.43,False
+MN-IMP-000818,Bijoy Angami,residential,single_phase,BPL Category,Imphal West,Irilbung,"Irilbung, Imphal West, Manipur",24.817649,93.91904,3.06,MNP940104,2021-01-10,6.13,False
+MN-BIS-000819,Gokul Monsang,residential,single_phase,Domestic LT-II,Bishnupur,Kwasiphai,"Kwasiphai, Bishnupur, Manipur",24.608047,93.77088,3.5,MNP553939,2020-04-14,7.0,False
+MN-BIS-000820,Oinam Kharam,residential,single_phase,BPL Category,Bishnupur,Laphupat Tera,"Laphupat Tera, Bishnupur, Manipur",24.612623,93.823335,3.31,MNP289373,2023-11-25,6.62,False
+MN-THO-000821,Lanchenbi Thangal,residential,single_phase,BPL Category,Thoubal,Leisho,"Leisho, Thoubal, Manipur",24.699385,94.082047,4.31,MNP658596,2020-07-23,8.61,False
+MN-SEN-000822,Reliance Fresh Imphal,commercial,single_phase,Commercial LT,Senapati,Karong,"Karong, Senapati, Manipur",25.313875,94.074132,14.04,MNP481969,2021-05-30,28.09,False
+MN-THO-000823,Bidyarani Anal,residential,three_phase,Domestic LT-I,Thoubal,Yairipok,"Yairipok, Thoubal, Manipur",24.639514,93.955919,3.64,MNP764721,2022-11-12,7.28,False
+MN-CHU-000824,Big Bazaar Imphal,commercial,single_phase,Shops & Establishments,Churachandpur,Henglep,"Henglep, Churachandpur, Manipur",24.381454,93.684162,38.83,MNP730437,2022-09-06,77.66,False
+MN-IMP-000825,Ibomcha Chothe,residential,single_phase,Domestic LT-II,Imphal West,Keishampat,"Keishampat, Imphal West, Manipur",24.813662,93.93055,3.9,MNP586706,2021-04-13,7.8,False
+MN-SEN-000826,Thokchom Paite,residential,single_phase,Domestic LT-I,Senapati,Tadubi,"Tadubi, Senapati, Manipur",25.373994,93.97613,5.06,MNP370948,2019-07-30,10.11,False
+MN-THO-000827,HDFC Bank Imphal,commercial,three_phase,Commercial LT,Thoubal,Thoubal Bazar,"Thoubal Bazar, Thoubal, Manipur",24.612482,94.069132,16.46,MNP188006,2022-03-31,32.92,False
+MN-IMP-000828,Devi Rongmei,residential,three_phase,BPL Category,Imphal West,Kakching,"Kakching, Imphal West, Manipur",24.811396,93.946083,2.17,MNP983687,2023-03-21,4.34,False
+MN-IMP-000829,Hemabati Haokip,residential,single_phase,Domestic LT-I,Imphal West,Naoremthong,"Naoremthong, Imphal West, Manipur",24.782387,93.948669,3.68,MNP910749,2022-04-01,7.35,False
+MN-SEN-000830,Lanchenbi Simte,residential,single_phase,Domestic LT-I,Senapati,Maram,"Maram, Senapati, Manipur",25.37271,94.067746,3.19,MNP387883,2021-07-16,6.38,False
+MN-IMP-000831,Ibemhal Anal,residential,single_phase,Domestic LT-II,Imphal East,Koirengei,"Koirengei, Imphal East, Manipur",24.800005,93.944226,4.93,MNP815903,2022-08-16,9.86,False
+MN-THO-000832,Cement Corporation Manipur,industrial,three_phase,Small Scale Industry,Thoubal,Lilong,"Lilong, Thoubal, Manipur",24.638654,94.026691,118.77,MNP485602,2022-04-11,237.54,False
+MN-IMP-000833,Maibam Khoibu,residential,single_phase,BPL Category,Imphal East,Porompat,"Porompat, Imphal East, Manipur",24.82041,93.99059,5.91,MNP834649,2021-12-20,11.83,False
+MN-IMP-000834,Gomti Restaurant,commercial,three_phase,Commercial HT,Imphal West,Naoremthong,"Naoremthong, Imphal West, Manipur",24.778531,93.937926,32.35,MNP108248,2021-10-20,64.69,False
+MN-CHU-000835,BT Road Market,commercial,three_phase,Commercial LT,Churachandpur,Henglep,"Henglep, Churachandpur, Manipur",24.386029,93.793407,14.02,MNP411870,2022-10-29,28.03,False
+MN-THO-000836,Reliance Fresh Imphal,commercial,single_phase,Shops & Establishments,Thoubal,Heirok,"Heirok, Thoubal, Manipur",24.610926,94.078094,21.77,MNP526024,2019-07-31,43.54,False
+MN-IMP-000837,Bidyarani Angami,residential,single_phase,Domestic LT-I,Imphal West,Kongba,"Kongba, Imphal West, Manipur",24.809288,93.942516,1.78,MNP964446,2023-02-08,3.56,False
+MN-IMP-000838,Ojita Khoibu,residential,single_phase,Domestic LT-II,Imphal West,Chingmeirong,"Chingmeirong, Imphal West, Manipur",24.811843,93.911382,3.8,MNP828980,2023-11-07,7.59,False
+MN-THO-000839,Big Bazaar Imphal,commercial,single_phase,Commercial HT,Thoubal,Heirok,"Heirok, Thoubal, Manipur",24.662659,94.088957,8.12,MNP309794,2020-06-25,16.24,False
+MN-IMP-000840,Lourembam Chiru,residential,single_phase,BPL Category,Imphal West,Singjamei,"Singjamei, Imphal West, Manipur",24.783379,93.928141,4.75,MNP900234,2023-04-11,9.5,False
+MN-SEN-000841,St. Joseph School,commercial,single_phase,Shops & Establishments,Senapati,Mao,"Mao, Senapati, Manipur",25.338506,93.976887,17.23,MNP239995,2022-07-18,34.46,False
+MN-UKH-000842,Rajkumar Tangkhul,residential,single_phase,Domestic LT-II,Ukhrul,Lunghar,"Lunghar, Ukhrul, Manipur",25.071743,94.460887,2.75,MNP495648,2020-10-21,5.51,False
+MN-IMP-000843,Rajkumar Thangal,residential,single_phase,BPL Category,Imphal East,Nagamapal,"Nagamapal, Imphal East, Manipur",24.794749,93.997021,1.54,MNP993209,2023-01-22,3.08,False
+MN-SEN-000844,Ongbi Haokip,residential,three_phase,Domestic LT-I,Senapati,Karong,"Karong, Senapati, Manipur",25.399564,94.085364,5.23,MNP694797,2023-05-07,10.46,False
+MN-SEN-000845,Ibemhal Aimol,residential,single_phase,Domestic LT-I,Senapati,Liyai,"Liyai, Senapati, Manipur",25.258924,93.952863,4.82,MNP952924,2019-08-15,9.64,False
+MN-CHA-000846,Leishangthem Kom,residential,single_phase,Domestic LT-II,Chandel,Liwa Sarei,"Liwa Sarei, Chandel, Manipur",24.466829,94.222143,2.14,MNP862008,2020-03-17,4.29,False
+MN-THO-000847,Ibomcha Moyon,residential,three_phase,Domestic LT-I,Thoubal,Khongjom,"Khongjom, Thoubal, Manipur",24.675343,94.065338,4.46,MNP747684,2021-06-23,8.93,False
+MN-UKH-000848,Big Bazaar Imphal,commercial,single_phase,Commercial LT,Ukhrul,Jessami,"Jessami, Ukhrul, Manipur",25.153223,94.469184,27.44,MNP591658,2023-04-05,54.88,False
+MN-SEN-000849,Manipur University,commercial,three_phase,Shops & Establishments,Senapati,Maram,"Maram, Senapati, Manipur",25.217721,94.047526,10.02,MNP726205,2022-07-27,20.05,False
+MN-IMP-000850,Naoroibam Kabui,residential,three_phase,BPL Category,Imphal East,Porompat,"Porompat, Imphal East, Manipur",24.808528,93.958497,1.8,MNP803375,2020-08-25,3.59,False
+MN-IMP-000851,Ibeyaima Poumai,residential,single_phase,Domestic LT-II,Imphal East,Porompat,"Porompat, Imphal East, Manipur",24.804417,93.93777,5.14,MNP803869,2021-12-04,10.27,False
+MN-IMP-000852,Maibam Paite,residential,single_phase,Domestic LT-II,Imphal East,Thangmeiband,"Thangmeiband, Imphal East, Manipur",24.846338,93.935062,5.8,MNP590822,2023-04-07,11.6,False
+MN-SEN-000853,Ibemhal Anal,residential,single_phase,Domestic LT-I,Senapati,Saikul,"Saikul, Senapati, Manipur",25.304515,94.009913,1.85,MNP623460,2022-06-06,3.69,False
+MN-SEN-000854,Premila Koireng,residential,single_phase,Domestic LT-II,Senapati,Purul,"Purul, Senapati, Manipur",25.300125,94.108903,4.68,MNP272998,2022-03-27,9.36,False
+MN-CHA-000855,Memcha Hmar,residential,single_phase,Domestic LT-I,Chandel,Machi,"Machi, Chandel, Manipur",24.310045,94.021871,3.31,MNP292037,2023-10-21,6.63,False
+MN-THO-000856,Ibemhal Inpui,residential,single_phase,Domestic LT-II,Thoubal,Heirok,"Heirok, Thoubal, Manipur",24.629529,93.984858,2.76,MNP843470,2020-11-10,5.53,False
+MN-CHA-000857,Yumnam Mao,residential,single_phase,Domestic LT-II,Chandel,Tengnoupal,"Tengnoupal, Chandel, Manipur",24.460697,94.278768,3.32,MNP289430,2023-01-23,6.65,False
+MN-CHU-000858,Bijoy Singh,residential,single_phase,BPL Category,Churachandpur,Mualkoi,"Mualkoi, Churachandpur, Manipur",24.435917,93.698224,3.64,MNP289340,2021-09-02,7.29,False
+MN-BIS-000859,Lamlong Market,commercial,three_phase,Commercial LT,Bishnupur,Toubul,"Toubul, Bishnupur, Manipur",24.572603,93.846071,39.32,MNP398090,2020-03-08,78.63,False
+MN-IMP-000860,MANIREDA Office,industrial,three_phase,Small Scale Industry,Imphal West,Kakching,"Kakching, Imphal West, Manipur",24.792245,93.905047,143.65,MNP211222,2022-03-11,287.3,False
+MN-IMP-000861,Elangbam Lamkang,residential,single_phase,Domestic LT-I,Imphal West,Kongba,"Kongba, Imphal West, Manipur",24.758604,93.942206,3.76,MNP445429,2023-10-05,7.53,False
+MN-CHA-000862,Konsam Meitei,residential,single_phase,Domestic LT-II,Chandel,Khudengthabi,"Khudengthabi, Chandel, Manipur",24.38987,94.175759,4.31,MNP438869,2019-07-13,8.62,False
+MN-IMP-000863,Devi Rongmei,residential,single_phase,Domestic LT-I,Imphal West,Naoremthong,"Naoremthong, Imphal West, Manipur",24.755024,93.927783,2.59,MNP908323,2021-10-08,5.18,False
+MN-BIS-000864,Ahongsangbam Moyon,residential,single_phase,BPL Category,Bishnupur,Moirang,"Moirang, Bishnupur, Manipur",24.621395,93.87338,5.12,MNP261621,2023-05-01,10.24,False
+MN-SEN-000865,Yumlembam Vaiphei,residential,single_phase,BPL Category,Senapati,Purul,"Purul, Senapati, Manipur",25.3105,94.054034,2.14,MNP309580,2021-04-05,4.29,False
+MN-SEN-000866,Maipaksana Zeliang,residential,single_phase,Domestic LT-II,Senapati,Liyai,"Liyai, Senapati, Manipur",25.355069,94.004282,3.74,MNP950389,2021-12-09,7.47,False
+MN-SEN-000867,Tomba Kharam,residential,single_phase,Domestic LT-II,Senapati,Tadubi,"Tadubi, Senapati, Manipur",25.256855,93.976766,4.33,MNP809298,2022-09-30,8.67,False
+MN-THO-000868,Oinam Thangal,residential,single_phase,Domestic LT-II,Thoubal,Heirok,"Heirok, Thoubal, Manipur",24.605433,94.062297,2.93,MNP414985,2023-03-04,5.86,False
+MN-CHU-000869,Steel Plant Imphal,industrial,three_phase,Industrial HT,Churachandpur,Saikot,"Saikot, Churachandpur, Manipur",24.30002,93.726669,47.5,MNP409834,2020-10-25,94.99,False
+MN-IMP-000870,Thiyam Zeliang,residential,single_phase,Domestic LT-II,Imphal West,Lamphel,"Lamphel, Imphal West, Manipur",24.769332,93.929488,1.78,MNP792956,2019-12-19,3.56,False
+MN-CHU-000871,Naoba Haokip,residential,single_phase,Domestic LT-I,Churachandpur,Singngat,"Singngat, Churachandpur, Manipur",24.425901,93.650573,2.61,MNP219470,2019-11-08,5.22,False
+MN-THO-000872,Sanahanbi Haokip,residential,single_phase,BPL Category,Thoubal,Wangjing,"Wangjing, Thoubal, Manipur",24.67409,93.997441,1.96,MNP412106,2022-03-31,3.92,False
+MN-CHA-000873,Umakanta Thadou,residential,single_phase,Domestic LT-I,Chandel,New Samtal,"New Samtal, Chandel, Manipur",24.372047,94.081118,5.29,MNP883317,2020-08-13,10.58,False
+MN-IMP-000874,Thoiba Rongmei,residential,single_phase,Domestic LT-I,Imphal West,Kakching,"Kakching, Imphal West, Manipur",24.771934,93.935225,5.51,MNP787657,2021-04-30,11.03,False
+MN-SEN-000875,Sanasam Maram,residential,single_phase,BPL Category,Senapati,Karong,"Karong, Senapati, Manipur",25.286763,94.131989,3.2,MNP807896,2021-10-16,6.4,False
+MN-IMP-000876,Hotel Nirmala,commercial,single_phase,Commercial LT,Imphal West,Keishampat,"Keishampat, Imphal West, Manipur",24.817485,93.88625,29.83,MNP955604,2023-12-01,59.66,False
+MN-BIS-000877,Kshetrimayum Simte,residential,single_phase,Domestic LT-II,Bishnupur,Bishnupur Bazar,"Bishnupur Bazar, Bishnupur, Manipur",24.599381,93.808147,4.35,MNP982995,2020-06-29,8.69,False
+MN-BIS-000878,Babina Diagnostics,commercial,three_phase,Commercial LT,Bishnupur,Nambol,"Nambol, Bishnupur, Manipur",24.620386,93.750654,12.93,MNP597013,2021-08-21,25.85,False
+MN-THO-000879,Hemabati Kabui,residential,single_phase,Domestic LT-II,Thoubal,Wangjing,"Wangjing, Thoubal, Manipur",24.671305,94.049958,5.85,MNP713654,2022-08-24,11.69,False
+MN-SEN-000880,Thoibi Vaiphei,residential,single_phase,BPL Category,Senapati,Senapati Town,"Senapati Town, Senapati, Manipur",25.352208,94.140155,4.66,MNP552762,2021-09-03,9.32,False
+MN-CHU-000881,HDFC Bank Imphal,commercial,single_phase,Shops & Establishments,Churachandpur,Churachandpur Town,"Churachandpur Town, Churachandpur, Manipur",24.344708,93.665805,32.91,MNP719749,2019-12-10,65.82,False
+MN-CHA-000882,Usham Devi,residential,single_phase,Domestic LT-II,Chandel,Moreh,"Moreh, Chandel, Manipur",24.42883,94.014456,3.12,MNP680130,2023-08-25,6.24,False
+MN-SEN-000883,Sorokhaibam Mao,residential,single_phase,Domestic LT-II,Senapati,Liyai,"Liyai, Senapati, Manipur",25.39136,94.05008,3.45,MNP121817,2023-02-06,6.89,False
+MN-BIS-000884,Dinamani Aimol,residential,single_phase,BPL Category,Bishnupur,Toubul,"Toubul, Bishnupur, Manipur",24.59577,93.781332,3.16,MNP818247,2022-02-07,6.32,False
+MN-CHA-000885,Raj Medicity,commercial,three_phase,Commercial HT,Chandel,Machi,"Machi, Chandel, Manipur",24.373963,94.015707,32.45,MNP537110,2020-03-25,64.89,False
+MN-UKH-000886,Deben Kom,residential,single_phase,BPL Category,Ukhrul,Shangshak,"Shangshak, Ukhrul, Manipur",25.083301,94.464436,5.33,MNP190378,2020-04-06,10.65,False
+MN-THO-000887,Chinglen Inpui,residential,single_phase,Domestic LT-II,Thoubal,Wabagai,"Wabagai, Thoubal, Manipur",24.621199,94.048603,3.63,MNP617708,2022-04-21,7.25,False
+MN-IMP-000888,Oinam Mao,residential,single_phase,Domestic LT-I,Imphal East,Porompat,"Porompat, Imphal East, Manipur",24.841611,93.945102,4.55,MNP968167,2021-03-07,9.1,False
+MN-IMP-000889,Ibemhal Aimol,residential,single_phase,Domestic LT-I,Imphal West,Chingmeirong,"Chingmeirong, Imphal West, Manipur",24.792543,93.900671,2.11,MNP609990,2022-07-23,4.23,False
+MN-UKH-000890,Steel Plant Imphal,industrial,three_phase,Industrial HT,Ukhrul,Ukhrul Town,"Ukhrul Town, Ukhrul, Manipur",25.130328,94.447719,90.5,MNP258522,2020-02-19,181.0,False
+MN-IMP-000891,St. Joseph School,commercial,three_phase,Commercial LT,Imphal West,Lamphel,"Lamphel, Imphal West, Manipur",24.795138,93.907659,30.68,MNP211035,2019-08-16,61.36,False
+MN-IMP-000892,Thiyam Vaiphei,residential,single_phase,Domestic LT-I,Imphal West,Naoremthong,"Naoremthong, Imphal West, Manipur",24.763945,93.942315,2.79,MNP315363,2021-12-23,5.59,False
+MN-CHU-000893,Tombi Simte,residential,single_phase,Domestic LT-II,Churachandpur,Thanlon,"Thanlon, Churachandpur, Manipur",24.355168,93.658714,2.0,MNP958952,2023-03-26,4.0,False
+MN-BIS-000894,Thoibi Chothe,residential,single_phase,Domestic LT-II,Bishnupur,Toubul,"Toubul, Bishnupur, Manipur",24.601586,93.790139,5.26,MNP457900,2022-05-25,10.52,False
+MN-IMP-000895,Bidyarani Maram,residential,single_phase,Domestic LT-I,Imphal West,Kwakeithel,"Kwakeithel, Imphal West, Manipur",24.751029,93.906537,3.02,MNP258975,2019-10-13,6.04,False
+MN-SEN-000896,Hotel Nirmala,commercial,three_phase,Commercial HT,Senapati,Maram,"Maram, Senapati, Manipur",25.203866,93.974874,20.94,MNP529191,2021-06-07,41.89,False
+MN-UKH-000897,Cement Corporation Manipur,industrial,three_phase,Industrial LT,Ukhrul,Ukhrul Town,"Ukhrul Town, Ukhrul, Manipur",25.098573,94.380858,124.95,MNP907562,2023-12-13,249.9,False
+MN-IMP-000898,Takhellambam Rongmei,residential,three_phase,Domestic LT-I,Imphal West,Singjamei,"Singjamei, Imphal West, Manipur",24.791659,93.880695,3.59,MNP555157,2023-08-30,7.18,False
+MN-IMP-000899,Ebomcha Chiru,residential,three_phase,Domestic LT-II,Imphal East,Heingang,"Heingang, Imphal East, Manipur",24.847445,93.966332,4.55,MNP521530,2020-03-09,9.1,False
+MN-CHU-000900,Thoibi Lamkang,residential,three_phase,BPL Category,Churachandpur,Singngat,"Singngat, Churachandpur, Manipur",24.34678,93.766099,4.98,MNP253995,2020-01-29,9.96,False
+MN-BIS-000901,Victoria Rongmei,residential,single_phase,Domestic LT-II,Bishnupur,Thanga,"Thanga, Bishnupur, Manipur",24.60213,93.896402,2.06,MNP188374,2023-10-19,4.13,False
+MN-SEN-000902,Lanchenbi Haokip,residential,single_phase,Domestic LT-II,Senapati,Saikul,"Saikul, Senapati, Manipur",25.20339,94.104032,5.13,MNP646660,2022-02-04,10.26,False
+MN-THO-000903,Khwairamband Bazaar,commercial,three_phase,Shops & Establishments,Thoubal,Thoubal Bazar,"Thoubal Bazar, Thoubal, Manipur",24.612021,93.989837,8.07,MNP721285,2022-07-22,16.14,False
+MN-CHU-000904,Leikai Meitei,residential,single_phase,Domestic LT-II,Churachandpur,Tipaimukh,"Tipaimukh, Churachandpur, Manipur",24.343996,93.765971,3.83,MNP757446,2021-02-27,7.66,False
+MN-IMP-000905,Sanasam Singh,residential,single_phase,Domestic LT-I,Imphal East,Khongman,"Khongman, Imphal East, Manipur",24.804367,93.956022,1.51,MNP944510,2019-10-28,3.01,False
+MN-BIS-000906,Imphal Rice Mill,industrial,three_phase,Industrial HT,Bishnupur,Kwasiphai,"Kwasiphai, Bishnupur, Manipur",24.57998,93.846969,195.87,MNP799318,2019-08-09,391.74,False
+MN-THO-000907,Manipur Handloom,commercial,three_phase,Commercial LT,Thoubal,Khongjom,"Khongjom, Thoubal, Manipur",24.684706,93.953539,36.7,MNP443772,2021-02-09,73.41,False
+MN-UKH-000908,Laishram Zeliang,residential,single_phase,Domestic LT-I,Ukhrul,Shangshak,"Shangshak, Ukhrul, Manipur",25.15664,94.456075,3.56,MNP196729,2023-08-28,7.12,False
+MN-THO-000909,Mangang Meetei,residential,single_phase,BPL Category,Thoubal,Heirok,"Heirok, Thoubal, Manipur",24.639801,93.995437,1.8,MNP522317,2020-09-15,3.59,False
+MN-SEN-000910,Chandrakala Liangmai,residential,single_phase,Domestic LT-II,Senapati,Purul,"Purul, Senapati, Manipur",25.245647,93.999321,3.68,MNP867260,2021-09-01,7.36,False
+MN-THO-000911,Hotel Nirmala,commercial,single_phase,Commercial HT,Thoubal,Mayang Imphal,"Mayang Imphal, Thoubal, Manipur",24.674744,94.021071,9.38,MNP235670,2020-01-21,18.76,False
+MN-IMP-000912,Geetarani Chanu,residential,single_phase,BPL Category,Imphal West,Uripok,"Uripok, Imphal West, Manipur",24.817045,93.945991,5.03,MNP487272,2023-05-04,10.07,False
+MN-SEN-000913,Heisnam Moyon,residential,single_phase,Domestic LT-I,Senapati,Kangpokpi,"Kangpokpi, Senapati, Manipur",25.398266,94.058896,5.83,MNP223461,2021-12-03,11.66,False
+MN-UKH-000914,Hemabati Devi,residential,single_phase,Domestic LT-I,Ukhrul,Lunghar,"Lunghar, Ukhrul, Manipur",25.015121,94.373136,2.51,MNP921866,2020-09-12,5.03,False
+MN-CHU-000915,Sagolsem Inpui,residential,single_phase,BPL Category,Churachandpur,Henglep,"Henglep, Churachandpur, Manipur",24.329375,93.67112,4.3,MNP465584,2023-08-17,8.6,False
+MN-SEN-000916,Kauna Craft,commercial,single_phase,Commercial HT,Senapati,Liyai,"Liyai, Senapati, Manipur",25.356264,94.06566,12.28,MNP454233,2019-08-16,24.55,False
+MN-THO-000917,Dinamani Liangmai,residential,single_phase,BPL Category,Thoubal,Wangjing,"Wangjing, Thoubal, Manipur",24.681112,94.045393,3.25,MNP441013,2023-07-04,6.49,False
+MN-SEN-000918,Rice Bowl Restaurant,commercial,three_phase,Commercial HT,Senapati,Tadubi,"Tadubi, Senapati, Manipur",25.334826,94.001981,18.72,MNP667273,2023-10-01,37.44,False
+MN-CHA-000919,Bamboo Processing Unit,industrial,three_phase,Industrial LT,Chandel,Chakpikarong,"Chakpikarong, Chandel, Manipur",24.483497,94.087151,115.2,MNP273659,2020-01-15,230.4,False
+MN-CHU-000920,Gokul Khoibu,residential,single_phase,BPL Category,Churachandpur,Sangaikot,"Sangaikot, Churachandpur, Manipur",24.433521,93.756158,1.78,MNP668154,2020-10-08,3.56,False
+MN-BIS-000921,Manipur Rural Bank,commercial,three_phase,Commercial LT,Bishnupur,Toubul,"Toubul, Bishnupur, Manipur",24.56473,93.751176,28.0,MNP790229,2021-01-08,56.01,False
+MN-IMP-000922,Lourembam Liangmai,residential,single_phase,BPL Category,Imphal East,Sagolband,"Sagolband, Imphal East, Manipur",24.811337,93.939399,5.81,MNP736333,2022-03-17,11.62,False
+MN-IMP-000923,Wangkhem Zeliang,residential,single_phase,Domestic LT-I,Imphal East,Koirengei,"Koirengei, Imphal East, Manipur",24.817076,93.946933,3.75,MNP653545,2022-03-24,7.51,False
+MN-IMP-000924,Wahengbam Paite,residential,single_phase,Domestic LT-I,Imphal West,Singjamei,"Singjamei, Imphal West, Manipur",24.797573,93.885337,2.74,MNP367968,2019-09-12,5.47,False
+MN-CHU-000925,Biren Anal,residential,single_phase,BPL Category,Churachandpur,Tipaimukh,"Tipaimukh, Churachandpur, Manipur",24.421045,93.71895,3.96,MNP161343,2022-05-02,7.92,False
+MN-UKH-000926,Takhellambam Koireng,residential,single_phase,Domestic LT-I,Ukhrul,Kamjong,"Kamjong, Ukhrul, Manipur",25.086563,94.30878,2.25,MNP154398,2022-11-14,4.49,False
+MN-BIS-000927,Ibemhal Lamkang,residential,single_phase,Domestic LT-II,Bishnupur,Toubul,"Toubul, Bishnupur, Manipur",24.594554,93.781378,1.72,MNP679989,2021-09-21,3.45,False
+MN-IMP-000928,Ibomcha Lamkang,residential,single_phase,BPL Category,Imphal East,Mantripukhri,"Mantripukhri, Imphal East, Manipur",24.839055,93.998683,5.07,MNP807890,2023-06-09,10.14,False
+MN-THO-000929,Dinamani Haokip,residential,single_phase,BPL Category,Thoubal,Yairipok,"Yairipok, Thoubal, Manipur",24.685378,93.986297,5.82,MNP313340,2019-08-13,11.65,False
+MN-UKH-000930,NEEPCO Office,industrial,three_phase,Industrial LT,Ukhrul,Pushing,"Pushing, Ukhrul, Manipur",25.039385,94.490286,199.17,MNP663646,2021-08-18,398.34,False
+MN-CHA-000931,MSPDCL Substation,industrial,three_phase,Industrial HT,Chandel,Chandel Town,"Chandel Town, Chandel, Manipur",24.442345,94.294343,131.13,MNP969659,2020-07-10,262.25,False
+MN-THO-000932,Kshetrimayum Lamkang,residential,single_phase,BPL Category,Thoubal,Thoubal Bazar,"Thoubal Bazar, Thoubal, Manipur",24.625954,94.015549,4.17,MNP498619,2022-01-13,8.34,False
+MN-BIS-000933,Manipur Rural Bank,commercial,single_phase,Commercial LT,Bishnupur,Karang,"Karang, Bishnupur, Manipur",24.557308,93.843351,39.39,MNP875089,2021-01-04,78.78,False
+MN-CHU-000934,Ibemhal Zou,residential,single_phase,Domestic LT-II,Churachandpur,Tuibong,"Tuibong, Churachandpur, Manipur",24.328516,93.768889,5.59,MNP552945,2022-10-28,11.17,False
+MN-UKH-000935,Dinamani Lamkang,residential,single_phase,Domestic LT-II,Ukhrul,Chingai,"Chingai, Ukhrul, Manipur",25.18874,94.492027,3.85,MNP458224,2022-10-28,7.69,False
+MN-UKH-000936,Gokul Singh,residential,single_phase,Domestic LT-I,Ukhrul,Ukhrul Town,"Ukhrul Town, Ukhrul, Manipur",25.195462,94.451462,2.23,MNP110043,2020-03-26,4.46,False
+MN-CHA-000937,Gokul Meetei,residential,single_phase,BPL Category,Chandel,Liwa Sarei,"Liwa Sarei, Chandel, Manipur",24.39538,94.215499,2.61,MNP566801,2020-03-27,5.23,False
+MN-SEN-000938,Yaiphabi Thadou,residential,single_phase,BPL Category,Senapati,Karong,"Karong, Senapati, Manipur",25.328123,94.08332,2.23,MNP108840,2023-04-22,4.46,False
+MN-BIS-000939,Khumanthem Devi,residential,single_phase,BPL Category,Bishnupur,Toubul,"Toubul, Bishnupur, Manipur",24.606509,93.865744,3.75,MNP843647,2021-12-31,7.49,False
+MN-CHU-000940,Sorokhaibam Maram,residential,single_phase,Domestic LT-II,Churachandpur,Saikot,"Saikot, Churachandpur, Manipur",24.301815,93.651356,3.11,MNP838247,2020-01-16,6.21,False
+MN-IMP-000941,Ibemhal Lamkang,residential,single_phase,Domestic LT-II,Imphal East,Wangkhei,"Wangkhei, Imphal East, Manipur",24.844834,93.946007,4.35,MNP278758,2020-11-28,8.71,False
+MN-THO-000942,Manihar Meetei,residential,single_phase,BPL Category,Thoubal,Kakching,"Kakching, Thoubal, Manipur",24.622208,93.99825,5.32,MNP997034,2022-09-23,10.63,False
+MN-CHU-000943,Khwairamband Bazaar,commercial,three_phase,Shops & Establishments,Churachandpur,Saikot,"Saikot, Churachandpur, Manipur",24.409329,93.66431,21.43,MNP810656,2021-01-06,42.87,False
+MN-CHA-000944,Memcha Anal,residential,single_phase,Domestic LT-II,Chandel,Chandel Town,"Chandel Town, Chandel, Manipur",24.305834,94.144267,4.48,MNP387347,2023-04-28,8.96,False
+MN-CHA-000945,Jamuna Chanu,residential,three_phase,Domestic LT-I,Chandel,New Samtal,"New Samtal, Chandel, Manipur",24.323701,94.086665,3.29,MNP149246,2022-06-12,6.58,False
+MN-CHA-000946,Ima Keithel,commercial,single_phase,Commercial HT,Chandel,Khudengthabi,"Khudengthabi, Chandel, Manipur",24.483906,94.297977,8.96,MNP185782,2020-10-18,17.92,False
+MN-BIS-000947,Thangal Bazaar,commercial,three_phase,Commercial LT,Bishnupur,Laphupat Tera,"Laphupat Tera, Bishnupur, Manipur",24.626101,93.805759,20.25,MNP272471,2022-02-27,40.51,False
+MN-IMP-000948,Chandrakala Devi,residential,single_phase,BPL Category,Imphal West,Lamphel,"Lamphel, Imphal West, Manipur",24.802799,93.94429,5.78,MNP450541,2022-08-08,11.56,False
+MN-CHA-000949,Memcha Angami,residential,single_phase,Domestic LT-I,Chandel,Moreh,"Moreh, Chandel, Manipur",24.415425,94.107136,5.04,MNP176452,2019-08-28,10.09,False
+MN-CHA-000950,Naoba Gangte,residential,single_phase,Domestic LT-I,Chandel,Tengnoupal,"Tengnoupal, Chandel, Manipur",24.3502,94.169222,3.11,MNP134963,2021-11-21,6.23,False
+MN-IMP-000951,Mangang Meitei,residential,single_phase,BPL Category,Imphal West,Keishampat,"Keishampat, Imphal West, Manipur",24.795964,93.896828,2.36,MNP552816,2023-08-21,4.72,False
+MN-IMP-000952,Oinam Poumai,residential,single_phase,BPL Category,Imphal East,Nagamapal,"Nagamapal, Imphal East, Manipur",24.844277,93.937126,3.78,MNP888490,2021-09-13,7.55,False
+MN-IMP-000953,Elangbam Zeliang,residential,three_phase,BPL Category,Imphal East,Koirengei,"Koirengei, Imphal East, Manipur",24.79546,93.932725,1.66,MNP206197,2022-02-06,3.32,False
+MN-IMP-000954,Naoba Hmar,residential,single_phase,Domestic LT-I,Imphal East,Koirengei,"Koirengei, Imphal East, Manipur",24.792266,93.990674,2.77,MNP724086,2020-01-03,5.54,False
+MN-BIS-000955,Ebomcha Kharam,residential,single_phase,Domestic LT-II,Bishnupur,Karang,"Karang, Bishnupur, Manipur",24.645046,93.837243,3.46,MNP604783,2019-12-10,6.93,False
+MN-THO-000956,Tomba Meitei,residential,single_phase,BPL Category,Thoubal,Wabagai,"Wabagai, Thoubal, Manipur",24.658009,94.027505,4.91,MNP557019,2021-02-16,9.83,False
+MN-UKH-000957,Handloom Cluster Moirang,industrial,three_phase,Small Scale Industry,Ukhrul,Lunghar,"Lunghar, Ukhrul, Manipur",25.056499,94.37061,183.06,MNP913166,2023-03-10,366.11,False
+MN-CHU-000958,Radhamani Maram,residential,three_phase,BPL Category,Churachandpur,Mualkoi,"Mualkoi, Churachandpur, Manipur",24.441968,93.783884,3.39,MNP714926,2020-04-26,6.78,False
+MN-IMP-000959,Leishangthem Mao,residential,single_phase,Domestic LT-I,Imphal East,Wangkhei,"Wangkhei, Imphal East, Manipur",24.834626,93.963344,3.74,MNP771670,2022-11-16,7.48,False
+MN-UKH-000960,Vishal Mega Mart,commercial,single_phase,Shops & Establishments,Ukhrul,Kasom,"Kasom, Ukhrul, Manipur",25.040936,94.418226,13.55,MNP590106,2020-08-22,27.1,False
+MN-UKH-000961,Bidyarani Angami,residential,single_phase,Domestic LT-II,Ukhrul,Jessami,"Jessami, Ukhrul, Manipur",25.066313,94.471006,2.43,MNP927527,2023-10-08,4.86,False
+MN-IMP-000962,Ngangom Kom,residential,single_phase,BPL Category,Imphal East,Wangkhei,"Wangkhei, Imphal East, Manipur",24.784981,93.934831,5.73,MNP905671,2022-02-23,11.47,False
+MN-SEN-000963,NIT Manipur,commercial,single_phase,Commercial LT,Senapati,Maram,"Maram, Senapati, Manipur",25.301384,94.031882,33.85,MNP480441,2023-12-13,67.71,False
+MN-IMP-000964,Laishram Moyon,residential,single_phase,BPL Category,Imphal East,Nagamapal,"Nagamapal, Imphal East, Manipur",24.838508,93.953253,4.62,MNP714136,2019-09-18,9.24,False
+MN-IMP-000965,Oinam Thadou,residential,single_phase,Domestic LT-II,Imphal East,Wangkhei,"Wangkhei, Imphal East, Manipur",24.833979,93.975826,2.18,MNP853754,2023-01-11,4.36,False
+MN-BIS-000966,Ibomcha Thadou,residential,single_phase,Domestic LT-I,Bishnupur,Moirang,"Moirang, Bishnupur, Manipur",24.637588,93.830864,2.77,MNP122013,2020-03-16,5.54,False
+MN-IMP-000967,Pukhrambam Thangal,residential,single_phase,Domestic LT-II,Imphal West,Chingmeirong,"Chingmeirong, Imphal West, Manipur",24.779766,93.88263,2.08,MNP793013,2023-01-17,4.15,False
+MN-SEN-000968,Loktak Power Station,industrial,three_phase,Industrial LT,Senapati,Kangpokpi,"Kangpokpi, Senapati, Manipur",25.353109,93.950002,106.65,MNP237148,2019-07-20,213.3,False
+MN-SEN-000969,Ojita Zeliang,residential,three_phase,Domestic LT-I,Senapati,Mao,"Mao, Senapati, Manipur",25.304502,93.960927,5.88,MNP148439,2019-09-23,11.76,False
+MN-BIS-000970,Ongbi Anal,residential,single_phase,BPL Category,Bishnupur,Thanga,"Thanga, Bishnupur, Manipur",24.572613,93.79563,2.87,MNP934259,2022-06-08,5.74,False
+MN-CHA-000971,BT Road Market,commercial,three_phase,Shops & Establishments,Chandel,Moreh,"Moreh, Chandel, Manipur",24.346083,94.000442,31.2,MNP744755,2023-08-23,62.41,False
+MN-SEN-000972,Hemabati Chiru,residential,single_phase,Domestic LT-II,Senapati,Willong,"Willong, Senapati, Manipur",25.393369,93.994859,4.48,MNP847096,2021-11-28,8.97,False
+MN-CHA-000973,Phurailatpam Rongmei,residential,single_phase,BPL Category,Chandel,New Samtal,"New Samtal, Chandel, Manipur",24.448379,94.254528,3.4,MNP781298,2023-10-20,6.8,False
+MN-BIS-000974,Jilangamba Kom,residential,single_phase,Domestic LT-II,Bishnupur,Toubul,"Toubul, Bishnupur, Manipur",24.580293,93.798794,4.71,MNP699125,2023-02-15,9.41,False
+MN-UKH-000975,Steel Plant Imphal,industrial,three_phase,Industrial LT,Ukhrul,Lunghar,"Lunghar, Ukhrul, Manipur",25.163356,94.336323,99.35,MNP240855,2019-10-16,198.7,False
+MN-CHA-000976,Mangolnganbi Chanu,residential,single_phase,BPL Category,Chandel,Molnoi,"Molnoi, Chandel, Manipur",24.480388,94.242008,5.93,MNP452713,2021-08-13,11.86,False
+MN-SEN-000977,Hemabati Anal,residential,single_phase,Domestic LT-I,Senapati,Tadubi,"Tadubi, Senapati, Manipur",25.35085,94.028639,4.16,MNP288288,2021-07-12,8.32,False
+MN-IMP-000978,Oinam Kharam,residential,single_phase,BPL Category,Imphal West,Chingmeirong,"Chingmeirong, Imphal West, Manipur",24.796271,93.885492,3.95,MNP181955,2019-08-07,7.9,False
+MN-BIS-000979,Okram Maram,residential,single_phase,Domestic LT-I,Bishnupur,Nambol,"Nambol, Bishnupur, Manipur",24.620932,93.775098,5.01,MNP449970,2022-11-26,10.03,False
+MN-CHU-000980,Yumnam Zou,residential,three_phase,BPL Category,Churachandpur,Henglep,"Henglep, Churachandpur, Manipur",24.387566,93.792833,1.69,MNP875758,2020-12-16,3.38,False
+MN-IMP-000981,Raj Medicity,commercial,three_phase,Commercial HT,Imphal East,Sagolband,"Sagolband, Imphal East, Manipur",24.798573,93.972109,17.14,MNP525468,2020-10-02,34.28,False
+MN-IMP-000982,Big Bazaar Imphal,commercial,three_phase,Commercial LT,Imphal East,Koirengei,"Koirengei, Imphal East, Manipur",24.83001,93.98313,10.83,MNP516814,2022-09-23,21.66,False
+MN-BIS-000983,Usham Khoibu,residential,single_phase,BPL Category,Bishnupur,Toubul,"Toubul, Bishnupur, Manipur",24.601385,93.826334,3.16,MNP953957,2021-06-02,6.32,False
+MN-IMP-000984,Leishangthem Tangkhul,residential,single_phase,Domestic LT-II,Imphal West,Chingmeirong,"Chingmeirong, Imphal West, Manipur",24.815305,93.937925,4.64,MNP994376,2020-11-15,9.27,False
+MN-THO-000985,Pukhrambam Singh,residential,single_phase,BPL Category,Thoubal,Leisho,"Leisho, Thoubal, Manipur",24.671433,94.019257,5.64,MNP974825,2022-01-06,11.29,False
+MN-SEN-000986,Kalpana Monsang,residential,single_phase,Domestic LT-I,Senapati,Tadubi,"Tadubi, Senapati, Manipur",25.338919,94.095796,5.38,MNP695148,2019-08-08,10.76,False
+MN-THO-000987,Maipaksana Rongmei,residential,three_phase,Domestic LT-I,Thoubal,Wangjing,"Wangjing, Thoubal, Manipur",24.627407,94.071061,2.38,MNP509611,2023-08-25,4.76,False
+MN-BIS-000988,Wangkhem Liangmai,residential,single_phase,Domestic LT-II,Bishnupur,Toubul,"Toubul, Bishnupur, Manipur",24.584534,93.800342,5.9,MNP197770,2023-01-16,11.81,False
+MN-THO-000989,Sanatombi Thadou,residential,single_phase,Domestic LT-II,Thoubal,Thoubal Bazar,"Thoubal Bazar, Thoubal, Manipur",24.685654,94.055175,4.77,MNP397604,2022-11-07,9.54,False
+MN-IMP-000990,Heisnam Chiru,residential,single_phase,Domestic LT-II,Imphal West,Kongba,"Kongba, Imphal West, Manipur",24.789345,93.946296,3.73,MNP530819,2021-10-24,7.47,False
+MN-IMP-000991,Geetarani Meetei,residential,single_phase,Domestic LT-I,Imphal West,Keishampat,"Keishampat, Imphal West, Manipur",24.776636,93.891412,5.04,MNP236243,2022-11-07,10.08,False
+MN-CHA-000992,Naoba Hmar,residential,single_phase,BPL Category,Chandel,Machi,"Machi, Chandel, Manipur",24.446889,94.115307,1.61,MNP581250,2022-06-17,3.23,False
+MN-THO-000993,Jilangamba Chothe,residential,single_phase,BPL Category,Thoubal,Heirok,"Heirok, Thoubal, Manipur",24.6839,93.951713,4.67,MNP614807,2021-06-04,9.33,False
+MN-IMP-000994,Elangbam Mao,residential,single_phase,BPL Category,Imphal East,Khongman,"Khongman, Imphal East, Manipur",24.847918,93.960636,2.56,MNP930835,2022-05-03,5.11,False
+MN-THO-000995,Sagolsem Zeliang,residential,single_phase,BPL Category,Thoubal,Khongjom,"Khongjom, Thoubal, Manipur",24.670487,94.072569,3.96,MNP292355,2020-02-02,7.92,False
+MN-SEN-000996,Ningombam Lamkang,residential,three_phase,BPL Category,Senapati,Senapati Town,"Senapati Town, Senapati, Manipur",25.393407,93.960334,3.77,MNP406068,2020-04-07,7.54,False
+MN-BIS-000997,CMC Imphal,commercial,three_phase,Shops & Establishments,Bishnupur,Toubul,"Toubul, Bishnupur, Manipur",24.621845,93.879396,13.33,MNP227119,2021-12-08,26.65,False
+MN-IMP-000998,Bidyarani Liangmai,residential,single_phase,Domestic LT-I,Imphal West,Naoremthong,"Naoremthong, Imphal West, Manipur",24.806,93.918689,3.28,MNP630647,2023-10-03,6.57,False
+MN-IMP-000999,Umakanta Rongmei,residential,three_phase,Domestic LT-II,Imphal West,Kongba,"Kongba, Imphal West, Manipur",24.75922,93.940571,2.21,MNP139609,2023-12-12,4.42,False
+MN-THO-001000,Hemabati Thangal,residential,single_phase,BPL Category,Thoubal,Lilong,"Lilong, Thoubal, Manipur",24.630979,93.993507,5.42,MNP788938,2022-08-24,10.84,False

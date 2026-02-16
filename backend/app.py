@@ -9,6 +9,7 @@ import pandas as pd
 import numpy as np
 import json
 import os
+import gzip
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for React frontend
@@ -18,13 +19,30 @@ CORS(app)  # Enable CORS for React frontend
 # ==============================================================================
 
 def get_data_path(filename):
-    """Get absolute path to data files"""
-    base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    return os.path.join(base_path, filename)
+    """Get absolute path to data files - works for local dev and Render deployment"""
+    base_path = os.path.dirname(os.path.abspath(__file__))
+    
+    # First check if data is in the backend folder (Render deployment)
+    local_path = os.path.join(base_path, filename)
+    if os.path.exists(local_path):
+        return local_path
+    
+    # Fallback to parent directory (local development)
+    parent_path = os.path.join(os.path.dirname(base_path), filename)
+    return parent_path
 
 def load_consumption_data():
     """Load consumption timeseries data"""
     path = get_data_path('data/synthetic/consumption_timeseries.csv')
+    
+    # Check for gzip version first (for Render deployment with compressed data)
+    gz_path = path + '.gz'
+    if os.path.exists(gz_path):
+        with gzip.open(gz_path, 'rt') as f:
+            df = pd.read_csv(f)
+        df['timestamp'] = pd.to_datetime(df['timestamp'])
+        return df
+    
     if os.path.exists(path):
         df = pd.read_csv(path)
         df['timestamp'] = pd.to_datetime(df['timestamp'])

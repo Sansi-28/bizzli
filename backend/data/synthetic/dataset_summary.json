@@ -1,0 +1,35 @@
+{
+  "region": "Manipur, India",
+  "utility": "MSPDCL (Manipur State Power Distribution Company Limited)",
+  "total_consumers": 1000,
+  "n_days": 90,
+  "total_readings": 2160000,
+  "anomalous_consumers": 50,
+  "date_range": {
+    "start": "2025-10-15",
+    "end": "2026-01-13"
+  },
+  "district_distribution": {
+    "Churachandpur": 135,
+    "Chandel": 134,
+    "Thoubal": 126,
+    "Imphal East": 124,
+    "Imphal West": 124,
+    "Senapati": 124,
+    "Bishnupur": 117,
+    "Ukhrul": 116
+  },
+  "consumer_type_distribution": {
+    "residential": 751,
+    "commercial": 179,
+    "industrial": 70
+  },
+  "anomaly_distribution": {
+    "normal": 2052000,
+    "sudden_spike": 28080,
+    "gradual_theft": 23760,
+    "odd_hour_usage": 21600,
+    "zero_consumption": 17280,
+    "erratic_pattern": 17280
+  }
+}
