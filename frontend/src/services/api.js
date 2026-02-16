@@ -1,6 +1,19 @@
 import axios from 'axios';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+// Handle different deployment environments
+const getApiBaseUrl = () => {
+  if (process.env.REACT_APP_API_URL) {
+    // If env var is just a hostname, append /api
+    const url = process.env.REACT_APP_API_URL;
+    if (url.startsWith('https://') && !url.includes('/api')) {
+      return `${url}/api`;
+    }
+    return url;
+  }
+  return 'http://localhost:5000/api';
+};
+
+const API_BASE_URL = getApiBaseUrl();
 
 const api = axios.create({
   baseURL: API_BASE_URL,
