@@ -10,9 +10,26 @@ import numpy as np
 import json
 import os
 import gzip
+import sys
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for React frontend
+
+# ==============================================================================
+# Startup Logging
+# ==============================================================================
+print("=" * 50, file=sys.stderr)
+print("PowerGuard API Starting...", file=sys.stderr)
+print(f"Working directory: {os.getcwd()}", file=sys.stderr)
+print(f"Script directory: {os.path.dirname(os.path.abspath(__file__))}", file=sys.stderr)
+
+# Check data files
+data_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'synthetic')
+print(f"Data directory: {data_dir}", file=sys.stderr)
+print(f"Data directory exists: {os.path.exists(data_dir)}", file=sys.stderr)
+if os.path.exists(data_dir):
+    print(f"Files in data dir: {os.listdir(data_dir)}", file=sys.stderr)
+print("=" * 50, file=sys.stderr)
 
 # ==============================================================================
 # Data Loading
